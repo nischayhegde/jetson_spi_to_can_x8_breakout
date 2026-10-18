@@ -1,0 +1,27 @@
+{
+  "ABM8G-40.000MHZ-18-D2Y-T": {
+    "observed_stock": 1362,
+    "unit_usd": 0.62,
+    "checked_date": "2026-10-18",
+    "sourcing_note": "Mouser indexed USD cut-tape price and stock; quantity-10 unit price $0.54."
+  },
+  "CGA3E1X7R1E105K080AC": {
+    "observed_stock": 867741,
+    "unit_usd": 0.17,
+    "checked_date": "2026-10-18",
+    "sourcing_note": "DigiKey US page opened; USD cut-tape quantity-1 price $0.17."
+  },
+  "CL21B106KOQNNNE": {
+    "observed_stock": 0,
+    "unit_usd": 0.27,
+    "checked_date": "2026-10-18",
+    "sourcing_note": "DigiKey US direct page shows zero stock despite older indexed stock. Listed price is not a stock-backed quote. Mouser's CL21B106KOQNNNG page lists this exact E-suffix MPN as in-stock alternative packaging; verify exact part/cart availability.",
+    "alternate_supplier_evidence": "https://www.mouser.com/en/ProductDetail/Samsung-Electro-Mechanics/CL21B106KOQNNNG?qs=Wt8QXSv5fpijNSc%252BYtlvng%3D%3D"
+  },
+  "B2B-XH-A": {
+    "observed_stock": 248308,
+    "unit_usd": 0.10,
+    "checked_date": "2026-10-18",
+    "sourcing_note": "DigiKey US page opened; USD bulk quantity-1 price $0.10."
+  }
+}

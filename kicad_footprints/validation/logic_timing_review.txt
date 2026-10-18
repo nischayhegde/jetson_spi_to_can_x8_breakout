@@ -1,0 +1,10 @@
+Logic review 2026-10-17
+Conditions: VCC=3.0-3.6 V; TA=-40 to +125 C; CL=50 pF; manufacturer test circuits.
+AND Nexperia 74LVC08A Rev12 Table7: maximum 4.8 ns.
+NOT Diodes 74LVC04A DS35258 Rev5-2 pp5-6: maximum 6.0 ns.
+OR Nexperia 74LVC32A Rev11 Table7: maximum 5.0 ns.
+Existing NOT-AND-NOT CS allocation: 16.8 ns. With one additional cascaded OR: 21.8 ns.
+8 MHz SPI: period=125 ns; half-period=62.5 ns.
+Logic is suitable for intended MHz operation; full CS/SCK timing still requires isolation, board delays and actual Jetson setup/hold behavior.
+OR wiring is not yet specified; no bank equations changed.
+Local OR PDF is older NXP Rev5 distributor mirror; current Nexperia Rev11 was reviewed online and is linked in BOM.

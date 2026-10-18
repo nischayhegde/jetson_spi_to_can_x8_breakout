@@ -1,0 +1,47 @@
+**CONTEXT**
+
+- We are building a humanoid robot with 4 limbs and around 25 Robstride and Damiao actuators as well as some peripherals like tactile sensors, cameras, etc...
+
+- Main embedded computer: NVIDIA Jetson Orin Nano Super
+
+- Our team is the embedded design team. We are tasked with designing and building all the embedded communications between the computer and the motors/peripherals.
+
+- The NVIDIA Jetson Orin Nano Super only has a singular CAN channel. It has two SPI channels with 2 chipselects each.
+
+**GOAL**
+
+- Build an 2xSPI-8xCAN expander board.
+
+- Write the Linux drivers for the expander.
+
+**REQUIREMENTS**
+
+- Cheap options for parts.
+
+- All parts must be in stock on mouser or digikey and have associated symbol and footprint libraries for KICAD
+
+- No unnecessary complexity. For example, there is no point in choosing a separate CAN transceiver and controller if it is not immensely cheaper/highquality than a component which combines a CAN transceiver and controller. Another example: no point in choosing a powered oscillator when we could use a passive oscillator.
+
+- Good power management/regulation, overcurrent protection, signal integrity, decoupling.
+
+- Relatively small form-factor.
+
+- Galvanic isolation between digital signals and power system.
+
+- 5V max 2A in.
+
+**THINGS TO KEEP IN MIND**
+
+- Bitrates per controller will have to be around 1Mbit/s to interface with the Robstride and Damiao motors. NVIDIA Jetson Orin Nano Super is not the bottleneck at 1.7 GHz. Oscillator should be at 40Mhz.
+
+- This means parasitic capacitance will slow the slew rate and parasitic inductance will affect signal integrity.
+
+- Chipselect output and interrupt input might be pretty high frequency so we need the driver to bypass the kernel and set/read the GPIO memory address directly.
+
+
+**GPIO BANK CHIP-SELECT REQUIREMENT (2026-10-17)**
+
+- Each physical SPI bus retains its two native active-low Jetson chip selects and uses one independent GPIO bank selector to address four CAN controllers.
+- Implement the selection with AND and NOT gates on the 3.3 V host side, before the galvanic isolators. Both native chip selects high must deselect all four controllers.
+- Linux must own and serialize the bank GPIO with SPI transactions. Evaluate the standard spi-mux/gpio-mux framework with the exact JetPack kernel; do not toggle the bank independently from userspace. This supersedes treating direct GPIO register access as mandatory above.
+- Use separate bank GPIOs for the two SPI buses. Change bank only with both native CS lines inactive; budget logic/isolation delay, CS setup/hold and previous-device MISO release.

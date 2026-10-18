@@ -1,0 +1,280 @@
+
+=== PDF PAGE 1 ===
+ABM8G
+STANDARD SPECIFICATIONS:
+APPLICATIONS:
+FEATURES:
+• High density applications.
+• Modems, communication and test equipment.
+• PMCIA, wireless applications
+• Low in height; suitable for thin equipment
+• Glass sealed package assures high reliability
+  and high temperature operation
+• Tight tolerance and stability available
+• IR reflow capable
+• Low cost version of ABM8 crystal
+OPTIONS & PART IDENTIFICATION:
+(Left blank if standard)
+ULTRA MINIATURE CERAMIC GLASS SEALED  SMD CRYSTAL 
+                                      
+3.2 x 2.5 x 1.0mm
+Pb in glass exemption 7 (c)-I per 
+RoHS II 2011/65/EU Annex
+ 
+Parameters 
+Minimum 
+Typical 
+Maximum 
+Units 
+Notes 
+Frequency Range 
+12.000 
+ 
+50.000 
+MHz 
+ 
+ 
+ 
+  latn
+e
+m
+a
+d
+n
+u
+F
+ e
+d
+o
+M
+ n
+oitare
+p
+O
+Operating Temperature 
+-10 
+ 
++60 
+ºC 
+See options 
+Storage Temperature 
+-40 
+ 
++85 
+ºC 
+ 
+Frequency Tolerance @+25°C 
+-50 
+ 
++50 
+ppm 
+See options 
+Frequency Stability over the Operating 
+Temperature  
+ ( ref. to +25°C) 
+-50 
+ 
++50 
+ppm 
+See options 
+Equivalent series resistance 
+ 
+ 
+120 
+Ω 
+12.000MHz 
+ 
+ 
+80 
+12.001MHz ~ 20.000MHz 
+ 
+ 
+60 
+20.001MHz ~ 28.000MHz 
+ 
+ 
+50 
+28.001MHz ~ 50.000MHz 
+Shunt capacitance (C0) 
+ 
+ 
+5.0 
+pF 
+ 
+ s
+n
+oitp
+o e
+e
+S
+ 
+F
+p
+ 0
+1
+ )
+L
+C
+( e
+c
+n
+atic
+a
+p
+a
+c d
+a
+o
+L
+ 
+ 
+W
+µ
+ 0
+0
+1
+ 0
+1
+ 
+ le
+v
+e
+L
+ e
+vir
+D
+Aging@25°C±3°C 
+ 
+ 
+±3 
+ppm 
+First year 
+Insulation Resistance 
+500 
+ 
+ 
+M Ω 
+@ 100Vdc ± 15V 
+RoHS/RoHS II Compliant
+ABM8G -                MHz -     -           -     -     -     - 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Frequency in MHz 
+Please specify the  
+frequency in MHz. 
+e.g. 14.31818MHz 
+Packaging 
+Blank: Bulk 
+T:  Tape & Reel 
+ (1k pcs /reel) 
+T3:  Tape & Reel 
+(3k pcs /reel) 
+Freq. Stability 
+U*: ± 10 ppm 
+G**: ± 15 ppm 
+X: ± 20 ppm 
+W: ± 25 ppm 
+Y: ± 30 ppm 
+H: ± 35 ppm 
+Q: ± 100 ppm 
+Load Capacitance 
+(pF) 
+Please specify CL in 
+pF or S for series. 
+(Minimum 7pF) 
+Please contact 
+Abracon for values 
+under 10pF  
+Freq. Tolerance 
+1: ± 10 ppm  
+7: ± 15 ppm  
+2: ± 20 ppm 
+3: ± 25 ppm 
+4: ± 30 ppm 
+Operating Temp. 
+ 
+E: 0°C ~ +70°C 
+B: -20°C ~ +70°C 
+C: -30°C ~ +70°C 
+ 
+ 
+ 
+N: -30°C ~ +85°C 
+D: -40°C ~ +85°C 
+Custom ESR  
+if other than 
+standard 
+R□ 
+□: Specify a 
+value in Ω 
+(e.g.: R40) 
+* -10 ~ 60°C only. Contact Abracon for tighter freq. stability. 
+** -10 ~ 60°C option E, B, C, N only. 
+ 
+ABRACON IS
+ISO 9001 / QS 9000
+CERTIFIED
+ABRACON IS
+ISO 9001 : 2008
+CERTIFIED
+2 Faraday, Suite# B | Irvine | CA 92618 Revised: 08.13.15
+Ph. 949.546.8000 | Fax. 949.546.8001 
+Visit  www.abracon.com for Terms and Conditions of Sale
+LLC
+Moisture Sensitivity Level (MSL) – This product is Hermetically Sealed and not Moisture Sensitive - MSL = N/A: Not Applicable
+
+
+=== PDF PAGE 2 ===
+ABM8G
+3.2 x 2.5 x 1.0mm
+Dimensions: Inch (mm)
+Dimensions: mm
+OUTLINE DRAWING:
+TAPE & REEL:
+Note: Due to the availability of raw materials, 
+this part may be manufactured with the 
+chamfer on pin 4. Be advised that this does 
+not affect the electrical characteristics of 
+the crystal in any way.  
+Need a test socket for the ABM8G Series? To view  
+compatible PRECISION TEST & BURN-IN SOCKETS
+for these parts, click here.
+ 
+REFLOW PROFILE:
+Tape and reel (1,000pcs/reel)
+Tape and reel (3,000pcs/reel)
+ULTRA MINIATURE CERAMIC GLASS SEALED  SMD CRYSTAL 
+                                      
+-
+ ATTENTION: Abracon Corporation’s products are COTS – Commercial-Off-The-Shelf products; suitable for 
+Commercial, Industrial and, where designated, Automotive Applications.  Abracon’s products are not 
+specifically designed for Military, Aviation, Aerospace, Life-dependant Medical applications or any application 
+requiring high reliability where component failure could result in loss of life and/or property. For applications 
+requiring high reliability and/or presenting an extreme operating environment, written consent and authoriza-
+tion from Abracon Corporation is required. Please contact Abracon Corporation for more information.
+Per the Top Marking from left to right, Pin 1 is 
+always located on the bottom left.
+ABRACON IS
+ISO 9001 / QS 9000
+CERTIFIED
+ABRACON IS
+ISO 9001 : 2008
+CERTIFIED
+2 Faraday, Suite# B | Irvine | CA 92618 Revised: 08.13.15
+Ph. 949.546.8000 | Fax. 949.546.8001 
+Visit  www.abracon.com for Terms and Conditions of Sale
+LLC
+Pb in glass exemption 7 (c)-I per 
+RoHS II 2011/65/EU Annex
+RoHS/RoHS II Compliant

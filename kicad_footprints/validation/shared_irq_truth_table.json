@@ -1,0 +1,7 @@
+{
+  "input_combinations_checked": 256,
+  "result": "PASS",
+  "equation": "IRQ_N=NOT(NAND(INT_N[0..7]))",
+  "domain": "3V3_HOST after eight independent return isolators",
+  "software_validation": "not performed"
+}

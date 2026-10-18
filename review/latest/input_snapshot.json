@@ -1,0 +1,22 @@
+{
+  "breakout/breakout.kicad_sch": {
+    "sha256": "1b249f17520a92f2a6f42f83b4d38123da1947dde9f0b997504a9378c4e1b8b3",
+    "size": 574420,
+    "mtime_ns": 1792362525429157700
+  },
+  "breakout/breakout.kicad_pro": {
+    "sha256": "d8a6956b57d800ca89009946681d8395bbee919e5b64cbd433220309550c696a",
+    "size": 8275,
+    "mtime_ns": 1792147756716278900
+  },
+  "breakout/sym-lib-table": {
+    "sha256": "d719a9812894082a6e039c7b37d4c594ed1f8b8c79272e41673e0d90f411de0a",
+    "size": 177,
+    "mtime_ns": 1792213734805497900
+  },
+  "breakout/fp-lib-table": {
+    "sha256": "31ad00e35c908f468270c137826fff6a9c374bad11cc9d7791764838e31e500a",
+    "size": 181,
+    "mtime_ns": 1792362156029248200
+  }
+}

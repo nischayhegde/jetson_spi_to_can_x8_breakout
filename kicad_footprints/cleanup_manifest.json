@@ -1,0 +1,277 @@
+{
+  "schematic_sha256": "99a8ba42d9fe60e22a594ab5381f919271ad39c28c3fe0a39dd5cf6f39acc3ce",
+  "retained_symbols": [
+    "0466001.NR",
+    "74AHC30PW,118",
+    "74LVC04AT14-13",
+    "74LVC32APW,118",
+    "ABM8G-40.000MHZ-18-D2Y-T",
+    "AO3401A",
+    "B2B-XH-A",
+    "B3B-XH-A",
+    "BZT52C6V8-13-F",
+    "CC0603KRX7R9BB104",
+    "CGA3E1X7R1E105K080AC",
+    "CL10C270JB8NNNC",
+    "CL21B106KOQNNNE",
+    "M20-9982046",
+    "MCP251863T-E_SS",
+    "RC0603FR-07100KL",
+    "RC0603FR-0710KL",
+    "RC0603FR-0733RL",
+    "RC1206FR-07120RL",
+    "TLV75533PDBVR"
+  ],
+  "retained_footprints": [
+    "C_0603_1608Metric",
+    "C_0805_2012Metric",
+    "Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+    "D_SOD-123",
+    "Fuse_1206_3216Metric",
+    "JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+    "JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+    "PinHeader_2x20_P2.54mm_Vertical",
+    "R_0603_1608Metric",
+    "R_1206_3216Metric",
+    "SOT-23",
+    "SOT-23-5",
+    "SSOP-28_5.3x10.2mm_P0.65mm",
+    "TSSOP-14_4.4x5mm_P0.65mm"
+  ],
+  "retained_step_models": [
+    "3dmodels/C_0603_1608Metric.step",
+    "3dmodels/C_0805_2012Metric.step",
+    "3dmodels/Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm.step",
+    "3dmodels/D_SOD-123.step",
+    "3dmodels/Fuse_1206_3216Metric.step",
+    "3dmodels/JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical.step",
+    "3dmodels/JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical.step",
+    "3dmodels/PinHeader_2x20_P2.54mm_Vertical.step",
+    "3dmodels/R_0603_1608Metric.step",
+    "3dmodels/R_1206_3216Metric.step",
+    "3dmodels/SOT-23-5.step",
+    "3dmodels/SOT-23.step",
+    "3dmodels/SSOP-28_5.3x10.2mm_P0.65mm.step",
+    "3dmodels/TSSOP-14_4.4x5mm_P0.65mm.step"
+  ],
+  "removed_symbols": [
+    "0466002.NR",
+    "74LVC08APW,118",
+    "C0603C180J5GACTU",
+    "CAN_Termination_Enable",
+    "CC0603KRX7R9BB103",
+    "CRCW06031K21FKEA",
+    "ESDONCAN1LT1G",
+    "ISO7763DWR",
+    "PMEG3050EP,115",
+    "STPS20L15D",
+    "TMR_6-0511",
+    "TPS259530DSGR"
+  ],
+  "deleted_files": [
+    "3dmodels/Converter_DCDC_TRACO_TMR-xxxx_THT.step",
+    "3dmodels/D_SOD-128.step",
+    "3dmodels/Fuse_0603_1608Metric.step",
+    "3dmodels/SOIC-16W_7.5x10.3mm_P1.27mm.step",
+    "3dmodels/TO-220-2_Vertical.step",
+    "3dmodels/WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm.step",
+    "BreakoutBoard.pretty/Converter_DCDC_TRACO_TMR-xxxx_THT.kicad_mod",
+    "BreakoutBoard.pretty/D_SOD-128.kicad_mod",
+    "BreakoutBoard.pretty/Fuse_0603_1608Metric.kicad_mod",
+    "BreakoutBoard.pretty/SOIC-16W_7.5x10.3mm_P1.27mm.kicad_mod",
+    "BreakoutBoard.pretty/SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm.kicad_mod",
+    "BreakoutBoard.pretty/TO-220-2_Vertical.kicad_mod",
+    "BreakoutBoard.pretty/WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm.kicad_mod",
+    "SG-210STF_40.0000ML3/OSC_SG-210STF_40.0000ML3.kicad_mod",
+    "SG-210STF_40.0000ML3/SG-210STF_40.0000ML3.kicad_sym",
+    "SG-210STF_40.0000ML3/SG-210STF_40.0000ML3.step",
+    "SG-210STF_40.0000ML3/how-to-import.htm",
+    "validation/symbols/0466002.NR_unit1.svg",
+    "validation/symbols/0467002.NR_unit1.svg",
+    "validation/symbols/74LVC08APW,118_unit1.svg",
+    "validation/symbols/74LVC08APW,118_unit1_demorgan.svg",
+    "validation/symbols/74LVC08APW,118_unit2.svg",
+    "validation/symbols/74LVC08APW,118_unit2_demorgan.svg",
+    "validation/symbols/74LVC08APW,118_unit3.svg",
+    "validation/symbols/74LVC08APW,118_unit3_demorgan.svg",
+    "validation/symbols/74LVC08APW,118_unit4.svg",
+    "validation/symbols/74LVC08APW,118_unit4_demorgan.svg",
+    "validation/symbols/74LVC08APW,118_unit5.svg",
+    "validation/symbols/74LVC08APW,118_unit5_demorgan.svg",
+    "validation/symbols/C0603C180J5GACTU_unit1.svg",
+    "validation/symbols/CAN_Termination_Enable_unit1.svg",
+    "validation/symbols/CC0603KRX7R9BB103_unit1.svg",
+    "validation/symbols/CRCW06031K21FKEA_unit1.svg",
+    "validation/symbols/ESDONCAN1LT1G_unit1.svg",
+    "validation/symbols/ISO7763DWR_unit1.svg",
+    "validation/symbols/PMEG3050EP,115_unit1.svg",
+    "validation/symbols/STPS20L15D_unit1.svg",
+    "validation/symbols/TMR_6-0511_unit1.svg",
+    "validation/symbols/TPS259530DSGR_unit1.svg"
+  ],
+  "component_usage": [
+    {
+      "mpn": "MCP251863T-E/SS",
+      "quantity": 8,
+      "symbol": "BreakoutBoard:MCP251863T-E_SS",
+      "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+      "placed_references": "U10;U11;U12;U13;U14;U15;U16;U9",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "quantity": 8,
+      "symbol": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+      "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+      "placed_references": "Y1;Y2;Y3;Y4;Y5;Y6;Y7;Y8",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "TLV75533PDBVR",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:TLV75533PDBVR",
+      "footprint": "BreakoutBoard:SOT-23-5",
+      "placed_references": "U3",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "CL10C270JB8NNNC",
+      "quantity": 16,
+      "symbol": "BreakoutBoard:CL10C270JB8NNNC",
+      "footprint": "BreakoutBoard:C_0603_1608Metric",
+      "placed_references": "C10;C11;C12;C13;C14;C15;C16;C17;C2;C3;C4;C5;C6;C7;C8;C9",
+      "retention_reason": "package retained for placed generic C/R symbol"
+    },
+    {
+      "mpn": "CC0603KRX7R9BB104",
+      "quantity": 28,
+      "symbol": "BreakoutBoard:CC0603KRX7R9BB104",
+      "footprint": "BreakoutBoard:C_0603_1608Metric",
+      "placed_references": "CC0603KRX7R9BB1;CC0603KRX7R9BB10;CC0603KRX7R9BB11;CC0603KRX7R9BB12;CC0603KRX7R9BB13;CC0603KRX7R9BB14;CC0603KRX7R9BB15;CC0603KRX7R9BB16;CC0603KRX7R9BB17;CC0603KRX7R9BB18;CC0603KRX7R9BB19;CC0603KRX7R9BB2;CC0603KRX7R9BB20;CC0603KRX7R9BB21;CC0603KRX7R9BB22;CC0603KRX7R9BB23;CC0603KRX7R9BB24;CC0603KRX7R9BB25;CC0603KRX7R9BB26;CC0603KRX7R9BB27;CC0603KRX7R9BB28;CC0603KRX7R9BB29;CC0603KRX7R9BB3;CC0603KRX7R9BB5;CC0603KRX7R9BB6;CC0603KRX7R9BB7;CC0603KRX7R9BB8;CC0603KRX7R9BB9",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "CGA3E1X7R1E105K080AC",
+      "quantity": 2,
+      "symbol": "BreakoutBoard:CGA3E1X7R1E105K080AC",
+      "footprint": "BreakoutBoard:C_0603_1608Metric",
+      "placed_references": "C18;C19",
+      "retention_reason": "package retained for placed generic C/R symbol"
+    },
+    {
+      "mpn": "CL21B106KOQNNNE",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:CL21B106KOQNNNE",
+      "footprint": "BreakoutBoard:C_0805_2012Metric",
+      "placed_references": "C20",
+      "retention_reason": "package retained for placed generic C/R symbol"
+    },
+    {
+      "mpn": "RC1206FR-07120RL",
+      "quantity": 8,
+      "symbol": "BreakoutBoard:RC1206FR-07120RL",
+      "footprint": "BreakoutBoard:R_1206_3216Metric",
+      "placed_references": "R10;R13;R16;R23;R26;R29;R32;R6",
+      "retention_reason": "package retained for placed generic C/R symbol"
+    },
+    {
+      "mpn": "RC0603FR-0710KL",
+      "quantity": 9,
+      "symbol": "BreakoutBoard:RC0603FR-0710KL",
+      "footprint": "BreakoutBoard:R_0603_1608Metric",
+      "placed_references": "R11;R14;R17;R24;R27;R30;R38;R7;R8",
+      "retention_reason": "package retained for placed generic C/R symbol"
+    },
+    {
+      "mpn": "RC0603FR-07100KL",
+      "quantity": 4,
+      "symbol": "BreakoutBoard:RC0603FR-07100KL",
+      "footprint": "BreakoutBoard:R_0603_1608Metric",
+      "placed_references": "R34;R35;R36;R37",
+      "retention_reason": "package retained for placed generic C/R symbol"
+    },
+    {
+      "mpn": "RC0603FR-0733RL",
+      "quantity": 16,
+      "symbol": "BreakoutBoard:RC0603FR-0733RL",
+      "footprint": "BreakoutBoard:R_0603_1608Metric",
+      "placed_references": "R1;R12;R15;R18;R19;R2;R20;R21;R22;R25;R28;R3;R31;R4;R5;R9",
+      "retention_reason": "package retained for placed generic C/R symbol"
+    },
+    {
+      "mpn": "B3B-XH-A",
+      "quantity": 8,
+      "symbol": "BreakoutBoard:B3B-XH-A",
+      "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+      "placed_references": "J10;J11;J12;J4;J5;J7;J8;J9",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "B2B-XH-A",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:B2B-XH-A",
+      "footprint": "BreakoutBoard:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "placed_references": "J6",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "M20-9982046",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:M20-9982046",
+      "footprint": "BreakoutBoard:PinHeader_2x20_P2.54mm_Vertical",
+      "placed_references": "J1",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "0466001.NR",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:0466001.NR",
+      "footprint": "BreakoutBoard:Fuse_1206_3216Metric",
+      "placed_references": "",
+      "retention_reason": "retained for requested 1 A input fuse; absent from schematic"
+    },
+    {
+      "mpn": "AO3401A",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:AO3401A",
+      "footprint": "BreakoutBoard:SOT-23",
+      "placed_references": "Q1",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "BZT52C6V8-13-F",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:BZT52C6V8-13-F",
+      "footprint": "BreakoutBoard:D_SOD-123",
+      "placed_references": "D2",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "74AHC30PW,118",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:74AHC30PW,118",
+      "footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+      "placed_references": "U4",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "74LVC32APW,118",
+      "quantity": 2,
+      "symbol": "BreakoutBoard:74LVC32APW,118",
+      "footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+      "placed_references": "U1;U5",
+      "retention_reason": "placed BreakoutBoard symbol"
+    },
+    {
+      "mpn": "74LVC04AT14-13",
+      "quantity": 1,
+      "symbol": "BreakoutBoard:74LVC04AT14-13",
+      "footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+      "placed_references": "U2",
+      "retention_reason": "placed BreakoutBoard symbol"
+    }
+  ],
+  "applied": true,
+  "verified_against_schematic_sha256": "1b249f17520a92f2a6f42f83b4d38123da1947dde9f0b997504a9378c4e1b8b3",
+  "verification_note": "User updated gate supply labels after cleanup; placed components and required assets are unchanged."
+}

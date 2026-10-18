@@ -1,0 +1,9 @@
+channel,reference,expected_spi,VCC_pin25,VDD_pin14,VIO_pin1,SCK_pin9,SDI_pin10,SDO_via_resistor,CS_pin13,INT_pin19,power,spi,chip_select,interrupt,internal_can_links,grounds_and_standby,crystal,crystal_capacitors,local_bypass,can_connector,termination
+1,U9,0,VCC,VDD_VIO,VDD_VIO,SPI0_SCK,SPI0_MOSI,"[('R2', 'SPI0_MISO')]",CAN1_CS,CAN1_INT,True,True,True,True,True,True,True,True,True,True,True
+2,U10,0,VCC,VDD_VIO,VDD_VIO,SPI0_SCK,SPI0_MOSI,"[('R9', 'SPI0_MISO')]",CAN2_CS,CAN2_INT,True,True,True,True,True,True,True,True,True,True,True
+3,U11,0,VCC,VDD_VIO,VDD_VIO,SPI0_SCK,SPI0_MOSI,"[('R12', 'SPI0_MISO')]",CAN3_CS,CAN3_INT,True,True,True,True,True,True,True,True,True,True,True
+4,U12,0,VCC,VDD_VIO,VDD_VIO,SPI0_SCK,SPI0_MOSI,"[('R15', 'SPI0_MISO')]",CAN4_CS,CAN4_INT,True,True,True,True,True,True,True,True,True,True,True
+5,U13,1,VCC,VDD_VIO,VDD_VIO,SPI1_SCK,SPI1_MOSI,"[('R22', 'SPI1_MISO')]",CAN5_CS,CAN5_INT,True,True,True,True,True,True,True,True,True,True,True
+6,U14,1,VCC,VDD_VIO,VDD_VIO,SPI1_SCK,SPI1_MOSI,"[('R25', 'SPI1_MISO')]",CAN6_CS,CAN6_INT,True,True,True,True,True,True,True,True,True,True,True
+7,U15,1,VCC,VDD_VIO,VDD_VIO,SPI1_SCK,SPI1_MOSI,"[('R28', 'SPI1_MISO')]",CAN7_CS,CAN7_INT,True,True,True,True,True,True,True,True,True,True,True
+8,U16,1,VCC,VDD_VIO,VDD_VIO,SPI1_SCK,SPI1_MOSI,"[('R31', 'SPI1_MISO')]",CAN8_CS,CAN8_INT,True,True,True,True,True,True,True,True,True,True,True

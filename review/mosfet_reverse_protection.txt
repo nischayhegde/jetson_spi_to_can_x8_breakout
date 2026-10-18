@@ -1,0 +1,71 @@
+V1 regulated 5 V input: P-channel reverse-hookup protection
+Selected 2026-10-18; apply these connections in the schematic explicitly.
+
+Parts (one each)
+F2: Littelfuse 0466001.NR, 1 A fast-acting, 1206 (retained).
+Q1: Alpha & Omega Semiconductor AO3401A, P-channel -30 V, SOT-23.
+D2: Diodes Incorporated BZT52C6V8-13-F, 6.8 V Zener, SOD-123.
+R_GATE: YAGEO RC0603FR-0710KL, 10 kohm +/-1%, 0.1 W, 0603.
+
+Connection table
+Input connector +5 V -> F2 -> Q1 pin 3 DRAIN.
+Q1 pin 2 SOURCE -> +5V_PROTECTED -> CAN VCC pin 25 and LDO IN.
+Q1 pin 1 GATE -> R_GATE -> common GND.
+D2 pin 1 CATHODE / banded end -> Q1 pin 2 SOURCE.
+D2 pin 2 ANODE -> Q1 pin 1 GATE.
+10 uF input bulk capacitor -> +5V_PROTECTED and GND, AFTER Q1.
+Connector ground -> common GND directly.
+LDO output 3.3 V -> CAN VDD/VIO and logic supplies.
+Keep nominal >=1 uF local LDO input and output capacitance.
+Remove the previous PMEG3050EP rail-to-ground shunt diode.
+
+Operation and sizing
+Q1's intrinsic diode has its anode at drain, cathode at source. A correct
+input starts the output through this diode, then the low gate turns Q1 on.
+An initially unpowered output with reversed input leaves the intrinsic
+diode blocking and Q1 off. Do not swap source and drain.
+
+AO3401A gate absolute maximum is +/-12 V. Its maximum RDS(on) at VGS=-4.5 V
+is 60 milliohm under the datasheet's 25 C conditions (85 milliohm at -2.5 V).
+At 1 A: Vdrop ~= 60 mV; heat ~= 60 mW. At 0.75 A: 45 mV and 34 mW.
+Resistance rises with temperature; verify the actual PCB temperature.
+With the fuse's nominal 75 milliohm cold resistance, total cold drop at 1 A
+is approximately 135 mV, before cables/PCB. CAN VCC must remain >=4.5 V.
+
+The 6.8 V Zener normally stays below breakdown at a 5 V source-to-gate
+voltage. Cathode at source and anode at gate clamp excessive negative VGS;
+the gate resistor limits the resulting current. Its specified 6.4-7.2 V
+range is at 5 mA/25 C; actual clamp voltage depends on current/temperature.
+This is gate protection, NOT a 6.8 V supply clamp. Normal gate-resistor
+current is essentially leakage, not 5 V / 10 kohm.
+
+Limits to verify on the prototype
+- Regulated 5 V input only: this is not 48 V miswire or positive-rail
+  overvoltage protection, controlled inrush, or an electronic current limit.
+- This single self-biased MOSFET does not implement ideal-diode reverse-
+  current blocking: a charged output can feed a collapsing/shorted input.
+  Rapid reversal with an already powered output needs separate evaluation.
+- Keep the requested 1 A fuse, but check actual current/startup/temperature.
+  Manufacturer continuous-current derating gives about 0.75 A at room
+  temperature, 0.60 A in its 70 C example. The eight-channel 0.724 A load
+  allowance before gates/pull-ups is not a measured average or guarantee.
+- Use short, sufficiently wide power traces, and place Q1/Zener/resistor
+  together. Review hot-plug, thermal behavior and minimum rail voltage.
+
+Local CAD and PDFs
+kicad_footprints/BreakoutBoard.kicad_sym contains all selected aliases.
+Q1: BreakoutBoard:AO3401A, footprint BreakoutBoard:SOT-23.
+D2: BreakoutBoard:BZT52C6V8-13-F, footprint BreakoutBoard:D_SOD-123.
+R_GATE: existing 10 kohm alias / R_0603_1608Metric.
+Nominal package STEP models are saved in kicad_footprints/3dmodels.
+datasheets/AO3401A.pdf: original AOS Rev. 3.1, December 2023.
+datasheets/BZT52C6V8-13-F.pdf: Diodes DS18004 Rev. 32-2, June 2008,
+  original manufacturer family sheet hosted by DigiKey; includes -13-F.
+  Current DS18004 manufacturer sheet was additionally checked online.
+datasheets/RC0603FR-0710KL.pdf: original YAGEO RC_L resistor family sheet.
+datasheets/MOSFET_Reverse_Protection_TI.pdf: TI SLVAE57B, sections 4-5.
+
+Sources
+https://www.aosmd.com/sites/default/files/res/datasheets/AO3401A.pdf
+https://www.diodes.com/assets/Datasheets/ds18004.pdf
+https://www.ti.com/lit/an/slvae57/slvae57.pdf

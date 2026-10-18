@@ -1,0 +1,313 @@
+V1 schematic review - 2026-10-18
+
+Reviewed all eight screenshots in v1screenshots and the saved schematic
+breakout/breakout.kicad_sch, not just the three pictured CAN controllers.
+This review treats the drawing as the common-ground, nonisolated version
+discussed most recently. The older isolated component list is not the current
+electrical reference for this drawing. No schematic or project files changed.
+
+RESULT: several definite wiring errors remain. Do not power this version from
+the Jetson or release a PCB from it until the power and connectivity errors
+below are corrected. This is a schematic review; routing, thermal behavior,
+power sequencing and real signal integrity remain to be checked on the layout
+and prototype.
+
+1. CAN power rails are reversed relative to the intended 3.3 V interface.
+
+Screenshot ss4 and the netlist establish that J6 -> F2 feeds VDD_VIO directly;
+U3 takes that rail as input and generates VCC. With a 5 V input, VDD_VIO is
+therefore 5 V and VCC is 3.3 V. All eight CAN chips take controller VDD pin 14
+and transceiver VIO pin 1 from the former, and transceiver VCC pin 25 from the
+latter. MCP251863 Figure 1-2 instead specifies this arrangement:
+
+  Fused/protected +5 V -> every MCP251863 VCC pin 25 and U3 IN/EN
+  U3 3.3 V output     -> every MCP251863 VDD pin 14 and VIO pin 1
+                      -> U1, U2, U4, U5 supply pins
+                      -> every CAN CS pull-up
+  Common GND         -> every MCP251863 pin 22 and pin 24, U3 and logic GND
+
+Use explicit +5V and +3V3 net names. Do not only exchange the existing label
+text: the logic ICs are already on the LDO output and must stay there, while
+the CAN supply pins and CS pull-ups need their connections changed.
+
+The present 3.3 V CAN VCC is below its 4.5 V operating minimum. The present
+5 V controller VDD also makes SDO a 5 V-domain output connected to the
+Jetson, and gives digital inputs a 3.5 V minimum HIGH threshold. A 33 ohm
+series resistor is not voltage translation or protection against that error.
+Sources: MCP251863 DS20006624B, Figure 1-2, Tables 9-2 and 9-8.
+
+2. SPI clock and the division into two buses are not connected correctly.
+
+All eight SCK pins 9 are on the global net SCK. Neither SPI0_SCK nor SPI1_SCK
+is connected to SCK. Those two named nets end at their header resistors and
+test points. Consequently none of the controllers receives a Jetson clock.
+
+All eight SDI pins 10 use SPI0_MOSI. All eight SDO pins 11 return through their
+individual 33 ohm resistors to SPI0_MISO. SPI1_MOSI and SPI1_MISO have no CAN
+controllers attached. This also permits independently selected devices on the
+two intended buses to drive the same MISO line.
+
+Connect CAN1-CAN4 (U9-U12) to SPI0_SCK/MOSI/MISO. Connect CAN5-CAN8 (U13-U16)
+to SPI1_SCK/MOSI/MISO. Retain one individual SDO resistor near each MCP251863.
+Do not connect the two physical SPI clocks or the two MISO buses together.
+
+3. Three CAN controllers share CAN7_CS due to copied labels.
+
+Actual U13/CAN5, U14/CAN6 and U15/CAN7 pin 13 all connect to CAN7_CS.
+Their R17, R24 and R27 pull-ups are consequently also on that same net.
+U5's CAN5_CS and CAN6_CS outputs reach only their test points.
+
+Change U13 pin 13 / R17 to CAN5_CS, U14 pin 13 / R24 to CAN6_CS, and keep
+U15 pin 13 / R27 on CAN7_CS. U16 / CAN8_CS is distinct already.
+As drawn, selecting CAN7 can enable three SDO drivers at once.
+
+4. Add the LDO's specified local input and output capacitors.
+
+U3 has only a 100 nF local input capacitor and no dedicated output capacitor.
+TI specifies nominal 1 uF or larger at IN and OUT, and requires effective
+capacitance greater than 0.47 uF after derating. Fit a suitable ceramic 1 uF
+or larger from pin 1 to GND and another from pin 5 to GND, immediately at U3.
+Keep the existing 100 nF if useful; distributed CAN/gate decouplers do not
+replace the specified local regulator capacitors. Pin 3 EN tied to input is
+valid for always-on operation; pin 4 NC may be left open.
+
+Add input bulk capacitance, for example 10 uF at the protected 5 V entry, and
+appropriate rail bulk near the CAN groups. Keep each existing 100 nF directly
+at its respective VDD, VIO or VCC pin with a short ground return. Additional
+local 1 uF at a CAN port/group is a practical starting option, to be checked
+against supply impedance and simultaneous activity rather than treated as a
+mandatory per-pin value from the MCP datasheet.
+Source: TLV755P Rev. D, pin functions and sections 5.3, 7.1.1 and 7.3.
+
+5. Unused inverter inputs and startup controls need defined states.
+
+U2E input pin 11 and U2F input pin 13 are marked no-connect. They are CMOS
+inputs, not NC pins. Tie unused inputs to GND or 3.3 V; their unused outputs
+pins 10 and 12 can remain open. If using U2E to invert IRQ below, only U2F
+remains unused.
+
+There is no board-side bias on the four native Jetson CS inputs or the two
+bank GPIOs. The eight pull-ups on the CAN-side CS outputs cannot establish
+the inputs of a powered push-pull OR gate. Establish native CS HIGH and a
+defined bank value during startup, including before software configures pins.
+
+Choose the Jetson-facing bias with the actual carrier's level translators in
+mind. NVIDIA's carrier specification Table 3-3 note 3 identifies TXB0108
+translators and weak drive on these signals. TI recommends external pulls
+above 50 kohm; 100 kohm is a possible starting value requiring leakage,
+internal-pull and logic-margin checks. Do not automatically use the CAN-side
+10 kohm resistor value on Jetson-driven nets. The 10 kohm CAN CS pull-ups are
+behind the strong OR outputs, so that is a different load case.
+Sources: Diodes 74LVC04A Rev. 5-2 p3 note 5; NVIDIA carrier specification
+SP-11324-001_v1.3 Table 3-3 note 3; TXB0108 Rev. L sections 7.3.5 and 8.2.2.
+
+6. Bank selection gates are logically valid; channel order is unusual.
+
+The actual OR/NOT network implements, for each SPI bus:
+
+  /CS1 = /nativeCS0 OR NOT(bank)
+  /CS2 = /nativeCS0 OR bank
+  /CS3 = /nativeCS1 OR bank
+  /CS4 = /nativeCS1 OR NOT(bank)
+
+Here the second bus substitutes CAN5-CAN8 for CAN1-CAN4. The selected logical
+outputs are:
+
+  Bank   Active native CS   SPI0 controller   SPI1 controller
+  0      CS0                CAN2              CAN6
+  0      CS1                CAN3              CAN7
+  1      CS0                CAN1              CAN5
+  1      CS1                CAN4              CAN8
+
+This is a valid four-device selection mapping after item 3 is fixed. Change
+gate connections only if you want sequential bank numbering; otherwise use
+this mapping in the device tree/mux design. Both native CS HIGH deselect all
+four logical outputs. Never drive both native CS LOW. Change bank only while
+both native CS are HIGH and the previous device has released MISO. Separate
+bank GPIOs on J1 pins 32 and 31 are appropriate for independent SPI buses.
+The netlist-derived truth tables are saved in audit_results.json.
+
+At 3.0-3.6 V, 50 pF and -40 to +125 C the selected OR has a 5 ns maximum
+delay, and the NOT has 6 ns maximum. The native CS path is one OR; the longest
+bank-to-CS path is one NOT plus one OR, approximately 11 ns by summing these
+specified stage limits. They suit the intended MHz operation. They do not
+eliminate the need to configure CS timing at the MCP pins.
+
+At an initial 8 MHz SPI clock, Table 9-7 requires 62.5 ns CS-to-first-SCK setup,
+125 ns from the relevant final SCK rising edge to CS rising, and allows up to
+250 ns for SDO to become high impedance after deselection. Account for gate,
+PCB and host timing: e.g. target at least 100 ns native-CS setup and a 300 ns
+inter-device deselection gap as starting margins, then verify actual waveforms.
+The relevant SCK-to-CS hold requirement must be met at the MCP pins as well.
+Maximum SPI is 17 MHz with a 40 MHz SYSCLK (0.85 * SYSCLK/2), not 40 MHz.
+Software bank ownership, bus serialization and exact JetPack mux support are
+not established by this schematic review.
+Sources: 74LVC32A Rev. 11 Table 7; 74LVC04A p5; MCP251863 Table 9-7.
+
+7. Shared IRQ NAND is usable with HIGH interrupt polarity.
+
+U4 is a NAND: all eight nINT inputs HIGH gives output LOW; any LOW input gives
+output HIGH. Its direct GPIO_1 connection therefore calls for a LEVEL_HIGH
+interrupt configuration. It is not an active-low combined IRQ. Alternatively
+insert spare U2E (pin 11 input, pin 10 output) to obtain a LEVEL_LOW IRQ. Do
+not configure an edge-only interrupt for the aggregate, because another source
+can assert while the line is already active.
+
+The eight inputs are separate, so push-pull controller IRQ outputs are not
+shorted together. With the power rails corrected, nINT outputs are in the
+3.3 V controller domain. Optional 10 kohm pull-ups at each nINT give a defined
+idle level when outputs are high impedance and support future open-drain
+configuration; push-pull operation itself does not require those pull-ups.
+U4's physical pin allocation, supply pins, bypass and NC9/10/13 are correct.
+Its maximum 3.3 V-domain, 50 pF delay is 15.5 ns over -40 to +125 C.
+
+Current upstream mcp251xfd was inspected and requests IRQF_SHARED | IRQF_ONESHOT;
+its handler starts with IRQ_NONE and checks its controller's pending flags.
+That is evidence for shared IRQ support, not proof about the JetPack kernel
+you will install. Verify that exact driver supports sharing and that all eight
+device nodes use the same physical IRQ with consistent polarity. Inversion
+alone does not address an older driver's missing shared-IRQ support. Leave
+individual nINT test access and consider individual-IRQ routing options for
+bring-up. No driver was built or tested here.
+Sources: 74AHC_AHCT30 Rev. 8 Tables 4 and 8; upstream mcp251xfd-core.c.
+
+8. Input reverse protection is correctly oriented but not fully specified.
+
+F2 is in series and D2 is in parallel, with cathode at fused positive input
+and anode at GND. This polarity is correct for the requested shunt topology.
+However D2 is a generic D_Schottky with no selected manufacturer part number
+or footprint. Resolve that before a manufacturing BOM is generated.
+
+A 2 A-limited source may never open the selected 2 A fuse. The diode must
+survive actual source current until shutdown/clearing, indefinitely if no
+clearing occurs. Also a Schottky clamp can leave the load at -VF, not 0 V.
+TLV755 input/EN and MCP power pins have -0.3 V absolute minima, so confirm
+guaranteed reverse-fault voltage at the loads, including cold diode drop and
+transients. The previously proposed STPS20L15D is not a guaranteed sub-0.3 V
+clamp over all fault conditions. A fuse/diode symbol pair alone does not prove
+complete reverse-input protection. A reverse-blocking arrangement or a
+qualified fault-tolerant power path may still be needed.
+The original TPS259530 eFuse is absent; this drawing relies on the fuse and
+source for fault current handling. An eFuse is not inherently mandatory for
+the new nonisolated architecture, but its old electronic current-limit and
+inrush functions are absent too.
+Sources: TLV755P absolute maximum ratings; MCP251863 section 9.1;
+Littelfuse 466 and STPS20L15 datasheets archived in datasheets/.
+
+9. CAN connectors currently have no external TVS, and fixed termination.
+
+There are no ESDONCAN1LT1G parts or equivalent CAN-line protection devices in
+the saved netlist. Add the selected protection footprint at each external CAN
+connector: pins 1/2 to CANH/CANL and pin 3 to the common board ground, with a
+short return. For the chosen bidirectional dual protector either line may use
+pin 1 or 2. Its transient ratings and clamping must suit the actual exposure;
+this is not a claim of protection against arbitrary sustained 48 V faults.
+
+Each port has a permanently connected 120 ohm resistor. That is appropriate
+when the board is guaranteed to be one physical endpoint of each separate
+bus. Otherwise add a solder jumper or other disconnect in series. Each bus
+needs exactly two end terminations, including any inside actuators. Eight
+independent CAN buses may each have their own board termination.
+
+10. Crystals are wired correctly, but the fitted value needs reconciliation.
+
+Every Y1-Y8 has active pads 1 and 3 across OSC1/OSC2, ground pads 2 and 4 to
+ground, and a shunt capacitor on each active node. These connections are right.
+The schematic uses 27 pF for C2-C17, while the selected component list says
+18 pF. This is a real assembly-document mismatch, not proof that 27 pF is wrong.
+
+For equal external capacitors, CL = C/2 + Cstray. With an 18 pF target and
+4.5 pF effective stray, C = 27 pF. Microchip reports that this exact Abracon
+crystal worked with 18 pF external capacitors on its evaluation boards. Either
+starting population needs PCB-specific startup/frequency/drive checks. Choose
+and document the intended initial value and matching C0G/NP0 MPN; use pF, not
+uF. Keep crystal traces and return paths short. Optional series/feedback
+resistor provisions can be considered if layout space permits.
+Source: MCP251863 Board Design Hints, section 1 and Figure 2-1.
+
+11. LDO current rating is plausible; verify its actual thermal layout.
+
+The CAN controller table lists 20 mA maximum VDD supply current at 40 MHz,
+so eight controllers account for 160 mA, plus up to roughly 4 mA total VIO
+under listed dominant-state conditions and the gates/bias/dynamic load.
+The corrected 3.3 V load is within this LDO's 500 mA output rating in principle.
+At a 200 mA design allowance, its dissipation is (5 - 3.3)*0.2 = 0.34 W.
+The higher CAN VCC current bypasses the LDO after item 1 is corrected.
+
+Do not use the new thermally enhanced DYD-package figure for the selected
+PDBVR/DBV part. TI gives DBV RthetaJA of 231.1 C/W on its JEDEC board and
+100.8 C/W on its EVM example. Thus 0.34 W corresponds to approximately 79 C
+or 34 C rise in those example conditions, not a universal board prediction.
+Check copper, ambient, actual load and junction margin. An LDO remains a
+reasonable choice; a switcher is not required solely by this voltage ratio.
+Sources: MCP251863 Tables 9-2 and 9-8; TLV755P sections 5.3, 5.4 and 7.1.5.
+
+12. CAD/ERC cleanup is needed, including a supplied-symbol defect.
+
+KiCad CLI ERC found 125 reported violations: 37 errors and 88 warnings.
+Counts by type are 76 footprint-library warnings, 26 unconnected header pins,
+12 symbol/library mismatch warnings, 8 output/output conflicts, 2 undriven
+power nets, and 1 undriven input (the disconnected SCK net).
+These are not 125 independent hardware faults.
+
+The bundled MCP251863 symbol incorrectly declares pin 23 TXD as an output.
+The manufacturer defines TXD as INPUT. Pin 15 TXCAN -> pin 23 TXD is correct
+and is present on all eight devices; do not remove those wires to silence ERC.
+Fix the library's TXD electrical type and update the schematic's cached symbol
+carefully, preserving the user's symbol/graphics changes. Pin 28 RXD is
+correctly an output and connects correctly to pin 16 RXCAN, an input.
+The TXD type error in the previously supplied asset causes all eight reported
+output/output conflicts. No physical pin-number correction is needed there.
+
+There are 72 components without footprint assignments: the 16 crystal load
+capacitors, 32 resistors, generic D2, and 23 test point symbols. Assign actual
+packages, including at least the selected 1206 quarter-watt CAN termination
+resistors and chosen crystal capacitor size.
+
+breakout/fp-lib-table is missing. The CLI cannot resolve BreakoutBoard
+footprints in its current configuration. Register the existing local library
+at project level; the provided kicad_footprints/fp-lib-table template already
+uses ${KIPRJMOD}/../kicad_footprints/BreakoutBoard.pretty for this project path.
+Review the symbol/library mismatches before updating symbols globally.
+Add PWR_FLAG declarations for genuinely externally powered input/ground nets
+after fixing their wiring. Mark unused header signal/power pins with NC flags.
+
+J1's SPI signal pin assignments match the supplied Jetson pinout. Ground is
+currently connected only on pin 39; also connect the available header ground
+pins 6, 9, 14, 20, 25, 30 and 34 to improve nearby SPI return paths. Do not join
+the local 3.3 V regulator output to Jetson 3.3 V just to add those grounds.
+Use a short interconnect. Check the carrier TXB0108 capacitive-load limit when
+driving four CAN inputs and cable/PCB capacitance; buffering SCK/MOSI can be
+appropriate if the fanout/interconnect exceeds the margin. Confirm power
+sequencing prevents driving unpowered Jetson or MCP inputs above their limits.
+
+Correct connections checked on every channel: grounded STBY pin 5 for normal
+mode; both ground pins; TXCAN/TXD and RXD/RXCAN links; crystal active/case
+connections; main nINT pin 19; and CANH/CANL to connector pins 1/2 respectively.
+Unused dedicated interrupt/GPIO pins 6/7 may remain externally unconnected if
+their software configuration is suitable. Both independent bank GPIOs and
+one bypass capacitor per gate package are already present.
+
+Evidence files: breakout.net.xml, erc.json, channel_audit.csv,
+audit_results.json and audit_v1.py. The JSON records the reviewed schematic
+SHA-256. The original schematic was read only.
+
+Manufacturer references:
+MCP251863 Rev B (also downloaded to review/MCP251863_RevB.pdf):
+https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-External-CAN-FD-Controller-with-Integrated-Transceiver-DS20006624.pdf
+TLV755P Rev D:
+https://www.ti.com/lit/ds/symlink/tlv755p.pdf
+74LVC32A Rev 11:
+https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf
+74LVC04A Rev 5-2 (local datasheets/ copy checked):
+https://www.diodes.com/assets/Datasheets/74LVC04A.pdf
+74AHC_AHCT30 Rev 8:
+https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT30.pdf
+Microchip Board Design Hints:
+https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ApplicationNotes/ApplicationNotes/MCP251863-Application-Note-00004560A.pdf
+TXB0108 Rev L:
+https://www.ti.com/lit/ds/symlink/txb0108.pdf
+NVIDIA SP-11324-001_v1.3 original manufacturer document (mirror):
+https://manuals.plus/m/f79b58bbad428012c500db50c490df2a243f46c7b09c46dfca2812b0f3daad64.pdf
+Upstream driver source inspected on 2026-10-18; exact installed JetPack unknown:
+https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-core.c

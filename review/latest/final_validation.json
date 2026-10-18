@@ -1,0 +1,18 @@
+{
+  "schematic_sha256": "1b249f17520a92f2a6f42f83b4d38123da1947dde9f0b997504a9378c4e1b8b3",
+  "symbols": 20,
+  "footprints": 14,
+  "step_models": 14,
+  "bom_mpn_types": 20,
+  "bom_planned_quantity": 118,
+  "bom_placed_quantity": 117,
+  "all_references_unique": true,
+  "local_datasheets_and_models_present": true,
+  "cad_sha256_pass": true,
+  "cleanup_applied": true,
+  "backup_zip_pass": true,
+  "schematic_unchanged_by_agent": true,
+  "all_eight_channels_and_gate_power_pass": true,
+  "remaining_missing_footprints": 79,
+  "input_fuse_present": false
+}

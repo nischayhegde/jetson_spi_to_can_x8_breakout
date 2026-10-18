@@ -1,0 +1,3849 @@
+{
+  "schematic_sha256": "39a4e9220c4e64bcee5ddd40ae46e5973513c6ea8a2fc214fceedaed124fe360",
+  "components": 133,
+  "can_controllers": 8,
+  "missing_footprints": [
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9",
+    "C10",
+    "C11",
+    "C12",
+    "C13",
+    "C14",
+    "C15",
+    "C16",
+    "C17",
+    "D2",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "R19",
+    "R20",
+    "R21",
+    "R22",
+    "R23",
+    "R24",
+    "R25",
+    "R26",
+    "R27",
+    "R28",
+    "R29",
+    "R30",
+    "R31",
+    "R32",
+    "TP1",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9",
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP16",
+    "TP17",
+    "TP18",
+    "TP19",
+    "TP20",
+    "TP21",
+    "TP22",
+    "TP23"
+  ],
+  "erc_total": 125,
+  "erc_severity_counts": {
+    "warning": 88,
+    "error": 37
+  },
+  "erc_type_counts": {
+    "footprint_link_issues": 76,
+    "pin_to_pin": 8,
+    "power_pin_not_driven": 2,
+    "pin_not_connected": 26,
+    "lib_symbol_mismatch": 12,
+    "pin_not_driven": 1
+  },
+  "channel_audit": [
+    {
+      "channel": 1,
+      "reference": "U9",
+      "expected_spi": 0,
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "VCC_pin25": "VCC",
+      "SCK_pin9": "SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_pin11": "Net-(U9-SDO)",
+      "SDO_series_resistor": 2,
+      "CS_pin13": "CAN1_CS",
+      "INT_pin19": "CAN1_INT",
+      "TXCAN15_to_TXD23": true,
+      "RXD28_to_RXCAN16": true,
+      "STBY_pin5": "GND",
+      "VSS_pin22": "GND",
+      "GND_pin24": "GND",
+      "crystal_pad2": "GND",
+      "crystal_pad4": "GND"
+    },
+    {
+      "channel": 2,
+      "reference": "U10",
+      "expected_spi": 0,
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "VCC_pin25": "VCC",
+      "SCK_pin9": "SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_pin11": "Net-(U10-SDO)",
+      "SDO_series_resistor": 9,
+      "CS_pin13": "CAN2_CS",
+      "INT_pin19": "CAN2_INT",
+      "TXCAN15_to_TXD23": true,
+      "RXD28_to_RXCAN16": true,
+      "STBY_pin5": "GND",
+      "VSS_pin22": "GND",
+      "GND_pin24": "GND",
+      "crystal_pad2": "GND",
+      "crystal_pad4": "GND"
+    },
+    {
+      "channel": 3,
+      "reference": "U11",
+      "expected_spi": 0,
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "VCC_pin25": "VCC",
+      "SCK_pin9": "SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_pin11": "Net-(U11-SDO)",
+      "SDO_series_resistor": 12,
+      "CS_pin13": "CAN3_CS",
+      "INT_pin19": "CAN3_INT",
+      "TXCAN15_to_TXD23": true,
+      "RXD28_to_RXCAN16": true,
+      "STBY_pin5": "GND",
+      "VSS_pin22": "GND",
+      "GND_pin24": "GND",
+      "crystal_pad2": "GND",
+      "crystal_pad4": "GND"
+    },
+    {
+      "channel": 4,
+      "reference": "U12",
+      "expected_spi": 0,
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "VCC_pin25": "VCC",
+      "SCK_pin9": "SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_pin11": "Net-(U12-SDO)",
+      "SDO_series_resistor": 15,
+      "CS_pin13": "CAN4_CS",
+      "INT_pin19": "CAN4_INT",
+      "TXCAN15_to_TXD23": true,
+      "RXD28_to_RXCAN16": true,
+      "STBY_pin5": "GND",
+      "VSS_pin22": "GND",
+      "GND_pin24": "GND",
+      "crystal_pad2": "GND",
+      "crystal_pad4": "GND"
+    },
+    {
+      "channel": 5,
+      "reference": "U13",
+      "expected_spi": 1,
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "VCC_pin25": "VCC",
+      "SCK_pin9": "SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_pin11": "Net-(U13-SDO)",
+      "SDO_series_resistor": 22,
+      "CS_pin13": "CAN7_CS",
+      "INT_pin19": "CAN5_INT",
+      "TXCAN15_to_TXD23": true,
+      "RXD28_to_RXCAN16": true,
+      "STBY_pin5": "GND",
+      "VSS_pin22": "GND",
+      "GND_pin24": "GND",
+      "crystal_pad2": "GND",
+      "crystal_pad4": "GND"
+    },
+    {
+      "channel": 6,
+      "reference": "U14",
+      "expected_spi": 1,
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "VCC_pin25": "VCC",
+      "SCK_pin9": "SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_pin11": "Net-(U14-SDO)",
+      "SDO_series_resistor": 25,
+      "CS_pin13": "CAN7_CS",
+      "INT_pin19": "CAN6_INT",
+      "TXCAN15_to_TXD23": true,
+      "RXD28_to_RXCAN16": true,
+      "STBY_pin5": "GND",
+      "VSS_pin22": "GND",
+      "GND_pin24": "GND",
+      "crystal_pad2": "GND",
+      "crystal_pad4": "GND"
+    },
+    {
+      "channel": 7,
+      "reference": "U15",
+      "expected_spi": 1,
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "VCC_pin25": "VCC",
+      "SCK_pin9": "SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_pin11": "Net-(U15-SDO)",
+      "SDO_series_resistor": 28,
+      "CS_pin13": "CAN7_CS",
+      "INT_pin19": "CAN7_INT",
+      "TXCAN15_to_TXD23": true,
+      "RXD28_to_RXCAN16": true,
+      "STBY_pin5": "GND",
+      "VSS_pin22": "GND",
+      "GND_pin24": "GND",
+      "crystal_pad2": "GND",
+      "crystal_pad4": "GND"
+    },
+    {
+      "channel": 8,
+      "reference": "U16",
+      "expected_spi": 1,
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "VCC_pin25": "VCC",
+      "SCK_pin9": "SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_pin11": "Net-(U16-SDO)",
+      "SDO_series_resistor": 31,
+      "CS_pin13": "CAN8_CS",
+      "INT_pin19": "CAN8_INT",
+      "TXCAN15_to_TXD23": true,
+      "RXD28_to_RXCAN16": true,
+      "STBY_pin5": "GND",
+      "VSS_pin22": "GND",
+      "GND_pin24": "GND",
+      "crystal_pad2": "GND",
+      "crystal_pad4": "GND"
+    }
+  ],
+  "gate_truth_tables": [
+    {
+      "spi": 0,
+      "bank": 0,
+      "native_cs0": 0,
+      "native_cs1": 0,
+      "forbidden_both_cs_active": true,
+      "gate_output_levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 0,
+        "CAN3_CS": 0,
+        "CAN4_CS": 1
+      },
+      "selected_logical_channels": [
+        "CAN2_CS",
+        "CAN3_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 0,
+      "native_cs0": 0,
+      "native_cs1": 1,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 0,
+        "CAN3_CS": 1,
+        "CAN4_CS": 1
+      },
+      "selected_logical_channels": [
+        "CAN2_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 0,
+      "native_cs0": 1,
+      "native_cs1": 0,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 1,
+        "CAN3_CS": 0,
+        "CAN4_CS": 1
+      },
+      "selected_logical_channels": [
+        "CAN3_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 0,
+      "native_cs0": 1,
+      "native_cs1": 1,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 1
+      },
+      "selected_logical_channels": []
+    },
+    {
+      "spi": 0,
+      "bank": 1,
+      "native_cs0": 0,
+      "native_cs1": 0,
+      "forbidden_both_cs_active": true,
+      "gate_output_levels": {
+        "CAN1_CS": 0,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 0
+      },
+      "selected_logical_channels": [
+        "CAN1_CS",
+        "CAN4_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 1,
+      "native_cs0": 0,
+      "native_cs1": 1,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN1_CS": 0,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 1
+      },
+      "selected_logical_channels": [
+        "CAN1_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 1,
+      "native_cs0": 1,
+      "native_cs1": 0,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 0
+      },
+      "selected_logical_channels": [
+        "CAN4_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 1,
+      "native_cs0": 1,
+      "native_cs1": 1,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 1
+      },
+      "selected_logical_channels": []
+    },
+    {
+      "spi": 1,
+      "bank": 0,
+      "native_cs0": 0,
+      "native_cs1": 0,
+      "forbidden_both_cs_active": true,
+      "gate_output_levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 0,
+        "CAN7_CS": 0,
+        "CAN8_CS": 1
+      },
+      "selected_logical_channels": [
+        "CAN6_CS",
+        "CAN7_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 0,
+      "native_cs0": 0,
+      "native_cs1": 1,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 0,
+        "CAN7_CS": 1,
+        "CAN8_CS": 1
+      },
+      "selected_logical_channels": [
+        "CAN6_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 0,
+      "native_cs0": 1,
+      "native_cs1": 0,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 1,
+        "CAN7_CS": 0,
+        "CAN8_CS": 1
+      },
+      "selected_logical_channels": [
+        "CAN7_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 0,
+      "native_cs0": 1,
+      "native_cs1": 1,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 1
+      },
+      "selected_logical_channels": []
+    },
+    {
+      "spi": 1,
+      "bank": 1,
+      "native_cs0": 0,
+      "native_cs1": 0,
+      "forbidden_both_cs_active": true,
+      "gate_output_levels": {
+        "CAN5_CS": 0,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 0
+      },
+      "selected_logical_channels": [
+        "CAN5_CS",
+        "CAN8_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 1,
+      "native_cs0": 0,
+      "native_cs1": 1,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN5_CS": 0,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 1
+      },
+      "selected_logical_channels": [
+        "CAN5_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 1,
+      "native_cs0": 1,
+      "native_cs1": 0,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 0
+      },
+      "selected_logical_channels": [
+        "CAN8_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 1,
+      "native_cs0": 1,
+      "native_cs1": 1,
+      "forbidden_both_cs_active": false,
+      "gate_output_levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 1
+      },
+      "selected_logical_channels": []
+    }
+  ],
+  "irq_truth_table": [
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "U4_pin8": 1
+    },
+    {
+      "can_nINT_levels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "U4_pin8": 0
+    }
+  ],
+  "bank_idle_deselects_all": true,
+  "one_native_cs_selects_one_logical_output": true,
+  "warning": "Correct logical gate outputs do not fix the CAN5/CAN6 copied CS labels or the SPI/power wiring errors."
+}

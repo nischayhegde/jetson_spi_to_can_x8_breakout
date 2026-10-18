@@ -1,0 +1,11 @@
+**TENTATIVE**
+
+Function	Exact part / purchase link	Qty for board	Displayed stock	Unit price¹
+Integrated SPI CAN controller + transceiver, SSOP-28	MCP251863T-E/SS	8	820	$2.30
+Passive 40 MHz crystal, 18 pF load, −40 to +85°C	ABM8G-40.000MHZ-18-D2Y-T	8	1,732	$0.62
+Two-line CAN TVS protection	ESDONCAN1LT1G	8	54,464	$0.56
+Crystal load capacitors, 27 pF C0G²	C0603C270J5GACTU	16	318,031	$0.10
+Local decoupling, 100 nF X7R	CC0603KRX7R9BB104	24	4,381,814	$0.14
+Additional local capacitance, 1 µF X7R	CGA3E1X7R1E105K080AC	8	867,741	$0.17
+Selectable bus termination, 120 Ω, 1%, ¼ W	RC1206FR-07120RL	8	65,122	$0.10
+Economical 3-pin CANH/CANL/GND board connector	JST B3B-XH-A	8	69,190	$0.13

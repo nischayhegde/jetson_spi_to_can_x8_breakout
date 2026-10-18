@@ -1,0 +1,254 @@
+[
+  {
+    "spi": 0,
+    "bank": 0,
+    "native_cs0": 0,
+    "native_cs1": 0,
+    "forbidden_both_active": true,
+    "levels": {
+      "CAN1_CS": 1,
+      "CAN2_CS": 0,
+      "CAN3_CS": 0,
+      "CAN4_CS": 1
+    },
+    "selected": [
+      "CAN2_CS",
+      "CAN3_CS"
+    ]
+  },
+  {
+    "spi": 0,
+    "bank": 0,
+    "native_cs0": 0,
+    "native_cs1": 1,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN1_CS": 1,
+      "CAN2_CS": 0,
+      "CAN3_CS": 1,
+      "CAN4_CS": 1
+    },
+    "selected": [
+      "CAN2_CS"
+    ]
+  },
+  {
+    "spi": 0,
+    "bank": 0,
+    "native_cs0": 1,
+    "native_cs1": 0,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN1_CS": 1,
+      "CAN2_CS": 1,
+      "CAN3_CS": 0,
+      "CAN4_CS": 1
+    },
+    "selected": [
+      "CAN3_CS"
+    ]
+  },
+  {
+    "spi": 0,
+    "bank": 0,
+    "native_cs0": 1,
+    "native_cs1": 1,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN1_CS": 1,
+      "CAN2_CS": 1,
+      "CAN3_CS": 1,
+      "CAN4_CS": 1
+    },
+    "selected": []
+  },
+  {
+    "spi": 0,
+    "bank": 1,
+    "native_cs0": 0,
+    "native_cs1": 0,
+    "forbidden_both_active": true,
+    "levels": {
+      "CAN1_CS": 0,
+      "CAN2_CS": 1,
+      "CAN3_CS": 1,
+      "CAN4_CS": 0
+    },
+    "selected": [
+      "CAN1_CS",
+      "CAN4_CS"
+    ]
+  },
+  {
+    "spi": 0,
+    "bank": 1,
+    "native_cs0": 0,
+    "native_cs1": 1,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN1_CS": 0,
+      "CAN2_CS": 1,
+      "CAN3_CS": 1,
+      "CAN4_CS": 1
+    },
+    "selected": [
+      "CAN1_CS"
+    ]
+  },
+  {
+    "spi": 0,
+    "bank": 1,
+    "native_cs0": 1,
+    "native_cs1": 0,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN1_CS": 1,
+      "CAN2_CS": 1,
+      "CAN3_CS": 1,
+      "CAN4_CS": 0
+    },
+    "selected": [
+      "CAN4_CS"
+    ]
+  },
+  {
+    "spi": 0,
+    "bank": 1,
+    "native_cs0": 1,
+    "native_cs1": 1,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN1_CS": 1,
+      "CAN2_CS": 1,
+      "CAN3_CS": 1,
+      "CAN4_CS": 1
+    },
+    "selected": []
+  },
+  {
+    "spi": 1,
+    "bank": 0,
+    "native_cs0": 0,
+    "native_cs1": 0,
+    "forbidden_both_active": true,
+    "levels": {
+      "CAN5_CS": 1,
+      "CAN6_CS": 0,
+      "CAN7_CS": 0,
+      "CAN8_CS": 1
+    },
+    "selected": [
+      "CAN6_CS",
+      "CAN7_CS"
+    ]
+  },
+  {
+    "spi": 1,
+    "bank": 0,
+    "native_cs0": 0,
+    "native_cs1": 1,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN5_CS": 1,
+      "CAN6_CS": 0,
+      "CAN7_CS": 1,
+      "CAN8_CS": 1
+    },
+    "selected": [
+      "CAN6_CS"
+    ]
+  },
+  {
+    "spi": 1,
+    "bank": 0,
+    "native_cs0": 1,
+    "native_cs1": 0,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN5_CS": 1,
+      "CAN6_CS": 1,
+      "CAN7_CS": 0,
+      "CAN8_CS": 1
+    },
+    "selected": [
+      "CAN7_CS"
+    ]
+  },
+  {
+    "spi": 1,
+    "bank": 0,
+    "native_cs0": 1,
+    "native_cs1": 1,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN5_CS": 1,
+      "CAN6_CS": 1,
+      "CAN7_CS": 1,
+      "CAN8_CS": 1
+    },
+    "selected": []
+  },
+  {
+    "spi": 1,
+    "bank": 1,
+    "native_cs0": 0,
+    "native_cs1": 0,
+    "forbidden_both_active": true,
+    "levels": {
+      "CAN5_CS": 0,
+      "CAN6_CS": 1,
+      "CAN7_CS": 1,
+      "CAN8_CS": 0
+    },
+    "selected": [
+      "CAN5_CS",
+      "CAN8_CS"
+    ]
+  },
+  {
+    "spi": 1,
+    "bank": 1,
+    "native_cs0": 0,
+    "native_cs1": 1,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN5_CS": 0,
+      "CAN6_CS": 1,
+      "CAN7_CS": 1,
+      "CAN8_CS": 1
+    },
+    "selected": [
+      "CAN5_CS"
+    ]
+  },
+  {
+    "spi": 1,
+    "bank": 1,
+    "native_cs0": 1,
+    "native_cs1": 0,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN5_CS": 1,
+      "CAN6_CS": 1,
+      "CAN7_CS": 1,
+      "CAN8_CS": 0
+    },
+    "selected": [
+      "CAN8_CS"
+    ]
+  },
+  {
+    "spi": 1,
+    "bank": 1,
+    "native_cs0": 1,
+    "native_cs1": 1,
+    "forbidden_both_active": false,
+    "levels": {
+      "CAN5_CS": 1,
+      "CAN6_CS": 1,
+      "CAN7_CS": 1,
+      "CAN8_CS": 1
+    },
+    "selected": []
+  }
+]

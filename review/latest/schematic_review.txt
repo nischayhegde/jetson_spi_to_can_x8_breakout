@@ -1,0 +1,268 @@
+Saved schematic review - 2026-10-18
+
+Reviewed breakout/breakout.kicad_sch, including all eight CAN channels, the
+exported netlist, rendered power/logic and CAN sections, and KiCad ERC.
+Input SHA-256: 1b249f17520a92f2a6f42f83b4d38123da1947dde9f0b997504a9378c4e1b8b3
+The schematic and PCB were not edited. This report supersedes the electrical
+findings in review/v1_schematic_review.txt for this saved revision.
+
+RESULT: all eight channel checks pass, and the latest saved revision now
+correctly powers all four logic ICs and their bypass capacitors at 3.3 V.
+The requested 1 A input fuse is absent. Footprint assignments and CAD/ERC
+cleanup remain before PCB transfer, plus prototype timing/thermal checks.
+
+1. VERIFIED: gate supplies and bypass capacitors are now on 3.3 V.
+
+The current net VCC is protected +5 V: Q1 source pin 2 connects to U3 IN/EN
+and every CAN VCC pin 25. U3 output pin 5 is VDD_VIO, the intended 3.3 V rail.
+All CAN VDD14 and VIO1 pins are correctly connected to VDD_VIO.
+
+The user's new saved revision also connects U1, U2, U4 and U5 pin 14 to
+VDD_VIO / +3.3 V, with the associated 100 nF capacitor supply connections:
+
+  U1 / OR:       CC0603KRX7R9BB5
+  U2 / inverter: CC0603KRX7R9BB6
+  U4 / NAND:     CC0603KRX7R9BB7
+  U5 / OR:       CC0603KRX7R9BB17
+
+Each capacitor's other terminal and each logic pin7 are on common GND.
+The incorrect 5 V gate-supply finding from the earlier snapshot is resolved.
+Explicit +5V_PROTECTED and +3V3 names would still make the distinction clearer.
+
+The selected OR has a maximum recommended supply of 3.6 V; the new 3.3 V
+connection meets it. The inverter/IRQ and CAN nCS also now use the intended
+3.3 V domain. The previous review snapshot was archived in
+../revision-99a8ba42d9fe.zip before re-exporting this revision.
+References: Nexperia 74LVC32A Rev11 Tables5/7; Diodes 74LVC04A DS35258
+Rev5-2; Nexperia 74AHC_AHCT30 Rev8 Tables5/6; MCP DS20006624B section9.1.
+
+2. REQUIRED TO MATCH THE SELECTED POWER CIRCUIT: restore the 1 A series fuse.
+
+There is no fuse component in the saved netlist. J6 pin 2 connects directly
+to Q1 drain pin 3. Restore the selected Littelfuse 0466001.NR between them:
+
+  J6.2 (+5 V input) -> 1 A fuse -> Q1.3 (drain)
+  Q1.2 (source) -> protected +5 V / VCC
+
+The MOSFET orientation, Zener orientation, 10 kohm gate pull-down R38 and
+bulk capacitor C20 are otherwise correct. D2 cathode pin1 goes to Q1 source;
+D2 anode pin2 goes to Q1 gate. C20 is after Q1. No old supply-to-ground shunt
+diode remains. Ground stays directly common.
+
+The 1 A fuse's symbol, 1206 footprint and STEP are deliberately retained in
+the cleaned library for this correction. Its thermal/current margin remains
+a prototype validation item; see ../mosfet_reverse_protection.txt. This PFET
+circuit protects against static reverse hookup, not positive overvoltage or
+guaranteed reverse-current blocking from a charged output.
+References: AO3401A Rev3.1 pinout; Diodes DS18004; TI SLVAE57B sections4-5.
+
+3. REQUIRED BEFORE PCB TRANSFER: assign the 79 missing footprints.
+
+The saved schematic has 140 physical symbols, of which 79 have blank
+footprint fields. KiCad ERC does not report these as missing-library links:
+
+  16 x 27 pF capacitors C2-C17 -> BreakoutBoard:C_0603_1608Metric
+   2 x 1 uF capacitors C18/C19 -> BreakoutBoard:C_0603_1608Metric
+   1 x 10 uF capacitor C20 -> BreakoutBoard:C_0805_2012Metric
+  29 x 33 ohm / 10 kohm / 100 kohm resistors -> BreakoutBoard:R_0603_1608Metric
+   8 x 120 ohm resistors -> BreakoutBoard:R_1206_3216Metric
+  23 x test points TP1-TP23 -> choose pads or through-hole test points
+
+Retained mapped MPNs and exact placed references appear in
+kicad_footprints/parts.json and asset_manifest.csv. These are package
+recommendations for generic symbols, not assignments made to the schematic.
+The 120 ohm resistor selection is 1206 / 0.25 W. Choose test-point mechanics
+to suit probing and clearances; no unrequested test-point footprint was added.
+
+Registered the existing local footprint library in breakout/fp-lib-table.
+The 76 previous footprint-library configuration warnings are now gone.
+
+4. STARTUP BIAS: native CS pull-ups are present; define both bank inputs too.
+
+R34-R37 are 100 kohm pulls to VDD_VIO / 3.3 V on the four native CS lines.
+They are on the header side of R4/R5/R19/R20. This is electrically acceptable:
+moving across 33 ohm makes a negligible difference compared with 100 kohm.
+No rewiring is required solely to move these pull-ups after the series parts.
+R7/R8/R11/R14/R17/R24/R27/R30 pull individual CAN nCS pins up to 3.3 V.
+
+No board-side bias is present on GPIO_7 (J1.32) or GPIO_11 (J1.31).
+Define their startup states with confirmed carrier/boot pinmux behavior, or
+consider weak board-side pull-downs such as 100 kohm where appropriate.
+Both native CS HIGH deselect every CAN channel regardless of bank state;
+nevertheless floating CMOS gate inputs should not be left undefined.
+
+The Orin developer carrier uses TXB0108 translators on these signals. TI
+requires external pulls greater than 50 kohm when used. A 100 kohm pull is a
+starting bias value, not a guarantee that it overrides an enabled translator
+or an opposing SoC pull. Confirm native CS HIGH and defined bank levels during
+power-up/reset, before the Linux SPI driver runs. Change bank only while both
+native CS are HIGH and the previous CAN SDO has released the MISO bus.
+
+5. LOGIC VERIFIED: bank selection and the combined interrupt are correct.
+
+All 16 bank/native-CS combinations were evaluated from actual gate nets:
+
+  bank=0, native CS0 active -> CAN2 on SPI0 / CAN6 on SPI1
+  bank=0, native CS1 active -> CAN3 on SPI0 / CAN7 on SPI1
+  bank=1, native CS0 active -> CAN1 on SPI0 / CAN5 on SPI1
+  bank=1, native CS1 active -> CAN4 on SPI0 / CAN8 on SPI1
+
+Both native CS HIGH deselect all four channels. Never assert both native CS
+LOW on one physical bus: that selects two devices and can contend on MISO.
+Use the actual mapping above when defining software mux children.
+
+U4 NAND output pin8 feeds U2F input pin13; U2F output pin12 drives GPIO_1 /
+J1.29. This produces AND(nINT1..nINT8), so the Jetson interrupt is now
+active LOW and goes LOW whenever any CAN controller asserts its interrupt.
+All 256 interrupt input combinations passed. The eight push-pull outputs are
+separate NAND inputs, not directly tied together. Default push-pull operation
+does not require an external pull-up at every nINT pin. If software selects
+open-drain outputs, each separate gate input needs a suitable pull-up.
+
+U2E unused input pin11 is tied to 3.3 V and output pin10 is NC: correct with
+U2 now supplied at 3.3 V. The two old free-standing NC markers can be removed.
+
+For software, configure the shared interrupt LEVEL_LOW. All eight CAN devices
+need the same IRQ and compatible shared handling. Current upstream mcp251xfd
+requests IRQF_SHARED | IRQF_ONESHOT; the exact installed JetPack kernel and
+GPIO mux/device-tree topology still require testing. Hardware gating does not
+by itself make four devices per SPI bus enumerable by the stock configuration.
+
+At 3.0-3.6 V and the reviewed load/temperature conditions, the selected OR's
+maximum delay is 5 ns and the NOT's is 6 ns. Native CS passes through one OR;
+bank changes traverse at most NOT+OR, about 11 ns before PCB effects. These
+parts suit MHz operation at their now-correct 3.3 V supplies. Actual Jetson CS-to-
+clock setup, hold and MISO release timing still needs verification; preserve
+the earlier initial 100 ns CS setup / 300 ns device-change gap targets as
+prototype margins rather than treating propagation delay alone as proof.
+
+6. VERIFIED ON ALL EIGHT CAN CHANNELS.
+
+Every per-channel check passes in channel_audit.csv / audit_results.json:
+CAN1-CAN4 use SPI0 SCK/MOSI/MISO; CAN5-CAN8 use SPI1. Each SDO reaches only
+its own bus through its individual 33 ohm resistor. Each nCS is distinct and
+matches its channel label. CAN5/CAN6 no longer share CAN7's select.
+Each nINT reaches the correct NAND input. Each TXCAN15 connects to TXD23,
+and RXD28 connects to RXCAN16. STBY5, VSS22 and GND24 are grounded. Both crystal
+case pads are grounded; crystal active pads and two 27 pF capacitors connect
+correctly. Each CAN has the intended three 100 nF rail bypass capacitors.
+CANH4/CANL3 go to connector pins1/2, with common GND on pin3 and 120 ohm across
+the differential pair. Unused secondary interrupt/GPIO/clock pins are NC.
+
+C18/C19 provide nominal 1 uF at the TLV755 input/output. Keep them physically
+close and ensure effective capacitance remains above TI's 0.47 uF minimum
+after tolerance, bias and temperature. EN tied to the input is valid. Check
+SOT-23-5 LDO heating; at 200 mA the nominal dissipation is about 0.34 W.
+
+The 27 pF C0G values remain a reasonable prototype choice, not a proven exact
+oscillator load: 27 pF / 2 plus 4.5 pF effective stray gives 18 pF. Microchip
+also reports a tested 18 pF external-capacitor population for this crystal.
+Measure oscillator startup/frequency and tune for the actual PCB.
+
+7. RECOMMENDED BEFORE LAYOUT / PROTOTYPE.
+
+Only J1.39 is grounded. Connect the available J1 ground pins 6/9/14/20/25/30/34
+as well to improve return paths near SPI signals. Keep the local 3.3 V LDO
+output independent of the Jetson 3.3 V supply. The SPI header pin assignments
+match the intended Orin developer-carrier pinout. GPIO labels must be matched
+to the exact carrier and device-tree names rather than assumed universal.
+
+The eight 120 ohm terminations are permanently connected. That is correct if
+each port is an endpoint and the other end has one termination. Use exactly
+two terminations per CAN bus. Add jumpers or DNP options if these ports may
+instead be used in the middle of a bus or with already-terminated equipment.
+
+There are no external CAN TVS parts in this revision; they were removed from
+the active CAD library as requested. They are optional for basic signaling,
+but connector-side protection is still worth considering for the robot's
+motor wiring. Integrated ESD ratings do not prove the complete harness/system
+immune to the robot's actual disturbances.
+
+Keep each 33 ohm source resistor near its driver, especially each CAN SDO
+resistor. Verify SPI edges and aggregate input/interconnect capacitance at
+the carrier translators. CAN bitrate is separate from SPI edge rate.
+
+Most CAN symbols lie outside the A4 drawing border (negative Y or Y>210 mm).
+The normal page export clips them. Move blocks inside a larger page or use
+separate sheets before sharing plots. The review images can_spi0.png and
+can_spi1.png use expanded SVG bounds so all channels were inspected anyway.
+
+8. REMAINING ERC: 86 items, 36 errors and 50 warnings.
+
+  48 symbol/library mismatches: cached, edited symbols differ from the source
+     library. Review changes before updating; preserve the user's graphics.
+   8 output/output errors: the schematic's MCP cache still calls TXD23 an
+     output. The local library correctly calls it an INPUT. Correct the cached
+     TXD23 electrical type or update carefully. The TXCAN15->TXD23 wires are
+     correct and must stay. This was a defect in the earlier supplied symbol.
+  26 unconnected J1 pins: connect appropriate ground pins; mark truly unused
+     remaining pins NC as intentional.
+   2 undriven power-net errors: add PWR_FLAG declarations on genuinely powered
+     protected +5 V / GND nets after checking the circuit, not to hide bad wiring.
+   2 dangling NC markers: remove the old free-standing markers near U2.
+
+The 79 missing footprint assignments are additional to this count. ERC does
+not establish rail voltage levels; these were checked separately and are now
+correct. A clean ERC alone would not validate PCB mechanics/timing.
+
+9. LIBRARY CLEANUP COMPLETED.
+
+Retained: 20 standalone MPN symbols, 14 package footprints, 14 nominal package
+STEP models. This includes packages for the placed generic R/C values and the
+requested 1 A fuse needed for correction. Added the matching 100 kohm resistor
+alias RC0603FR-07100KL for the four already-placed pull-ups.
+
+Removed 12 unused aliases from the main symbol library: old 2 A fuse, AND gate,
+18 pF capacitor, termination jumper, eFuse slew capacitor / setting resistor,
+CAN TVS, isolator, old shunt/series diodes, isolated converter and eFuse.
+Also removed the old SG-210STF oscillator import bundle, eight unused footprint
+files in total, seven unused STEP files in total, and 22 obsolete SVG previews.
+
+Backup of the entire former kicad_footprints directory:
+  library-before-cleanup.zip (in this review/latest directory)
+Exact removed/retained file names and reasons:
+  ../../kicad_footprints/cleanup_manifest.json
+
+The generator now selects parts from the live schematic and maps generic
+passives, rather than regenerating the abandoned isolated-design library.
+No changes were made to the schematic, PCB, existing symbol-library table,
+or datasheet archive. Added only the missing project footprint-library table.
+
+Validation: KiCad parsed/exported all 20 library symbols; its footprint reader
+loaded all retained parts; symbol pin numbers match footprint pads; AO3401A
+and Zener pin identities match their datasheets; all local model references
+resolve; STEP signatures and SHA-256 inventory pass. These checks establish
+file integrity and pad-number coverage, not certified mechanical models.
+
+Evidence in this directory: input_snapshot.json, breakout.net.xml,
+erc_after.json, channel_audit.csv, audit_results.json,
+bank_truth_table.json, irq_truth_table.json, rendered schematic images.
+Read-only audit script: ../audit_latest.py. erc_before.json is the earlier
+99a8ba42d9fe snapshot before the footprint-library registration, retained only
+for comparison. The current revision uses erc_after.json.
+The component list and CSV were also rewritten for this current nonisolated
+inventory; their previous contents were preserved in componentlist-before-update files.
+
+Primary references checked:
+MCP251863 Rev B, sections1/5/6/9:
+https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-External-CAN-FD-Controller-with-Integrated-Transceiver-DS20006624.pdf
+74LVC32A Rev11, supply and timing:
+https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf
+Diodes 74LVC04A DS35258 Rev5-2 (saved manufacturer PDF reviewed locally):
+https://www.diodes.com/assets/Datasheets/74LVC04A.pdf
+74AHC30 Rev8, thresholds and pinout:
+https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT30.pdf
+TLV755P RevD, capacitor/thermal requirements:
+https://www.ti.com/lit/ds/symlink/tlv755p.pdf
+AO3401A Rev3.1, pinout and ratings:
+https://www.aosmd.com/sites/default/files/res/datasheets/AO3401A.pdf
+Microchip AN4560, oscillator/layout:
+https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ApplicationNotes/ApplicationNotes/MCP251863-Application-Note-00004560A.pdf
+TI, reverse polarity versus reverse-current protection:
+https://www.ti.com/lit/an/slvae57/slvae57.pdf
+TI, TXB pull resistor guidance:
+https://www.ti.com/lit/an/scea054a/scea054a.pdf
+NVIDIA, developer-carrier pinout and TXB0108 connections:
+https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf
+Upstream mcp251xfd source inspected 2026-10-18 (installed kernel unknown):
+https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-core.c

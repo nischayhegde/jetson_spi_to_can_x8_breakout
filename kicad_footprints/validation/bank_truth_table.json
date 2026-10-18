@@ -1,0 +1,98 @@
+[
+  {
+    "bank": 0,
+    "cs0": 0,
+    "cs1": 0,
+    "outputs": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "valid": false
+  },
+  {
+    "bank": 0,
+    "cs0": 0,
+    "cs1": 1,
+    "outputs": [
+      0,
+      1,
+      1,
+      1
+    ],
+    "valid": true
+  },
+  {
+    "bank": 0,
+    "cs0": 1,
+    "cs1": 0,
+    "outputs": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "valid": true
+  },
+  {
+    "bank": 0,
+    "cs0": 1,
+    "cs1": 1,
+    "outputs": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "valid": true
+  },
+  {
+    "bank": 1,
+    "cs0": 0,
+    "cs1": 0,
+    "outputs": [
+      1,
+      1,
+      0,
+      0
+    ],
+    "valid": false
+  },
+  {
+    "bank": 1,
+    "cs0": 0,
+    "cs1": 1,
+    "outputs": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "valid": true
+  },
+  {
+    "bank": 1,
+    "cs0": 1,
+    "cs1": 0,
+    "outputs": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "valid": true
+  },
+  {
+    "bank": 1,
+    "cs0": 1,
+    "cs1": 1,
+    "outputs": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "valid": true
+  }
+]

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "BreakoutBoard")(type "KiCad")(uri "C:/humanoids/breakoutboard/kicad_footprints/BreakoutBoard.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,218 @@
+# 2 x SPI to 8 x CAN board — selected component list
+
+Reviewed 2026-10-16; GPIO-bank logic, OR gate, shared-IRQ gate and input fuse/diode reviewed 2026-10-17. Checked against `PRD.md.txt`. This is the selected prototype BOM, with sourcing evidence and a local KiCad bundle. Original draft preserved as `componentlist.original.md.txt`.
+
+Use eight MCP251863 integrated controller/transceivers, four controllers per SPI bus, individual CAN chip selects and interrupts, host-side AND/NOT bank-select logic, four six-channel digital isolators, and one regulated 6 W isolated power module. All eight CAN ports share one isolated ground; they are isolated from the Jetson, **not from one another**. This interpretation minimizes cost and size. Independent port isolation would require a different architecture and BOM.
+
+The CAN side runs entirely at isolated 5 V, including MCP251863 VDD/VIO/VCC and isolator VCC2. Isolators translate between that domain and host-side 3.3 V. A host-side LDO supplies their VCC1; no isolated 3.3 V regulator or extra CAN transceivers are needed.
+
+## Selected board BOM
+
+The logic-gate, fuse and diode rows were checked on 2026-10-17; unchanged rows retain their earlier sourcing dates in `componentlist.csv`. Stock below is the displayed distributor stock from the linked page or indexed snapshot accessed during this review, not a live inventory guarantee or reservation. Some indexed snapshots are older than the review date. Region-specific and cached results sometimes disagree; use the linked stock-bearing SKU, and recheck at checkout. Every selected purchased line has positive stock evidence exceeding the board quantity. “—” means a reliable USD quote was not captured; it does not mean free. Prices shown are one-piece USD prices, not quantity-break board costs; shipping, tax and tariffs are excluded.
+
+| Function | Exact manufacturer part number / source | Board qty | Observed stock | USD each, qty 1 |
+|---|---|---:|---:|---:|
+| Integrated SPI CAN FD controller/transceiver | [MCP251863T-E/SS](https://www.digikey.com/en/products/detail/microchip-technology/MCP251863T-E-SS/15985723) | 8 | 820 | $2.30 |
+| 40 MHz passive crystal, CL=18 pF | [ABM8G-40.000MHZ-18-D2Y-T](https://www.mouser.com/en/ProductDetail/ABRACON/ABM8G-40.000MHZ-18-D2Y-T?qs=3LVMET7lfiO1sAQRIVmcWA%3D%3D) | 8 | 1,362 | — |
+| Dual bidirectional CAN TVS | [ESDONCAN1LT1G](https://www.mouser.com/en/ProductDetail/onsemi/ESDONCAN1LT1G?qs=xGcJQ%252BnsJwvlHkj2cpk%252Btw%3D%3D) | 8 | 7,124 | $0.55 |
+| Six-channel digital isolator, 3 forward/3 reverse | [ISO7763DWR](https://www.mouser.com/en/ProductDetail/Texas-Instruments/ISO7763DWR?qs=BZBei1rCqCCY2ZEA%252BvwxBA%3D%3D) | 4 | 358 | — |
+| Regulated isolated 5 V / 1.2 A, 6 W converter | [TMR 6-0511](https://www.digikey.com/en/products/detail/traco-power/TMR-6-0511/9383425) | 1 | 1,085 | $24.18 |
+| Input eFuse, latch-off, adjustable current limit | [TPS259530DSGR](https://www.digikey.com/en/products/detail/texas-instruments/TPS259530DSGR/8038175) | 1 | 6,664 | $1.04 |
+| Host-side 3.3 V LDO | [TLV75533PDBVR](https://www.digikey.com/en/products/detail/texas-instruments/TLV75533PDBVR/9356541) | 1 | 84,540 | $0.45 |
+| 18 pF 50 V C0G crystal load capacitor | [C0603C180J5GACTU](https://www.digikey.com/en/products/detail/kemet/C0603C180J5GACTU/411054) | 16 | 337,357 | $0.10 |
+| 100 nF 50 V X7R bypass capacitor | [CC0603KRX7R9BB104](https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082) | 41 | 21,441 | $0.14 |
+| 1 uF 25 V X7R local and LDO capacitor | [CGA3E1X7R1E105K080AC](https://www.digikey.com/en/products/detail/tdk-corporation/CGA3E1X7R1E105K080AC/2672824) | 20 | 1,048,821 | — |
+| 10 uF 16 V X7R power bulk capacitor | [CL21B106KOQNNNE](https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B106KOQNNNE/3890958) | 4 | 322,235 | — |
+| 10 nF 50 V X7R eFuse slew capacitor | [CC0603KRX7R9BB103](https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB103/302995) | 1 | 635,615 | — |
+| 120 ohm 1% 0.25 W selectable CAN termination | [RC1206FR-07120RL](https://www.digikey.com/en/products/detail/yageo/RC1206FR-07120RL/728523) | 8 | 65,122 | $0.10 |
+| 10 kohm 1% CS/IRQ/MISO bias | [RC0603FR-0710KL](https://www.digikey.com/en/products/detail/yageo/RC0603FR-0710KL/729827) | 24 | 1,215,724 | $0.10 |
+| 33 ohm 1% SPI source damping | [RC0603FR-0733RL](https://www.mouser.com/en/ProductDetail/YAGEO/RC0603FR-0733RL?qs=diQw95jMAeMotgif2GSHTQ%3D%3D) | 14 | 595,649 | $0.10 |
+| 1.21 kohm 1% eFuse ILM setting | [CRCW06031K21FKEA](https://www.digikey.com/en/products/detail/vishay-dale/CRCW06031K21FKEA/1179818) | 1 | 49,852 | $0.10 |
+| 3-pin 2.50 mm CAN connector | [B3B-XH-A](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046) | 8 | 69,190 | $0.13 |
+| 2-pin 2.50 mm 5 V input connector | [B2B-XH-A](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-XH-A/1651045) | 1 | 304,650 | — |
+| 2x20 2.54 mm host harness header | [M20-9982046](https://www.digikey.com/en/products/detail/harwin-inc/M20-9982046/3921209) | 1 | 1,525 | $1.34 |
+| 2 A 63 V fast-acting series input fuse, 1206 | [0466002.NR](https://www.digikey.com/en/products/detail/littelfuse-inc/0466002-NR/521355) | 1 | 9,900 | $1.25 |
+| 15 V 20 A shunt reverse-polarity Schottky, qualification required | [STPS20L15D](https://www.digikey.com/en/products/detail/stmicroelectronics/STPS20L15D/1039632) | 1 | 1,157 | $2.18 |
+| Quad 2-input AND, 3.3 V host-side CS bank logic | [74LVC08APW,118](https://www.digikey.com/en/products/detail/nexperia-usa-inc/74LVC08APW-118/2209917) | 2 | 17,941 | $0.23 |
+| 8-input NAND plus spare NOT implements shared-IRQ AND | [74AHC30PW,118](https://www.mouser.com/ProductDetail/Nexperia/74AHC30PW118?qs=P62ublwmbi%252B963Q4ACANGA%3D%3D) | 1 | 3,795 | $0.39 |
+| Quad 2-input OR, 3.3 V host-side logic provision | [74LVC32APW,118](https://www.digikey.com/en/products/detail/nexperia-usa-inc/74LVC32APW-118/946666) | 1 | 6,092 | $0.25 |
+| Hex inverter, 3.3 V host-side CS bank logic | [74LVC04AT14-13](https://www.digikey.com/en/products/detail/diodes-incorporated/74LVC04AT14-13/10452774) | 3 | 3,994 | $0.32 |
+
+Add eight PCB solder bridges, `BreakoutBoard:CAN_Termination_Enable`, in series with the termination resistors. These are copper features, not separately purchased parts. Leave open unless the board is a physical bus endpoint. Use exactly two 120 ohm terminations per bus, including any motor-internal termination.
+
+For budgeting, allow roughly **$85–$100 in board components for one prototype**, pending the unquoted rows and cart quantity breaks. This is an engineering allowance, not a distributor quotation. PCB, assembly, harnesses, mating contacts and shipping are additional. The regulated isolated module is the largest known cost ($24.18). Do not replace it with a cheap unregulated 1 W 5-to-5 V module: eight simultaneously active transceivers exceed that power class and an unregulated output can exceed the CAN IC's supply range. A lower-cost 6 W module can be considered only after checking regulation, pinout, thermal behavior and CAD.
+
+## Changes from the draft
+
+- Retained MCP251863T-E/SS, the passive ABM8G crystal, CAN TVS, 120 ohm termination and JST XH bus connector.
+- Replaced 27 pF crystal capacitors with **18 pF C0G, C0603C180J5GACTU**. Microchip explicitly reports using this exact ABM8G crystal with 18 pF capacitors successfully in evaluation boards. This is a tested starting population, not proof for an arbitrary PCB. Check startup, drive level and frequency over voltage/temperature on the prototype; tune if needed. Do not calculate the final capacitor value from the crystal's printed load capacitance alone. [Microchip board-design note, section 1](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ApplicationNotes/ApplicationNotes/MCP251863-Application-Note-00004560A.pdf)
+- Added the complete host isolation and isolated power path, input eFuse, host 3.3 V LDO, bulk capacitors, bias resistors, SPI damping and host/power connectors. Increased bypass quantities accordingly.
+- Selected **ISO7763DWR, wide SOIC-16**, rather than the smaller DBQR version: current US Mouser evidence for DBQR showed zero stock, despite an older regional snapshot showing stock. The selected DWR has stock evidence for 358. Do not substitute the F suffix: the selected non-F version defaults outputs high when an input-side supply is absent, useful for inactive chip selects and interrupts. [TI ISO776x datasheet](https://www.ti.com/lit/ds/symlink/iso7763.pdf)
+
+## Series input fuse and parallel reverse-polarity diode
+
+Replaces the earlier series-diode option with **F1: Littelfuse 0466002.NR**, 2 A / 63 V AC/DC fast-acting fuse in 1206, and **D1: STMicroelectronics STPS20L15D**, 15 V / 20 A Schottky in TO-220AC. DigiKey displayed 9,900 fuses at $1.25 and 1,157 diodes at $2.18 each, **$3.43 per pair** at quantity one. The 1206 fuse is cheaper and easier to rework than the earlier 0603 part; the larger diode provides much greater fault-current and thermal headroom than the former 5 A SOD128 diode. TO-220AC is deliberately larger for prototype fault testing. The surface-mount STPS20L15G-TR was rejected because the opened DigiKey and Mouser pages both showed zero stock, despite older positive-stock search snapshots.
+
+**Status: selected prototype pair for the requested topology; complete reverse-polarity protection is NOT yet qualified with the existing TPS259530 and unspecified source fault behavior.** Do not treat this BOM substitution as a verified protection circuit.
+
+```text
++5V_IN connector ---- F1 ----+---- TPS259530 IN and EN/UVLO
+                           |
+                       D1 cathode K
+                       D1 anode A
+                           |
+GND connector -------------+---- GND_HOST
+
+TPS259530 OUT -> TRACO VIN+ and host LDO IN
+```
+
+D1 is reverse-biased in normal operation: **cathode to fused positive input, anode to GND_HOST**. The TO-220AC datasheet drawing shows left lead K, right lead A when viewed from the marked front, with leads pointing down; the metal tab is K. The bundled two-pad footprint uses 1=K and 2=A, matching the local symbol. This two-pad library numbering is a mapping to the two populated leads, not a claim that every TO-220 diode shares the same polarity. Keep the cathode tab isolated from grounded chassis/heatsinks, or use an appropriate electrically insulating mounting arrangement. Put the input 10 uF and 100 nF at the fused node / eFuse IN. All loads and EN/UVLO take power after F1. Place F1 at the connector and D1 close to the eFuse input, with a short, wide diode-to-ground fault loop. Route fault return directly to the input ground rather than through sensitive signal-ground paths.
+
+Normal-operation diode series drop is **zero**; reverse leakage is not zero. Retain the TPS259530 for controlled startup and the approximately 1.69 A electronic load-current limit. The shunt fault path bypasses that eFuse, so it cannot limit the diode current. Normal converter voltage is VIN_connector - I*R_F1 - Vdrop_eFuse - Vdrop_PCB and must remain at least 4.5 V, including startup and minimum connector voltage after cable losses. The earlier series-diode 250-360 mV loss is removed.
+
+F1 nominal cold resistance is 30 milliohm in the current manufacturer sheet (DigiKey lists 31 milliohm); warm resistance is higher. Nominal melting I-squared-t is 0.2326 A-squared-seconds, and rated interrupt capacity is 50 A at 63 V AC/DC. At 25 C its opening specification is 5 seconds maximum at 4 A and 0.2 seconds maximum at 6 A; there is no maximum opening time specified at its 2 A rating. Apply the manufacturer's 25% continuous-current derating before temperature derating: 1.5 A at room temperature, 1.2 A in its 70 C example. Check actual board input current and startup pulse energy; 2 A is the supply ceiling, not a guaranteed 2 A continuous load through this fuse. Ambient range is -55 to +90 C.
+
+D1 is rated 20 A DC with case held at 115 C, and **310 A non-repetitive surge for one 10 ms sine pulse**. The corresponding half-sine integral is approximately 480.5 A-squared-seconds, but this is NOT an independently specified universal diode I-squared-t rating and does not establish fuse coordination. In particular, do not compare it only with the fuse's nominal melting integral: clearing includes arcing, waveforms differ, and fault duration/initial temperature matter. At modest current the diode must survive until the maximum fuse clearing time; at high current compare maximum total clearing energy with the diode's allowable surge under matching conditions, using manufacturer data or tests. Ensure source prospective fault current does not exceed the fuse's interrupt capacity.
+
+**Two release conditions remain:**
+
+1. **Source behavior / heating:** a supply current-limited to 2 A may never open a 2 A fuse. For that case D1 must tolerate the actual current limit indefinitely, including adapter retry pulses, temperature rise and fault-loop heating; it must not depend on F1 opening. The 20 A rating assumes controlled case temperature, not a bare TO-220 automatically carrying that current in air. Define the actual source/cable behavior and verify the thermal design. Do not simply lower F1 to force clearing: the normal board load is already around 1.1 A plus margin and temperature derating must still be met.
+2. **Downstream negative-voltage compatibility:** reverse connection places the fused node at approximately -VF_D1 until the source shuts off or F1 clears. TPS259530 IN and EN/UVLO have **-0.3 V absolute minima**. ST specifies D1 up to 0.41 V at 19 A / 25 C, with voltage rising at cold temperature; its datasheet does not guarantee a clamp below 0.3 V throughout this application's fault envelope. Therefore this two-component pair alone does not establish compliance with the eFuse limits. Establish a guaranteed clamp including wiring inductance and ground shift, or add a reverse-input blocking stage / choose a downstream power path tolerant of the clamp. Bench typical behavior alone is not a worst-case guarantee. No silent replacement of the existing eFuse has been made.
+
+Sources: [Littelfuse 466 datasheet](https://www.littelfuse.com/assetdocs/fuse-466-datasheet?assetguid=dbe9bcd7-6072-4adf-bf5b-d33e52a6b90f), [ST STPS20L15 datasheet](https://www.st.com/resource/en/datasheet/stps20l15.pdf), [TI TPS2595 absolute maximum ratings](https://www.ti.com/lit/ds/symlink/tps2595.pdf). Local symbols, footprints and nominal package STEP models accompany the pair; see the datasheet archive for actual download status and source provenance. Earlier 0467002.NR / PMEG3050EP assets are retained as superseded files, but are no longer selected in the BOM.
+
+## GPIO bank selection using AND and NOT gates
+
+Added **2 x Nexperia 74LVC08APW,118** (quad AND) and **3 x Diodes Incorporated 74LVC04AT14-13** (hex inverter). All five use TSSOP-14, 4.4 x 5 mm body, 0.65 mm pitch, and run from **3V3_HOST / GND_HOST before the isolators**. Do not power the Nexperia AND part from 5V_ISO: its maximum operating supply is 3.6 V. Keep the gate network on the same switched host supply as the host-side isolator halves. The bank GPIOs do not cross the isolation barrier; the four resulting CS outputs per SPI bus do. Existing four ISO7763DWR devices and their forward-channel allocation remain sufficient.
+
+DigiKey showed 17,941 AND ICs at $0.23 each and 3,994 inverter ICs at $0.32 each on the accessed pages; this is stock evidence, not a reservation. Gate-IC subtotal for one board is **$1.42** before shipping/tax/tariffs. The extra five bypass capacitors add up to $0.70 using the existing conservative one-piece capacitor price. The two fewer 10 kohm resistors reduce that allowance by $0.20. At these row prices the net component allowance increases by **$1.92**. Common TI/Nexperia hex-inverter TSSOP alternatives were rejected where current US pages showed no stock; slower AHC inverters were considered but these LVC parts provide more timing margin.
+
+For each physical SPI bus define J0 and J1 as the active-low native chip-select levels, B as its bank GPIO, A0=NOT(J0), A1=NOT(J1), and NB=NOT(B). Construct the four selects strictly with AND and NOT:
+
+```text
+/CAN0 = NOT(A0 AND NB)
+/CAN1 = NOT(A1 AND NB)
+/CAN2 = NOT(A0 AND B)
+/CAN3 = NOT(A1 AND B)
+```
+
+| B | J0 | J1 | /CAN0 | /CAN1 | /CAN2 | /CAN3 | Meaning |
+|---:|---:|---:|---:|---:|---:|---:|---|
+| 0 | 1 | 1 | 1 | 1 | 1 | 1 | Idle |
+| 0 | 0 | 1 | 0 | 1 | 1 | 1 | CAN0 |
+| 0 | 1 | 0 | 1 | 0 | 1 | 1 | CAN1 |
+| 1 | 1 | 1 | 1 | 1 | 1 | 1 | Idle |
+| 1 | 0 | 1 | 1 | 1 | 0 | 1 | CAN2 |
+| 1 | 1 | 0 | 1 | 1 | 1 | 0 | CAN3 |
+
+J0=J1=0 selects two controllers in the chosen bank and is forbidden: software must never assert both native selects together. Changing B while either J is low can select a different controller mid-message; switch B only after both native CS lines are high and the previous CAN SDO has released MISO. These gates are combinational; no break-before-make behavior is implied.
+
+Gate usage across the complete board: eight AND stages and fourteen NOT stages. Use one quad AND per SPI bus. Use one hex inverter per SPI bus for its two native-CS inversions and four output inversions. Use two stages of the third hex inverter for the two independent bank inversions. Tie its four unused inputs to GND_HOST and leave unused outputs unconnected for dedicated IRQs. The shared-IRQ option below uses unit C and leaves only three unused stages. Connect every IC's pin 14 to 3V3_HOST and pin 7 to GND_HOST; place one 100 nF capacitor at each package. The new KiCad symbols are pin-compatible aliases of the generic 74LS08 and 74LS04 drawings, with LVC names, selected footprints and correct datasheet links; they are not electrically LS-family parts. Place the separate power unit when using these multi-unit symbols.
+
+Timing: the AND datasheet specifies up to 4.8 ns at 3.0-3.6 V over -40 to +125 C, and the inverter up to 6.0 ns under its 3.0-3.6 V / 50 pF conditions. The three-stage native-CS path therefore has a **16.8 ns sum of device maximum delays** under those conditions; routing/loading adds delay. This is a timing allocation, not a measured board result. Budget it along with isolation delay and the MCP251863 CS setup/hold requirements. Start with a requested native-CS setup allowance of at least 100 ns and hold allowance of at least 250 ns at 8 MHz, allow bank settling before assertion, and verify actual waveforms at the CAN IC. Ensure inter-device idle time also covers the CAN SDO release specification. Do not assume the stock Tegra driver exposes every timing control or that a device-tree delay property is honored without checking. The gates do not carry SCK/MOSI/MISO, so their propagation is on the CS timing path, not the serial data path.
+
+Sources: [Nexperia AND datasheet](https://assets.nexperia.com/documents/data-sheet/74LVC08A.pdf), [Diodes inverter datasheet](https://www.diodes.com/assets/Datasheets/74LVC04A.pdf), [Linux SPI-mux binding](https://raw.githubusercontent.com/torvalds/linux/v5.15/Documentation/devicetree/bindings/spi/spi-mux.yaml), [Linux GPIO-mux binding](https://raw.githubusercontent.com/torvalds/linux/v5.15/Documentation/devicetree/bindings/mux/gpio-mux.yaml).
+
+## Additional OR gate and logic timing review
+
+Added **1 x Nexperia 74LVC32APW,118**, a quad 2-input OR gate in the same TSSOP-14, 4.4 x 5 mm / 0.65 mm pitch package as the AND/NOT parts. DigiKey displayed 6,092 in stock and $0.25 at quantity one. One package provides four OR functions; this is an added logic provision, not a change to the existing AND/NOT bank-select equations or their package counts. The final OR connections and number of used stages have not been specified. Do not insert it into SCK/MOSI/MISO or alter the CS polarity automatically.
+
+Power pin 14 from **3V3_HOST**, pin 7 from GND_HOST, and fit one 100 nF bypass at the package. This increases the board's 100 nF total from 39 to **40**; incremental allowance is $0.39 including the capacitor at the existing row price, and all six logic packages total $1.67 before bypass capacitors. Tie every unused OR input to ground and leave unused outputs open. Place the separate power unit in KiCad. The OR symbol is a pin-compatible graphical alias of 74LS32 with the selected LVC name, datasheet and footprint; electrical specifications are those of the LVC part. No 5 V supply for either Nexperia logic IC.
+
+The following are **maximum propagation delays per stage at 3.0-3.6 V, -40 to +125 C and 50 pF test load**, not typical-only speed claims:
+
+| Function | Selected part | Maximum delay |
+|---|---|---:|
+| AND | 74LVC08APW,118 | 4.8 ns |
+| NOT | 74LVC04AT14-13 | 6.0 ns |
+| OR | 74LVC32APW,118 | 5.0 ns |
+
+At 8 MHz, the SPI period is 125 ns and half-period is 62.5 ns. These gates are suitable for the intended MHz logic operation under the stated conditions; the bank-select network is on CS, so its relevant constraint is CS setup/hold relative to the separately routed SCK, rather than simply comparing a gate's delay with a clock period. The existing NOT-AND-NOT CS path sums to **16.8 ns** before board effects. If one OR stage is added in series to a particular CS path, allocate **21.8 ns** for those four stages, plus routing, loading and isolation delay; revise the timing for the actual circuit. Retain the provisional native-CS setup/hold allocations of 100 ns / 250 ns and verify at the MCP251863 with the exact Jetson driver. These allocations are not proof that the kernel honors the requested timing or that the complete board has passed timing. Additional cascaded OR stages each consume more delay. Clock/data paths must be budgeted separately if their routing is changed.
+
+Keep fan-out and trace capacitance within the checked load, meet input edge-rate limits, and verify the 3.3 V supply remains within 3.0-3.6 V for these delay numbers. Tie unused CMOS inputs to defined levels. The newly added OR function alone does not establish a safe startup inhibit; that requires an explicit signal/polarity and startup-bias design.
+
+Sources: [Nexperia OR datasheet, dynamic characteristics](https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf), [Nexperia AND datasheet](https://assets.nexperia.com/documents/data-sheet/74LVC08A.pdf), [Diodes inverter datasheet](https://www.diodes.com/assets/Datasheets/74LVC04A.pdf), [OR gate at DigiKey](https://www.digikey.com/en/products/detail/nexperia-usa-inc/74LVC32APW-118/946666). Datasheet and local CAD assets are included with their provenance in the archive manifests.
+
+## Single host interrupt GPIO: eight-input AND implementation
+
+Added **1 x Nexperia 74AHC30PW,118**, an **8-input NAND** in TSSOP-14, plus use of one already-spare NOT stage in the third 74LVC04AT14-13. This implements the requested 8-input AND function; the new IC itself is NAND, not AND. The opened US Mouser page displayed 3,795 in stock at $0.39, but is an older snapshot (September 2025). More recent regional Mouser snapshots showed about 3,800 and DigiKey regional snapshots 5,519; recheck US checkout availability. One new 100 nF bypass increases the board total to **41**; incremental allowance is $0.53 at the current row prices. No extra inverter package is required.
+
+**Voltage distinction:** controller VDD sets the MCP251863 controller digital output domain, including main nINT (pin 19). The current design powers VDD from 5V_ISO, so nINT at the chip is nominally a 5 V signal. VIO belongs to the integrated transceiver interface; setting VIO alone to 3.3 V would not change the controller nINT/SPI domain. After the ISO7763 return channels, each host-side interrupt output is **3.3 V relative to GND_HOST**. Place this shared-IRQ logic there. A design with controller VDD=3.3 V and CAN transceiver VCC=5 V is also possible, but needs an isolated 3.3 V rail and a reviewed supply/isolation change; it is not the current BOM architecture.
+
+```text
+Eight MCP251863 nINT outputs (pin 19, 5 V domain)
+    -> eight existing independent CAN-to-host isolator channels
+    -> eight 3.3 V host outputs -> 74AHC30 NAND -> spare NOT -> one Jetson GPIO
+```
+
+The existing four ISO7763 packages and eight return interrupt channels remain; this host-side combination saves Jetson GPIOs, not isolation channels. Never join isolator outputs together. NAND pin 14=3V3_HOST, pin 7=GND_HOST, inputs A..H=pins 1,2,3,4,5,6,11,12 and output Y=pin 8. Leave physical NC pins 9/10/13 unconnected. Fit one 100 nF at VCC. Do not substitute AHCT30 at 3.3 V: its operating range is 4.5-5.5 V. AHC30 operates at 2.0-5.5 V; use it at host 3.3 V here.
+
+Use the third inverter package's unit C for shared IRQ: input pin 5 from NAND Y, output pin 6 to the chosen Jetson IRQ. Units A/B remain the two bank inversions, and unused D/E/F inputs (pins 9/11/13) tie to GND_HOST with outputs left open. The package count stays at three hex inverters. This revises the earlier four-unused-stage statement to **three unused stages when shared IRQ is populated**. Keep the OR package independent; it is not required for this AND function.
+
+All eight source levels high gives NAND low and final shared IRQ high (inactive). Any one or more source levels low gives NAND high and shared IRQ low (active). A NAND alone has the opposite, active-high polarity. All inputs must be connected to defined isolator outputs; if fewer than eight are used, tie unused NAND inputs high, not low. Non-F ISO7763 return outputs default high when the input domain is absent while the host domain is properly powered. Configure and unmask the host IRQ only after its supply, logic, CAN controllers and SPI paths are initialized. Power-ramp transients are not valid logic and are not fixed simply by adding a gate.
+
+**Timing:** at 3.0-3.6 V, 50 pF load and -40 to +125 C, AHC30 maximum delay is **15.5 ns**. Adding the existing NOT maximum of 6.0 ns gives **21.5 ns** from an isolator's host output to the combined GPIO before board effects. With a 15 pF NAND load, its specified maximum is 12 ns. These delays suit this interrupt function; the line is a level held until software services the cause, not an 8 MHz SPI clock path. SCK/MOSI/MISO and chip-select timing allocations are unchanged.
+
+**Software dependency:** this hardware option does not by itself make the stock Jetson CAN driver support eight devices on one interrupt. Verify IRQ sharing and per-device interrupt-ownership handling in the exact JetPack kernel, or implement an aggregate handler that checks every controller and drains pending causes until the line deasserts. Use an active-low level IRQ, not falling-edge-only; a second controller can assert while the shared line is already low. Each enabled controller needs service, including simultaneous events across both SPI buses. Preserve per-controller test points to diagnose a source stuck low. The eight dedicated-host-IRQ configuration remains the simpler default until the shared handler is validated; this section defines the alternative hardware wiring.
+
+Sources: [MCP251863 digital output specifications and interrupt registers](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf), [Nexperia AHC30 pinout and timing](https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT30.pdf), [Mouser selected SKU](https://www.mouser.com/ProductDetail/Nexperia/74AHC30PW118?qs=P62ublwmbi%252B963Q4ACANGA%3D%3D). The symbol is a 74LS30 graphical pin-compatible alias with explicit NC pins added to its power unit, renamed with AHC data and a local footprint; it is not an LS electrical part. Place both logic and power units in KiCad.
+
+## Crystal load capacitance clarification
+
+All oscillator load values here are **pF, not uF**. The crystal specified load is 18 pF; that is not automatically the value of each external capacitor. In the common lumped approximation, CL = C1*C2/(C1+C2) + Cstray. For equal external capacitors, C1 = C2 = 2*(18 pF - Cstray). With zero stray capacitance this gives 36 pF each; with an assumed 4.5 pF effective stray contribution it gives 27 pF each. That 4.5 pF is an example, not a measured value for this board. Pin capacitances can instead be included individually in each leg before taking the series equivalent; do not count them twice.
+
+The selected 18 pF external capacitors are Microchip's reported tested population for this exact crystal. They contribute 9 pF in series before parasitics, so matching an 18 pF effective load would require an additional 9 pF effective contribution. The application note does not establish that value for this PCB or prove exact frequency accuracy. Retain 18 pF only as a prototype starting population; final values require the chip/PCB capacitance estimate and oscillator startup/frequency validation. The earlier draft's 27 pF was not inherently invalid.
+
+## Required connections and population
+
+Each of the two banks uses two ISO7763DWR isolators. Connect VCC1/GND1 to 3V3_HOST/GND_HOST, and VCC2/GND2 to 5V_ISO/GND_ISO.
+
+| Isolator in each bank | Channels A/B/C, host to CAN side | Channels D/E/F, CAN side to host |
+|---|---|---|
+| First | SCK, MOSI, CS0 | MISO, INT0, INT1 |
+| Second | CS1, CS2, CS3 | INT2, INT3, unused |
+
+Tie the unused reverse input to GND_ISO and leave its output unconnected. Four controllers share MOSI/SCK and the pre-isolation MISO net in each bank. Their SDO pins tri-state when deselected. Use just one returning MISO isolator channel per bank; never tie isolator outputs together. Budget the controller SDO release interval when changing chip selects.
+
+The gate network generates eight active-low CAN chip selects from the Jetson's four native chip selects and two bank GPIOs (one GPIO per SPI bus). Route eight independent interrupt returns through isolation; use eight Jetson GPIOs by default or combine on the host side as described in the shared-IRQ option. Do not wire the default push-pull interrupt outputs together. Keep native CS inputs high during startup and interrupt returns inactive until initialization. The isolator-table CS0..CS3 labels refer to the four generated CAN selects in each bank, not four Jetson-native outputs.
+
+For every MCP251863, externally connect **TXCAN to TXD, RXD to RXCAN**, and tie **STBY low** for the initial always-on transceiver configuration. They are separate controller/transceiver pins even though the dies share a package. Both ground pins go to GND_ISO. Leave NC pins unconnected. Crystal terminals use pins 1/3 of the crystal symbol, with package grounds 2/4 connected to GND_ISO. Check these against the manufacturer pin table during schematic review. [MCP251863 datasheet, figures 1-1/1-2](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf)
+
+Allocate the passives as follows; reference designators are assigned when drawing the schematic:
+
+| Part/value | Allocation |
+|---|---|
+| 41 x 100 nF | Three per CAN IC (VDD, VIO, VCC), two per isolator (one each side), two at eFuse input/output, one per AND/NOT/OR/NAND logic IC (seven packages) |
+| 20 x 1 uF | One per CAN IC, one at each isolator supply side, two at host LDO input/output, two bank bulk capacitors |
+| 4 x 10 uF | Fused eFuse input, eFuse output/converter input, two in parallel at isolated output; confirm effective capacitance after DC bias |
+| 16 x 18 pF | Two per crystal, immediately adjacent to oscillator pins |
+| 24 x 10 kohm | Four native-CS pull-ups to 3V3_HOST, two BANK pull-downs to GND_HOST, eight CAN-side CS pull-ups to 5V_ISO, eight CAN-side interrupt pull-ups, two pre-isolation MISO bias resistors |
+| 14 x 33 ohm | Six forward SPI signals per bank at isolator outputs, plus one returning MISO at each host-side isolator output; tune after scope measurements |
+| 1 x 1.21 kohm | TPS259530 ILM to GND_HOST |
+| 1 x 10 nF | TPS259530 dVdt to GND_HOST |
+
+The TPS259530 input is the fused external supply with the parallel diode to GND_HOST; its protected output feeds the converter and host-side LDO. Connect EN/UVLO to input for always-on operation; leave /FLT unconnected or expose a test point. Ground the exposed pad. The 1.21 kohm ILM resistor gives approximately **1.69 A nominal**, using TI's equation; the stated current-limit tolerance plus 1% resistor tolerance keeps the static setting below 2 A. It is not a guarantee against instantaneous fault overshoot. The latch-off variant requires an enable or power cycle after a fault. The built-in 5.7 V clamp does not provide a precise 5.5 V protection threshold: the external source must be regulated 5 V as specified. [TI TPS2595 datasheet, sections 8/9](https://www.ti.com/lit/ds/symlink/tps2595.pdf)
+
+Enable the host LDO from the Jetson's 3.3 V rail so the board does not drive MISO/IRQ into an unpowered host. Do not connect its output to the Jetson's 3.3 V output. Leave TRACO REMOTE open for normal operation; pins 5/8 are NC for this single-output model. GND_ISO must never join GND_HOST through a plane, connector, test instrument or shield connection that defeats the isolation.
+
+## Power and interface limits
+
+Use a regulated 5 V / 2 A input. The TMR input must stay above 4.5 V after cable, fuse, eFuse and PCB drop; the parallel diode adds no normal series drop. See the input-protection qualification conditions above. Its regulated 5 V output is rated 1.2 A; allow approximately **0.85 A / 4.25 W** for the isolated domain as a conservative design allocation: eight transceivers up to 70 mA dominant each, controller/VIO allowance of 25 mA each, and 90 mA total isolator/spare allowance. This is a sizing allowance, not a measured worst-case certification. At 81% nominal conversion efficiency the isolated load draws about 1.05 A from 5 V before host-side consumption. Verify shorted-bus behavior, startup and thermal derating; nominal efficiency must not be treated as a guaranteed minimum. [MCP251863 supply table](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf), [TRACO TMR 6 specifications](https://www.tracopower.com/products/tmr6.pdf)
+
+The converter is rated for 1.6 kV DC isolation test voltage; wide-SOIC isolators do not make the complete board a higher-rated barrier. Reserve the required creepage/clearance for the intended working voltage and environment across all layers. Do not claim a safety-rated system from component test ratings alone.
+
+Set CAN to **1 Mbit/s Classical CAN**, compatible with the selected parts; the CAN FD capability is optional. Set oscillator frequency to **40 MHz**. SPI is a separate frequency: start at **8 MHz**, with SPI mode 0, and verify the complete timing budget before increasing it. The isolated clock outward and MISO return incur two propagation delays plus controller SDO delay, host setup time and trace delays. The bare controller's 17 MHz ceiling is not the safe speed of this isolated board. At an 8 MHz SPI clock, only 62.5 ns is available in a half-cycle. [Microchip SPI timing table](https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf), [TI switching characteristics](https://www.ti.com/lit/ds/symlink/iso7763.pdf)
+
+**1 Mbit/s line rate on eight buses does not promise simultaneous full-duplex saturation on all eight buses.** Four controllers share each SPI link; register/FIFO/CRC transactions and Linux scheduling add overhead. Validate the actual motor frame rate and command latency with all eight buses active, bidirectional traffic, RX FIFO pressure and faults. If the requirement is eight buses continuously saturated with arbitrary traffic, this topology has not been demonstrated to meet it; measure before PCB release or revisit the architecture.
+
+Use Linux SocketCAN's existing `mcp251xfd` support as the starting point, with eight CAN devices behind four `spi-mux` instances and 40 MHz clock descriptions. Each physical SPI controller has one mux child at native CS0 and another at native CS1; both reference the same bank GPIO mux-control for that physical bus, each with two CAN children. Enable `CONFIG_SPI_MUX`, `CONFIG_MULTIPLEXER`, and `CONFIG_MUX_GPIO` in addition to the CAN driver. Verify the exact JetPack kernel bindings and behavior; this is a proposed software topology, not a tested Jetson overlay. Configure pinmux using the NVIDIA guidance. Direct userspace GPIO register access is not a component requirement and can conflict with kernel ownership, interrupt handling and concurrency. Profile the normal kernel driver path before considering a driver change. [Linux binding](https://kernel.googlesource.com/pub/scm/linux/kernel/git/torvalds/linux/%2B/ae1c1a8fd9c3f504b390df26b4af8ef6bfde005e/Documentation/devicetree/bindings/net/can/microchip%2Cmcp251xfd.yaml), [NVIDIA expansion headers](https://docs.nvidia.com/jetson/archives/r36.4.3/DeveloperGuide/HR/ConfiguringTheJetsonExpansionHeaders.html)
+
+The M20-9982046 is a **board-side host harness header**, not a drop-in underside Jetson stacking socket. Allocate its pins explicitly when drawing the schematic: two sets of SCK/MOSI/MISO/2 native CS/1 BANK/4 IRQ plus host ground, Jetson 3.3 V enable sense and spare grounds. Do not assume a straight-through Raspberry Pi cable pinout. Verify the selected GPIOs and carrier-board pinmux before assigning the harness. Keep the unbuffered host SPI harness short and check waveforms at the target speed.
+
+CAN connector allocation: 1=CANH, 2=CANL, 3=GND_ISO; power input: 1=+5V_IN, 2=GND_HOST. Label these on both PCB and harness. JST XH mating housings/contacts and host cable parts are not included in the PCB BOM; select contacts for the actual wire gauge and strain relief. Use twisted-pair CAN wiring and short stubs. A TVS does not make a CAN port tolerant of sustained motor-battery miswiring.
+
+## KiCad delivery and remaining release checks
+
+All purchased MPNs map to a local symbol, footprint and STEP in `kicad_footprints/`; see `kicad_footprints/README.md` and `asset_manifest.csv`. Symbols and footprints are sourced from the installed official KiCad 9 libraries, with two custom symbols and explicitly identified package aliases. Network downloads through the shell were unavailable, so these are local official-library copies, not fresh distributor CAD downloads. Generic package STEP models are included; the TMR and host header models require particular mechanical review. The existing powered-oscillator library is retained but excluded from this BOM.
+
+The component selection is ready for schematic capture. Production release still requires schematic/pad review, final GPIO/harness assignment, isolation layout review, oscillator and SPI timing measurements, thermal/power startup checks, and an eight-bus traffic test. The existing schematic/PCB has not been redesigned or electrically validated by this sourcing task.
