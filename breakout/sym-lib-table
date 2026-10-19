@@ -1,4 +1,4 @@
 (sym_lib_table
-  (version 7)
-  (lib (name "BreakoutBoard")(type "KiCad")(uri "C:/humanoids/breakoutboard/kicad_footprints/BreakoutBoard.kicad_sym")(options "")(descr ""))
+	(version 7)
+	(lib (name "BreakoutBoard") (type "KiCad") (uri "C:/Users/charl/OneDrive/Documents/kicadprojects/jetson_spi_to_can_x8_breakout/kicad_footprints/BreakoutBoard.kicad_sym") (options "") (descr ""))
 )
