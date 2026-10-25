@@ -1,0 +1,10 @@
+# KiCad editor/session state must stay local to each checkout.
+*.kicad_prl
+*.lck
+.history
+_autosave-*
+~*.kicad_*
+
+# Automatic and manual recovery copies; design history is tracked by Git.
+*-backups/
+layout-backups/

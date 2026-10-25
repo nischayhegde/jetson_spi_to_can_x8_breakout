@@ -1,0 +1,28 @@
+Compact SPI-to-eight-channel CAN FD layout
+
+Board size: 77 x 80 mm (22.6% less area than the original 99.5 x 80 mm outline).
+All 141 component footprints and pad/net assignments are retained.
+Connector positions and orientations have changed; selected passives and test
+pads are on the back side. The Jetson socket is between two four-channel banks.
+
+Four copper layers:
+  F.Cu: local IC, crystal, bypass and signal routing.
+  In1.Cu: continuous ground plane; no signal tracks.
+  In2.Cu: 3.3 V pour with selected SPI and control routes.
+  B.Cu: signal routing and selected small components.
+
+All 24 MCP251863 bypass connections are 2.425 mm from IC pin pad to cap pad.
+Oscillator signals stay on F.Cu without vias.
+Approximate maximum header-to-controller paths, including series-resistor span:
+  SPI0: clock 75.4 mm, MOSI 58.8 mm, MISO 47.7 mm.
+  SPI1: clock 67.5 mm, MOSI 95.4 mm, MISO 48.1 mm.
+
+Checked with KiCad 10.0.7: zero DRC violations, zero unrouted connections,
+and zero schematic/PCB parity issues. No DRC exclusions were added.
+Mechanical fit, signal integrity and hardware operation require validation.
+
+Collaboration: use a separate Git checkout for each person, pull before editing,
+and coordinate ownership of the PCB file. KiCad lock files only describe an
+open editor instance in that working folder; they are not a Git collaboration
+or remote-presence mechanism. Lock files, local preferences and recovery
+backups are intentionally excluded from version control.
