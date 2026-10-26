@@ -1,0 +1,29 @@
+J1 ground-pin update - 2026-10-25
+
+Connected J1 pins 6, 9, 14, 20, 25, 30 and 34 to GND in both the saved
+schematic and PCB. Pin 39 was already connected. All eight designated Jetson
+header ground positions now connect to the existing ground plane.
+
+Reference: NVIDIA Jetson Orin Nano Developer Kit Carrier Board Specification,
+SP-11324-001 v1.3, section 3.3, Figure 3-1, printed page 21 / PDF page 25.
+The NVIDIA carrier calls its header J12; this PCB calls its matching header J1.
+Local source: ../verification-2026-10-25/sources/Jetson_carrier_v1_3.pdf.
+
+Removed the seven schematic no-connect markers and placed compact global GND
+labels at the terminals. Shifted only R21's schematic reference text to avoid
+an annotation overlap. Changed the matching PCB pad nets and removed their
+obsolete no-connect pin metadata. Refilled the existing copper zones; the
+plated through-hole pads connect directly to the inner GND plane.
+
+Verified using KiCad 10.0.7:
+  PCB DRC: 0 violations.
+  Unrouted connections: 0.
+  Schematic / PCB parity: 0 mismatches.
+  ERC: 0 errors; the same 28 pre-existing capacitor library warnings.
+  Netlist comparison: exactly the seven requested J1 pins changed net.
+  All other pad nets/positions and existing tracks/vias are unchanged.
+
+Committed evidence: final_validation.json, erc-after.json and drc-after.json.
+The netlist export, rendered previews, source PDF and before-change backups
+are retained locally as working evidence. The earlier local verification
+report has a follow-up marking F02 resolved.

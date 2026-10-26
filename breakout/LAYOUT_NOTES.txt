@@ -1,7 +1,10 @@
 Compact SPI-to-eight-channel CAN FD layout
 
 Board size: 77 x 80 mm (22.6% less area than the original 99.5 x 80 mm outline).
-All 141 component footprints and pad/net assignments are retained.
+All 141 component footprints are retained.
+J1 grounds 6, 9, 14, 20, 25, 30, 34 and 39 connect to GND, following the
+Jetson Orin Nano developer-carrier 40-pin header pinout. The seven previously
+unused ground pads were connected and the existing planes refilled.
 Connector positions and orientations have changed; selected passives and test
 pads are on the back side. The Jetson socket is between two four-channel banks.
 

@@ -6890,10 +6890,6 @@
 		(uuid "18e7e72c-b2b9-4011-8181-8d07cb350ac9")
 	)
 	(no_connect
-		(at 55.88 86.36)
-		(uuid "196bb618-94e2-4bd0-b531-ec0384f0b74b")
-	)
-	(no_connect
 		(at 212.09 120.65)
 		(uuid "198d90c7-4f4e-4e25-8cfe-bcd4a1e7a56e")
 	)
@@ -6916,10 +6912,6 @@
 	(no_connect
 		(at 55.88 88.9)
 		(uuid "39711311-8559-4fed-9ccf-0a2f3b7624b2")
-	)
-	(no_connect
-		(at 68.58 99.06)
-		(uuid "3b009a95-cfb5-4b5e-98a9-e87247e50038")
 	)
 	(no_connect
 		(at 55.88 109.22)
@@ -6966,10 +6958,6 @@
 		(uuid "7d997a9f-c7b7-4014-a62f-8bebde8995dd")
 	)
 	(no_connect
-		(at 68.58 116.84)
-		(uuid "87a221d6-1608-4ef1-8289-8ab9e629e1a3")
-	)
-	(no_connect
 		(at 303.53 -19.05)
 		(uuid "87a45e61-925a-4767-bde3-fac7809a448b")
 	)
@@ -6994,10 +6982,6 @@
 		(uuid "a25d8947-9e31-45b6-acfa-39c5d676554e")
 	)
 	(no_connect
-		(at 68.58 91.44)
-		(uuid "b013919e-08c0-4b65-b088-68d924292687")
-	)
-	(no_connect
 		(at 201.93 -19.05)
 		(uuid "b0d4fa12-bfad-4ed8-b19e-0170887538e9")
 	)
@@ -7018,16 +7002,8 @@
 		(uuid "bfc2aca3-a298-4967-8135-50edb0c4a129")
 	)
 	(no_connect
-		(at 68.58 111.76)
-		(uuid "c44d0295-c9a9-429e-b7b5-47dce3758b3b")
-	)
-	(no_connect
 		(at 8.89 -12.7)
 		(uuid "ca630c91-0b81-4827-b125-b600c1a4f1f4")
-	)
-	(no_connect
-		(at 68.58 81.28)
-		(uuid "cae6fcb8-4d66-4e7f-b284-cc2da15010a1")
 	)
 	(no_connect
 		(at 201.93 -21.59)
@@ -7036,10 +7012,6 @@
 	(no_connect
 		(at 68.58 109.22)
 		(uuid "e30ab0ff-3bce-4f63-9f2f-54f469670d54")
-	)
-	(no_connect
-		(at 55.88 106.68)
-		(uuid "e32ca2f4-c581-4137-b74f-ba4d15077206")
 	)
 	(no_connect
 		(at 120.65 284.48)
@@ -14156,6 +14128,48 @@
 				(justify left)
 			)
 		)
+	)
+	(global_label "GND"
+		(shape input)
+		(at 68.58 81.28 0)
+		(effects (font (size 0.9 0.9)) (justify left))
+		(uuid "0a939ecd-51c0-43f5-9a8d-01332b15aa17")
+	)
+	(global_label "GND"
+		(shape input)
+		(at 55.88 86.36 180)
+		(effects (font (size 0.9 0.9)) (justify right))
+		(uuid "4ddd54b7-e93c-4cdd-98e2-a54f6c7014fd")
+	)
+	(global_label "GND"
+		(shape input)
+		(at 68.58 91.44 0)
+		(effects (font (size 0.9 0.9)) (justify left))
+		(uuid "7acfdc8c-5662-4bc3-8262-cd495bdca5fb")
+	)
+	(global_label "GND"
+		(shape input)
+		(at 68.58 99.06 0)
+		(effects (font (size 0.9 0.9)) (justify left))
+		(uuid "7b8fe543-01c3-4d29-878a-28f16599df0c")
+	)
+	(global_label "GND"
+		(shape input)
+		(at 55.88 106.68 180)
+		(effects (font (size 0.9 0.9)) (justify right))
+		(uuid "3c69a137-c87d-470a-b2f2-ba2379a1e132")
+	)
+	(global_label "GND"
+		(shape input)
+		(at 68.58 111.76 0)
+		(effects (font (size 0.9 0.9)) (justify left))
+		(uuid "77b0f07e-06c4-4cd2-8884-86c54217fb00")
+	)
+	(global_label "GND"
+		(shape input)
+		(at 68.58 116.84 0)
+		(effects (font (size 0.9 0.9)) (justify left))
+		(uuid "a41c04a6-612c-4b15-b000-912482fc7f49")
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
@@ -31493,7 +31507,7 @@
 		(fields_autoplaced yes)
 		(uuid "ce0943ab-0170-40f2-8a02-0ac1eab419fb")
 		(property "Reference" "R21"
-			(at 52.07 86.36 90)
+			(at 49.53 86.36 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

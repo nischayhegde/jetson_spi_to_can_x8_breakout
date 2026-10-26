@@ -1,0 +1,85 @@
+{
+  "grounded_J1_pins": [
+    6,
+    9,
+    14,
+    20,
+    25,
+    30,
+    34,
+    39
+  ],
+  "schematic_net_changes": {
+    "J1.6": [
+      "unconnected-(J1-Pin_6-Pad6)",
+      "GND"
+    ],
+    "J1.9": [
+      "unconnected-(J1-Pin_9-Pad9)",
+      "GND"
+    ],
+    "J1.14": [
+      "unconnected-(J1-Pin_14-Pad14)",
+      "GND"
+    ],
+    "J1.20": [
+      "unconnected-(J1-Pin_20-Pad20)",
+      "GND"
+    ],
+    "J1.25": [
+      "unconnected-(J1-Pin_25-Pad25)",
+      "GND"
+    ],
+    "J1.30": [
+      "unconnected-(J1-Pin_30-Pad30)",
+      "GND"
+    ],
+    "J1.34": [
+      "unconnected-(J1-Pin_34-Pad34)",
+      "GND"
+    ]
+  },
+  "pcb_pad_net_changes": {
+    "J1.6": [
+      "unconnected-(J1-Pin_6-Pad6)",
+      "GND"
+    ],
+    "J1.9": [
+      "unconnected-(J1-Pin_9-Pad9)",
+      "GND"
+    ],
+    "J1.14": [
+      "unconnected-(J1-Pin_14-Pad14)",
+      "GND"
+    ],
+    "J1.20": [
+      "unconnected-(J1-Pin_20-Pad20)",
+      "GND"
+    ],
+    "J1.25": [
+      "unconnected-(J1-Pin_25-Pad25)",
+      "GND"
+    ],
+    "J1.30": [
+      "unconnected-(J1-Pin_30-Pad30)",
+      "GND"
+    ],
+    "J1.34": [
+      "unconnected-(J1-Pin_34-Pad34)",
+      "GND"
+    ]
+  },
+  "all_other_pad_nets_and_positions_unchanged": true,
+  "existing_tracks_and_vias_unchanged": true,
+  "footprints": 141,
+  "tracks_and_vias": 1712,
+  "erc_errors": 0,
+  "erc_existing_library_warnings": 28,
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "schematic_pcb_mismatches": 0,
+  "final_sha256": {
+    "breakout.kicad_sch": "4769f26b4108f747cac426cf33e145d907afa9cb1eb3496f62f7ed67e8b19e03",
+    "breakout.kicad_pcb": "9b538f9305e52374a95cf05b6c7cab491e20499482e4229210d5a3d575ceafed"
+  }
+}
