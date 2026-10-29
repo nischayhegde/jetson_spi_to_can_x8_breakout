@@ -1,0 +1,1515 @@
+
+=== PDF PAGE 1 ===
+74LVC08A
+Quad 2-input AND gate
+Rev. 11 — 8 February 2024
+Product data sheet
+1.  General description
+The 74LVC08A is a quad 2-input AND gate. Inputs can be driven from either 3.3 V or 5 V devices.
+This feature allows the use of these devices as translators in mixed 3.3 V and 5 V applications.
+Schmitt-trigger action at all inputs makes the circuit tolerant of slower input rise and fall times.
+2.  Features and benefits
+•
+Overvoltage tolerant inputs to 5.5 V
+•
+Wide supply voltage range from 1.2 V to 3.6 V
+•
+CMOS low power consumption
+•
+Direct interface with TTL levels
+•
+Complies with JEDEC standard:
+•
+JESD8-7A (1.65 V to 1.95 V)
+•
+JESD8-5A (2.3 V to 2.7 V)
+•
+JESD8-C/JESD36 (2.7 V to 3.6 V)
+•
+ESD protection:
+•
+HBM: ANSI/ESDA/JEDEC JS-001 class 2 exceeds 2000 V
+•
+CDM: ANSI/ESDA/JEDEC JS-002 class C3 exceeds 1000 V
+•
+Specified from -40 °C to +85 °C and -40 °C to +125 °C
+3.  Ordering information
+Table 1. Ordering information
+Package
+Type number
+Temperature range
+Name
+Description
+Version
+74LVC08AD
+-40 °C to +125 °C
+SO14
+plastic small outline package; 14 leads;
+body width 3.9 mm
+SOT108-1
+74LVC08APW
+-40 °C to +125 °C
+TSSOP14
+plastic thin shrink small outline package; 14 leads;
+body width 4.4 mm
+SOT402-1
+74LVC08ABQ
+-40 °C to +125 °C
+DHVQFN14
+plastic dual in-line compatible thermal enhanced
+very thin quad flat package; no leads; 14 terminals;
+body 2.5 × 3 × 0.85 mm
+SOT762-1
+
+
+=== PDF PAGE 2 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+4.  Functional diagram
+mna222
+1A
+1B
+1Y
+2
+1
+3
+2A
+2B
+2Y
+5
+4
+6
+3A
+3B
+3Y
+10
+9
+8
+4A
+4B
+4Y
+13
+12
+11
+Fig. 1.
+Logic symbol
+mna223
+3
+&
+&
+&
+&
+2
+1
+6
+5
+4
+8
+10
+9
+11
+13
+12
+Fig. 2.
+IEC logic symbol
+mna221
+A
+B
+Y
+Fig. 3.
+Logic diagram for one gate
+5.  Pinning information
+5.1.  Pinning
+1A
+VCC
+1B
+4B
+1Y
+4A
+2A
+4Y
+2B
+3B
+2Y
+3A
+GND
+3Y
+aaa-036070
+1
+2
+3
+4
+5
+6
+7
+8
+10
+9
+12
+11
+14
+13
+D package
+SOT108-1 (SO14)
+ 
+1A
+VCC
+1B
+4B
+1Y
+4A
+2A
+4Y
+2B
+3B
+2Y
+3A
+GND
+3Y
+aaa-036071
+1
+2
+3
+4
+5
+6
+7
+8
+10
+9
+12
+11
+14
+13
+PW package
+SOT402-1 (TSSOP14)
+ 
+aaa-036072
+Transparent top view
+2Y
+3A
+2B
+3B
+2A
+4Y
+1Y
+4A
+1B
+4B
+GND
+3Y
+1A
+VCC
+6
+9
+5
+10
+4
+11
+3
+12
+2
+13
+7
+8
+1
+14
+terminal 1
+index area
+BQ package
+SOT762-1 (DHVQFN14)
+GND(1)
+(1) This is not a ground pin. There is no electrical or mechanical requirement to solder
+the pad. In case soldered, the solder land should remain floating or connected to GND.
+5.2.  Pin description
+Table 2. Pin description
+Symbol
+Pin
+Description
+1A, 2A, 3A, 4A
+1, 4, 9, 12
+data input
+1B, 2B, 3B, 4B
+2, 5, 10, 13
+data input
+1Y, 2Y, 3Y, 4Y
+3, 6, 8, 11
+data output
+GND
+7
+ground (0 V)
+VCC
+14
+supply voltage
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+2 / 12
+
+
+=== PDF PAGE 3 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+6.  Functional description
+Table 3. Function selection
+H = HIGH voltage level; L = LOW voltage level; X = don’t care
+Input
+Output
+nA
+nB
+nY
+L
+X
+L
+X
+L
+L
+H
+H
+H
+7.  Limiting values
+Table 4. Limiting values
+In accordance with the Absolute Maximum Rating System (IEC 60134). Voltages are referenced to GND (ground = 0 V).
+Symbol Parameter
+Conditions
+Min
+Max
+Unit
+VCC
+supply voltage
+-0.5
++6.5
+V
+IIK
+input clamping current
+VI < 0 V
+-50
+-
+mA
+VI
+input voltage
+[1]
+-0.5
++6.5
+V
+IOK
+output clamping current
+VO > VCC or VO < 0 V
+-
+±50
+mA
+VO
+output voltage
+output HIGH or LOW-state
+[2]
+-0.5
+VCC + 0.5 V
+IO
+output current
+VO = 0 V to VCC
+-
+±50
+mA
+ICC
+supply current
+-
+100
+mA
+IGND
+ground current
+-100
+-
+mA
+Ptot
+total power dissipation
+Tamb = -40 °C to +125 °C
+[3]
+-
+500
+mW
+Tstg
+storage temperature
+-65
++150
+°C
+[1]
+The minimum input voltage ratings may be exceeded if the input current ratings are observed.
+[2]
+The output voltage ratings may be exceeded if the output current ratings are observed.
+[3]
+For SOT108-1 (SO14) package: Ptot derates linearly with 10.1 mW/K above 100 °C.
+For SOT402-1 (TSSOP14) package: Ptot derates linearly with 7.3 mW/K above 81 °C.
+For SOT762-1 (DHVQFN14) package: Ptot derates linearly with 9.6 mW/K above 98 °C.
+8.  Recommended operating conditions
+Table 5. Recommended operating conditions
+Symbol Parameter
+Conditions
+Min
+Typ
+Max
+Unit
+1.65
+-
+3.6
+V
+VCC
+supply voltage
+functional
+1.2
+-
+-
+V
+VI
+input voltage
+0
+-
+5.5
+V
+VO
+output voltage
+output HIGH or LOW-state
+0
+-
+VCC
+V
+Tamb
+ambient temperature
+-40
+-
++125
+°C
+VCC = 1.65 V to 2.7 V
+0
+-
+20
+ns/V
+Δt/ΔV
+input transition rise and fall rate
+VCC = 2.7 V to 3.6 V
+0
+-
+10
+ns/V
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+3 / 12
+
+
+=== PDF PAGE 4 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+9.  Static characteristics
+Table 6. Static characteristics
+At recommended operating conditions. Voltages are referenced to GND (ground = 0 V).
+-40 °C to +85 °C
+-40 °C to +125 °C
+Symbol Parameter
+Conditions
+Min
+Typ [1]
+Max
+Min
+Max
+Unit
+VCC = 1.2 V
+1.08
+-
+-
+1.08
+-
+V
+VCC = 1.65 V to 1.95 V
+0.65VCC
+-
+-
+0.65VCC
+-
+V
+VCC = 2.3 V to 2.7 V
+1.7
+-
+-
+1.7
+-
+V
+VIH
+HIGH-level
+input voltage
+VCC = 2.7 V to 3.6 V
+2.0
+-
+-
+2.0
+-
+V
+VCC = 1.2 V
+-
+-
+0.12
+-
+0.12
+V
+VCC = 1.65 V to 1.95 V
+-
+-
+0.35VCC
+-
+0.35VCC V
+VCC = 2.3 V to 2.7 V
+-
+-
+0.7
+-
+0.7
+V
+VIL
+LOW-level
+input voltage
+VCC = 2.7 V to 3.6 V
+-
+-
+0.8
+-
+0.8
+V
+VI = VIH or VIL
+IO = -100 μA; VCC = 1.65 V to 3.6 V
+VCC - 0.2
+-
+-
+VCC - 0.3
+-
+V
+IO = -4 mA; VCC = 1.65 V
+1.2
+-
+-
+1.05
+-
+V
+IO = -8 mA; VCC = 2.3 V
+1.8
+-
+-
+1.65
+-
+V
+IO = -12 mA; VCC = 2.7 V
+2.2
+-
+-
+2.05
+-
+V
+IO = -18 mA; VCC = 3.0 V
+2.4
+-
+-
+2.25
+-
+V
+VOH
+HIGH-level
+output voltage
+IO = -24 mA; VCC = 3.0 V
+2.2
+-
+-
+2.0
+-
+V
+VI = VIH or VIL
+IO = 100 μA; VCC = 1.65 V to 3.6 V
+-
+-
+0.2
+-
+0.3
+V
+IO = 4 mA; VCC = 1.65 V
+-
+-
+0.45
+-
+0.65
+V
+IO = 8 mA; VCC = 2.3 V
+-
+-
+0.6
+-
+0.8
+V
+IO = 12 mA; VCC = 2.7 V
+-
+-
+0.4
+-
+0.6
+V
+VOL
+LOW-level
+output voltage
+IO = 24 mA; VCC = 3.0 V
+-
+-
+0.55
+-
+0.8
+V
+II
+input leakage
+current
+VCC = 3.6 V; VI = 5.5 V or GND
+-
+±0.1
+±5
+-
+±20
+μA
+ICC
+supply current
+VCC = 3.6 V; VI = VCC or GND; IO = 0 A
+-
+0.1
+10
+-
+40
+μA
+ΔICC
+additional
+supply current
+per input pin; VCC = 2.7 V to 3.6 V;
+VI = VCC - 0.6 V; IO = 0 A
+-
+5
+500
+-
+5000
+μA
+CI
+input
+capacitance
+VCC = 0 V to 3.6 V; VI = GND to VCC
+-
+4.0
+-
+-
+-
+pF
+[1]
+All typical values are measured at VCC = 3.3 V (unless stated otherwise) and Tamb = 25 °C.
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+4 / 12
+
+
+=== PDF PAGE 5 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+10.  Dynamic characteristics
+Table 7. Dynamic characteristics
+Voltages are referenced to GND (ground = 0 V). For test circuit see Fig. 5.
+-40 °C to +85 °C
+-40 °C to +125 °C
+Symbol Parameter
+Conditions
+Min
+Typ [1]
+Max
+Min
+Max
+Unit
+nA, nB to nY; see Fig. 4
+[2]
+VCC = 1.2 V
+-
+11.0
+-
+-
+-
+ns
+VCC = 1.65 V to 1.95 V
+0.5
+4.2
+9.0
+0.5
+10.4
+ns
+VCC = 2.3 V to 2.7 V
+1.0
+2.5
+6.9
+1.0
+8.0
+ns
+VCC = 2.7 V
+1.5
+2.5
+4.8
+1.5
+5.6
+ns
+tpd
+propagation delay
+VCC = 3.0 V to 3.6 V
+1.0
+2.3
+4.1
+1.0
+4.8
+ns
+tsk(o)
+output skew time
+VCC = 3.0 V to 3.6 V
+[3]
+-
+-
+1.0
+-
+1.5
+ns
+per gate; VI = GND to VCC
+[4]
+VCC = 1.65 V to 1.95 V
+-
+4.4
+-
+-
+-
+pF
+VCC = 2.3 V to 2.7 V
+-
+7.7
+-
+-
+-
+pF
+CPD
+power dissipation
+capacitance
+VCC = 3.0 V to 3.6 V
+-
+10.5
+-
+-
+-
+pF
+[1]
+Typical values are measured at Tamb = 25 °C and VCC = 1.2 V, 1.8 V, 2.5 V, 2.7 V, and 3.3 V respectively.
+[2]
+tpd is the same as tPLH and tPHL.
+[3]
+Skew between any two outputs of the same package switching in the same direction. This parameter is guaranteed by design.
+[4]
+CPD is used to determine the dynamic power dissipation (PD in μW).
+PD = CPD × VCC 2 × fi × N + Σ(CL × VCC 2 × fo) where:
+fi = input frequency in MHz, fo = output frequency in MHz
+CL = output load capacitance in pF
+VCC = supply voltage in Volts
+N = number of inputs switching
+Σ(CL × VCC 2 × fo) = sum of the outputs.
+10.1.  Waveforms and test circuit
+mna224
+nA, nB input
+nY output
+tPLH
+tPHL
+GND
+VI
+VM
+VM
+VOH
+VOL
+VM = 1.5 V at VCC ≥ 2.7 V
+VM = 0.5 × VCC at VCC < 2.7 V
+VOL and VOH are typical output voltage levels that occur with the output load.
+Fig. 4.
+The input nA, nB to output nY propagation delays
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+5 / 12
+
+
+=== PDF PAGE 6 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+VM
+VM
+tW
+tW
+10 %
+90 %
+0 V
+VI
+VI
+negative 
+pulse
+positive 
+pulse
+0 V
+VM
+VM
+90 %
+10 %
+tf
+tr
+tr
+tf
+001aaf615
+VCC
+VI
+VO
+DUT
+CL
+RT
+RL
+PULSE 
+GENERATOR
+Test data is given in Table 8. Definitions for test circuit:
+RL = Load resistance
+CL = Load capacitance including jig and probe capacitance
+RT = Termination resistance should be equal to output impedance Zo of the pulse generator
+Fig. 5.
+Test circuit for measuring switching times
+Table 8. Test data
+Input
+Load
+Supply voltage
+VI
+tr, tf
+CL
+RL
+1.2 V
+VCC
+≤ 2 ns
+30 pF
+1 kΩ
+1.65 V to 1.95 V
+VCC
+≤ 2 ns
+30 pF
+1 kΩ
+2.3 V to 2.7 V
+VCC
+≤ 2 ns
+30 pF
+500 Ω
+2.7 V
+2.7 V
+≤ 2.5 ns
+50 pF
+500 Ω
+3.0 V to 3.6 V
+2.7 V
+≤ 2.5 ns
+50 pF
+500 Ω
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+6 / 12
+
+
+=== PDF PAGE 7 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+11.  Package outline
+References
+Outline
+version
+European
+projection
+Issue date
+IEC
+JEDEC
+JEITA
+SOT108-1
+MS-012
+sot108-1_po
+03-02-19
+23-10-27
+Unit
+mm
+max
+nom
+min
+1.75
+0.25
+0.51
+0.25
+8.75
+1.27
+A
+Dimensions (inch dimensions are derived from the original mm dimensions)
+Note
+1. Plastic or metal protrusions of 0.15 mm (0.006 inch) maximum per side are not included. 
+SO14: plastic small outline package; 14 leads; body width 3.9 mm
+SOT108-1
+A1
+A2
+A3
+bp
+c
+D(1)
+8°
+0°
+θ
+E(1)
+e
+HE
+L
+1.05
+Lp
+v
+0.2
+w
+y
+0.25
+0.25
+0.1
+5.8
+0.4
+3.8
+0.10
+0.31
+0.10
+8.55
+1.25
+6.2
+1.27
+4.0
+inches
+max
+nom
+min
+0.069
+0.010
+0.020
+0.010
+0.344
+0.05
+8°
+0°
+0.041
+0.008
+0.01
+0.01
+0.004
+0.228
+0.016
+0.15
+0.004
+0.012
+0.004
+0.337
+0.049
+0.244
+0.05
+0.16
+X
+w M
+θ
+A
+A1
+A2
+bp
+D
+HE
+Lp
+detail X
+E
+e
+c
+L
+v M A
+A  3
+A
+7
+8
+1
+14
+y
+pin 1 index
+0
+5 mm
+scale
+Fig. 6.
+Package outline SOT108-1 (SO14)
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+7 / 12
+
+
+=== PDF PAGE 8 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+References
+Outline
+version
+European
+projection
+Issue date
+IEC
+JEDEC
+JEITA
+SOT402-1
+sot402-1_po
+03-02-18
+23-10-27
+Unit
+mm
+max
+nom
+min
+1.20
+0.15
+0.30
+0.2
+5.1
+0.65
+A
+Dimensions (mm are the original dimensions)
+Note
+1. Plastic or metal protrusions of 0.15 mm maximum per side are not included.
+2. Plastic interlead protrusions of 0.25 mm maximum per side are not included.
+TSSOP14: plastic thin shrink small outline package; 14 leads; body width 4.4 mm
+SOT402-1
+A1
+1.05
+bp
+c
+8°
+0°
+e
+HE
+L
+1
+Lp
+v
+0.2
+w
+y
+0.25
+0.1
+0.1
+6.2
+0.45
+4.3
+0.05
+0.19
+0.09
+4.9
+0.80
+6.6
+0.75
+4.5
+0
+5 mm
+scale
+w M
+bp
+D
+e
+1
+7
+14
+8
+θ
+A
+A1
+A2
+Lp
+detail X
+L
+HE
+E
+c
+v M A
+X
+A
+y
+pin 1 index
+A2
+A3
+MO-153
+θ
+A3
+D(1)
+E(2)
+Fig. 7.
+Package outline SOT402-1 (TSSOP14)
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+8 / 12
+
+
+=== PDF PAGE 9 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+References
+Outline
+version
+European
+projection
+Issue date
+IEC
+JEDEC
+JEITA
+SOT762-1
+MO-241
+sot762-1_po
+15-04-10
+15-05-05
+Unit
+mm
+max
+nom
+min
+1
+0.05
+3.1
+1.65
+2.6
+0.5
+2
+0.4
+A(1)
+Dimensions (mm are the original dimensions)
+Note
+1. Plastic or metal protrusions of 0.075 mm maximum per side are not included. 
+DHVQFN14: plastic dual in-line compatible thermal enhanced very thin quad flat package; no leads;
+14 terminals; body 2.5 x 3 x 0.85 mm  
+SOT762-1
+A1
+b
+0.30
+c
+D(1)
+Dh
+E(1)
+Eh
+1.00
+e
+e1
+k
+k
+L
+v
+0.1
+w
+y
+0.02
+0.2
+3.0
+1.50
+2.5
+0.1
+0.25
+0.05
+0.05
+y1
+0.3
+0.85
+0.2
+0.00
+2.9
+1.35
+2.4
+0.18
+0.5
+1.15
+0
+4 mm
+2
+scale
+terminal 1
+index area
+A
+A1
+c
+L
+Eh
+Dh
+k
+b
+2
+6
+13
+9
+8
+7
+1
+14
+D
+E
+terminal 1
+index area
+e1
+e
+e
+C
+y
+C
+y1
+A
+C
+B
+v
+C
+w
+detail X
+A
+B
+X
+Fig. 8.
+Package outline SOT762-1 (DHVQFN14)
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+9 / 12
+
+
+=== PDF PAGE 10 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+12.  Abbreviations
+Table 9. Abbreviations
+Acronym
+Description
+CDM
+Charged Device Model
+CMOS
+Complementary Metal-Oxide Semiconductor
+DUT
+Device Under Test
+ESD
+ElectroStatic Discharge
+HBM
+Human Body Model
+TTL
+Transistor-Transistor Logic
+13.  Revision history
+Table 10. Revision history
+Document ID
+Release date
+Data sheet status
+Change notice
+Supersedes
+74LVC08A v.11
+20240208
+Product data sheet
+-
+74LVC08A v.10
+Modifications:
+•
+Fig. 6, Fig. 7: Aligned SO and TSSOP package outline drawings to JEDEC MS-012 and
+MO-153.
+74LVC08A v.10
+20230802
+Product data sheet
+-
+74LVC08A v.9
+Modifications:
+•
+Section 2: ESD specification updated according to the latest JEDEC standard.
+74LVC08A v.9
+20210917
+Product data sheet
+-
+74LVC08A v.8
+Modifications:
+•
+Type number 74LVC08ADB (SOT337-1/SSOP14) removed.
+•
+Section 1 updated.
+74LVC08A v.8
+20200402
+Product data sheet
+-
+74LVC08A v.7
+Modifications:
+•
+The format of this data sheet has been redesigned to comply with the identity
+guidelines of Nexperia.
+•
+Legal texts have been adapted to the new company name where appropriate.
+•
+Table 4: Derating values for Ptot total power dissipation updated.
+74LVC08A v.7
+20160419
+Product data sheet
+74LVC08A v.6
+Modifications:
+•
+Table 2: Pin description for 1A to 4A inputs and 1Y to 4Y outputs swapped (errata).
+74LVC08A v.6
+20111216
+Product data sheet
+74LVC08A v.5
+Modifications:
+•
+The format of this document has been redesigned to comply with the new identity
+guidelines of NXP Semiconductors.
+•
+Legal texts have been adapted to the new company name where appropriate.
+•
+Table 4, Table 5, Table 6, Table 7 and Table 8: values added for lower voltage ranges.
+74LVC08A v.5
+20030224
+Product specification
+-
+74LVC08A v.4
+74LVC08A v.4
+20021030
+Product specification
+-
+74LVC08A v.3
+74LVC08A v.3
+20020308
+Product specification
+-
+74LVC08A v.2
+74LVC08A v.2
+19970630
+Product specification
+-
+74LVC08A v.1
+74LVC08A v.1
+19970630
+Product specification
+-
+-
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+10 / 12
+
+
+=== PDF PAGE 11 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+14.  Legal information
+Data sheet status
+Document status
+[1][2]
+Product
+status [3]
+Definition
+Objective [short]
+data sheet
+Development
+This document contains data from
+the objective specification for
+product development.
+Preliminary [short]
+data sheet
+Qualification
+This document contains data from
+the preliminary specification.
+Product [short]
+data sheet
+Production
+This document contains the product
+specification.
+[1]
+Please consult the most recently issued document before initiating or
+completing a design.
+[2]
+The term 'short data sheet' is explained in section "Definitions".
+[3]
+The product status of device(s) described in this document may have
+changed since this document was published and may differ in case of
+multiple devices. The latest product status information is available on
+the internet at https://www.nexperia.com.
+Definitions
+Draft — The document is a draft version only. The content is still under
+internal review and subject to formal approval, which may result in
+modifications or additions. Nexperia does not give any representations or
+warranties as to the accuracy or completeness of information included herein
+and shall have no liability for the consequences of use of such information.
+Short data sheet — A short data sheet is an extract from a full data sheet
+with the same product type number(s) and title. A short data sheet is
+intended for quick reference only and should not be relied upon to contain
+detailed and full information. For detailed and full information see the relevant
+full data sheet, which is available on request via the local Nexperia sales
+office. In case of any inconsistency or conflict with the short data sheet, the
+full data sheet shall prevail.
+Product specification — The information and data provided in a Product
+data sheet shall define the specification of the product as agreed between
+Nexperia and its customer, unless Nexperia and customer have explicitly
+agreed otherwise in writing. In no event however, shall an agreement be
+valid in which the Nexperia product is deemed to offer functions and qualities
+beyond those described in the Product data sheet.
+Disclaimers
+Limited warranty and liability — Information in this document is believed
+to be accurate and reliable. However, Nexperia does not give any
+representations or warranties, expressed or implied, as to the accuracy
+or completeness of such information and shall have no liability for the
+consequences of use of such information. Nexperia takes no responsibility
+for the content in this document if provided by an information source outside
+of Nexperia.
+In no event shall Nexperia be liable for any indirect, incidental, punitive,
+special or consequential damages (including - without limitation - lost
+profits, lost savings, business interruption, costs related to the removal
+or replacement of any products or rework charges) whether or not such
+damages are based on tort (including negligence), warranty, breach of
+contract or any other legal theory.
+Notwithstanding any damages that customer might incur for any reason
+whatsoever, Nexperia’s aggregate and cumulative liability towards customer
+for the products described herein shall be limited in accordance with the
+Terms and conditions of commercial sale of Nexperia.
+Right to make changes — Nexperia reserves the right to make changes
+to information published in this document, including without limitation
+specifications and product descriptions, at any time and without notice. This
+document supersedes and replaces all information supplied prior to the
+publication hereof.
+Suitability for use — Nexperia products are not designed, authorized or
+warranted to be suitable for use in life support, life-critical or safety-critical
+systems or equipment, nor in applications where failure or malfunction
+of an Nexperia product can reasonably be expected to result in personal
+injury, death or severe property or environmental damage. Nexperia and its
+suppliers accept no liability for inclusion and/or use of Nexperia products in
+such equipment or applications and therefore such inclusion and/or use is at
+the customer’s own risk.
+Quick reference data — The Quick reference data is an extract of the
+product data given in the Limiting values and Characteristics sections of this
+document, and as such is not complete, exhaustive or legally binding.
+Applications — Applications that are described herein for any of these
+products are for illustrative purposes only. Nexperia makes no representation
+or warranty that such applications will be suitable for the specified use
+without further testing or modification.
+Customers are responsible for the design and operation of their applications
+and products using Nexperia products, and Nexperia accepts no liability for
+any assistance with applications or customer product design. It is customer’s
+sole responsibility to determine whether the Nexperia product is suitable
+and fit for the customer’s applications and products planned, as well as
+for the planned application and use of customer’s third party customer(s).
+Customers should provide appropriate design and operating safeguards to
+minimize the risks associated with their applications and products.
+Nexperia does not accept any liability related to any default, damage, costs
+or problem which is based on any weakness or default in the customer’s
+applications or products, or the application or use by customer’s third party
+customer(s). Customer is responsible for doing all necessary testing for the
+customer’s applications and products using Nexperia products in order to
+avoid a default of the applications and the products or of the application or
+use by customer’s third party customer(s). Nexperia does not accept any
+liability in this respect.
+Limiting values — Stress above one or more limiting values (as defined in
+the Absolute Maximum Ratings System of IEC 60134) will cause permanent
+damage to the device. Limiting values are stress ratings only and (proper)
+operation of the device at these or any other conditions above those
+given in the Recommended operating conditions section (if present) or the
+Characteristics sections of this document is not warranted. Constant or
+repeated exposure to limiting values will permanently and irreversibly affect
+the quality and reliability of the device.
+Terms and conditions of commercial sale — Nexperia products are
+sold subject to the general terms and conditions of commercial sale, as
+published at http://www.nexperia.com/profile/terms, unless otherwise agreed
+in a valid written individual agreement. In case an individual agreement is
+concluded only the terms and conditions of the respective agreement shall
+apply. Nexperia hereby expressly objects to applying the customer’s general
+terms and conditions with regard to the purchase of Nexperia products by
+customer.
+No offer to sell or license — Nothing in this document may be interpreted
+or construed as an offer to sell products that is open for acceptance or the
+grant, conveyance or implication of any license under any copyrights, patents
+or other industrial or intellectual property rights.
+Export control — This document as well as the item(s) described herein
+may be subject to export control regulations. Export might require a prior
+authorization from competent authorities.
+Non-automotive qualified products — Unless this data sheet expressly
+states that this specific Nexperia product is automotive qualified, the
+product is not suitable for automotive use. It is neither qualified nor tested in
+accordance with automotive testing or application requirements. Nexperia
+accepts no liability for inclusion and/or use of non-automotive qualified
+products in automotive equipment or applications.
+In the event that customer uses the product for design-in and use in
+automotive applications to automotive specifications and standards,
+customer (a) shall use the product without Nexperia’s warranty of the
+product for such automotive applications, use and specifications, and (b)
+whenever customer uses the product for automotive applications beyond
+Nexperia’s specifications such use shall be solely at customer’s own risk,
+and (c) customer fully indemnifies Nexperia for any liability, damages or failed
+product claims resulting from customer design and use of the product for
+automotive applications beyond Nexperia’s standard warranty and Nexperia’s
+product specifications.
+Translations — A non-English (translated) version of a document is for
+reference only. The English version shall prevail in case of any discrepancy
+between the translated and English versions.
+Trademarks
+Notice: All referenced brands, product names, service names and
+trademarks are the property of their respective owners.
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+11 / 12
+
+
+=== PDF PAGE 12 ===
+Nexperia
+74LVC08A
+Quad 2-input AND gate
+Contents
+1.  General description......................................................1
+2.  Features and benefits.................................................. 1
+3.  Ordering information....................................................1
+4.  Functional diagram.......................................................2
+5.  Pinning information......................................................2
+5.1.  Pinning.........................................................................2
+5.2.  Pin description.............................................................2
+6.  Functional description................................................. 3
+7.  Limiting values............................................................. 3
+8.  Recommended operating conditions..........................3
+9.  Static characteristics....................................................4
+10.  Dynamic characteristics............................................ 5
+10.1.  Waveforms and test circuit........................................ 5
+11.  Package outline.......................................................... 7
+12.  Abbreviations............................................................10
+13.  Revision history........................................................10
+14.  Legal information......................................................11
+© Nexperia B.V. 2024. All rights reserved
+For more information, please visit: http://www.nexperia.com
+For sales office addresses, please send an email to: salesaddresses@nexperia.com
+Date of release: 8 February 2024
+74LVC08A
+All information provided in this document is subject to legal disclaimers.
+© Nexperia B.V. 2024. All rights reserved
+Product data sheet
+Rev. 11 — 8 February 2024
+12 / 12

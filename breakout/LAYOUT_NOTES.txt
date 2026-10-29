@@ -1,7 +1,22 @@
 Compact SPI-to-eight-channel CAN FD layout
 
-Board size: 77 x 80 mm (22.6% less area than the original 99.5 x 80 mm outline).
-All 141 component footprints are retained.
+Board size: 81 x 80 mm (18.6% less area than the original 99.5 x 80 mm outline).
+The mounting-hole change extended the left edge 4 mm from the previous
+77 x 80 mm layout without moving existing components or tracks. The later
+standardization changed only R26's package, rotation and local CAN tracks.
+All 141 existing footprints are retained, plus four board-only mounting holes.
+
+Corner mounting holes H1-H4: 3.2 mm non-plated drills for M3 screws/standoffs.
+Each center is 4 mm from the two adjacent board edges; spacing is 73 x 72 mm.
+From the top-left board corner, centers are (4,4), (77,4), (4,76), (77,76) mm.
+Absolute KiCad centers: (60,51.5), (133,51.5), (60,123.5), (133,123.5) mm.
+Allow hardware up to 7 mm outside diameter on either face. Each hole has a
+7 mm copper keepout on all four copper layers and 7.5 mm front/back courtyards.
+The keepout excludes the drill itself; normal NPTH copper clearance protects
+that opening. Mounting footprints and their keepouts are locked together,
+marked board-only, and excluded from BOM and component-position exports.
+The project-local MountingHole_3.2mm_M3_7mm_Keepout footprint stores these rules.
+
 J1 grounds 6, 9, 14, 20, 25, 30, 34 and 39 connect to GND, following the
 Jetson Orin Nano developer-carrier 40-pin header pinout. The seven previously
 unused ground pads were connected and the existing planes refilled.
@@ -20,9 +35,28 @@ Approximate maximum header-to-controller paths, including series-resistor span:
   SPI0: clock 75.4 mm, MOSI 58.8 mm, MISO 47.7 mm.
   SPI1: clock 67.5 mm, MOSI 95.4 mm, MISO 48.1 mm.
 
-Checked with KiCad 10.0.7: zero DRC violations, zero unrouted connections,
-and zero schematic/PCB parity issues. No DRC exclusions were added.
-Mechanical fit, signal integrity and hardware operation require validation.
+Standardized on 2026-10-29:
+  All eight 120-ohm CAN terminations use RC1206FR-07120RL, 1%, 0.25 W, 1206.
+  R26 remains on B.Cu at its original center, rotated 180 degrees. Only its
+  two local CAN routes to J10 were replaced to fit the larger pads.
+  All other component centers, sides, pad geometry, tracks and vias are intact.
+  J1's symbol, value and MPN identify the M20-7832046 female socket already
+  represented by its footprint. TP13/TP14 identify M20-9990246 male headers.
+  The 28 bypass capacitors use C1 and C21-C47, value 100n, separate MPN fields.
+  All 120 purchased packages have matching schematic/PCB MPN/Manufacturer.
+  The schematic sheet is A1; one grid-aligned translation brings its existing
+  contents onto the sheet. Pin-to-net connectivity is exactly unchanged.
+  Model paths resolve to the project-local 3dmodels directory.
+
+Checked with KiCad 10.0.7 after standardization: zero ERC findings, zero DRC
+violations, zero unrouted items, zero schematic/PCB parity issues. All eight
+channel checks, 16 bank-select states and 256 interrupt states pass. Project
+rules and exclusions are unchanged. The four mounting holes are preserved.
+
+These static checks do not establish SPI timing margin, unpowered-input
+safety, LDO/fuse thermal margin, oscillator/EMC performance or mechanical fit.
+Existing electrical-review qualifications remain applicable; see
+../review/standardization-2026-10-29/standardization-report.txt.
 
 Collaboration: use a separate Git checkout for each person, pull before editing,
 and coordinate ownership of the PCB file. KiCad lock files only describe an

@@ -3370,7 +3370,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CC0603KRX7R9BB104"
+		(property "Value" "100n"
 			(at 0.635 -2.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3439,7 +3439,8 @@
 		(symbol "CC0603KRX7R9BB104_0_1"
 			(polyline
 				(pts
-					(xy -2.032 0.762) (xy 2.032 0.762)
+					(xy -2.032 0.762)
+					(xy 2.032 0.762)
 				)
 				(stroke
 					(width 0.508)
@@ -3451,7 +3452,8 @@
 			)
 			(polyline
 				(pts
-					(xy -2.032 -0.762) (xy 2.032 -0.762)
+					(xy -2.032 -0.762)
+					(xy 2.032 -0.762)
 				)
 				(stroke
 					(width 0.508)
@@ -3501,6 +3503,24 @@
 			)
 		)
 		(embedded_fonts no)
+		(property "MPN" "CC0603KRX7R9BB104"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "YAGEO"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(symbol "CGA3E1X7R1E105K080AC"
 		(pin_numbers
@@ -3967,7 +3987,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(symbol "M20-9982046"
+	(symbol "M20-7832046"
 		(pin_names
 			(offset 1.016)
 			(hide yes)
@@ -3987,7 +4007,7 @@
 				)
 			)
 		)
-		(property "Value" "M20-9982046"
+		(property "Value" "M20-7832046"
 			(at 1.27 -27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3997,7 +4017,7 @@
 				)
 			)
 		)
-		(property "Footprint" "BreakoutBoard:PinHeader_2x20_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4008,7 +4028,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/harwin-inc/M20-9982046/3921209"
+		(property "Datasheet" "https://www.harwin.com/products/M20-7832046"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4019,7 +4039,7 @@
 				)
 			)
 		)
-		(property "Description" "2x20 2.54 mm host harness header"
+		(property "Description" "40-pin female socket, 2 x 20, 2.54 mm pitch, vertical through-hole"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4052,7 +4072,7 @@
 				)
 			)
 		)
-		(symbol "M20-9982046_1_1"
+		(symbol "M20-7832046_1_1"
 			(rectangle
 				(start -1.27 24.13)
 				(end 3.81 -26.67)
@@ -5226,6 +5246,24 @@
 			)
 		)
 		(embedded_fonts no)
+		(property "MPN" "M20-7832046"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Harwin"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(symbol "MCP251863T-E_SS"
 		(exclude_from_sim no)
@@ -6596,5 +6634,170 @@
 			)
 		)
 		(embedded_fonts no)
+	)
+	(symbol "M20-9990246"
+		(pin_names
+			(offset 0.762)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "TP"
+			(at 0 1.524 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "M20-9990246"
+			(at 0 -1.778 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.harwin.com/products/M20-9990246"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "2-polar test point"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "point tp"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Pin* Test*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "M20-9990246_0_1"
+			(circle
+				(center -1.778 0)
+				(radius 0.762)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(circle
+				(center 1.778 0)
+				(radius 0.762)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 2.54)
+				(name "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 0 180)
+				(length 2.54)
+				(name "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+		(property "MPN" "M20-9990246"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Harwin"
+			(at 0 0 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 )

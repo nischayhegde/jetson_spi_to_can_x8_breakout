@@ -1,5 +1,5 @@
 """Validate the bundle with KiCad's actual footprint reader and pin mapping checks.
-Run using C:/Program Files/KiCad/9.0/bin/python.exe.
+Run using C:/Program Files/KiCad/10.0/bin/python.exe.
 """
 from pathlib import Path
 import json
@@ -31,8 +31,9 @@ def pins(name):
 report=[]
 for row in json.loads((root/'parts.json').read_text()):
     name=row['symbol'].split(':')[1]
-    fname=row['footprint'].split(':')[1]
-    fp=pcbnew.FootprintLoad(str(root/'BreakoutBoard.pretty'),fname)
+    namespace,fname=row['footprint'].split(':')
+    library=root/'BreakoutBoard.pretty' if namespace=='BreakoutBoard' else Path(r'C:/Program Files/KiCad/10.0/share/kicad/footprints')/(namespace+'.pretty')
+    fp=pcbnew.FootprintLoad(str(library),fname)
     assert fp is not None, fname
     pads={p.GetNumber() for p in fp.Pads() if p.GetNumber()}
     assert pins(name)==pads,(name,pins(name),pads)

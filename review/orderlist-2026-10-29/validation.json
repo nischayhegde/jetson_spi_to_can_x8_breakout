@@ -1,0 +1,27 @@
+{
+  "purchase_lines": 21,
+  "fitted_packages": 120,
+  "order_quantity": 129,
+  "spares": 9,
+  "digikey_subtotal_usd": 37.36,
+  "all_digikey_snapshot_stock_sufficient": true,
+  "native_excel_hyperlinks": 42,
+  "formula_error_cells": 0,
+  "frozen_panes": {
+    "xSplit": "1",
+    "ySplit": "6",
+    "topLeftCell": "B7",
+    "activePane": "bottomRight",
+    "state": "frozen"
+  },
+  "all_purchased_refs_and_footprints_match_cad": true,
+  "cad_files_unchanged_during_list_generation": true,
+  "j1_metadata_consistent_in_schematic_pcb_and_bom": true,
+  "sha256": {
+    "componentlist.csv": "eb43e948b4a3c6716d5f41aca4c30da1c7c26bd532d817a28d693f86cd9647c6",
+    "componentlist.md.txt": "0fffdf957c0645253371deaaf6a5fc726461556d77f3ebd9e1a17c5895ba5727",
+    "orderlist.csv": "7f098bc083786b8346c527208b26d0da3122f4eb40019efc4d206f234be9c037",
+    "orderlist.md.txt": "5d6417dc8605645434b4ffb42c52d895b488e76136deb6ba73eb2514b25819bb",
+    "orderlist.xlsx": "000940a29bc238fef031c2632c7cb9dc5a08f5cf3ac6369eab309acbdeafff5f"
+  }
+}

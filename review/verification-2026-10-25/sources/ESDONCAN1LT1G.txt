@@ -1,0 +1,548 @@
+
+=== PDF PAGE 1 ===
+© Semiconductor Components Industries, LLC, 2013
+October, 2016 − Rev. 1
+1
+Publication Order Number:
+ESDONCAN1/D
+ESDONCAN1, SESDONCAN1
+CAN/CAN-FD Bus Protector
+Low Capacitance ESD Protection Diode
+for CAN/CAN−FD Bus
+The S/ESDONCAN1 has been designed to protect the CAN
+transceiver from ESD and other harmful transient voltage events. This
+device provides bidirectional protection for each data line with a
+single compact SOT−23 package, giving the system designer a low
+cost option for improving system reliability and meeting stringent
+EMI requirements.
+Features
+• 200 W Peak Power Dissipation per Line (8 x 20 sec Waveform)
+• Diode Capacitance Matching
+• Low Reverse Leakage Current (< 100 nA)
+• Low Capacitance High−Speed FlexRay Data Rates
+• IEC Compatibility: − IEC 61000−4−2 (ESD): Level 4
+− IEC 61000−4−4 (EFT): 50 A – 5/50 ns
+− IEC 61000−4−5 (Lighting) 3.0 A (8/20 s)
+• ISO 7637−1, Nonrepetitive EMI Surge Pulse 2, 8.0 A
+(1 x 50 s)
+• ISO 7637−3, Repetitive Electrical Fast Transient (EFT)
+EMI Surge Pulses, 50 A (5 x 50 ns)
+• Flammability Rating UL 94 V−0
+• S Prefix for Automotive and Other Applications Requiring Unique
+Site and Control Change Requirements; AEC−Q101 Qualified and
+PPAP Capable
+• These are Pb−Free Devices
+Typical Applications
+• Industrial
+♦Smart Distribution Systems (SDS)
+♦DeviceNet
+• Automotive
+♦Controlled Area Network − CAN 2.1 / CAN FD
+♦Low and High Speed CAN
+SOT−23
+CASE 318
+STYLE 27
+PIN 1
+PIN 3
+PIN 2
+MARKING DIAGRAM
+25E
+= Device Code
+M
+= Date Code
+
+= Pb−Free Package
+SOT−23
+DUAL BIDIRECTIONAL
+VOLTAGE SUPPRESSOR
+200 W PEAK POWER
+1
+25EM
+
+See detailed ordering and shipping information in the package
+dimensions section on page 2 of this data sheet.
+ORDERING INFORMATION
+(Note: Microdot may be in either location)
+www.onsemi.com
+
+
+=== PDF PAGE 2 ===
+ESDONCAN1, SESDONCAN1
+www.onsemi.com
+2
+MAXIMUM RATINGS (TJ = 25°C, unless otherwise specified)
+Symbol
+Rating
+Value
+Unit
+PPK
+Peak Power Dissipation, 8 x 20s Double Exponential Waveform (Note 1)
+200
+W
+TJ
+Operating Junction Temperature Range
+−55 to 150
+°C
+TJ
+Storage Temperature Range
+−55 to 150
+°C
+TL
+Lead Solder Temperature (10 s)
+260
+°C
+ESD
+Human Body Model (HBM)
+Machine Model (MM)
+IEC  61000−4−2 Specification (Contact)
+8.0
+400
+23
+kV
+V
+kV
+Stresses exceeding those listed in the Maximum Ratings table may damage the device. If any of these limits are exceeded, device functionality
+should not be assumed, damage may occur and reliability may be affected.
+1. Non−repetitive current pulse per Figure 1.
+ELECTRICAL CHARACTERISTICS (TJ = 25°C, unless otherwise specified)
+Symbol
+Parameter
+Test Conditions
+Min
+Typ
+Max
+Unit
+VRWM
+Reverse Working Voltage
+(Note 2)
+24
+−
+−
+V
+VBR
+Breakdown Voltage
+IT = 1 mA (Note 3)
+26.2
+−
+32
+V
+IR
+Reverse Leakage Current
+VRWM = 24 V
+−
+15
+100
+nA
+VC
+Clamping Voltage
+IPP = 1 A (8 x 20 s Waveform)
+(Note 4)
+−
+33.4
+36.6
+V
+VC
+Clamping Voltage
+IPP = 3 A (8 x 20 s Waveform)
+(Note 4)
+−
+44
+50
+V
+IPP
+Maximum Peak Pulse Current
+8 x 20 s Waveform (Note 4)
+−
+−
+3.0
+A
+CJ
+Capacitance
+VR = 0 V, f = 1 MHz (Line to GND)
+−
+−
+10
+pF
+C
+Diode Capacitance Matching
+VR = 0 V, 5 MHz (Note 5)
+−
+0.26
+2
+%
+Product parametric performance is indicated in the Electrical Characteristics for the listed test conditions, unless otherwise noted. Product
+performance may not be indicated by the Electrical Characteristics if operated under different conditions.
+2. TVS devices are normally selected according to the working peak reverse voltage (VRWM), which should be equal or greater than the DC
+or continuous peak operating voltage level.
+3. VBR is measured at pulse test current IT.
+4. Pulse waveform per Figure 1.
+5. C is the percentage difference between CJ of lines 1 and 2 measured according to the test conditions given in the electrical characteristics
+table.
+ORDERING INFORMATION
+Device
+Package
+Shipping†
+ESDONCAN1LT1G
+SOT−23
+(Pb−Free)
+3,000 / Tape & Reel
+SESDONCAN1LT1G*
+SOT−23
+(Pb−Free)
+3,000 / Tape & Reel
+ESDONCAN1LT3G
+SOT−23
+(Pb−Free)
+10,000 / Tape & Reel
+SESDONCAN1LT3G*
+SOT−23
+(Pb−Free)
+10,000 / Tape & Reel
+†For information on tape and reel specifications, including part orientation and tape sizes, please refer to our Tape and Reel Packaging
+Specifications Brochure, BRD8011/D.
+*S Prefix for Automotive and Other Applications Requiring Unique Site and Control Change Requirements; AEC−Q101 Qualified and PPAP
+Capable.
+
+
+=== PDF PAGE 3 ===
+ESDONCAN1, SESDONCAN1
+www.onsemi.com
+3
+TYPICAL PERFORMANCE CURVES
+(TJ = 25°C unless otherwise noted)
+Figure 1. Pulse Waveform, 8 × 20 s
+110
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+0
+5
+15
+25
+t, TIME (s)
+% OF PEAK PULSE CURRENT
+WAVEFORM
+PARAMETERS
+tr = 8 s
+td = 20 s
+td = IPP/2
+30
+Figure 2. Clamping Voltage vs Peak Pulse Current
+3.5
+2.5
+2.0
+1.5
+1.0
+0.5
+0.0
+40
+VC, CLAMPING VOLTAGE (V)
+IPP, PEAK PULSE CURRENT (A)
+30
+35
+45
+50
+100
+10
+20
+c−t
+Figure 3. Typical Junction Capacitance vs
+Reverse Voltage
+5
+0
+5
+VR, REVERSE VOLTAGE (V)
+C, CAPACITANCE (pF)
+10
+15
+20
+25
+125°C
+4
+3
+9
+2
+6
+25°C
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+20
+22
+24
+26
+28
+30
+32
+34
+Figure 4. VBR versus IT Characteristics
+TA = −55°C
+125°C
+25°C
+65°C
+VBR, VOLTAGE (V)
+IT, (mA)
+Figure 5. IR versus Temperature Characteristics
+0
+5
+10
+15
+20
+25
+0
+1
+2
+3
+4
+5
+−55°C
+TA = +150°C
++25°C
+IL, LEAKAGE CURRENT (nA)
+VR, REVERSE BIAS VOLTAGE (V)
+0
+20
+40
+60
+80
+100
+120
+−60
+−30
+0
+30
+60
+90
+120
+150
+180
+Figure 6. Temperature Power Dissipation Derating
+TEMPERATURE (°C)
+PERCENT DERATING (%)
+3.0
+7
+8
+
+
+=== PDF PAGE 4 ===
+ESDONCAN1, SESDONCAN1
+www.onsemi.com
+4
+APPLICATIONS
+Background
+The Controller Area Network (CAN) is a serial
+communication protocol designed for providing reliable
+high speed data transmission in harsh environments. TVS
+diodes provide a low cost solution to conducted and radiated
+Electromagnetic Interference (EMI) and Electrostatic
+Discharge (ESD) noise problems. The noise immunity level
+and reliability of CAN transceivers can be easily increased
+by adding external TVS diodes to prevent transient voltage
+failures. The ESDONCAN1 provides a transient voltage
+suppression solution for CAN data communication lines.
+The ESDONCAN1 is a low capacitance dual bidirectional
+TVS device in a compact SOT-23 package especially
+suitable for CAN2.1 (CAN-FD). This device is based on
+Zener technology that optimizes the active area of a PN
+junction to provide robust protection against transient EMI
+surge voltage and ESD. The ESDONCAN1 has been tested
+to EMI and ESD levels that exceed the specifications of
+popular high speed CAN networks.
+
+
+=== PDF PAGE 5 ===
+ESDONCAN1, SESDONCAN1
+www.onsemi.com
+5
+PACKAGE DIMENSIONS
+SOT−23 (TO−236)
+CASE 318−08
+ISSUE AR
+D
+A1
+3
+1
+2
+NOTES:
+1. DIMENSIONING AND TOLERANCING PER ASME Y14.5M, 1994.
+2. CONTROLLING DIMENSION: MILLIMETERS.
+3. MAXIMUM LEAD THICKNESS INCLUDES LEAD FINISH. 
+MINIMUM LEAD THICKNESS IS THE MINIMUM THICKNESS OF
+THE BASE MATERIAL.
+4. DIMENSIONS D AND E DO NOT INCLUDE MOLD FLASH,
+PROTRUSIONS, OR GATE BURRS.
+SOLDERING FOOTPRINT*
+VIEW C
+L
+0.25
+L1
+e
+E
+E
+b
+A
+SEE VIEW C
+DIM
+A
+MIN
+NOM
+MAX
+MIN
+MILLIMETERS
+0.89
+1.00
+1.11
+0.035
+INCHES
+A1
+0.01
+0.06
+0.10
+0.000
+b
+0.37
+0.44
+0.50
+0.015
+c
+0.08
+0.14
+0.20
+0.003
+D
+2.80
+2.90
+3.04
+0.110
+E
+1.20
+1.30
+1.40
+0.047
+e
+1.78
+1.90
+2.04
+0.070
+L
+0.30
+0.43
+0.55
+0.012
+0.039
+0.044
+0.002
+0.004
+0.017
+0.020
+0.006
+0.008
+0.114
+0.120
+0.051
+0.055
+0.075
+0.080
+0.017
+0.022
+NOM
+MAX
+L1
+H
+2.10
+2.40
+2.64
+0.083
+0.094
+0.104
+HE
+0.35
+0.54
+0.69
+0.014
+0.021
+0.027
+c
+0
+−−−
+10
+0
+−−−
+10
+T
+°
+°
+°
+°
+T
+3X
+TOP VIEW
+SIDE VIEW
+END VIEW
+2.90
+0.80
+DIMENSIONS: MILLIMETERS
+0.90
+PITCH
+3X
+3X
+0.95
+RECOMMENDED
+*For additional information on our Pb−Free strategy and soldering
+details, please download the ON Semiconductor Soldering and
+Mounting Techniques Reference Manual, SOLDERRM/D.
+STYLE 27:
+PIN 1. CATHODE
+ 2. CATHODE
+ 3. CATHODE
+ON Semiconductor and      are trademarks of Semiconductor Components Industries, LLC dba ON Semiconductor or its subsidiaries in the United States and/or other countries.
+ON Semiconductor owns the rights to a number of patents, trademarks, copyrights, trade secrets, and other intellectual property. A listing of ON Semiconductor’s product/patent coverage
+may be accessed at www.onsemi.com/site/pdf/Patent−Marking.pdf. ON Semiconductor reserves the right to make changes without further notice to any products herein.
+ON Semiconductor makes no warranty, representation or guarantee regarding the suitability of its products for any particular purpose, nor does ON Semiconductor assume any liability
+arising out of the application or use of any product or circuit, and specifically disclaims any and all liability, including without limitation special, consequential or incidental damages. Buyer
+is responsible for its products and applications using ON Semiconductor products, including compliance with all laws, regulations and safety requirements or standards, regardless of
+any support or applications information provided by ON Semiconductor. “Typical” parameters which may be provided in ON Semiconductor data sheets and/or specifications can and
+do vary in different applications and actual performance may vary over time. All operating parameters, including “Typicals” must be validated for each customer application by customer’s
+technical experts. ON Semiconductor does not convey any license under its patent rights nor the rights of others. ON Semiconductor products are not designed, intended, or authorized
+for use as a critical component in life support systems or any FDA Class 3 medical devices or medical devices with a same or similar classification in a foreign jurisdiction or any devices
+intended for implantation in the human body. Should Buyer purchase or use ON Semiconductor products for any such unintended or unauthorized application, Buyer shall indemnify and
+hold ON Semiconductor and its officers, employees, subsidiaries, affiliates, and distributors harmless against all claims, costs, damages, and expenses, and reasonable attorney fees
+arising out of, directly or indirectly, any claim of personal injury or death associated with such unintended or unauthorized use, even if such claim alleges that ON Semiconductor was
+negligent regarding the design or manufacture of the part. ON Semiconductor is an Equal Opportunity/Affirmative Action Employer. This literature is subject to all applicable copyright
+laws and is not for resale in any manner.
+PUBLICATION ORDERING INFORMATION
+N. American Technical Support: 800−282−9855 Toll Free
+USA/Canada
+Europe, Middle East and Africa Technical Support:
+Phone: 421 33 790 2910
+Japan Customer Focus Center
+Phone: 81−3−5817−1050
+ESDONCAN1/D
+Honeywell and SDS are registered trademarks of Honeywell International Inc.
+DeviceNet is a trademark of Rockwell Automation.
+LITERATURE FULFILLMENT:
+Literature Distribution Center for ON Semiconductor
+19521 E. 32nd Pkwy, Aurora, Colorado 80011 USA
+Phone: 303−675−2175 or 800−344−3860 Toll Free USA/Canada
+Fax: 303−675−2176 or 800−344−3867 Toll Free USA/Canada
+Email: orderlit@onsemi.com
+ON Semiconductor Website: www.onsemi.com
+Order Literature: http://www.onsemi.com/orderlit
+For additional information, please contact your local
+Sales Representative
+◊

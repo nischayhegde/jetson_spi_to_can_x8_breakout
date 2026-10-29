@@ -1,0 +1,481 @@
+
+=== PDF PAGE 1 ===
+Fuse Datasheet
+© 2020 Littelfuse, Inc.
+Specifications are subject to change without notice.
+Revised: GD. 12/16/20
+1
+466 Series
+1206 Fast-Acting Fuse
+Description
+The 466 Series Fast-Acting Surface Mount Fuse (SMF) is a small 
+(1206 size) thin-film device designed for secondary protection of 
+circuits used in space constrained applications such as hand-held 
+portable electronic devices. 
+This series is 100% lead-free and meets the requirements of the 
+RoHS directive. New Halogen-Free 466 Series fuses are available 
+to order using the “HF” suffix. See Part Numbering section for 
+additional information.
+Agency Approvals
+Agency
+Agency File Number
+Ampere Range
+E10480
+0.125A - 5A
+29862
+0.125A - 5A
+Features & Benefits
+Electrical Characteristics for Series
+	
+■Product is compatible with 
+lead-free solders and higher 
+temperature profiles
+	
+■Product is marked on top 
+surface with code to allow 
+amperage rating identification 
+without testing
+	
+■	Low profile for height sensitive 
+applications
+	
+	
+■Flat top surface for pick-and-
+place operations
+	
+■	Element-covering material is 
+resistant to industry standard 
+cleaning operations
+	
+■	Lead-free, Halogen-free and 
+RoHS compliant
+	
+■Recognized to UL/CSA/NMX 
+248-1 and UL/CSA/NMX 248-
+14
+% of Ampere Rating
+Opening Time at 25OC
+100%
+4 hours, Minimum
+200%
+5 sec., Maximum
+300%
+0.2 sec., Maximum
+Applications
+Ampere Rating
+(A)
+Amp 
+Code
+Max
+Voltage Rating 
+(V)
+Interrupting
+Rating
+Nominal Cold 
+Resistance 
+(Ohms)
+Nominal 
+Melting 
+I2t (A2sec)
+Nom
+Voltage Drop 
+ (mV)
+Nom Power 
+Dissipation 
+ (W)
+Agency Approvals
+0.125
+.125
+125
+50A @ 125VAC/
+VDC
+3.925
+0.00064
+634.37
+0.0793
+x
+x
+0.200
+.200
+125
+1.100
+0.00055
+254.28
+0.0509
+x
+x
+0.250
+.250
+125
+0.691
+0.0022
+207.01
+0.0518
+x
+x
+0.375
+.375
+125
+0.351
+0.0045
+169.18
+0.0634
+x
+x
+0.500
+.500
+63
+50A @ 63VAC/VDC
+0.248
+0.0060
+158.47
+0.0792
+x
+x
+0.750
+.750
+63
+0.106
+0.0276
+98.65
+0.0740
+x
+x
+1.00
+001.
+63
+0.075
+0.0423
+79.97
+0.0800
+x
+x
+1.25
+1.25
+63
+0.057
+0.0640
+85.71
+0.1071
+x
+x
+1.50
+01.5
+63
+0.046
+0.1103
+82.97
+0.1244
+x
+x
+1.75
+1.75
+63
+0.038
+0.1835
+80.73
+0.1413
+x
+x
+2.00
+002.
+63
+0.030
+0.2326
+78.73
+0.1575
+x
+x
+2.50
+02.5
+32
+50A @ 32VAC/VDC
+0.023
+0.3516
+76.99
+0.1925
+x
+x
+3.00
+003.
+32
+0.019
+0.5760
+75.99
+0.2280
+x
+x
+4.00
+004.
+32
+0.014
+1.764
+74.50
+0.2980
+x
+x
+5.00
+005.
+32
+0.011
+2.500
+73.75
+0.3688
+x
+x
+Electrical Specifications by Item
+1.	 Measured at 10% of rated current, 25ºC.
+2.	 Measured at rated voltage.
+RoHS
+Pb
+	
+■	Cell phones
+	
+■Battery packs
+	
+■	Digital cameras
+	
+■	DVD players
+	
+■Hard disk drives
+Secondary protection for space constrained applications:
+Resources
+Accessories
+Samples
+Additional Information 
+
+
+=== PDF PAGE 2 ===
+Fuse Datasheet
+© 2020 Littelfuse, Inc.
+Specifications are subject to change without notice.
+Revised: GD. 12/16/20
+2
+466 Series
+1206 Fast-Acting Fuse
+Average Time Current Curves
+TIME IN SECONDS
+CURRENT IN AMPERES
+0.01
+0.1
+0.1
+1
+1
+10
+100
+10
+100
+0.001
+4A
+3A
+2 1/2A
+2A
+1 3/4A
+1 1/2A
+1 1/4A
+1A
+3/4A
+1/2A
+3/8A
+1/4A
+1/8A
+5A
+Reflow Condition
+Pb – free assembly
+Pre Heat
+- Temperature Min (Ts(min))
+150°C 
+- Temperature Max (Ts(max))
+200°C
+- Time (Min to Max) (ts)
+60 – 180 seconds
+Average Ramp-up Rate (Liquidus Temp (TL) 
+to peak)
+5°C/second max.
+TS(max) to TL - Ramp-up Rate
+5°C/second max.
+Reflow
+- Temperature (TL) (Liquidus)
+217°C 
+- Temperature (tL)
+60 – 150 seconds
+Peak Temperature (TP)
+260+0/-5 °C
+Time within 5°C of actual peak Temperature 
+(tp)
+20 – 40 seconds
+Ramp-down Rate
+5°C/second max.
+Time 25°C to peak Temperature (TP)
+8 minutes max.
+Do not exceed
+260°C
+Soldering Parameters
+Temperature Re-rating Curve
+Wave Soldering
+260°C, 10 seconds max.
+Note:
+1.	 Re-rating depicted in this curve is in addition to the standard re-rating of 25% for continuous operation.
+Example:
+	
+For continuous operation at 70 degrees celsius, the fuse should be rerated as follows:
+	
+I = (0.75)(0.80)IRAT = (0.60)IRAT
+2.	 The temperature derating curve represents the nominal conditions. For questions about temperature derating 
+curve, please consult Littelfuse technical support for assistance.
+Time (t)
+Temperature (T)
+TP
+TL
+TS(max)
+TS(min)
+25ºC
+tP
+tL
+tS
+t 25ºC to Peak
+Ramp-down
+Ramp-up
+Preheat
+Critical Zone
+TL to TP
+
+
+=== PDF PAGE 3 ===
+Fuse Datasheet
+© 2020 Littelfuse, Inc.
+Specifications are subject to change without notice.
+Revised: GD. 12/16/20
+3
+466 Series
+1206 Fast-Acting Fuse
+Dimensions
+2.03
+(.080")
+2.03
+(.080")
+WAVE SOLDER
+REFLOW SOLDER
+3.81
+(.150")
+1.52
+(.060")
+0.584 ± 0.076
+(0.023" ± 0.003")
+0.559 ± 0.127
+(0.022" ± 0.005")
+0.660 ± 0.127
+(0.026" ± 0.005")
+1.14
+(.045")
+MARKING CODE VARIES 
+WITH AMPERAGE RATING
+(SEE CHART)
+3.175 ± 0.127
+(0.125" ± 0.005")
+3.175 ± 0.127
+(0.125" ± 0.005")
+4.83
+(.190")
+1.65
+(.065")
+1.52
+(.060")
+Sn
+Sn
+Sn
+Cu
+Coating
+1.524 ± 0.127
+(0.060" ± 0.005")
+Packaging
+Part Numbering System
+Materials
+Body: Advanced High Temperature Substrate
+Terminations: 100% Tin over Nickel over Copper
+Element Cover Coat: Conformal Coating
+Operating 
+Temperature
+– 55OC to 90OC. 
+Consult temperature re-rating curve chart.
+Thermal Shock
+Withstands 5 cycles of –55OC to 125OC
+Humidity
+MIL-STD-202, Method 103, Condition D
+Vibration
+MIL-STD-202, Method 201
+Insulation 
+Resistance (After 
+Opening) 
+Greater than 10,000 ohms
+Resistance to 
+Soldering Heat
+MIL-STD-202, Method 210,    Condition D
+Product Characteristics
+Part Marking System
+Packaging Option
+Packaging Specification
+Quantity
+Quantity & Packaging Code
+8mm Tape and Reel
+EIA-481 Rev. D (IEC 60286, part 3)
+5000
+NR
+Amp Code
+Marking Code
+.125
+B
+.200
+C
+.250 
+D
+.375 
+E
+.500 
+F
+.750 
+G
+001. 
+H
+1.25 
+J
+01.5 
+K
+1.75 
+L
+002. 
+N
+02.5 
+O
+003. 
+P
+004. 
+S
+005. 
+T
+0466002.NRHF
+SERIES
+AMP Code
+‘HF’ SUFFIX
+Halogen-free 
+Refer to Amp Code column in the 
+Electrical Specifications table. 
+The dot is poisitioned before the Pack-
+aging Suffix with whole ratings and 
+within the numbering sequence for 
+fractional ratings.
+N = 5000 pcs
+PACKAGING Code
+R = Tape and Reel
+Example
+0.125 amp product is
+0466.125NRHF
+(2 amp product shown
+above).
+QUANTITY CODE
+Disclaimer Notice - Littelfuse products are not designed for, and shall not be used for, any purpose (including, without limitation, automotive, military, aerospace, medical, life-saving, life-sustaining or nuclear facility applications, 
+devices intended for surgical implant into the body, or any other application in which the failure or lack of desired operation of the product may result in personal injury, death, or property damage) other than those expressly set forth 
+in applicable Littelfuse product documentation.  Warranties granted by Littelfuse shall be deemed void for products used for any purpose not expressly set forth in applicable Littelfuse documentation.  Littelfuse shall not be liable 
+for any claims or damages arising out of products used in applications not expressly intended by Littelfuse as set forth in applicable Littelfuse documentation.  The sale and use of Littelfuse products is subject to Littelfuse Terms and 
+Conditions of Sale, unless otherwise agreed by Littelfuse. Information furnished is believed to be accurate and reliable. However, users should independently evaluate the suitability of and test each product selected for their own 
+applications.  Littelfuse products are not designed for, and may not be used in, all applications. Read complete Disclaimer Notice at www.littelfuse.com/disclaimer-electronics.

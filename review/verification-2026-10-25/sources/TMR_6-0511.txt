@@ -1,0 +1,510 @@
+
+=== PDF PAGE 1 ===
+DC/DC Converter
+TMR 6 Series, 6 Watt
+•
+Ultra-compact SIP-8 package
+•
+Wide 2:1 input voltage range
+•
+Continuous shor-circuit protection
+•
+Temperature range –40° to +78°C
+•
+High efficiency up to 86%
+•
+I/O isolation 1600 VDC
+•
+Remote On/Off control
+•
+3-year product warranty
+IEC 62368-1
+UL 62368-1
+The TMR-6 series is a new family of isolated 6W DC/DC converter modules
+with regulated output, featuring wide 2:1 input voltage ranges. The product
+comes in a ultra-compact SIP-8 plastic package with a small footprint
+occupying only 2.0 cm² of board space. Further features include remote On/Off
+control and continuous short circuit protection. The very compact dimensions
+of these converters make them an ideal solution for space critical applications.
+Models
+Order Code
+Input Voltage
+Output 1
+Output 2
+Efficiency
+Range
+Vnom
+Imax
+Vnom
+Imax
+typ.
+TMR 6-0510
+4.5 - 9 VDC
+(5 VDC nom.)
+3.3 VDC
+1'300 mA
+77 %
+TMR 6-0511
+5 VDC
+1'200 mA
+81 %
+TMR 6-0519
+9 VDC
+666 mA
+83 %
+TMR 6-0512
+12 VDC
+500 mA
+84 %
+TMR 6-0513
+15 VDC
+400 mA
+84 %
+TMR 6-0515
+24 VDC
+250 mA
+84 %
+TMR 6-0521
++5 VDC
+600 mA
+–5 VDC
+600 mA
+81 %
+TMR 6-0522
++12 VDC
+250 mA
+–12 VDC
+250 mA
+84 %
+TMR 6-0523
++15 VDC
+200 mA
+–15 VDC
+200 mA
+84 %
+TMR 6-1210
+9 - 18 VDC
+(12 VDC nom.)
+3.3 VDC
+1'300 mA
+78 %
+TMR 6-1211
+5 VDC
+1'200 mA
+83 %
+TMR 6-1219
+9 VDC
+666 mA
+85 %
+TMR 6-1212
+12 VDC
+500 mA
+85 %
+TMR 6-1213
+15 VDC
+400 mA
+85 %
+TMR 6-1215
+24 VDC
+250 mA
+84 %
+TMR 6-1221
++5 VDC
+600 mA
+–5 VDC
+600 mA
+82 %
+TMR 6-1222
++12 VDC
+250 mA
+–12 VDC
+250 mA
+84 %
+TMR 6-1223
++15 VDC
+200 mA
+–15 VDC
+200 mA
+85 %
+TMR 6-2410
+18 - 36 VDC
+(24 VDC nom.)
+3.3 VDC
+1'300 mA
+78 %
+TMR 6-2411
+5 VDC
+1'200 mA
+83 %
+TMR 6-2419
+9 VDC
+666 mA
+85 %
+TMR 6-2412
+12 VDC
+500 mA
+86 %
+TMR 6-2413
+15 VDC
+400 mA
+86 %
+TMR 6-2415
+24 VDC
+250 mA
+85 %
+TMR 6-2421
++5 VDC
+600 mA
+–5 VDC
+600 mA
+82 %
+TMR 6-2422
++12 VDC
+250 mA
+–12 VDC
+250 mA
+85 %
+TMR 6-2423
++15 VDC
+200 mA
+–15 VDC
+200 mA
+85 %
+TMR 6-4810
+36 - 75 VDC
+(48 VDC nom.)
+3.3 VDC
+1'300 mA
+78 %
+TMR 6-4811
+5 VDC
+1'200 mA
+82 %
+TMR 6-4819
+9 VDC
+666 mA
+84 %
+TMR 6-4812
+12 VDC
+500 mA
+85 %
+TMR 6-4813
+15 VDC
+400 mA
+86 %
+TMR 6-4815
+24 VDC
+250 mA
+84 %
+TMR 6-4821
++5 VDC
+600 mA
+–5 VDC
+600 mA
+82 %
+TMR 6-4822
++12 VDC
+250 mA
+–12 VDC
+250 mA
+84 %
+TMR 6-4823
++15 VDC
+200 mA
+–15 VDC
+200 mA
+85 %
+www.tracopower.com
+April 15, 2026
+Page 1 / 4
+
+
+=== PDF PAGE 2 ===
+Input Current
+- At no load
+5 Vin models: 105 mA typ.
+12 Vin models: 55 mA typ.
+24 Vin models: 28 mA typ.
+48 Vin models: 14 mA typ.
+Surge Voltage
+5 Vin models: 15 VDC max. (1 s max.)
+12 Vin models: 36 VDC max. (1 s max.)
+24 Vin models: 50 VDC max. (1 s max.)
+48 Vin models: 100 VDC max. (1 s max.)
+Under Voltage Lockout
+5 Vin models: 2 VDC min. / 3.5 VDC typ. / 4 VDC max.
+12 Vin models: 5 VDC min. / 7 VDC typ. / 8 VDC max.
+24 Vin models: 12 VDC min. / 15 VDC typ. / 17 VDC max.
+48 Vin models: 26 VDC min. / 33 VDC typ. / 35 VDC max.
+Recommended Input Fuse
+5 Vin models: 3'000 mA (slow blow)
+12 Vin models: 1'600 mA (slow blow)
+24 Vin models: 1'000 mA (slow blow)
+48 Vin models: 500 mA (slow blow)
+(The need of an external fuse has to be assessed
+in the final application.)
+Input Filter
+Internal Capacitor
+Input Specifications
+Voltage Set Accuracy
+±1% max.
+Regulation
+- Input Variation (Vmin - Vmax)
+single output models: 0.2% max.
+dual output models: 0.2% max.
+- Load Variation (0 - 100%)
+single output models: 1% max.
+dual output models: 1% max. (Output 1)
+1% max. (Output 2)
+- Cross Regulation
+(25% / 100% asym. load)
+dual output models: 5% max.
+Ripple and Noise
+- 20 MHz Bandwidth
+50 mVp-p typ.
+Capacitive Load
+- single output
+3.3 Vout models: 6'600 µF max.
+5 Vout models: 3'300 µF max.
+9 Vout models: 2'000 µF max.
+12 Vout models: 1'600 µF max.
+15 Vout models: 1'400 µF max.
+24 Vout models: 680 µF max.
+- dual output
+5 / -5 Vout models: 2'000 / 2'000 µF max.
+12 / -12 Vout models: 900 / 900 µF max.
+15 / -15 Vout models: 600 / 600 µF max.
+Minimum Load
+Not required
+Temperature Coefficient
+±0.02 %/K max.
+Start-up Time
+5 ms typ. / 10 ms max.
+Short Circuit Protection
+Continuous, Automatic recovery
+Transient Response
+- Response Time
+500 µs typ. (25% Load Step)
+Output Specifications
+Standards
+- IT / Multimedia Equipment
+EN 60950-1
+EN 62368-1
+IEC 60950-1
+IEC 62368-1
+UL 60950-1
+UL 62368-1
+- Certification Documents
+www.tracopower.com/tmr6-safety-cert
+Energy Source
+- Output, acc. to 62368-1
+ES1
+Power Source
+- Output, acc. to 62368-1
+PS1
+Safety Specifications
+TMR 6 Series, 6 Watt
+All specifications valid at nominal voltage, resistive full load and +25°C after warm-up time, unless otherwise stated.
+www.tracopower.com
+April 15, 2026
+Page 2 / 4
+
+
+=== PDF PAGE 3 ===
+Pollution Degree
+PD 2
+Over Voltage Category
+Not mains connected
+EMI (Emissions)
+- Conducted Emissions
+EN 55032 class A (with external filter)
+EN 55032 class B (with external filter)
+- Radiated Emissions
+EN 55032 class A (with external filter)
+EN 55032 class B (with external filter)
+External filter proposal: www.tracopower.com/tmr6-emc-filter
+EMS (Immunity)
+- Electrostatic Discharge
+Air: EN 61000-4-2, ±8 kV, perf. criteria A
+Contact: EN 61000-4-2, ±6 kV, perf. criteria A
+- RF Electromagnetic Field
+EN 61000-4-3, 10 V/m, perf. criteria A
+- EFT (Burst) / Surge
+EN 61000-4-4, ±2 kV, perf. criteria A
+EN 61000-4-5, ±1 kV, perf. criteria A
+Ext. input component: 5 Vin models: Nippon chemi-con KY 330 µF
+Other models: Nippon chemi-con KY 220 µF
+- Conducted RF Disturbances
+EN 61000-4-6, 10 Vrms, perf. criteria A
+- PF Magnetic Field
+Continuous: EN 61000-4-8, 100 A/m, perf. criteria A
+EMC Specifications
+Relative Humidity
+95% max. (non condensing)
+Temperature Ranges
+- Operating Temperature
+–40°C to +78°C
+- Case Temperature
++105°C max.
+- Storage Temperature
+–55°C to +125°C
+Power Derating
+- High Temperature
+Depending on model
+See application note: www.tracopower.com/tmr6-cc
+Cooling System
+Natural convection (20 LFM)
+Remote Control
+- Current Controlled Remote
+ (passive = on)
+On: open circuit
+Off: 2 to 4 mA current (internal 1 kΩ resistor)
+Refers to 'Remote' and '-Vin' Pin
+External circuit proposal: www.tracopower.com/info/current-remote.pdf
+- Off Idle Input Current
+2.5 mA max.
+See application note: www.tracopower.com/tmr6-remote
+Altitude During Operation
+5'000 m max.
+Regulator Topology
+Flyback Converter
+Switching Frequency
+100 kHz min. (RCC)
+Insulation System
+Functional Insulation
+Isolation Test Voltage
+- Input to Output, 60 s
+1'600 VDC
+Isolation Resistance
+- Input to Output, 500 VDC
+1'000 MΩ min.
+Isolation Capacitance
+- Input to Output, 100 kHz, 1 V
+50 pF max.
+Reliability
+- Calculated MTBF
+2'135'000 h (MIL-HDBK-217F, ground benign)
+Washing Process
+According to Cleaning Guideline
+www.tracopower.com/info/cleaning.pdf
+Environment
+- Vibration
+MIL-STD-810F
+- Thermal Shock
+MIL-STD-810F
+Housing Material
+Non-conductive Plastic (UL 94 V-0 rated)
+Potting Material
+Silicone (UL 94 V-0 rated)
+Pin Material
+Copper
+Pin Foundation Plating
+Nickel (2 - 3 µm)
+Pin Surface Plating
+Tin (3 - 5 µm), matte
+Housing Type
+Plastic Case
+Mounting Type
+PCB Mount
+Connection Type
+THD (Through-Hole Device)
+Footprint Type
+SIP8
+Soldering Profile
+Lead-Free Wave Soldering
+260°C / 6 s max.
+General Specifications
+TMR 6 Series, 6 Watt
+All specifications valid at nominal voltage, resistive full load and +25°C after warm-up time, unless otherwise stated.
+www.tracopower.com
+April 15, 2026
+Page 3 / 4
+
+
+=== PDF PAGE 4 ===
+Weight
+4.8 g
+Environmental Compliance
+- REACH Declaration
+www.tracopower.com/info/reach-declaration.pdf
+REACH SVHC list compliant
+REACH Annex XVII compliant
+- RoHS Declaration
+www.tracopower.com/info/rohs-declaration.pdf
+Exemptions: 7(a), 7(c)-I
+(RoHS exemptions refer to the component
+concentration only, not to the overall
+concentration in the product (O5A rule).)
+- SCIP Reference Number
+83a65577-1d00-4340-8642-87de0c778ffd
+Additional Information
+Supporting Documents
+www.tracopower.com/overview/tmr6
+Frequently Asked Questions
+www.tracopower.com/glossary-faq
+Glossary
+www.tracopower.com/info/glossary.pdf
+Outline Dimensions
+TMR 6 Series, 6 Watt
+Bottom view
+2.0
+21.8
+5.08
+3 x 2.54
+0.5 (0.02)
+11.2 (0.44)
+(3 x 0.100)
+(0.08)
+(0.200)
+4.1
+2 x 2.54
+(2 x 0.100)
+(0.86)
+(0.16)
+1
+2
+3
+5
+6
+7
+8
+Dimensions in mm (inch)
+Tolerances: x.x ±0.5 (x.xx ±0.02)
+                   x.xx ±0.25 (x.xxx ±0.01)
+Pin dimension tolerance: ±0.1 (±0.004)
+ 0.50 x 0.25
+(0.020 x 0.010)
+3.5
+(0.14)
+9.1 (0.36)
+Pinout
+Pin
+Single Output
+Dual Output
+1
+–Vin (GND)
+–Vin (GND)
+2
++Vin (Vcc)
++Vin (Vcc)
+3
+Remote
+Remote
+5
+NC
+NC
+6
++Vout
++Vout
+7
+–Vout
+Common
+8
+NC
+–Vout
+NC: Not connected
+www.tracopower.com
+©   Copyright 2025 Traco Electronic AG 
+Speciﬁcations can be changed without notice.
+Rev. April 15, 2026
+Page 4 / 4

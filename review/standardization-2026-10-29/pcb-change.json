@@ -1,0 +1,43 @@
+{
+  "r26": {
+    "1": {
+      "before_mm": [
+        86.425,
+        118.7
+      ],
+      "after_mm": [
+        88.7125,
+        118.7
+      ],
+      "net": "Net-(J10-Pin_1)"
+    },
+    "2": {
+      "before_mm": [
+        88.075,
+        118.7
+      ],
+      "after_mm": [
+        85.7875,
+        118.7
+      ],
+      "net": "Net-(J10-Pin_2)"
+    }
+  },
+  "r26_added_track_uuids": [
+    "2109c317-e3a3-44c2-b05c-cb7627b9610d",
+    "38e96117-6da6-42c5-b24f-c8dd068ac89e",
+    "6d7905af-2152-4f70-8016-72a38daaa173",
+    "c6cb667c-efe0-4e2a-b3f8-9c7b78cec57d"
+  ],
+  "r26_footprint": "BreakoutBoard:R_1206_3216Metric",
+  "renamed_capacitors": 28,
+  "footprints": 145,
+  "board_size_mm": [
+    81,
+    80
+  ],
+  "metadata_packages": 120,
+  "stage": "final_saved_pcb",
+  "r26_rotation_degrees": 180,
+  "other_tracks_and_vias_unchanged": true
+}

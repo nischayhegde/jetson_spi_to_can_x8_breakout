@@ -1,0 +1,1381 @@
+{
+  "date": "2026-10-29",
+  "boards": 1,
+  "purchased_packages_per_board": 120,
+  "purchase_lines": 21,
+  "schematic_physical_components": 141,
+  "pcb_footprints": 145,
+  "bare_test_pads": [
+    {
+      "reference": "TP1",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP2",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP3",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP4",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP5",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP6",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP7",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP8",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP9",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP10",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP11",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP12",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP15",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP16",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP17",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP18",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP19",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP20",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP21",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP22",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    },
+    {
+      "reference": "TP23",
+      "type": "Bare 1.5 mm test pad",
+      "footprint": "TestPoint:TestPoint_Pad_D1.5mm"
+    }
+  ],
+  "board_only_mounting_holes": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "sha256": {
+    "breakout\\breakout.kicad_sch": "e5fcc7f0b61d26664784e4e7607363ba22bacf82be935e080a10ebf20b39b456",
+    "breakout\\breakout.kicad_pcb": "0ee3e9547fe445c02e4dff8bc78db90068801db0794fd329b4c71b3dae0fb11c"
+  },
+  "parts": [
+    {
+      "mpn": "CC0603KRX7R9BB104",
+      "quantity": 28,
+      "references": [
+        "C1",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "C26",
+        "C27",
+        "C28",
+        "C29",
+        "C30",
+        "C31",
+        "C32",
+        "C33",
+        "C34",
+        "C35",
+        "C36",
+        "C37",
+        "C38",
+        "C39",
+        "C40",
+        "C41",
+        "C42",
+        "C43",
+        "C44",
+        "C45",
+        "C46",
+        "C47"
+      ],
+      "design_values": [
+        "100n"
+      ],
+      "footprints": [
+        "BreakoutBoard:C_0603_1608Metric"
+      ],
+      "instances": [
+        {
+          "reference": "C1",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C21",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C22",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C23",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C24",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C25",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C26",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C27",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C28",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C29",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C30",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C31",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C32",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C33",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C34",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C35",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C36",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C37",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C38",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C39",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C40",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C41",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C42",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C43",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C44",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C45",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C46",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C47",
+          "design_value": "100n",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "CL10C270JB8NNNC",
+      "quantity": 16,
+      "references": [
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17"
+      ],
+      "design_values": [
+        "27p"
+      ],
+      "footprints": [
+        "Capacitor_SMD:C_0603_1608Metric"
+      ],
+      "instances": [
+        {
+          "reference": "C2",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C3",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C4",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C5",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C6",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C7",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C8",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C9",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C10",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C11",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C12",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C13",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C14",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C15",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C16",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C17",
+          "design_value": "27p",
+          "footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "CGA3E1X7R1E105K080AC",
+      "quantity": 2,
+      "references": [
+        "C18",
+        "C19"
+      ],
+      "design_values": [
+        "1u"
+      ],
+      "footprints": [
+        "BreakoutBoard:C_0603_1608Metric"
+      ],
+      "instances": [
+        {
+          "reference": "C18",
+          "design_value": "1u",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "C19",
+          "design_value": "1u",
+          "footprint": "BreakoutBoard:C_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "CL21B106KOQNNNE",
+      "quantity": 1,
+      "references": [
+        "C20"
+      ],
+      "design_values": [
+        "10u"
+      ],
+      "footprints": [
+        "BreakoutBoard:C_0805_2012Metric"
+      ],
+      "instances": [
+        {
+          "reference": "C20",
+          "design_value": "10u",
+          "footprint": "BreakoutBoard:C_0805_2012Metric",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "BZT52C6V8-13-F",
+      "quantity": 1,
+      "references": [
+        "D2"
+      ],
+      "design_values": [
+        "BZT52C6V8-13-F"
+      ],
+      "footprints": [
+        "BreakoutBoard:D_SOD-123"
+      ],
+      "instances": [
+        {
+          "reference": "D2",
+          "design_value": "BZT52C6V8-13-F",
+          "footprint": "BreakoutBoard:D_SOD-123",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "0466001.NR",
+      "quantity": 1,
+      "references": [
+        "F1"
+      ],
+      "design_values": [
+        "0466001.NR"
+      ],
+      "footprints": [
+        "BreakoutBoard:Fuse_1206_3216Metric"
+      ],
+      "instances": [
+        {
+          "reference": "F1",
+          "design_value": "0466001.NR",
+          "footprint": "BreakoutBoard:Fuse_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "M20-7832046",
+      "quantity": 1,
+      "references": [
+        "J1"
+      ],
+      "design_values": [
+        "M20-7832046"
+      ],
+      "footprints": [
+        "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical"
+      ],
+      "instances": [
+        {
+          "reference": "J1",
+          "design_value": "M20-7832046",
+          "footprint": "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical",
+          "pad_count": 40,
+          "side": "Bottom"
+        }
+      ]
+    },
+    {
+      "mpn": "B3B-XH-A",
+      "quantity": 8,
+      "references": [
+        "J4",
+        "J5",
+        "J7",
+        "J8",
+        "J9",
+        "J10",
+        "J11",
+        "J12"
+      ],
+      "design_values": [
+        "B3B-XH-A"
+      ],
+      "footprints": [
+        "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
+      ],
+      "instances": [
+        {
+          "reference": "J4",
+          "design_value": "B3B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "pad_count": 3,
+          "side": "Top"
+        },
+        {
+          "reference": "J5",
+          "design_value": "B3B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "pad_count": 3,
+          "side": "Top"
+        },
+        {
+          "reference": "J7",
+          "design_value": "B3B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "pad_count": 3,
+          "side": "Top"
+        },
+        {
+          "reference": "J8",
+          "design_value": "B3B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "pad_count": 3,
+          "side": "Top"
+        },
+        {
+          "reference": "J9",
+          "design_value": "B3B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "pad_count": 3,
+          "side": "Top"
+        },
+        {
+          "reference": "J10",
+          "design_value": "B3B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "pad_count": 3,
+          "side": "Top"
+        },
+        {
+          "reference": "J11",
+          "design_value": "B3B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "pad_count": 3,
+          "side": "Top"
+        },
+        {
+          "reference": "J12",
+          "design_value": "B3B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "pad_count": 3,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "B2B-XH-A",
+      "quantity": 1,
+      "references": [
+        "J6"
+      ],
+      "design_values": [
+        "B2B-XH-A"
+      ],
+      "footprints": [
+        "BreakoutBoard:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
+      ],
+      "instances": [
+        {
+          "reference": "J6",
+          "design_value": "B2B-XH-A",
+          "footprint": "BreakoutBoard:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "AO3401A",
+      "quantity": 1,
+      "references": [
+        "Q1"
+      ],
+      "design_values": [
+        "AO3401A"
+      ],
+      "footprints": [
+        "BreakoutBoard:SOT-23"
+      ],
+      "instances": [
+        {
+          "reference": "Q1",
+          "design_value": "AO3401A",
+          "footprint": "BreakoutBoard:SOT-23",
+          "pad_count": 3,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "RC0603FR-0733RL",
+      "quantity": 16,
+      "references": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R9",
+        "R12",
+        "R15",
+        "R18",
+        "R19",
+        "R20",
+        "R21",
+        "R22",
+        "R25",
+        "R28",
+        "R31"
+      ],
+      "design_values": [
+        "33"
+      ],
+      "footprints": [
+        "BreakoutBoard:R_0603_1608Metric"
+      ],
+      "instances": [
+        {
+          "reference": "R1",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R2",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "R3",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R4",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R5",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R9",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "R12",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "R15",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "R18",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R19",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R20",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R21",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R22",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "R25",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "R28",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "R31",
+          "design_value": "33",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "RC1206FR-07120RL",
+      "quantity": 8,
+      "references": [
+        "R6",
+        "R10",
+        "R13",
+        "R16",
+        "R23",
+        "R26",
+        "R29",
+        "R32"
+      ],
+      "design_values": [
+        "120"
+      ],
+      "footprints": [
+        "BreakoutBoard:R_1206_3216Metric"
+      ],
+      "instances": [
+        {
+          "reference": "R6",
+          "design_value": "120",
+          "footprint": "BreakoutBoard:R_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R10",
+          "design_value": "120",
+          "footprint": "BreakoutBoard:R_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R13",
+          "design_value": "120",
+          "footprint": "BreakoutBoard:R_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R16",
+          "design_value": "120",
+          "footprint": "BreakoutBoard:R_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R23",
+          "design_value": "120",
+          "footprint": "BreakoutBoard:R_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R26",
+          "design_value": "120",
+          "footprint": "BreakoutBoard:R_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R29",
+          "design_value": "120",
+          "footprint": "BreakoutBoard:R_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R32",
+          "design_value": "120",
+          "footprint": "BreakoutBoard:R_1206_3216Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        }
+      ]
+    },
+    {
+      "mpn": "RC0603FR-0710KL",
+      "quantity": 9,
+      "references": [
+        "R7",
+        "R8",
+        "R11",
+        "R14",
+        "R17",
+        "R24",
+        "R27",
+        "R30",
+        "R38"
+      ],
+      "design_values": [
+        "10k"
+      ],
+      "footprints": [
+        "BreakoutBoard:R_0603_1608Metric"
+      ],
+      "instances": [
+        {
+          "reference": "R7",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R8",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R11",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R14",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R17",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R24",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R27",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R30",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R38",
+          "design_value": "10k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "RC0603FR-07100KL",
+      "quantity": 4,
+      "references": [
+        "R34",
+        "R35",
+        "R36",
+        "R37"
+      ],
+      "design_values": [
+        "100k"
+      ],
+      "footprints": [
+        "BreakoutBoard:R_0603_1608Metric"
+      ],
+      "instances": [
+        {
+          "reference": "R34",
+          "design_value": "100k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R35",
+          "design_value": "100k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R36",
+          "design_value": "100k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        },
+        {
+          "reference": "R37",
+          "design_value": "100k",
+          "footprint": "BreakoutBoard:R_0603_1608Metric",
+          "pad_count": 2,
+          "side": "Bottom"
+        }
+      ]
+    },
+    {
+      "mpn": "M20-9990246",
+      "quantity": 2,
+      "references": [
+        "TP13",
+        "TP14"
+      ],
+      "design_values": [
+        "M20-9990246"
+      ],
+      "footprints": [
+        "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+      ],
+      "instances": [
+        {
+          "reference": "TP13",
+          "design_value": "M20-9990246",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "pad_count": 2,
+          "side": "Top"
+        },
+        {
+          "reference": "TP14",
+          "design_value": "M20-9990246",
+          "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "pad_count": 2,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "74LVC32APW,118",
+      "quantity": 2,
+      "references": [
+        "U1",
+        "U5"
+      ],
+      "design_values": [
+        "74LVC32APW,118"
+      ],
+      "footprints": [
+        "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm"
+      ],
+      "instances": [
+        {
+          "reference": "U1",
+          "design_value": "74LVC32APW,118",
+          "footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "pad_count": 14,
+          "side": "Top"
+        },
+        {
+          "reference": "U5",
+          "design_value": "74LVC32APW,118",
+          "footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "pad_count": 14,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "74LVC04AT14-13",
+      "quantity": 1,
+      "references": [
+        "U2"
+      ],
+      "design_values": [
+        "74LVC04AT14-13"
+      ],
+      "footprints": [
+        "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm"
+      ],
+      "instances": [
+        {
+          "reference": "U2",
+          "design_value": "74LVC04AT14-13",
+          "footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "pad_count": 14,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "TLV75533PDBVR",
+      "quantity": 1,
+      "references": [
+        "U3"
+      ],
+      "design_values": [
+        "TLV75533PDBVR"
+      ],
+      "footprints": [
+        "BreakoutBoard:SOT-23-5"
+      ],
+      "instances": [
+        {
+          "reference": "U3",
+          "design_value": "TLV75533PDBVR",
+          "footprint": "BreakoutBoard:SOT-23-5",
+          "pad_count": 5,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "74AHC30PW,118",
+      "quantity": 1,
+      "references": [
+        "U4"
+      ],
+      "design_values": [
+        "74AHC30PW,118"
+      ],
+      "footprints": [
+        "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm"
+      ],
+      "instances": [
+        {
+          "reference": "U4",
+          "design_value": "74AHC30PW,118",
+          "footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "pad_count": 14,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "MCP251863T-E/SS",
+      "quantity": 8,
+      "references": [
+        "U9",
+        "U10",
+        "U11",
+        "U12",
+        "U13",
+        "U14",
+        "U15",
+        "U16"
+      ],
+      "design_values": [
+        "MCP251863T-E/SS"
+      ],
+      "footprints": [
+        "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm"
+      ],
+      "instances": [
+        {
+          "reference": "U9",
+          "design_value": "MCP251863T-E/SS",
+          "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "pad_count": 28,
+          "side": "Top"
+        },
+        {
+          "reference": "U10",
+          "design_value": "MCP251863T-E/SS",
+          "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "pad_count": 28,
+          "side": "Top"
+        },
+        {
+          "reference": "U11",
+          "design_value": "MCP251863T-E/SS",
+          "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "pad_count": 28,
+          "side": "Top"
+        },
+        {
+          "reference": "U12",
+          "design_value": "MCP251863T-E/SS",
+          "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "pad_count": 28,
+          "side": "Top"
+        },
+        {
+          "reference": "U13",
+          "design_value": "MCP251863T-E/SS",
+          "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "pad_count": 28,
+          "side": "Top"
+        },
+        {
+          "reference": "U14",
+          "design_value": "MCP251863T-E/SS",
+          "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "pad_count": 28,
+          "side": "Top"
+        },
+        {
+          "reference": "U15",
+          "design_value": "MCP251863T-E/SS",
+          "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "pad_count": 28,
+          "side": "Top"
+        },
+        {
+          "reference": "U16",
+          "design_value": "MCP251863T-E/SS",
+          "footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "pad_count": 28,
+          "side": "Top"
+        }
+      ]
+    },
+    {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "quantity": 8,
+      "references": [
+        "Y1",
+        "Y2",
+        "Y3",
+        "Y4",
+        "Y5",
+        "Y6",
+        "Y7",
+        "Y8"
+      ],
+      "design_values": [
+        "ABM8G-40.000MHZ-18-D2Y-T"
+      ],
+      "footprints": [
+        "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm"
+      ],
+      "instances": [
+        {
+          "reference": "Y1",
+          "design_value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "pad_count": 4,
+          "side": "Top"
+        },
+        {
+          "reference": "Y2",
+          "design_value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "pad_count": 4,
+          "side": "Top"
+        },
+        {
+          "reference": "Y3",
+          "design_value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "pad_count": 4,
+          "side": "Top"
+        },
+        {
+          "reference": "Y4",
+          "design_value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "pad_count": 4,
+          "side": "Top"
+        },
+        {
+          "reference": "Y5",
+          "design_value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "pad_count": 4,
+          "side": "Top"
+        },
+        {
+          "reference": "Y6",
+          "design_value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "pad_count": 4,
+          "side": "Top"
+        },
+        {
+          "reference": "Y7",
+          "design_value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "pad_count": 4,
+          "side": "Top"
+        },
+        {
+          "reference": "Y8",
+          "design_value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "pad_count": 4,
+          "side": "Top"
+        }
+      ]
+    }
+  ]
+}

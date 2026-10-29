@@ -1,0 +1,16 @@
+{
+  "board_size_mm": [
+    81,
+    80
+  ],
+  "board_outline_unchanged": true,
+  "all_component_centers_and_sides_unchanged": true,
+  "other_component_pad_geometry_unchanged": true,
+  "mounting_holes_and_hardware_keepouts_preserved": true,
+  "r26_rotation_degrees": 180,
+  "r26_footprint": "BreakoutBoard:R_1206_3216Metric",
+  "removed_old_local_can_tracks": 8,
+  "added_local_can_tracks": 4,
+  "all_other_tracks_and_vias_unchanged": true,
+  "tracks_and_vias": 1708
+}

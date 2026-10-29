@@ -1,4 +1,4 @@
-"""Bundle the selected parts from the installed official KiCad 9 libraries.
+"""Bundle selected parts from installed official KiCad 10 libraries.
 
 Run with ordinary Python. No network calls; no changes to the existing design.
 """
@@ -11,7 +11,7 @@ import shutil
 from library_usage import active_selection
 
 ROOT = Path(__file__).resolve().parent
-KICAD = Path(r'C:\Program Files\KiCad\9.0\share\kicad')
+KICAD = Path(r'C:\Program Files\KiCad\10.0\share\kicad')
 LIB = 'BreakoutBoard'
 FP = ROOT / (LIB + '.pretty')
 MODELS = ROOT / '3dmodels'
@@ -43,7 +43,8 @@ parts = [
  ('CRCW06031K21FKEA',1,'1.21 kohm 1% eFuse ILM setting','Device:R','Resistor_SMD:R_0603_1608Metric',dk('vishay-dale','CRCW06031K21FKEA',1179818),49852,.10),
  ('B3B-XH-A',8,'3-pin 2.50 mm CAN connector','Connector_Generic:Conn_01x03','Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical',dk('jst-sales-america-inc','B3B-XH-A',1651046),69190,.13),
  ('B2B-XH-A',1,'2-pin 2.50 mm 5 V input connector','Connector_Generic:Conn_01x02','Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical',dk('jst-sales-america-inc','B2B-XH-A',1651045),304650,None),
- ('M20-9982046',1,'2x20 2.54 mm host harness header','Connector_Generic:Conn_02x20_Odd_Even','Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical',dk('harwin-inc','M20-9982046',3921209),1525,1.34),
+ ('M20-7832046',1,'40-pin female socket, 2 x 20, 2.54 mm pitch, vertical through-hole','Connector_Generic:Conn_02x20_Odd_Even','Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical',dk('harwin-inc','M20-7832046',3728114),4597,4.34),
+ ('M20-9990246',2,'Two-pin 2.54 mm vertical through-hole test header','Connector:TestPoint_2Pole','Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical',dk('harwin-inc','M20-9990246',3728226),179951,.10),
  ('0466001.NR',1,'1 A 63 V fast-acting series input fuse, 1206; V1 load qualification required','Device:Fuse','Fuse:Fuse_1206_3216Metric',dk('littelfuse-inc','0466001-NR',521337),36047,1.25),
  ('AO3401A',1,'P-channel -30 V MOSFET for 5 V high-side reverse-hookup protection','Transistor_FET:AO3401A','Package_TO_SOT_SMD:SOT-23',dk('alpha-omega-semiconductor-inc','AO3401A',1855943),358299,.52),
  ('BZT52C6V8-13-F',1,'6.8 V gate-source Zener clamp, SOD123; not a supply-rail clamp','Device:D_Zener','Diode_SMD:D_SOD-123',dk('diodes-incorporated','BZT52C6V8-13-F',4570599),6702,.22),
@@ -55,7 +56,7 @@ parts = [
 
 # Generate only the current schematic's selected parts. Generic C/R symbols
 # retain their mapped packages; quantities count unique placed references.
-# Preserve the requested 1 A fuse for the correction identified in the review.
+# Quantities come only from placed parts, including the fitted F1 fuse.
 selection = active_selection({row[0] for row in parts})
 parts=[(n,selection[n]['quantity'],d,s,f,u,st,p)
        for n,q,d,s,f,u,st,p in parts if n in selection]
@@ -167,7 +168,10 @@ for name,qty,desc,src,fp,url,stock,price in parts:
             nc+=f'(pin no_connect line (at 10.16 {y} 180) (length 2.54) (name "NC" (effects (font (size 1 1)))) (number "{number}" (effects (font (size 1 1)))))'
         b=b.replace(child,child[:-1]+nc+')',1)
     b=re.sub(r'(\(property "Value" )"[^"]*"',lambda m:m[1]+json.dumps(name.replace('MCP251863T-E_SS','MCP251863T-E/SS').replace('TMR_6-0511','TMR 6-0511')),b,count=1)
-    b=re.sub(r'(\(property "Footprint" )"[^"]*"',lambda m:m[1]+json.dumps(LIB+':'+oldfp),b,count=1)
+    actual_footprints=selection[name]['footprints']
+    assert len(actual_footprints)==1,(name,actual_footprints)
+    actual_footprint=actual_footprints[0]
+    b=re.sub(r'(\(property "Footprint" )"[^"]*"',lambda m:m[1]+json.dumps(actual_footprint),b,count=1)
     def prop(key,value):
         global b
         pattern=r'(\(property "'+re.escape(key)+r'" )"[^"]*"'
@@ -176,6 +180,9 @@ for name,qty,desc,src,fp,url,stock,price in parts:
         else:
             b=b[:-1]+f'(property "{key}" {json.dumps(value)} (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes))))'
     prop('Description',desc)
+    prop('MPN',name.replace('MCP251863T-E_SS','MCP251863T-E/SS'))
+    prop('Manufacturer',selection[name]['manufacturer'])
+    if name=='CC0603KRX7R9BB104':prop('Value','100n')
     datasheets={
       'MCP251863T-E_SS':'https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf',
       'ABM8G-40.000MHZ-18-D2Y-T':'https://abracon.com/Resonators/abm8g.pdf',
@@ -200,7 +207,7 @@ for name,qty,desc,src,fp,url,stock,price in parts:
         prop('ki_keywords',{'74LVC08APW,118':'LVC CMOS AND bank select','74LVC04AT14-13':'LVC CMOS inverter bank select','74LVC32APW,118':'LVC CMOS OR','74AHC30PW,118':'AHC CMOS NAND shared interrupt'}[name])
         prop('ki_fp_filters','TSSOP*14*4.4x5mm*P0.65mm*')
     symbols.append(b)
-    manifest.append(dict(mpn=name.replace('MCP251863T-E_SS','MCP251863T-E/SS').replace('TMR_6-0511','TMR 6-0511'),quantity=qty,function=desc,symbol=LIB+':'+name,footprint=LIB+':'+oldfp,step=';'.join(local_models),asset_origin=src or 'custom symbol from manufacturer pin table',supplier_url=url,observed_stock=stock,unit_usd=price,checked_date='2026-10-18' if name in ('0466001.NR','AO3401A','BZT52C6V8-13-F','RC0603FR-0710KL','CL10C270JB8NNNC') else '2026-10-17' if name in ('74LVC08APW,118','74LVC04AT14-13','74LVC32APW,118','74AHC30PW,118') else '2026-10-16'))
+    manifest.append(dict(mpn=name.replace('MCP251863T-E_SS','MCP251863T-E/SS').replace('TMR_6-0511','TMR 6-0511'),quantity=qty,function=desc,symbol=LIB+':'+name,footprint=actual_footprint,step=';'.join(local_models),asset_origin=src or 'custom symbol from manufacturer pin table',supplier_url=url,observed_stock=stock,unit_usd=price,checked_date='2026-10-18' if name in ('0466001.NR','AO3401A','BZT52C6V8-13-F','RC0603FR-0710KL','CL10C270JB8NNNC') else '2026-10-17' if name in ('74LVC08APW,118','74LVC04AT14-13','74LVC32APW,118','74AHC30PW,118') else '2026-10-16'))
     manifest[-1].update(placed_references=';'.join(selection[name]['references']),
                         retention_reason=selection[name]['reason'])
     if name=='RC0603FR-07100KL':manifest[-1]['checked_date']='2026-10-18'

@@ -1,0 +1,1076 @@
+
+=== PDF PAGE 1 ===
+ 
+1.
+Product profile
+1.1
+General description
+Planar Maximum Efficiency General Application (MEGA) Schottky barrier rectifier with an 
+integrated guard ring for stress protection, encapsulated in a SOD128 small and flat lead 
+Surface-Mounted Device (SMD) plastic package.
+1.2
+Features
+ Average forward current: IF(AV) ≤5 A
+ Reverse voltage: VR ≤30 V
+ Low forward voltage
+ High power capability due to clip-bond technology
+ AEC-Q101 qualified
+ Small and flat lead SMD plastic package
+1.3
+Applications
+ Low voltage rectification
+ High efficiency DC-to-DC conversion
+ Switch Mode Power Supply (SMPS)
+ Reverse polarity protection
+ Low power consumption applications
+1.4
+Quick reference data
+ 
+[1]
+Device mounted on a ceramic Printed-Circuit Board (PCB), Al2O3, standard footprint.
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+Rev. 01 — 10 December 2009
+Product data sheet
+Table 1.
+Quick reference data
+Tj = 25 °C unless otherwise specified.
+Symbol
+Parameter
+Conditions
+Min
+Typ
+Max
+Unit
+IF(AV)
+average forward current
+square wave; 
+δ = 0.5; 
+f = 20 kHz
+Tamb ≤35 °C
+[1] -
+-
+5
+A
+Tsp ≤130 °C
+-
+-
+5
+A
+VR
+reverse voltage
+-
+-
+30
+V
+VF
+forward voltage
+IF = 5 A
+-
+315
+360
+mV
+IR
+reverse current
+VR = 30 V
+-
+2.6
+8
+mA
+
+
+=== PDF PAGE 2 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+2 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+2.
+Pinning information
+ 
+[1]
+The marking bar indicates the cathode.
+3.
+Ordering information
+ 
+4.
+Marking
+ 
+5.
+Limiting values
+ 
+Table 2.
+Pinning
+Pin
+Description
+Simplified outline
+Graphic symbol
+1
+cathode
+[1]
+2
+anode
+1
+2
+sym001
+1
+2
+Table 3.
+Ordering information
+Type number
+Package
+Name
+Description
+Version
+PMEG3050EP
+-
+plastic surface-mounted package; 2 leads
+SOD128
+Table 4.
+Marking codes
+Type number
+Marking code
+PMEG3050EP
+A7
+Table 5.
+Limiting values
+In accordance with the Absolute Maximum Rating System (IEC 60134).
+Symbol
+Parameter
+Conditions
+Min
+Max
+Unit
+VR
+reverse voltage
+Tj = 25 °C
+-
+30
+V
+IF(AV)
+average forward current
+square wave; 
+δ = 0.5; 
+f = 20 kHz
+Tamb ≤35 °C
+[1] -
+5
+A
+Tsp ≤130 °C
+-
+5
+A
+IFSM
+non-repetitive peak 
+forward current
+square wave; 
+tp = 8 ms
+[2] -
+70
+A
+Ptot
+total power dissipation
+Tamb ≤25 °C
+[3][4] -
+625
+mW
+[3][5] -
+1050
+mW
+[3][1] -
+2100
+mW
+
+
+=== PDF PAGE 3 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+3 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+[1]
+Device mounted on a ceramic PCB, Al2O3, standard footprint.
+[2]
+Tj = 25 °C prior to surge.
+[3]
+Reflow soldering is the only recommended soldering method.
+[4]
+Device mounted on an FR4 PCB, single-sided copper, tin-plated and standard footprint.
+[5]
+Device mounted on an FR4 PCB, single-sided copper, tin-plated, mounting pad for cathode 1 cm2.
+6.
+Thermal characteristics
+ 
+[1]
+For Schottky barrier diodes thermal runaway has to be considered, as in some applications the reverse 
+power losses PR are a significant part of the total power losses.
+[2]
+Reflow soldering is the only recommended soldering method.
+[3]
+Device mounted on an FR4 PCB, single-sided copper, tin-plated and standard footprint.
+[4]
+Device mounted on an FR4 PCB, single-sided copper, tin-plated, mounting pad for cathode 1 cm2.
+[5]
+Device mounted on a ceramic PCB, Al2O3, standard footprint.
+[6]
+Soldering point of cathode tab.
+Tj
+junction temperature
+-
+150
+°C
+Tamb
+ambient temperature
+−55
++150
+°C
+Tstg
+storage temperature
+−65
++150
+°C
+Table 5.
+Limiting values …continued
+In accordance with the Absolute Maximum Rating System (IEC 60134).
+Symbol
+Parameter
+Conditions
+Min
+Max
+Unit
+Table 6.
+Thermal characteristics
+Symbol
+Parameter
+Conditions
+Min
+Typ
+Max
+Unit
+Rth(j-a)
+thermal resistance from 
+junction to ambient
+in free air
+[1][2]
+[3] -
+-
+200
+K/W
+[4] -
+-
+120
+K/W
+[5] -
+-
+60
+K/W
+Rth(j-sp)
+thermal resistance from 
+junction to solder point
+[6] -
+-
+12
+K/W
+
+
+=== PDF PAGE 4 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+4 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+ 
+FR4 PCB, standard footprint
+Fig 1.
+Transient thermal impedance from junction to ambient as a function of pulse duration; typical values
+FR4 PCB, mounting pad for cathode 1 cm2
+Fig 2.
+Transient thermal impedance from junction to ambient as a function of pulse duration; typical values
+006aab752
+10
+1
+102
+103
+Zth(j-a)
+(K/W)
+10−1
+tp (s)
+10−3
+102
+103
+10
+1
+10−2
+10−1
+1
+duty cycle =
+0.75
+0.5
+0.33
+0.2
+0.25
+0.1
+0.05
+0.02
+0.01
+0
+006aab753
+10
+1
+102
+103
+Zth(j-a)
+(K/W)
+10−1
+tp (s)
+10−3
+102
+103
+10
+1
+10−2
+10−1
+1
+duty cycle =
+0.75
+0.5
+0.33
+0.2
+0.25
+0.1
+0.05
+0.02
+0.01
+0
+
+
+=== PDF PAGE 5 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+5 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+ 
+7.
+Characteristics
+ 
+Ceramic PCB, Al2O3, standard footprint
+Fig 3.
+Transient thermal impedance from junction to ambient as a function of pulse duration; typical values
+006aab754
+tp (s)
+10−3
+102
+103
+10
+1
+10−2
+10−1
+10
+1
+102
+Zth(j-a)
+(K/W)
+10−1
+duty cycle =
+1
+0.75
+0.5
+0.33
+0.2
+0.25
+0.1
+0.05
+0.02
+0.01
+0
+Table 7.
+Characteristics
+Tj = 25 °C unless otherwise specified.
+Symbol
+Parameter
+Conditions
+Min
+Typ
+Max
+Unit
+VF
+forward voltage
+IF = 1 A
+-
+240
+275
+mV
+IF = 3 A
+-
+285
+340
+mV
+IF = 5 A
+-
+315
+360
+mV
+IR
+reverse current
+VR = 5 V
+-
+330
+-
+μA
+VR = 30 V
+-
+2.6
+8
+mA
+Cd
+diode capacitance
+f = 1 MHz
+VR = 1 V
+-
+800
+-
+pF
+VR = 10 V
+-
+260
+-
+pF
+
+
+=== PDF PAGE 6 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+6 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+ 
+(1)
+Tj = 150 °C
+(2)
+Tj = 125 °C
+(3)
+Tj = 85 °C
+(4)
+Tj = 25 °C
+(5)
+Tj = −40 °C
+(1)
+Tj = 125 °C
+(2)
+Tj = 85 °C
+(3)
+Tj = 25 °C
+(4)
+Tj = −40 °C
+Fig 4.
+Forward current as a function of forward 
+voltage; typical values
+Fig 5.
+Reverse current as a function of reverse 
+voltage; typical values
+f = 1 MHz; Tamb = 25 °C
+Fig 6.
+Diode capacitance as a function of reverse voltage; typical values
+006aab755
+10−2
+10−3
+1
+10−1
+10
+IF
+(A)
+10−4
+VF (V)
+0.0
+0.5
+0.4
+0.2
+0.3
+0.1
+(1)
+(2)
+(3)
+(4)
+(5)
+006aab756
+VR (V)
+0
+30
+20
+10
+1
+10−1
+10−2
+10−3
+10−4
+10−5
+10−6
+IR
+(A)
+10−7
+(1)
+(2)
+(3)
+(4)
+VR (V)
+0
+30
+20
+10
+006aab757
+500
+1000
+1500
+Cd
+(pF)
+0
+
+
+=== PDF PAGE 7 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+7 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+ 
+Tj = 150 °C
+(1)
+δ = 0.1
+(2)
+δ = 0.2
+(3)
+δ = 0.5
+(4)
+δ = 1
+Tj = 125 °C
+(1)
+δ = 1
+(2)
+δ = 0.9
+(3)
+δ = 0.8
+(4)
+δ = 0.5
+Fig 7.
+Average forward power dissipation as a 
+function of average forward current; typical 
+values
+Fig 8.
+Average reverse power dissipation as a 
+function of reverse voltage; typical values
+FR4 PCB, standard footprint
+Tj = 150 °C
+(1)
+δ = 1; DC
+(2)
+δ = 0.5; f = 20 kHz
+(3)
+δ = 0.2; f = 20 kHz
+(4)
+δ = 0.1; f = 20 kHz
+FR4 PCB, mounting pad for cathode 1 cm2
+Tj = 150 °C
+(1)
+δ = 1; DC
+(2)
+δ = 0.5; f = 20 kHz
+(3)
+δ = 0.2; f = 20 kHz
+(4)
+δ = 0.1; f = 20 kHz
+Fig 9.
+Average forward current as a function of 
+ambient temperature; typical values
+Fig 10.
+Average forward current as a function of 
+ambient temperature; typical values
+IF(AV) (A)
+0
+8
+6
+2
+4
+006aab758
+0.6
+1.2
+1.8
+PF(AV)
+(W)
+0.0
+(1)
+(2)
+(3)
+(4)
+VR (V)
+0
+25
+20
+10
+15
+5
+006aab759
+14
+PR(AV)
+(W)
+10
+6
+2
+0
+4
+8
+12
+(1)
+(2)
+(4)
+(3)
+Tamb (°C)
+0
+50
+100
+150
+175
+125
+75
+25
+006aab760
+2.5
+5.0
+7.5
+IF(AV)
+(A)
+0.0
+(1)
+(2)
+(3)
+(4)
+Tamb (°C)
+0
+50
+100
+150
+175
+125
+75
+25
+006aab761
+2.5
+5.0
+7.5
+IF(AV)
+(A)
+0.0
+(4)
+(2)
+(1)
+(3)
+
+
+=== PDF PAGE 8 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+8 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+ 
+Ceramic PCB, Al2O3, standard footprint
+Tj = 150 °C
+(1)
+δ = 1; DC
+(2)
+δ = 0.5; f = 20 kHz
+(3)
+δ = 0.2; f = 20 kHz
+(4)
+δ = 0.1; f = 20 kHz
+Tj = 150 °C
+(1)
+δ = 1; DC
+(2)
+δ = 0.5; f = 20 kHz
+(3)
+δ = 0.2; f = 20 kHz
+(4)
+δ = 0.1; f = 20 kHz
+Fig 11.
+Average forward current as a function of 
+ambient temperature; typical values
+Fig 12.
+Average forward current as a function of 
+solder point temperature; typical values
+Tamb (°C)
+0
+50
+100
+150
+175
+125
+75
+25
+006aab762
+2.5
+5.0
+7.5
+IF(AV)
+(A)
+0.0
+(4)
+(2)
+(1)
+(3)
+Tsp (°C)
+0
+50
+100
+150
+175
+125
+75
+25
+006aab763
+2.5
+5.0
+7.5
+IF(AV)
+(A)
+0.0
+(4)
+(2)
+(1)
+(3)
+
+
+=== PDF PAGE 9 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+9 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+8.
+Test information
+ 
+The current ratings for the typical waveforms as shown in Figure 9, 10, 11 and 12 are 
+calculated according to the equations: 
+with IM defined as peak current, 
+ at DC, and 
+ with IRMS defined as RMS current.
+8.1
+Quality information
+This product has been qualified in accordance with the Automotive Electronics Council 
+(AEC) standard Q101 - Stress test qualification for discrete semiconductors, and is 
+suitable for use in automotive applications.
+9.
+Package outline
+ 
+Fig 13.
+Duty cycle definition
+t1
+t2
+P
+t
+006aaa812
+ duty cycle δ =
+t1
+t2
+IF AV
+(
+)
+IM
+δ
+×
+=
+IRMS
+IF AV
+(
+)
+=
+IRMS
+IM
+δ
+×
+=
+Fig 14.
+Package outline SOD128
+07-09-12
+Dimensions in mm
+1.1
+0.9
+0.22
+0.10
+0.6
+0.3
+5.0
+4.4
+4.0
+3.6
+1.9
+1.6
+2.7
+2.3
+1
+2
+
+
+=== PDF PAGE 10 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+10 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+10. Packing information
+ 
+[1]
+For further information and the availability of packing methods, see Section 14.
+11. Soldering
+ 
+Table 8.
+Packing methods
+The indicated -xxx are the last three digits of the 12NC ordering code.[1]
+Type number
+Package
+Description
+Packing quantity
+3000
+PMEG3050EP
+SOD128
+4 mm pitch, 12 mm tape and reel
+-115
+Reflow soldering is the only recommended soldering method.
+Fig 15.
+Reflow soldering footprint SOD128
+solder lands
+solder resist
+occupied area
+solder paste
+2.5
+3.4
+2.1
+(2×)
+1.9
+(2×)
+4.4
+4.2
+6.2
+1.2
+(2×)
+1.4
+(2×)
+sod128_fr
+Dimensions in mm
+
+
+=== PDF PAGE 11 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+11 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+12. Revision history
+ Table 9.
+Revision history
+Document ID
+Release date
+Data sheet status
+Change notice
+Supersedes
+PMEG3050EP_1
+20091210
+Product data sheet
+-
+-
+
+
+=== PDF PAGE 12 ===
+PMEG3050EP_1
+© NXP B.V. 2009. All rights reserved.
+Product data sheet
+Rev. 01 — 10 December 2009 
+12 of 13
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+13. Legal information
+13.1
+Data sheet status
+ 
+[1]
+Please consult the most recently issued document before initiating or completing a design. 
+[2]
+The term ‘short data sheet’ is explained in section “Definitions”. 
+[3]
+The product status of device(s) described in this document may have changed since this document was published and may differ in case of multiple devices. The latest product status 
+information is available on the Internet at URL http://www.nxp.com. 
+13.2
+Definitions
+Draft — The document is a draft version only. The content is still under 
+internal review and subject to formal approval, which may result in 
+modifications or additions. NXP Semiconductors does not give any 
+representations or warranties as to the accuracy or completeness of 
+information included herein and shall have no liability for the consequences of 
+use of such information.
+Short data sheet — A short data sheet is an extract from a full data sheet 
+with the same product type number(s) and title. A short data sheet is intended 
+for quick reference only and should not be relied upon to contain detailed and 
+full information. For detailed and full information see the relevant full data 
+sheet, which is available on request via the local NXP Semiconductors sales 
+office. In case of any inconsistency or conflict with the short data sheet, the 
+full data sheet shall prevail.
+13.3
+Disclaimers
+General — Information in this document is believed to be accurate and 
+reliable. However, NXP Semiconductors does not give any representations or 
+warranties, expressed or implied, as to the accuracy or completeness of such 
+information and shall have no liability for the consequences of use of such 
+information.
+Right to make changes — NXP Semiconductors reserves the right to make 
+changes to information published in this document, including without 
+limitation specifications and product descriptions, at any time and without 
+notice. This document supersedes and replaces all information supplied prior 
+to the publication hereof.
+Suitability for use — NXP Semiconductors products are not designed, 
+authorized or warranted to be suitable for use in medical, military, aircraft, 
+space or life support equipment, nor in applications where failure or 
+malfunction of an NXP Semiconductors product can reasonably be expected 
+to result in personal injury, death or severe property or environmental 
+damage. NXP Semiconductors accepts no liability for inclusion and/or use of 
+NXP Semiconductors products in such equipment or applications and 
+therefore such inclusion and/or use is at the customer’s own risk.
+Applications — Applications that are described herein for any of these 
+products are for illustrative purposes only. NXP Semiconductors makes no 
+representation or warranty that such applications will be suitable for the 
+specified use without further testing or modification.
+Limiting values — Stress above one or more limiting values (as defined in 
+the Absolute Maximum Ratings System of IEC 60134) may cause permanent 
+damage to the device. Limiting values are stress ratings only and operation of 
+the device at these or any other conditions above those given in the 
+Characteristics sections of this document is not implied. Exposure to limiting 
+values for extended periods may affect device reliability.
+Terms and conditions of sale — NXP Semiconductors products are sold 
+subject to the general terms and conditions of commercial sale, as published 
+at http://www.nxp.com/profile/terms, including those pertaining to warranty, 
+intellectual property rights infringement and limitation of liability, unless 
+explicitly otherwise agreed to in writing by NXP Semiconductors. In case of 
+any inconsistency or conflict between information in this document and such 
+terms and conditions, the latter will prevail.
+No offer to sell or license — Nothing in this document may be interpreted or 
+construed as an offer to sell products that is open for acceptance or the grant, 
+conveyance or implication of any license under any copyrights, patents or 
+other industrial or intellectual property rights.
+Export control — This document as well as the item(s) described herein 
+may be subject to export control regulations. Export might require a prior 
+authorization from national authorities.
+Quick reference data — The Quick reference data is an extract of the 
+product data given in the Limiting values and Characteristics sections of this 
+document, and as such is not complete, exhaustive or legally binding.
+13.4
+Trademarks
+Notice: All referenced brands, product names, service names and trademarks 
+are the property of their respective owners.
+14. Contact information
+For more information, please visit: http://www.nxp.com
+For sales office addresses, please send an email to: salesaddresses@nxp.com
+Document status[1][2]
+Product status[3]
+Definition
+Objective [short] data sheet
+Development
+This document contains data from the objective specification for product development. 
+Preliminary [short] data sheet
+Qualification
+This document contains data from the preliminary specification. 
+Product [short] data sheet
+Production
+This document contains the product specification. 
+
+
+=== PDF PAGE 13 ===
+NXP Semiconductors
+PMEG3050EP
+5 A low VF MEGA Schottky barrier rectifier
+© NXP B.V. 2009.
+All rights reserved.
+For more information, please visit: http://www.nxp.com
+For sales office addresses, please send an email to: salesaddresses@nxp.com
+Date of release: 10 December 2009
+Document identifier: PMEG3050EP_1
+Please be aware that important notices concerning this document and the product(s)
+described herein, have been included in section ‘Legal information’. 
+15. Contents
+1
+Product profile . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+1.1
+General description . . . . . . . . . . . . . . . . . . . . .  1
+1.2
+Features . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+1.3
+Applications . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+1.4
+Quick reference data . . . . . . . . . . . . . . . . . . . .  1
+2
+Pinning information. . . . . . . . . . . . . . . . . . . . . .  2
+3
+Ordering information. . . . . . . . . . . . . . . . . . . . .  2
+4
+Marking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+5
+Limiting values. . . . . . . . . . . . . . . . . . . . . . . . . .  2
+6
+Thermal characteristics . . . . . . . . . . . . . . . . . .  3
+7
+Characteristics. . . . . . . . . . . . . . . . . . . . . . . . . .  5
+8
+Test information. . . . . . . . . . . . . . . . . . . . . . . . .  9
+8.1
+Quality information . . . . . . . . . . . . . . . . . . . . . .  9
+9
+Package outline . . . . . . . . . . . . . . . . . . . . . . . . .  9
+10
+Packing information . . . . . . . . . . . . . . . . . . . .  10
+11
+Soldering . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  10
+12
+Revision history. . . . . . . . . . . . . . . . . . . . . . . .  11
+13
+Legal information. . . . . . . . . . . . . . . . . . . . . . .  12
+13.1
+Data sheet status . . . . . . . . . . . . . . . . . . . . . .  12
+13.2
+Definitions. . . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+13.3
+Disclaimers . . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+13.4
+Trademarks. . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+14
+Contact information. . . . . . . . . . . . . . . . . . . . .  12
+15
+Contents . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  13

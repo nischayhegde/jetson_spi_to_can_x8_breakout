@@ -1,71 +1,41 @@
-# BreakoutBoard active schematic library
+# BreakoutBoard component library
 
-Cleaned on 2026-10-18 against `../breakout/breakout.kicad_sch`. The current bundle contains **20 standalone MPN symbols, 14 footprints and 14 STEP models**. Quantities in `parts.json` and `asset_manifest.csv` now count the placed parts in the common-ground schematic, with the requested 1 A input fuse retained for a reported correction. These files describe library usage; missing test-point packages and unresolved review findings mean they are not a released manufacturing BOM.
+Synchronized on 2026-10-29 with the saved KiCad schematic, PCB and purchasing lists. The active inventory contains **21 MPNs and 120 fitted packages**. All physical schematic components have footprints. F1 is present in series with the protected input. The 21 bare test pads and four board-only mounting holes require no purchased part.
 
-Read [the latest schematic review](../review/latest/schematic_review.txt) before layout. The schematic was left unchanged. The latest user-saved revision correctly powers all four logic ICs and their bypass capacitors at 3.3 V. The requested 1 A series fuse is still absent, and 79 footprint fields are blank.
+The current change record and validation results are in [the standardization report](../review/standardization-2026-10-29/standardization-report.txt). Earlier files in `review/latest/` and the dated review folders describe historical revisions; their missing-fuse and missing-footprint statements do not describe the current design.
 
-## What was retained
+## Consistent component identities
 
-- The 12 MPN symbol types actually placed from `BreakoutBoard`, including the CAN IC, crystals, 100 nF capacitors, connectors, LDO, OR/NOT/NAND logic, MOSFET and gate Zener.
-- Seven selected MPN aliases and their packages for generic capacitors/resistors already placed in the schematic. Blank footprint fields do not make these packages unused.
-- `0466001.NR`: the requested 1 A, 1206 input fuse, retained to restore the missing series fuse.
+- R6, R10, R13, R16, R23, R26, R29 and R32: YAGEO **RC1206FR-07120RL**, 120 ohm, 1%, 0.25 W, `BreakoutBoard:R_1206_3216Metric`.
+- J1: Harwin **M20-7832046**, female 2 x 20, 2.54 mm through-hole socket, matching its existing female PCB footprint.
+- TP13 and TP14: Harwin **M20-9990246**, male 1 x 2, 2.54 mm through-hole headers. Other test points are bare copper pads.
+- The 28 bypass capacitors: **CC0603KRX7R9BB104**, displayed value `100n`, references C1 and C21-C47. Capacitor references are now C1-C47.
+- Every purchased package carries explicit `MPN` and `Manufacturer` fields in both the schematic and PCB. Multi-unit ICs count as one package. Values and references are not used as substitutes for an MPN.
 
-`RC0603FR-07100KL` is the matching 100 kohm, 1%, 0.1 W, 0603 alias for R34-R37. Its package is shared with the other 0603 resistors. [DigiKey](https://www.digikey.com/en/products/detail/yageo/RC0603FR-07100KL/729836), [YAGEO specification](https://yageogroup.com/component-documentation/download/specsheet/RC0603FR-07100KL). The saved YAGEO RC_L family sheet at `../datasheets/RC0603FR-0710KL.pdf` also documents this resistor family.
+The 27 pF, 1 uF and 100 nF capacitors all use 0603 packages; C20 is 0805. The 33 ohm, 10 kohm and 100 kohm resistors remain 0603. Their differing values and ratings are intentional.
 
-The seven generic C/R mappings are:
+## Project assets
 
-| Schematic value | Selected MPN | Local footprint |
-|---|---|---|
-| 27 pF | CL10C270JB8NNNC | C_0603_1608Metric |
-| 1 uF | CGA3E1X7R1E105K080AC | C_0603_1608Metric |
-| 10 uF | CL21B106KOQNNNE | C_0805_2012Metric |
-| 33 ohm | RC0603FR-0733RL | R_0603_1608Metric |
-| 10 kohm | RC0603FR-0710KL | R_0603_1608Metric |
-| 100 kohm | RC0603FR-07100KL | R_0603_1608Metric |
-| 120 ohm | RC1206FR-07120RL | R_1206_3216Metric |
+Open `../breakout/breakout.kicad_pro` with KiCad 10. The project library tables register the local symbol and footprint libraries using project-relative paths. PCB model paths use `${KIPRJMOD}/../kicad_footprints/3dmodels/`, including the female socket and test headers, so these models do not depend on a KiCad 9 environment variable.
 
-These mappings preserve the intended assets; they do not assign footprints to the schematic automatically. There are still 79 blank footprint fields, including 23 test points whose mechanics must be chosen.
+- `BreakoutBoard.kicad_sym`: 21 standalone MPN aliases with expanded inheritance.
+- `BreakoutBoard.pretty/` and `3dmodels/`: shared package assets, the mounting-hole footprint, and nominal STEP models. A retained asset is not necessarily a fitted purchase item; use the live inventory for quantities.
+- `parts.json` and `asset_manifest.csv`: the 21 active MPNs, quantities, references and actual assigned footprint IDs.
+- `sha256.json`: checksums for the local symbol library, footprint files and STEP models.
+- `validation/report.txt`: symbol-to-pad numbering, key pin identities, STEP signatures and checksum verification.
 
-## Removed assets and recovery
+The MCP251863 symbol declares TXD23 as input and RXD28 as output. AO3401A uses G1/S2/D3. The gate-clamp Zener uses K1/A2. These identities and the complete channel wiring were verified against the saved schematic and PCB.
 
-Removed the abandoned isolator/converter/eFuse selections, unused AND gate, external CAN TVS, old diode/fuse/capacitor aliases, unplaced termination jumper and old SG-210STF powered-oscillator import bundle. Shared SOT-23, TSSOP-14 and passive packages were preserved for the parts still using them. Unused SVG previews were removed too.
+## Updating the lists
 
-`cleanup_manifest.json` lists every removed file, the 12 removed main-library aliases, every retained asset and the placed references/reason for each component. The complete folder before cleanup is saved in [library-before-cleanup.zip](../review/latest/library-before-cleanup.zip), outside this active library directory. The main component list and CSV are synchronized to this active nonisolated inventory; archived component lists and datasheets remain separately available.
+Run `python -B kicad_footprints/write_component_list.py` from the repository root. This exports a fresh netlist, reconciles schematic/PCB fields, and regenerates both component lists and all order-list formats. It requires KiCad 10 and the Codex bundled Node/Artifact Tool runtime. Override runtime locations with `KICAD_BIN`, `CODEX_NODE` and `CODEX_ARTIFACT_NODE_MODULES` if needed.
 
-## Use in KiCad
+Supplier data comes from the dated observations in `../review/orderlist-2026-10-29/supplier_quotes.json`. Regenerating the lists does **not** refresh stock or prices. All displayed stock and prices retain their observation date, and unverified Mouser entries remain labeled. Refresh supplier evidence deliberately before purchasing.
 
-Open `../breakout/breakout.kicad_pro` in KiCad 9 or newer. Its existing symbol-library table already registers `BreakoutBoard.kicad_sym`. The missing `../breakout/fp-lib-table` has now been added and registers `BreakoutBoard.pretty` using a project-relative path. Restart the editor or reload libraries if it was already open.
+`library_usage.py` follows the root schematic and its referenced child sheets, avoiding backups and history files. `build_library.py` can rebuild the active MPN aliases from installed official KiCad assets; review the resulting changes before replacing project assets. `validate_library.py` runs with KiCad's bundled Python. Rebuilding library defaults does not update placed PCB footprints automatically.
 
-The supplied `sym-lib-table` and `fp-lib-table` here are templates for the existing `breakout/` project location. Merge entries rather than overwriting other project libraries. Footprint model paths use `${KIPRJMOD}/../kicad_footprints/3dmodels/`; keep that directory relationship. No separate STEP import is needed when these local footprints are assigned to the PCB.
+## Verification limits and attribution
 
-## Files and reproducibility
+Current ERC, PCB DRC and schematic/PCB parity checks have zero findings. The netlist before and after standardization has exactly the same pin-to-net connectivity. No project rules or exclusions were changed. These results do not establish SPI timing margin, independent power-sequence safety, thermal margin or EMC performance. The outstanding system qualification items from [the electrical review](../review/verification-2026-10-25/verification_report.txt) remain applicable except for explicitly resolved documentation and ground-pin items.
 
-- `BreakoutBoard.kicad_sym`: 20 standalone symbols with expanded inheritance.
-- `BreakoutBoard.pretty/` and `3dmodels/`: 14 packages and matching local nominal STEP models.
-- `parts.json` / `asset_manifest.csv`: MPN, quantity, placed references, retention reason, package/model mapping and dated sourcing evidence.
-- `sha256.json`: checksums of the retained CAD assets.
-- `validation/report.txt`: KiCad loading, pin/pad coverage, specific pin identities, STEP signatures and checksums.
-- `validation/symbols/`: current previews exported by KiCad's symbol parser.
-- `library_usage.py`: reads placed symbols and maps generic passives without editing the design.
-- `build_library.py`: generates the active selection from the installed official KiCad libraries. The larger source catalog in this script is filtered against the live schematic.
-- `prune_library.py`: dependency-based cleanup, with a reviewable plan by default and explicit file deletion only with `--apply`.
-
-To rebuild after deliberate schematic changes, run `python build_library.py`, inspect `python prune_library.py`, then run `python prune_library.py --apply`. Validate with KiCad's bundled Python using `validate_library.py`, and export symbol SVGs with `kicad-cli sym export svg`. The cleanup tool checks resolved paths remain inside this folder and retains explicitly assigned PCB footprints too. Unknown generic passive values stop generation rather than silently losing their packages.
-
-`write_component_list.py` renders the current nonisolated BOM/CSV from the active inventory, live reference counts, latest audit and `sourcing_updates.json`. It preserves the former component list under `../review/latest/`. The older `validation/bank_truth_table.json`, `shared_irq_truth_table.json` and `logic_timing_review.txt` describe the original isolated AND/NOT proposal. Current truth tables and review evidence are in `../review/latest/`.
-
-## Provenance and limits
-
-These assets derive from the installed official KiCad 9 distribution at `C:/Program Files/KiCad/9.0/share/kicad`, rather than supplier CAD-widget downloads. STEP files represent nominal package geometry and are not manufacturer-certified models of each MPN. Confirm package tolerances and connector heights before mechanical release.
-
-The MCP251863 E/SS alias uses the official H/SS pin arrangement for the shared SSOP-28 package. The local library correctly declares TXD pin 23 as an input, per Microchip Table 1-1; the user's cached schematic symbol still needs that electrical-type correction. Do not delete the valid TXCAN15-to-TXD23 connection to silence ERC.
-
-The selected OR, NOT and NAND symbols use compatible graphical symbols with actual MPN names and manufacturer links. The NAND's physical NC pads 9/10/13 are represented explicitly. Place every used logic unit and its power unit, powered at 3.3 V in this circuit. Updating cached symbols requires care to preserve the user's graphical edits.
-
-AO3401A: pin1=G, pin2=S, pin3=D. Drain faces the fused input; source feeds protected 5 V. BZT52C6V8-13-F: pin1=K to the MOSFET source, pin2=A to the gate. R38 pulls the gate to GND. The Zener protects VGS, not the supply rail. Bulk capacitance stays after the MOSFET. The review documents the missing fuse and the limits of this simple reverse-hookup circuit.
-
-## Attribution
-
-Derived symbols, footprints and STEP models: [KiCad official libraries](https://www.kicad.org/libraries/), under the [KiCad library license and exception](https://www.kicad.org/libraries/license/). Original authors retain attribution. Local changes include MPN aliases, flattened inheritance, corrected pin electrical types and project-relative STEP references.
-
-Validation establishes parsing, local asset availability and pin-number coverage. It does not certify electrical behavior, PCB routing, package tolerances or prototype performance.
+Derived symbols, footprints and STEP models come from the [official KiCad libraries](https://www.kicad.org/libraries/) under the [library license and exception](https://www.kicad.org/libraries/license/). Original authors retain attribution. Local modifications include MPN aliases, flattened inheritance, corrected electrical pin types and project-relative model paths. STEP files depict nominal package geometry and are not manufacturer-certified mechanical models.

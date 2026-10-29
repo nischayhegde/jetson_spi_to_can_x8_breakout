@@ -1,0 +1,605 @@
+SPI-to-eight-CAN design verification - 2026-10-25
+
+FOLLOW-UP: F02 was resolved on 2026-10-25 at the user's request. J1 ground
+pins 6,9,14,20,25,30,34,39 now connect to GND in both schematic and PCB,
+with copper planes refilled. The body below records the pre-change review;
+updated evidence is in ../j1-ground-fix-2026-10-25/. Other findings remain.
+
+Disposition: NOT READY FOR UNCONDITIONAL MANUFACTURING / SYSTEM SIGN-OFF.
+
+The current design passes its enabled PCB connectivity and clearance checks.
+The eight-channel wiring and selection logic are consistent. There are still
+electrical, layout, timing and system requirements to resolve. A schematic/
+layout review cannot demonstrate EMC immunity or real-time loss-free operation.
+No schematic, PCB, project settings or component library files were changed.
+
+User clarification after the initial review: the Jetson-to-PCB cable is about
+5 cm and CAN nodes are mostly RobStride motors and IMUs. Section 7 below
+applies that information. Motor rates, protocol mode and IMU frame schedules
+have not yet been specified.
+
+Scope and evidence
+------------------
+Reviewed saved breakout/breakout.kicad_sch and breakout/breakout.kicad_pcb at
+commit 8a7cece, with KiCad 10.0.7. Current inputs were checked again after the
+pause/resume and their SHA-256 hashes were unchanged:
+  schematic ef185397759b690fbab8afd64d6c93fda8616984e1ce9a3a143a1e98d3175f34
+  PCB       dc8c25e40236c56d6152cb0a81461df066c329f8193ceeb43edfeaea04ddfb14
+  project   3de665ecd030f3fef767137f3c30ef88aa469ce72e953415b2305817138462b3
+
+The previous review/latest report is an older revision. Its missing-fuse and
+missing-footprint findings are now resolved: F1 is present in series with the
+input, and all 141 PCB features have footprints (118 components, 23 test pads).
+The componentlist files still describe the older missing-fuse revision and
+must be reconciled before purchasing/assembly.
+
+Fresh results:
+  PCB DRC, zones refilled in memory: 0 violations, 0 unrouted items.
+  Schematic / PCB parity: 0 mismatches.
+  ERC: 0 errors, 28 warnings, all capacitor library-symbol mismatches.
+  All eight per-channel connectivity checks: PASS.
+  All 16 bank/native-CS combinations: evaluated; allowed single-select states
+    select exactly one controller, and both native CS high select none.
+  All 256 interrupt combinations: correct active-low combined interrupt.
+  DRC exclusions: none. Existing ignored categories include missing courtyard,
+    footprint filters/type, via centering and tuning-profile geometry.
+  Minimum silk clearance is configured as zero; clean DRC is not a substitute
+    for the fabricator's silk/mask and assembly rules. No impedance constraints
+    or end-to-end SPI timing constraints are checked by these DRC results.
+
+The 28 cached capacitor symbols have the same passive pin definitions and pin
+positions as the library; reference-prefix / footprint-filter metadata differ.
+These warnings do not explain a wrong capacitor connection. Reconcile the
+cache/library metadata deliberately, preserving placed connectivity.
+
+1. Findings and required resolution
+-----------------------------------
+
+F01 - HIGH: Jetson SPI receive timing has no demonstrated margin at 16-17 MHz.
+
+The carrier routes the SPI header through TXB0108 level translators [3,4].
+At 1.8 V to 3.3 V, TI specifies up to 6.8 ns A-to-B and 7.6 ns B-to-A
+propagation delay. The MCP251863 specifies up to 20 ns SCK-to-SDO [1, Table
+9-7]. A conventional master sampling half a clock after launching the falling
+edge therefore has a first-order external path of:
+
+  6.8 + 20 + 7.6 = 34.4 ns,
+
+before carrier/PCB/cable flight time, loading, host setup time and margin.
+At 16 MHz the half-period is 31.25 ns; at 17 MHz it is 29.41 ns. Even the
+idealized zero-wiring/setup ceiling is 1/(2*34.4 ns) = 14.53 MHz. This is a
+worst-case timing-budget concern, not a measurement of this board's failure.
+It assumes the expected 1.8/3.3 V translator arrangement and ordinary
+half-cycle sampling. The actual Jetson sampling position must be established.
+
+The subsequently specified 5 cm cable is favorable for flight time. At an
+illustrative propagation speed of 2e8 m/s, SCK out plus MISO return adds about
+0.5 ns; this does not cancel the 34.4 ns device/translator delay above. Cable
+construction, capacitance and return conductors remain relevant even at 5 cm.
+
+TI also limits the lumped load driven by the translator to 70 pF and calls
+for short interconnects relative to its roughly 10 ns edge-accelerator pulse
+[4]. Sum all four controller pin loads, copper, header, carrier and cable.
+This total was not established from an IBIS model or measurement. Reducing
+the clock rate increases timing margin but does not remove fast-edge
+reflections or guarantee an excessive capacitive load will be driven properly.
+
+Resolve with the exact carrier revision, JetPack SPI driver, actual clock,
+RX sample delay and load. The inspected upstream Tegra driver has RX/TX clock
+tap settings [10], but tap duration and support in the installed kernel have
+not been established. Start bring-up at a low SPI rate; qualify higher rates
+with scope measurements and CRC error counters across voltage/temperature.
+Neither reducing frequency nor adding a buffer alone proves full throughput:
+the measured sustainable rate must also pass the model and workload below.
+
+The MCP itself is limited to FSCK <= 0.85*(FSYSCLK/2), hence 17 MHz with
+SYSCLK=40 MHz [1,2]. Do not use 20 MHz based on an old front-page expectation.
+Use some clock tolerance margin below the 17 MHz boundary; 16 MHz is a
+candidate only after the end-to-end timing is closed. If SYSCLK is divided
+to 20 MHz, the corresponding SPI ceiling falls to 8.5 MHz.
+
+F02 - HIGH: Only J1 pin 39 provides a host-ground connection.
+
+J1 ground pins 6,9,14,20,25,30,34 are explicitly unconnected in both saved
+files. SPI uses distant signal pins and long branches, with no nearby header
+return conductors. This increases return-loop area and sensitivity to harness
+inductance and simultaneous switching. Connect all these designated ground
+pins to the board ground plane with short connections. Carry the ground
+conductors through the actual mating cable/adapter, especially near SPI pins.
+The existing In1.Cu ground plane is useful but does not fix the missing
+connector return paths.
+
+F03 - HIGH, CONDITIONAL: Inputs can be driven while the PCB is unpowered.
+
+J6 powers the PCB independently; J1 power pins are not used. Jetson SCK/MOSI
+drive MCP input pins through 33 ohms, without board-side power-off isolation.
+The MCP controller's other pins are limited to VDD+0.3 V [1, section 9.1].
+A live Jetson driving 3.3 V into VDD=0 V is outside that stated input range.
+Do not assume 33 ohms provides safe injection-current limiting. Resolve the
+power-sequencing contract, including unplugged J6, brownouts and restarts.
+Where independent power loss is permitted, use appropriate power-off-tolerant
+buffering/isolation and a defined enable/power-good scheme. Verify the
+opposite power sequence at the host too. This is a conditional exposure;
+there is no claim that an unpowered-input test has been performed.
+
+F04 - MEDIUM: Bank inputs lack explicit board-side bias.
+
+J1.32/GPIO_7 and J1.31/GPIO_11 go directly to CMOS logic without board-side
+bias resistors. The carrier table gives GPIO07 a default 'z' state and GPIO11
+a default pull-down [3, Table 3-3]. Thus it is inaccurate to assume both are
+defined by the carrier at all times. Provide a defined boot/reset/unplugged
+state, normally with weak pulls and verified pinmux. Because of the TXB0108,
+TI requires external pulls greater than 50 kohm [4, section 7.3.5]; a value
+such as 100 kohm is a candidate, not proof it overrides every host condition.
+Native CS pulls R34-R37 are already 100 kohm, which follows this guidance.
+Both native CS high deselect all controllers regardless of bank value, but
+floating logic inputs and selection transitions still need defined behavior.
+
+F05 - MEDIUM: VDD bypass returns do not follow Microchip's preferred layout.
+
+All eight VDD pin-14 bypass capacitors are 2.425 mm pad-center to pad-center
+from the corresponding supply pin. That distance alone does not validate the
+decoupling loop. Pin 22 and capacitor ground terminals use separate local
+connections into the ground plane; the copper-path audit found no direct
+surface return between them. AN4560 explicitly recommends a direct low-
+impedance pin-22-to-bypass return and warns about relying only on a plane
+connection [5, page 4]. Review/reroute these loops using that topology, with
+ground vias near the capacitor. This is an EMC/layout recommendation gap,
+not evidence of missing DC ground or a guaranteed functional failure.
+
+F06 - MEDIUM: Oscillator network is plausible, not yet qualified.
+
+Y1-Y8 use the exact Abracon 40 MHz crystal named in AN4560. Active crystal
+pads, grounded case pads and two load capacitors are correctly connected.
+Oscillator tracks remain on the top layer without signal vias. However,
+the modeled planar OSC1 path is about 11.7 mm versus about 4.5-4.8 mm for
+OSC2; the routed loop is less compact than the crystal's proximity suggests.
+Shorten these routes and minimize loop area and nearby aggressors.
+
+The selected crystal has CL=18 pF; two 27 pF caps give 13.5 pF before effective
+stray capacitance, requiring about 4.5 pF effective stray for that load.
+AN4560 reports testing this crystal with two 18 pF external capacitors [5].
+That example does not by itself establish the right value on this PCB.
+Evaluate external-cap values, oscillator start-up over voltage/temperature,
+frequency and crystal drive. The crystal drive rating is 100 uW maximum [6].
+Use a low-capacitance active probe or a buffered clock output; an ordinary
+passive probe on OSC1/OSC2 can change the circuit being measured.
+
+F07 - MEDIUM: SOT-23-5 LDO and fuse need a thermal/load qualification.
+
+U3 is the DBV TLV75533PDBVR package, not TI's lower-thermal-resistance DYD
+package. Controller maximum current gives 8*20 mA = 160 mA from 3.3 V;
+transceiver VIO can add 8*0.5 mA = 4 mA [1]. Budgeting about 180 mA including
+logic/pulls gives P_LDO=(5-3.3)*0.18 = 0.306 W. The allowance for logic is an
+engineering budget and requires actual load confirmation.
+
+TI's DBV reference boards give 100.8 C/W (EVM) and 231.1 C/W (JEDEC), implying
+about 31 C or 71 C temperature rise at 0.306 W [7, Table 5.4]. These are two
+reference layouts, not guaranteed bounds on this board. At 70 C ambient the
+corresponding junction estimates are about 101 C and 141 C. The 500 mA current
+rating is therefore not thermal sign-off. Establish maximum local ambient,
+measure the package temperature with the populated board, and improve heat
+spreading or regulation if required. Use TI's thermal-metric guidance for
+estimating junction temperature from a measured case/top temperature.
+
+C18/C19 are nominal 1 uF X7R and are correctly connected near IN/OUT. TI
+requires effective capacitance above 0.47 uF [7]; account for DC bias,
+tolerance, temperature and ageing of the actual ordered capacitor. The 10 uF
+input bulk and 24 local MCP bypass capacitors exist; supply transient droop
+still depends on effective capacitance and the supply cable.
+
+F1 is correctly in series before Q1. At the above 180 mA logic budget,
+5 V current is approximately 220 mA with all transceivers recessive, 740 mA
+with all dominant using their 70 mA maximum, or 860 mA with all eight in the
+specified 85 mA CANH-to-CANL short condition. These are load cases, not
+predictions of sustained CAN dominant duty cycle. A regulated 5 V / 2 A
+source has sufficient current capacity for these board loads.
+
+The 1 A fuse is not a 1 A precision current limiter. Its archived manufacturer
+sheet calls for 25% continuous-current derating and gives 60% of rating at
+70 C after temperature derating [8]. Check actual duty, inrush, ambient and
+fault clearing; the hottest/high-load case has limited margin. Cold nominal
+fuse resistance is 75 milliohms; Q1 is at most 60 milliohms at VGS=-4.5 V,
+25 C [8,9]. At 0.74 A those two parts alone drop about 0.10 V, before hot
+resistance, copper, connectors and cable. Verify at least 4.5 V at every VCC
+pin under the minimum source voltage and transient loads [1, section 9.4].
+
+F08 - MEDIUM: Harness protection and termination are conditional on topology.
+
+Each CAN port has a permanent 120 ohm / 0.25 W termination. This is suitable
+for an endpoint with one other termination at the far endpoint. Exactly two
+120 ohm terminations give about 60 ohms across an unpowered bus. Disable
+terminations on intermediate motors/nodes. Add configurable termination if
+ports might be used mid-bus or with already-terminated equipment. Normal
+specified 3 V differential drive dissipates 3^2/120=75 mW in each 120 ohm
+resistor, below 0.25 W before temperature derating; motor-voltage wiring
+faults are a separate protection case.
+
+No external CAN TVS parts or common-mode chokes are populated. Their absence
+is not automatically a CAN functional-spec violation. Integrated IC ratings
+do not demonstrate whole-robot harness immunity. Define hot-plug, ESD, surge,
+ground-offset and motor-noise requirements; select connector-side protection
+and test accordingly. D2 is a MOSFET gate-source clamp, not a 5 V input clamp.
+J6 requires an already regulated, suitably bounded 5 V source.
+
+The CAN routes are roughly 21-29 mm to their connectors, with about 0.5-7 mm
+pair skew. This skew is insignificant relative to a 1 us bit; no evidence
+supports adding length-tuning meanders. Closer differential routing and
+smaller loop area can improve emissions. Use a suitable twisted-pair harness,
+short stubs and a propagation/sample-point budget for its actual length.
+
+F09 - REQUIREMENT MISMATCH: No galvanic isolation in this revision.
+
+All eight CAN grounds, logic ground and J1.39 share one plane, and there are
+no isolators or isolated converter. The component list calls this a current
+nonisolated V1; the PRD still calls for galvanic isolation. If that requirement
+remains active, this design fails it and needs an architectural revision.
+If nonisolated operation is the intended accepted scope, update the PRD and
+qualify the robot's ground paths and fault exposure explicitly.
+
+F10 - DOCUMENTATION / MECHANICAL ITEMS.
+
+The A4 schematic has channel circuitry outside its page bounds. The ordinary
+page export clips it; schematic/full.svg and full.png are expanded review
+copies that were inspected. Reorganize into suitable sheets before release.
+J1 is a male Harwin header on the bottom side. Verify the mating harness,
+pin-1 orientation, clearance above/below the Jetson and cable strain relief.
+No mounting holes were found in this PCB. Its 77 x 80 mm size does not prove
+mechanical fit or vibration retention in the robot. The component inventory,
+assembly drawings and purchase MPNs also need to match this current revision.
+Label J6 polarity and the CAN H/L/G pin assignments explicitly in the release
+documentation/harness drawing: J6 pin 1 is GND and pin 2 is positive input.
+Connector numbering alone is not a universal polarity convention.
+
+2. Correct circuitry verified
+------------------------------
+U9-U16 have VCC pin 25 on protected 5 V, VDD pin 14 and VIO pin 1 on 3.3 V,
+ground pins 22/24 grounded, and STBY pin 5 low. Every TXCAN15 -> TXD23 and
+RXD28 -> RXCAN16 link is present; those internal controller/transceiver links
+are necessary. TXD is correctly an input in the current saved schematic.
+Every controller has its own active-low nCS, interrupt input to U4, crystal,
+three 100 nF bypass capacitors and individual 33 ohm SDO source resistor.
+CANH/CANL/ground reach connector pins 1/2/3 respectively.
+
+U1/U5 OR gates, U2 inverters and U4 NAND are all supplied/bypassed at 3.3 V.
+Their supply ranges and logic levels are compatible [11,12,13]. The unused
+inverter input is tied to a rail and its output is unused. Although an old
+PRD calls this AND/NOT logic, OR gating is the correct implementation for
+the required active-low selects. Do not replace gates merely to match prose.
+
+Selection table (native CS numbers per physical SPI bus):
+  bank  CS0  CS1       SPI0 selected       SPI1 selected
+   0     0    1           CAN2                CAN6
+   0     1    0           CAN3                CAN7
+   1     0    1           CAN1                CAN5
+   1     1    0           CAN4                CAN8
+   x     1    1           none                none
+   x     0    0           TWO - forbidden     TWO - forbidden
+
+U4 followed by U2F implements AND(nINT1,...,nINT8). The Jetson GPIO_1/J1.29
+is low whenever any controller requests service. The eight push-pull nINT
+outputs are separate gate inputs and are not wired together. Keep push-pull
+mode or provide each separate gate input a pull-up if open-drain is selected.
+Use a level-low host IRQ and drain all pending sources before completion.
+
+The reverse-input topology is correct: J6 positive -> F1 -> Q1 drain; Q1
+source -> protected VCC; gate pulled toward ground through R38; D2 cathode
+at source and anode at gate [9]. It provides reverse-hookup protection;
+do not treat it as guaranteed reverse-current blocking or input overvoltage
+regulation. The local 3.3 V output is not tied to the Jetson 3.3 V supply.
+
+Passive/component rating checks: 50 V 100 nF bypass and C0G crystal caps,
+25 V 1 uF LDO caps, and 16 V 10 uF bulk have adequate nominal voltage ratings
+for the intended 3.3/5 V rails. Effective MLCC capacitance remains a separate
+check. The selected 0603 resistor ratings accommodate normal signal/pull
+currents: a selected 10 kohm CS pull dissipates about 1.1 mW at 3.3 V and
+the 10 kohm gate pull about 2.5 mW at 5 V. Neither resistor sizing nor the
+33 ohm SPI resistors make forbidden contention/power-off operation safe.
+The local JST XH specification gives 3 A with its specified wire/contact
+conditions, above the estimated board supply load; the actual mating contact,
+wire gauge and locking/retention still require qualification. Package pad
+numbering and supply/ground connections were checked; this is not a supplier
+stock or manufacturing-process certification.
+
+PCB: four layers, 1.6 mm, nominal 35 um copper. In1.Cu is an essentially
+continuous ground plane with no signal tracks. In2.Cu has a 3.3 V pour and
+signals. Much of the clocks and SPI1 MOSI are on In2.Cu, separated from In1
+by 1.24 mm of core; bottom signals reference the nearby power pour. Review
+return-current transitions and power-plane cuts. The stack is not proof of
+controlled impedance or high-frequency power/ground coupling. The common
+clock/MOSI/MISO nets have approximately 91-155 mm total copper per net;
+longest modeled planar J1-to-controller routes are 92 mm. Add vertical-via,
+carrier and harness delay when doing timing. See layout_metrics.json.
+
+3. SPI capacity at eight 1 Mbit/s CAN channels
+---------------------------------------------
+Assumptions: Classical CAN data frames, 11- or 29-bit IDs, no CAN FD BRS,
+and four independent CAN controllers on each of TWO physical SPI buses.
+The eight CAN channels together have 8 Mbit/s physical line capacity. CAN
+is half duplex: do not add another 8 Mbit/s for simultaneous TX and RX.
+Error frames, retransmissions, software gaps, polling, mux operations and
+interrupt handling must be budgeted separately. If '1 Mbit/s' means CAN FD
+arbitration with a faster data phase, this model is not the right workload.
+
+Frame length before bit stuffing, INCLUDING three intermission bits:
+  Standard ID: B=47+8*DLC. Extended ID: B=67+8*DLC.
+For DLC=8, B=111 or 131 bits; maximum arrival-rate bounds are 9009 or 7634
+frames/s/channel. Stuffing only reduces these error-free frame rates.
+Four controllers therefore present up to 36,036 or 30,534 frames/s to each
+SPI bus; eight channels total up to 72,072 or 61,069 frames/s.
+
+Model SPI byte counts, including command/address/CRC overhead:
+  RX8: timestamped object 20 + READ_CRC overhead 5 + one-byte WRITE_CRC
+       UINC transaction 6 = 31 bytes/frame, with status costs amortized.
+  RX8 example with two extra 4-byte READ_CRC status operations: 49 bytes.
+  TX8: object+WRITE_CRC 21 + FIFO advance/request WRITE_CRC 6 + timestamped
+       TEF read 17 + TEF advance WRITE_CRC 6 = 50 bytes/frame.
+  TX8 example with two extra status operations: 68 bytes/frame.
+
+These are transparent custom-driver models, not measured costs or a claimed
+exact trace of stock mcp251xfd. WRITE_SAFE choices, larger writes, extra
+IRQ polling, errata retries or fewer status operations change the count.
+Burst RAM reads can amortize command overhead further. SPI full-duplex wires
+do not double useful capacity for sequential read/write device commands.
+
+Per physical SPI bus, four fully loaded CAN channels, DLC=8:
+                                  Standard ID       Extended ID
+  RX, status amortized             8.94 Mbit/s        7.57 Mbit/s
+  RX, two status reads/frame      14.13 Mbit/s       11.97 Mbit/s
+  TX+TEF, status amortized        14.41 Mbit/s       12.21 Mbit/s
+  TX+TEF, two status reads/frame  19.60 Mbit/s       16.61 Mbit/s
+
+At 16 MHz, RX31 standard-ID wire occupancy is 55.9%; RX49 is 88.3%.
+RX49 leaves only 3.25 us/frame for ALL nonclock overhead at the upper-bound
+frame rate. TX68 standard-ID is already above 17 MHz before software gaps.
+An efficient RX/TX implementation may be feasible; arbitrary message
+direction mixes and inefficient transactions are not automatically feasible.
+At 10 MHz, RX31 standard-ID already consumes 89.4%, leaving little reserve;
+RX49 cannot meet the upper-bound offered load. This makes F01 material.
+
+Short frames stress the design more than an '8 Mbit/s total' comparison:
+standard-ID DLC0 has a 47-bit no-stuff frame and a theoretical 170,213 frames/s
+across eight channels. A custom 12-byte RX-header read with CRC+UINC costs
+23 bytes, demanding 15.66 Mbit/s per SPI bus before status reads/gaps. Adding
+two status reads gives 41 bytes and 27.91 Mbit/s. Even an intentionally
+overgenerous 55-bit frame length (maximum stuff-bit bound) gives 23.85 Mbit/s
+for that unbatched model, above the controller's ceiling. A driver reading
+full fixed-size eight-byte FIFO slots for DLC0 costs more than a header-only
+model. A conservative no-stuff upper bound exceeding capacity is not alone
+proof of real overload; the 55-bit case shows the inefficient model has a
+problem even allowing maximum stuffing. General loss-free saturation for
+all frame sizes/directions is not established by this architecture review.
+
+Use actual ID, DLC, direction, update rate, CAN utilization and driver
+transactions to set a supported operating envelope. bandwidth.json/.csv and
+verify_design.py contain the reproducible model for DLC 0,1,2,4,8.
+
+4. Jetson capacity, driver requirements and robot example
+--------------------------------------------------------
+The Jetson offers the two SPI interfaces needed by this topology [3]. Its
+host-memory bandwidth is far above the few MB/s exchanged here; the relevant
+risks are electrical timing and kernel transaction/interrupt latency. At
+72,072 frames/s, one 1.7 GHz core provides about 23,587 cycles/frame before
+other work. A 10,000-cycle/frame implementation alone would consume about
+42% of one such core; 20,000 cycles would consume about 85%. These are
+arithmetic examples, not driver benchmarks. CPU clock, core count, AI TOPS
+and nominal SPI clock cannot prove worst-case real-time throughput.
+
+The answer for the Jetson is therefore: no raw memory-bandwidth obstacle is
+apparent, and the required SPI topology exists; sustained loss-free service
+still requires a measured efficient kernel implementation and timing closure.
+No Jetson was connected for this review. The requested SPI clock must be
+verified on the pins; a device-tree clock setting is not a rate measurement.
+Both physical SPI buses must make progress concurrently. Serializing all
+eight controllers behind one global blocking worker wastes that opportunity.
+
+Current upstream mcp251xfd explicitly supports microchip,mcp251863, applies
+CRC quirks and requests IRQF_SHARED | IRQF_ONESHOT [10]. That is a useful
+reference; it is not evidence those features exist in the installed JetPack
+kernel. Reuse/backport proven pieces where appropriate. Board-specific mux,
+shared IRQ and scheduling behavior still need implementation and validation.
+
+For each physical bus, bank GPIO ownership must be serialized with BOTH
+native CS paths. Change bank only while both CS are high, after the previous
+SDO release. The inspected spi-mux driver binds a mux to one parent native
+chip select; a single instance is not a ready-made four-child representation
+of this board. A possible solution is two 2-state virtual muxes sharing one
+properly serialized bank-control provider, or a board-specific SPI wrapper.
+Validate this with the actual kernel locking and message queue behavior.
+Do not toggle bank independently from userspace or race direct GPIO writes
+against the SPI framework. The archived PRD amendment already supersedes
+the old assertion that GPIO registers must be accessed outside the kernel.
+
+At the MCP pins [1, Table 9-7], nCS setup >= T_SCK/2; nCS hold from the last
+rising SCK >= T_SCK; inactive gap >= T_SCK; SDO high-Z can take 2*T_SCK.
+At 16 MHz these are 31.25, 62.5, 62.5 and 125 ns respectively. Add translator,
+OR/inverter, route and host timing when programming master-side intervals.
+Native CS passes one OR; bank inversion can add another gate. Enforce the
+SDO-release gap on every change of selected controller, including native-CS
+changes without a bank change. A fixed 300 ns gap is a possible bring-up
+margin at 16 MHz, not a valid universal constant at lower clock rates.
+The spi-mux path also needs verification that parent CS setup/hold settings
+are preserved/applied; it copies basic mode/speed settings, not every timing
+field in the inspected implementation.
+
+Errata DS80000984B [2] must inform custom code:
+  - CRC-protected affected reads, bounded retry and fault reporting.
+  - RX FIFO index sanity checks / multiple reads: FIFOCI corruption can have
+    a matching CRC. CRC alone is not enough for this erratum.
+  - ECC correction is not trustworthy in all cases: detect/report/recover.
+  - Avoid invalid SFR rollover accesses and the IOCON multi-byte write issue.
+  - Respect the 0.85 clock ratio and valid-FIFO-before-RAM-read sequencing.
+  - Sleep/wake needs the specified 50-SYSCLK-cycle timing (1.25 us at
+    40 MHz) and two successful OSCRDY reads; retries must be bounded.
+  - Avoid spurious CS pulses and handle CRC format-error indication.
+
+A 32-object RX FIFO at the upper-bound 9009 frames/s fills in about 3.55 ms.
+Actual FIFO allocation, interrupt threshold and reserve must be explicit;
+the 2 KB RAM also holds TX and completion objects. Do not assume the full
+2 KB is one RX queue. Measure worst service stalls, including simultaneous
+activity on other controllers, AI workloads, power management and bus faults.
+
+Illustrative workload from the PRD's approximately 25 motors, NOT an assumed
+motor protocol: one eight-byte command and one eight-byte feedback at 1 kHz
+per motor gives 50,000 CAN frames/s. Before stuffing, total CAN occupancy is
+69.4% for standard IDs or 81.9% for extended IDs, averaged across eight buses.
+A bus with four motors is already 88.8% standard-ID or 104.8% extended-ID.
+Thus four extended-ID motors cannot each exchange that command+feedback pair
+at 1 kHz on a 1 Mbit/s bus, even before stuffing/retries. Standard-ID traffic
+at that density also has little margin. The CAN segment can be the bottleneck.
+
+With this example evenly spread over the two SPI buses and 50% RX/50% TX,
+SPI demand is about 8.10 Mbit/s/bus with status amortization, or 11.70 Mbit/s
+with the two-status-read model, before gaps. Real channel grouping is discrete
+and must be checked per bus. Obtain the actual motor update/feedback policy,
+ID format and DLC before defining the supported robot control rate.
+
+At SYSCLK=40 MHz a possible 1 Mbit/s nominal bit-time is BRP=1, 40 time quanta,
+TSEG1=31, TSEG2=8, sample point 80%, SJW<=8. Encoded register fields subtract
+one where specified (BRP=0, NTSEG1=30, NTSEG2=7). This is a starting setting;
+the selected sample point/SJW must fit the actual cable/oscillator budget.
+
+5. Release criteria
+--------------------
+Before releasing a production PCB: resolve F01-F06 and the active isolation
+requirement, reconcile the BOM/sheets, establish thermal/environment limits,
+and verify connector mechanics and fabricator rules. The highest-value board
+changes are ground returns, defined startup states, power-sequence handling
+and tighter local bypass/oscillator loops. Final buffer/protection choices
+depend on the cable and power contract; they were not guessed into the CAD.
+
+On prototypes, run all eight channels at 1 Mbit/s simultaneously with the
+actual harness. Exercise RX-heavy, TX-heavy and mixed traffic, standard and
+extended IDs, short and eight-byte frames, bursts and controller switches.
+Record sequence loss, CRC/retry counts, FIFO/TEF overflow, CAN errors/bus-off,
+CPU load and tail latency under the intended AI/robot workload. Capture SCK,
+MISO, CS and bank transitions at the devices and verify power/clock behavior
+over the specified voltage and temperature range. Test both power sequences,
+brownout, cable faults and the defined EMC disturbances. A pass needs explicit
+duration, load envelope and zero unexplained loss; none was measured here.
+
+6. Primary references and reproducibility
+-----------------------------------------
+[1] Microchip MCP251863 DS20006624B: pinout, supply limits, message objects,
+    SPI section 5; Table 9-7/page 88; transceiver section 9.4.
+    https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-External-CAN-FD-Controller-with-Integrated-Transceiver-DS20006624.pdf
+    Archived sources/MCP251863_RevB.pdf (older datasheets/ copy is Rev A).
+[2] Microchip DS80000984B, January 2025, errata pages 1-2.
+    https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/Errata/MCP251863-Silicon-Errata-and-Data-Sheet-Clarification-DS80000984.pdf
+    Archived sources/MCP251863_ErrataB.pdf.
+[3] NVIDIA SP-11324-001 v1.3, December 2024, carrier specification,
+    Table 3-3 including translator/default-state notes.
+    https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf
+    Archived sources/Jetson_carrier_v1_3.pdf.
+[4] TI TXB0108 SCES643L, February 2026; sections 5.16/5.17 and 7.3.3/7.3.5.
+    https://www.ti.com/lit/ds/symlink/txb0108.pdf
+    Archived sources/TXB0108.pdf; complete timing page visually inspected.
+[5] Microchip AN4560 / 00004560A, pages 3-5, crystal/bypass layout.
+    https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ApplicationNotes/ApplicationNotes/MCP251863-Application-Note-00004560A.pdf
+    Local datasheets/MCP251863_Board_Design_Hints.pdf.
+[6] Abracon ABM8G crystal family specification and MPN option encoding.
+    https://abracon.com/Resonators/ABM8G.pdf
+    Local datasheets/ABM8G-40.000MHZ-18-D2Y-T.pdf.
+[7] TI TLV755P SBVS320D, September 2024, sections 5.3/5.4 and 7.
+    https://www.ti.com/lit/ds/symlink/tlv755p.pdf
+    Local datasheets/TLV75533PDBVR.pdf; DBV thermal table visually inspected.
+[8] Littelfuse 466 series manufacturer sheet, local datasheets/0466001.NR.pdf.
+    Manufacturer document archived from distributor; includes the exact
+    1 A row and temperature re-rating. Source provenance: datasheets/README.md.
+[9] AOS AO3401A Rev 3.1, December 2023; ratings, pinout and on resistance.
+    https://www.aosmd.com/sites/default/files/res/datasheets/AO3401A.pdf
+    Local datasheets/AO3401A.pdf. D2 pin identity/rating checked against local
+    datasheets/BZT52C6V8-13-F.pdf (older manufacturer family sheet).
+[10] Upstream Linux source snapshots; exact installed JetPack is unknown:
+    https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-core.c
+    https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-rx.c
+    https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-tx.c
+    https://raw.githubusercontent.com/torvalds/linux/master/drivers/spi/spi-mux.c
+    https://raw.githubusercontent.com/torvalds/linux/master/drivers/spi/spi-tegra114.c
+    Exact content hashes in source_manifest.json; snapshots are references,
+    not a claim about the software installed on the target Jetson.
+[11] Nexperia 74LVC32A Rev 11, May 2025, reviewed via manufacturer web PDF:
+    https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf
+[12] Nexperia 74AHC/AHCT30 Rev 8, April 2025, manufacturer web PDF:
+    https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT30.pdf
+    Direct downloads for [11,12] were HTTP 403; no new local PDF is claimed.
+    Older local manufacturer sheets and exact net/logic checks also inspected.
+[13] Diodes 74LVC04A DS35258 Rev 5-2, local datasheets/74LVC04AT14-13.pdf.
+    https://www.diodes.com/assets/Datasheets/74LVC04A.pdf
+    Website fetch unavailable; the local manufacturer sheet was inspected.
+
+Re-run from the repository root (PowerShell), with installed KiCad 10:
+  & 'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe' sch export netlist --format kicadxml -o 'review\verification-2026-10-25\breakout.net.xml' 'breakout\breakout.kicad_sch'
+  & 'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe' sch erc --format json --severity-all -o 'review\verification-2026-10-25\erc.json' 'breakout\breakout.kicad_sch'
+  & 'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe' pcb drc --schematic-parity --refill-zones --format json --severity-all -o 'review\verification-2026-10-25\drc.json' 'breakout\breakout.kicad_pcb'
+  & 'C:\Program Files\KiCad\10.0\bin\python.exe' 'review\verification-2026-10-25\extract_board.py'
+  python 'review\verification-2026-10-25\verify_design.py'
+  python 'review\verification-2026-10-25\analyze_geometry.py'
+
+Do not add --save-board to the DRC command for a read-only review. Python
+dependencies used by the review scripts include sexpdata, networkx and
+PyMuPDF; the board exporter uses KiCad's bundled pcbnew. Copper-path lengths
+are centerline approximations, include resistor pad span, exclude vertical
+via length and are not a field-solver or measured signal-integrity result.
+
+7. Update for 5 cm cable, RobStride motors and IMUs
+--------------------------------------------------
+User-provided inputs: Jetson-to-board cable approximately 5 cm; CAN nodes
+mostly RobStride motors and IMUs. The exact motor models, firmware/protocol
+mode, motor count per segment, command/feedback rates and IMU frame schedule
+remain unspecified. No CAD changes were made for this clarification.
+
+Manufacturer evidence: the RobStride04 manual, English section 4 on PDF page
+46 (printed page 44), specifies Classical CAN at 1 Mbit/s with 29-bit IDs and
+eight-byte data. The operation command on PDF pages 47-48 returns a motor
+feedback frame. This supports the report's extended-ID workload for the
+private protocol; it does not establish every model/firmware or alternate
+protocol mode. Vendor source:
+https://www.robstride.com/assets/product_manual_robStride04-37549d59.pdf
+Archived as sources/RobStride04_Manual.pdf, with its hash in the manifest.
+
+At a nominal cable propagation speed of 2e8 m/s, the 5 cm cable contributes
+about 0.25 ns in each direction, or 0.5 ns SCK-out/MISO-return flight time.
+That is a small addition to the 34.4 ns worst-case device/translator path;
+ordinary half-cycle sampling at 16 MHz remains unclosed. This flight-time
+estimate is not a cable specification or a load model. Connect J1's available
+grounds and use nearby ground conductors in the short harness. Cable length
+alone does not establish impedance, capacitance, grounding or sample margin.
+
+For ONE 1 Mbit/s CAN segment, one command plus one feedback per update,
+private-protocol eight-byte extended frames, and NO IMU/extra traffic:
+
+  Motors on bus   Per-motor rate   CAN occupancy, no stuffing to upper bound
+       2             500 Hz                     26.2% - 32.0%
+       2            1000 Hz                     52.4% - 64.0%
+       3             500 Hz                     39.3% - 48.0%
+       3            1000 Hz                     78.6% - 96.0%
+       4             500 Hz                     52.4% - 64.0%
+       4            1000 Hz                    104.8% - 128.0%
+
+The upper bound uses 160 bits/frame, including worst-case stuffing and
+intermission; actual stuffing depends on IDs, payload and CRC. Three motors
+at 1 kHz have little worst-case reserve; four at that rate cannot fit.
+At 500 Hz the displayed motor-only scenarios leave more room, but the
+remaining capacity is not automatically all available for scheduled IMUs:
+also budget faults, configuration, retransmissions and latency margin.
+
+IMU models matter because one measurement may require multiple CAN frames.
+For example, 1000 extended eight-byte IMU frames/s consume another 13.1%
+before stuffing, up to 16.0% with the conservative stuffing bound, on whichever
+CAN segment carries them. This is an illustrative frame rate, not an assumed
+IMU format or sample rate. Sum actual frame rates and lengths per segment:
+
+  utilization = sum(frames_per_second * on_wire_bits_per_frame) / 1,000,000.
+
+For four such CAN segments on one SPI bus, the extended-ID SPI demand in
+section 3 is the applicable estimate: 7.57 Mbit/s for RX with status amortized,
+11.97 Mbit/s for RX with two status reads/frame, 12.21 Mbit/s for TX+completion
+with status amortized, or 16.61 Mbit/s for the extra-status TX model, before
+nonclock gaps. Actual mixed direction and motor update rates will change
+these values. A 5 cm cable does not change the number of SPI bytes needed.
+
+Reproducible scenarios: robstride_workload.json and robstride_workload.csv.
+Run python review/verification-2026-10-25/update_workload.py to regenerate.
+The original generic bandwidth scenarios are retained for other devices and
+alternate protocols. The design disposition and F01-F10 remain unchanged.

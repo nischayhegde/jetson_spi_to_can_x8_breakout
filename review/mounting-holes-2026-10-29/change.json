@@ -1,0 +1,61 @@
+{
+  "original_size_mm": [
+    77,
+    80
+  ],
+  "new_size_mm": [
+    81,
+    80
+  ],
+  "outline_mm": {
+    "left": 56,
+    "top": 47.5,
+    "right": 137,
+    "bottom": 127.5
+  },
+  "diameter_mm": 3.2,
+  "hole_type": "non-plated through hole",
+  "hole_centers_mm": {
+    "H1": [
+      60,
+      51.5
+    ],
+    "H2": [
+      133,
+      51.5
+    ],
+    "H3": [
+      60,
+      123.5
+    ],
+    "H4": [
+      133,
+      123.5
+    ]
+  },
+  "edge_inset_mm": 4,
+  "hole_spacing_mm": [
+    73,
+    72
+  ],
+  "copper_keepout_diameter_mm": 7,
+  "courtyard_diameter_mm": 7.5,
+  "keepout_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu"
+  ],
+  "before_sha256": "9b538f9305e52374a95cf05b6c7cab491e20499482e4229210d5a3d575ceafed",
+  "after_sha256": "8daad598d0ae59ef91b5f50e902295045b92a65a8ee4d703976a4738cda0cdb6",
+  "footprints": 145,
+  "all_141_existing_footprints_and_pad_nets_unchanged": true,
+  "all_existing_tracks_and_vias_unchanged": true,
+  "existing_tracks_and_vias": 1712,
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity_issues": 0,
+  "npth_drill_hits": 4,
+  "kicad_version": "10.0.7",
+  "saved_zone_copper_free_sample_checks": 2048
+}

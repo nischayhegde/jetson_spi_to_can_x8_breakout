@@ -1,0 +1,804 @@
+{
+  "routes": [
+    {
+      "channel": 1,
+      "signal": "SCK",
+      "planar_length_mm_including_R33_span": 36.037263127003804,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 1,
+      "signal": "MOSI",
+      "planar_length_mm_including_R33_span": 36.435400749723584,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 1,
+      "signal": "MISO",
+      "planar_length_mm_including_R33_span": 36.9366215316609,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 2,
+      "signal": "SCK",
+      "planar_length_mm_including_R33_span": 25.891886247102185,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 2,
+      "signal": "MOSI",
+      "planar_length_mm_including_R33_span": 24.072029451681534,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 2,
+      "signal": "MISO",
+      "planar_length_mm_including_R33_span": 17.186224316943374,
+      "layers": [
+        "Top"
+      ]
+    },
+    {
+      "channel": 3,
+      "signal": "SCK",
+      "planar_length_mm_including_R33_span": 45.994596219111784,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 3,
+      "signal": "MOSI",
+      "planar_length_mm_including_R33_span": 41.581721019553996,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 3,
+      "signal": "MISO",
+      "planar_length_mm_including_R33_span": 25.803300681841254,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 4,
+      "signal": "SCK",
+      "planar_length_mm_including_R33_span": 72.35180063107337,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 4,
+      "signal": "MOSI",
+      "planar_length_mm_including_R33_span": 55.74914871273469,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 4,
+      "signal": "MISO",
+      "planar_length_mm_including_R33_span": 44.60812636578009,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 5,
+      "signal": "SCK",
+      "planar_length_mm_including_R33_span": 64.42474233308536,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 5,
+      "signal": "MOSI",
+      "planar_length_mm_including_R33_span": 39.33641119242063,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 5,
+      "signal": "MISO",
+      "planar_length_mm_including_R33_span": 44.97849714249237,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 6,
+      "signal": "SCK",
+      "planar_length_mm_including_R33_span": 48.00084239829918,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 6,
+      "signal": "MOSI",
+      "planar_length_mm_including_R33_span": 57.481166428072854,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 6,
+      "signal": "MISO",
+      "planar_length_mm_including_R33_span": 27.795044764576765,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 7,
+      "signal": "SCK",
+      "planar_length_mm_including_R33_span": 27.385915295891827,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 7,
+      "signal": "MOSI",
+      "planar_length_mm_including_R33_span": 76.03342043977001,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 7,
+      "signal": "MISO",
+      "planar_length_mm_including_R33_span": 28.736177318863795,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    },
+    {
+      "channel": 8,
+      "signal": "SCK",
+      "planar_length_mm_including_R33_span": 49.274303925677266,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 8,
+      "signal": "MOSI",
+      "planar_length_mm_including_R33_span": 92.26716290637354,
+      "layers": [
+        "Bottom",
+        "PWR",
+        "Top"
+      ]
+    },
+    {
+      "channel": 8,
+      "signal": "MISO",
+      "planar_length_mm_including_R33_span": 36.248177318863796,
+      "layers": [
+        "Bottom",
+        "Top"
+      ]
+    }
+  ],
+  "total_net_track_mm": {
+    "SPI0_SCK": {
+      "length_mm": 106.94535776501064,
+      "layer_mm": {
+        "Top": 17.509516587096844,
+        "GND": 0,
+        "PWR": 70.29836832157284,
+        "Bottom": 19.137472856340963
+      },
+      "min_width_mm": 0.2
+    },
+    "SPI0_MOSI": {
+      "length_mm": 107.58326368866344,
+      "layer_mm": {
+        "Top": 31.83292626107135,
+        "GND": 0,
+        "PWR": 0,
+        "Bottom": 75.75033742759209
+      },
+      "min_width_mm": 0.2
+    },
+    "SPI0_MISO": {
+      "length_mm": 91.54493407466467,
+      "layer_mm": {
+        "Top": 45.279910250351975,
+        "GND": 0,
+        "PWR": 0,
+        "Bottom": 46.26502382431269
+      },
+      "min_width_mm": 0.2
+    },
+    "SPI1_SCK": {
+      "length_mm": 115.12725387235703,
+      "layer_mm": {
+        "Top": 20.470741589946815,
+        "GND": 0,
+        "PWR": 80.33151548890172,
+        "Bottom": 14.324996793508507
+      },
+      "min_width_mm": 0.2
+    },
+    "SPI1_MOSI": {
+      "length_mm": 155.03127313781653,
+      "layer_mm": {
+        "Top": 16.886890047224917,
+        "GND": 0,
+        "PWR": 116.89586403173342,
+        "Bottom": 21.248519058858175
+      },
+      "min_width_mm": 0.2
+    },
+    "SPI1_MISO": {
+      "length_mm": 90.92650153555357,
+      "layer_mm": {
+        "Top": 43.69719799385458,
+        "GND": 0,
+        "PWR": 0,
+        "Bottom": 47.22930354169899
+      },
+      "min_width_mm": 0.2
+    },
+    "VCC": {
+      "length_mm": 206.01114408447987,
+      "layer_mm": {
+        "Top": 90.26175448370107,
+        "GND": 0,
+        "PWR": 0,
+        "Bottom": 115.7493896007788
+      },
+      "min_width_mm": 0.3
+    },
+    "GND": {
+      "length_mm": 123.44302395030323,
+      "layer_mm": {
+        "Top": 123.44302395030323,
+        "GND": 0,
+        "PWR": 0,
+        "Bottom": 0
+      },
+      "min_width_mm": 0.2
+    }
+  },
+  "bypass": [
+    {
+      "channel": 1,
+      "pin": 1,
+      "cap": "CC0603KRX7R9BB3",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 1,
+      "pin": 14,
+      "cap": "CC0603KRX7R9BB2",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 1,
+      "pin": 25,
+      "cap": "CC0603KRX7R9BB1",
+      "rail_center_distance_mm": 2.4250000000000043,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 2,
+      "pin": 1,
+      "cap": "CC0603KRX7R9BB8",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 2,
+      "pin": 14,
+      "cap": "CC0603KRX7R9BB9",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 2,
+      "pin": 25,
+      "cap": "CC0603KRX7R9BB10",
+      "rail_center_distance_mm": 2.4250000000000043,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 3,
+      "pin": 1,
+      "cap": "CC0603KRX7R9BB11",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 3,
+      "pin": 14,
+      "cap": "CC0603KRX7R9BB12",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 3,
+      "pin": 25,
+      "cap": "CC0603KRX7R9BB13",
+      "rail_center_distance_mm": 2.4250000000000043,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 4,
+      "pin": 1,
+      "cap": "CC0603KRX7R9BB14",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 4,
+      "pin": 14,
+      "cap": "CC0603KRX7R9BB15",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 4,
+      "pin": 25,
+      "cap": "CC0603KRX7R9BB16",
+      "rail_center_distance_mm": 2.4250000000000043,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 5,
+      "pin": 1,
+      "cap": "CC0603KRX7R9BB18",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 5,
+      "pin": 14,
+      "cap": "CC0603KRX7R9BB19",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 5,
+      "pin": 25,
+      "cap": "CC0603KRX7R9BB20",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 6,
+      "pin": 1,
+      "cap": "CC0603KRX7R9BB21",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 6,
+      "pin": 14,
+      "cap": "CC0603KRX7R9BB22",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 6,
+      "pin": 25,
+      "cap": "CC0603KRX7R9BB23",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 7,
+      "pin": 1,
+      "cap": "CC0603KRX7R9BB24",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 7,
+      "pin": 14,
+      "cap": "CC0603KRX7R9BB25",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 7,
+      "pin": 25,
+      "cap": "CC0603KRX7R9BB26",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 8,
+      "pin": 1,
+      "cap": "CC0603KRX7R9BB27",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 8,
+      "pin": 14,
+      "cap": "CC0603KRX7R9BB28",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    },
+    {
+      "channel": 8,
+      "pin": 25,
+      "cap": "CC0603KRX7R9BB29",
+      "rail_center_distance_mm": 2.4250000000000114,
+      "pin22_return_without_planes": null
+    }
+  ],
+  "crystals": [
+    {
+      "channel": 1,
+      "pin": 20,
+      "route": [
+        4.798832970144359,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 1,
+      "pin": 21,
+      "route": [
+        11.672461008596265,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 2,
+      "pin": 20,
+      "route": [
+        4.798832970144359,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 2,
+      "pin": 21,
+      "route": [
+        11.690796124093984,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 3,
+      "pin": 20,
+      "route": [
+        4.798832970144359,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 3,
+      "pin": 21,
+      "route": [
+        11.73982547124999,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 4,
+      "pin": 20,
+      "route": [
+        4.798832970144359,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 4,
+      "pin": 21,
+      "route": [
+        11.73982547124999,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 5,
+      "pin": 20,
+      "route": [
+        4.7988329701443515,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 5,
+      "pin": 21,
+      "route": [
+        11.725555553111384,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 6,
+      "pin": 20,
+      "route": [
+        4.529594154601838,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 6,
+      "pin": 21,
+      "route": [
+        11.75458387293667,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 7,
+      "pin": 20,
+      "route": [
+        4.798832970144356,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 7,
+      "pin": 21,
+      "route": [
+        11.74057186002527,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 8,
+      "pin": 20,
+      "route": [
+        4.798832970144356,
+        [
+          "Top"
+        ]
+      ]
+    },
+    {
+      "channel": 8,
+      "pin": 21,
+      "route": [
+        11.71642972440154,
+        [
+          "Top"
+        ]
+      ]
+    }
+  ],
+  "source_resistors": [
+    {
+      "ref": "R3",
+      "header_pin": 23,
+      "pad": 1,
+      "header_to_resistor_mm": 2.9749999999999943
+    },
+    {
+      "ref": "R1",
+      "header_pin": 19,
+      "pad": 1,
+      "header_to_resistor_mm": 2.9967876333808285
+    },
+    {
+      "ref": "R18",
+      "header_pin": 37,
+      "pad": 2,
+      "header_to_resistor_mm": 5.272664326126575
+    },
+    {
+      "ref": "R21",
+      "header_pin": 13,
+      "pad": 1,
+      "header_to_resistor_mm": 2.9749999999999943
+    }
+  ],
+  "can_pairs": [
+    {
+      "channel": 1,
+      "CANH_route": [
+        20.564366398198164,
+        [
+          "Top"
+        ]
+      ],
+      "CANL_route": [
+        25.969784111310506,
+        [
+          "Top"
+        ]
+      ],
+      "length_difference_mm": 5.405417713112342
+    },
+    {
+      "channel": 2,
+      "CANH_route": [
+        20.5645320836231,
+        [
+          "Top"
+        ]
+      ],
+      "CANL_route": [
+        25.947419017604126,
+        [
+          "Top"
+        ]
+      ],
+      "length_difference_mm": 5.382886933981027
+    },
+    {
+      "channel": 3,
+      "CANH_route": [
+        25.042042759865247,
+        [
+          "Bottom",
+          "Top"
+        ]
+      ],
+      "CANL_route": [
+        22.33420232655446,
+        [
+          "Top"
+        ]
+      ],
+      "length_difference_mm": 2.7078404333107855
+    },
+    {
+      "channel": 4,
+      "CANH_route": [
+        29.03853833017873,
+        [
+          "Top"
+        ]
+      ],
+      "CANL_route": [
+        22.000024879673347,
+        [
+          "Top"
+        ]
+      ],
+      "length_difference_mm": 7.038513450505384
+    },
+    {
+      "channel": 5,
+      "CANH_route": [
+        22.83390675272986,
+        [
+          "Bottom",
+          "Top"
+        ]
+      ],
+      "CANL_route": [
+        23.344191979807903,
+        [
+          "Top"
+        ]
+      ],
+      "length_difference_mm": 0.5102852270780431
+    },
+    {
+      "channel": 6,
+      "CANH_route": [
+        21.79534194311448,
+        [
+          "Top"
+        ]
+      ],
+      "CANL_route": [
+        27.176271739956118,
+        [
+          "Top"
+        ]
+      ],
+      "length_difference_mm": 5.380929796841638
+    },
+    {
+      "channel": 7,
+      "CANH_route": [
+        21.565150531364708,
+        [
+          "Top"
+        ]
+      ],
+      "CANL_route": [
+        26.938523370911117,
+        [
+          "Top"
+        ]
+      ],
+      "length_difference_mm": 5.373372839546409
+    },
+    {
+      "channel": 8,
+      "CANH_route": [
+        28.90847231258429,
+        [
+          "Top"
+        ]
+      ],
+      "CANL_route": [
+        27.93513959755234,
+        [
+          "Bottom",
+          "Top"
+        ]
+      ],
+      "length_difference_mm": 0.9733327150319511
+    }
+  ]
+}

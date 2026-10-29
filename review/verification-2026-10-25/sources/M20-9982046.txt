@@ -1,0 +1,178 @@
+
+=== PDF PAGE 1 ===
+// HARWIN.COM 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ SECTION 
+TITLE 
+PAGE 
+ 
+ 
+1 
+Description of Connector and Intended Application 
+2 
+ 
+2 
+Ratings 
+2 
+ Appendix 1 
+Gauges 
+4 
+ 
+ 
+ 
+Component Specification 
+C00120 
+M20 Series Connectors 
+November 2022 
+ 
+
+
+=== PDF PAGE 2 ===
+ 
+ 
+2 
+C00120    Date: 28.11.2022     C/Order: 32100     Issue: 20 
+C00120 
+Component Specification – M20 Series Connectors 
+1. 
+DESCRIPTION OF CONNECTOR AND INTENDED APPLICATION 
+A range of 2.54mm (0.1”) pitch connectors, having 0.64mm (0.025”) square pins and sockets suitable for 
+interconnecting board to board and board to wire. 
+The socket is a box section design with a latch to locate and hold in an insulated housing. Terminations are 
+available for wire crimp, through board solder or surface mount in either horizontal or vertical mounting. 
+The plug pin is held in a moulding, and is available for either horizontal or vertical, surface mount or 
+through board solder mounting. Plug mouldings are available in unlatched or latched versions. Contacts 
+may be gold. Surface mountable pin headers are available in single and double row, vertical and horizontal 
+variations. 
+ 
+2. 
+RATINGS 
+Note: 
+ 
+Individual components may exceed below ratings – check individual customer information sheets. 
+ 
+Ratings for all M20 Throughboard Pin Headers, including Pin header variants, are detailed below as 
+“M20-PH”. 
+ 
+2.1. Material & Finish 
+Housing Material: 
+For PC Tail or SMT connector ........................................... High Temperature Thermoplastic, UL94V-0 
+For Cable connectors ......................................................... See individual drawing 
+Contact Material ...................................................................... Copper alloy 
+Contact Finish .......................................................................... See individual drawing 
+ 
+2.2. Electrical Characteristics 
+Current Rating (per contact) .................................................. 3A max 
+Contact Resistance (initial) ..................................................... 20mΩ max 
+Contact Resistance (after conditioning) ............................... 30mΩ max 
+Dielectric Withstanding Voltage (Voltage Proof): 
+M20-PH, M20-785/6/7/9, M20-875 ............................... 500V AC for 1 minute 
+M20-106/7, M20-116/8 ..................................................... 800V AC for 1 minute 
+Other ................................................................................... 1,000V AC for 1 minute 
+Insulation Resistance: 
+M20-PH ............................................................................... 500MΩ min 
+Other ................................................................................... 1,000MΩ min 
+ 
+2.3. Environmental Characteristics 
+Operating Temperature Range: 
+M20-106/7 .......................................................................... -25°C to +85°C 
+Other ................................................................................... -40°C to +105°C 
+Vibration: 
+M20-PH, M20-781/2/3/6/7/8/9, M20-791/2, 
+   M20-889/90/91 .............................................................. 50-2,000Hz, 3.13Grms, Duration 15 mins in each axis 
+Other ................................................................................... Not tested 
+Shock: 
+M20-PH, M20-781/2/3/6/7/8/9, M20-791/2, 
+   M20-889/90/91 .............................................................. 30G for 11ms 
+Other ................................................................................... Not tested 
+ 
+ 
+
+
+=== PDF PAGE 3 ===
+ 
+ 
+3 
+C00120    Date: 28.11.2022     C/Order: 32100     Issue: 20 
+C00120 
+Component Specification – M20 Series Connectors 
+2.4. Mechanical Characteristics 
+Durability: 
+Gold finish on contact area ....................................................... 300 operations 
+Tin finish on contact area ......................................................... 50 operations 
+Insertion Force (maximum): 
+M20-116/8................................................................................... 1.2N per contact 
+M20-781/2/3/6/7/8/9, M20-791/2 .......................................... 2.0N per contact 
+Withdrawal Force (minimum): 
+M20-116/8................................................................................... 0.8N per contact 
+M20-781/2/3/6/7/8/9 ............................................................... 0.3N per contact 
+M20-791/2 .................................................................................. 0.2N per contact 
+Contact Retention Force (minimum) ............................................. 7.84N per contact 
+Contact Crimp Pull-off Force: 
+30AWG ........................................................................................ 9N minimum 
+28AWG ........................................................................................ 11N minimum 
+26AWG ........................................................................................ 18N minimum 
+24AWG ........................................................................................ 29N minimum 
+22AWG ........................................................................................ 45N minimum 
+ 
+2.5. Soldering Data 
+Solderability (for PC Tail & SMT products) .................................... 245°C for 5 seconds 
+Soldering heat resistance (for PC Tail & SMT products) ............. 260°C for 10 seconds 
+ 
+ 
+ 
+
+
+=== PDF PAGE 4 ===
+ 
+ 
+4 
+C00120    Date: 28.11.2022     C/Order: 32100     Issue: 20 
+C00120 
+Component Specification – M20 Series Connectors 
+APPENDICES NOTES: 
+1. 
+Third angle projection is used where projected views are shown. 
+2. All dimensions are in millimetres. 
+3. For explanation of dimensions, etc. see BS8888. 
+ 
+ 
+APPENDIX 1 – GAUGES 
+NOTES: 
+1. 
+Material = Steel to BS1407 or equivalent. 
+2. Gauging surfaces to be hardened/ground, 650 HV5 min. 
+3. These gauges to be used for testing fully assembled components only. 
+4. Ultimate wear limit 0.005mm is allowable on gauging dimensions. 
+ 
+Contact Push-out Gauge 
+ 
+LAP 
+LAP 
+0.2
+0.2 
+3.75 +0.00 
+-0.05
+4.40 +0.00 
+-0.05 
+11.0 
+10.0 

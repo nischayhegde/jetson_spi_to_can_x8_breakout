@@ -1,0 +1,227 @@
+
+=== PDF PAGE 1 ===
+ 2022-2025 Microchip Technology Inc. and its subsidiaries
+DS80000984B-page 1
+MCP251863
+The functionality of the MCP251863 devices is
+described in the Device Data Sheet (DS20006624B),
+except for the anomalies described below.
+1.
+Module: SPI Module
+Incorrect data for certain READ/READ_CRC 
+commands:
+There is a possibility that the transmitted data on
+a READ/READ_CRC is wrong when reading from
+the chip. A glitch on the SDO line shorter than 1
+bit in length occurs and creates wrong data.
+Fix/Work Around
+Only use the READ_CRC command, and if a
+CRC mismatch occurs, re-issue the READ_CRC
+command.
+The following registers may be affected:
+CiTXIF
+CiRXIF
+CiCON
+CiTBC
+CiINT
+CiRXOVIF
+CiTXATIF
+CiTXREQ
+CiTREC
+CiBDIAG0
+CiBDIAG1
+CiTXQSTA
+CiFIFOSTAm
+The occurrence can be minimized by not using
+FIFOs 7/15/23/31.
+Bit 31 of RAM reads with CRC may also be
+affected. This can be avoided by reading from a
+receive FIFO only after the message was loaded
+into the FIFO, indicated by the receive flags.
+This 
+is 
+the 
+recommended 
+procedure
+independent of the issue described here.
+2.
+Module: ECC Module
+ECC Single Error Correction does not work
+in all cases:
+Fix/Work Around:
+Enable Single Error Correction (SEC) and
+Double Error Detection (DED) interrupts by set-
+ting SECIE and DEDIE. Handle SECIF as a
+detection interrupt and do not rely on the error
+correction. Instead, handle both interrupts as a
+notification that the RAM word at ERRADDR
+was corrupted.
+3.
+Module: SPI Module
+SFR address rollover does not work:
+The SFR address rollover, from 0x3FF to 0x000
+and from 0xFFF to 0xE00, does not work.
+Instead, the address changes from 0x3FF to
+0x400 and from 0xFFF to 0x000. 
+The address rollover for the RAM works as
+described.
+Fix/Work Around:
+None.
+4.
+Module: SPI/RAM Module
+The SPI may write corrupted data to the RAM
+at fast SPI speeds:
+Simultaneous activity on the CAN bus while
+writing data to RAM via the SPI interface, with
+high SCK frequency, may lead to corrupted data
+being written to RAM.
+Fix/Work Around:
+Ensure that FSCK is less than or equal to
+0.85 * (FSYSCLK/2).
+MCP251863 Silicon Errata and Data Sheet Clarification
+
+
+=== PDF PAGE 2 ===
+MCP251863
+DS80000984B-page 2
+ 2022-2025 Microchip Technology Inc. and its subsidiaries
+5.
+Module: SPI/GPIO Module
+Writing multiple bytes to the IOCON register
+using one SPI WRITE instruction may
+overwrite LAT0 and LAT1:
+Writing Byte 2 and Byte 3 of the IOCON register
+using one SPI WRITE instruction clears LAT0
+and LAT1.
+Fix/Work Around:
+When setting LAT0 or LAT1, do not use a
+multi-data byte SPI WRITE instruction. 
+Instead, write the bit fields in the IOCON register
+using single data byte SFR WRITE instructions.
+6.
+Module: SPI Module
+The reading of the FIFOCI bits in the
+FIFOSTA register may be corrupted:
+The reading of the FIFOCI bits in the FIFOSTA
+register for an RX FIFO may be corrupted if a
+certain timing is met with regards to a frame on
+the CAN bus. The generated CRC matches the
+false data. A subsequent READ will return the
+corrected FIFOCI. 
+Fix/Work Around:
+Perform multiple read-outs to detect unexpected
+data.
+7.
+Module: SPI/Device
+Failed wake up when clearing OSCDIS:
+When waking up the device by clearing the
+OSCDIS bit, it is possible to hit a timing window
+where the wake up will fail. The device will wake
+up briefly and go back to sleep again. 
+Fix/Work Around:
+1.
+Prolong the TSCK2NCS/Byte2Byte timing to at
+least 50 TSYSCLK cycles depending on
+whether 
+regular 
+Write 
+commands 
+or
+CRC/Write-safe commands are used. The delay
+needs to be after the byte containing the
+OSCDIS bit.
+2.
+When polling OSCRDY to determine whether
+the device woke up already, ensure that two
+back-to-back reads of the bit show it as ‘1’ to
+qualify for a successful wake up. If the second
+read returns a ‘0’, repeat the wake-up sequence
+by writing OSCDIS to ‘0’ again.
+Clarifications/Corrections to the Data 
+Sheet
+In the MCP251863 Data Sheet (DS20006624B), the
+following clarifications and corrections should be
+noted:
+1.
+Register 4-3: CRC - CRC Register
+The bit FERRIF (bit 17) may be set on illegal SPI
+transactions if the last successful transfer was
+one of the following commands: READ_CRC,
+WRITE_CRC or WRITE_SAFE. One example is
+the CS line going low and going up again without
+any activity on the SCK line.
+This will generate a Format error and needs to
+be handled by clearing the error bit in the CRC
+Register.
+
+
+=== PDF PAGE 3 ===
+ 2022-2025 Microchip Technology Inc. and its subsidiaries
+DS80000984B-page 3
+MCP251863
+APPENDIX A:
+REVISION HISTORY
+Revision B (January 2025)
+• Clarification of Register 4-3: CRC - CRC Regis-
+ter was added to Section “Clarifications/Cor-
+rections to the Data Sheet”.
+• Added Section 6. Module: “SPI Module”.
+• Added Section 7. Module: “SPI/Device”.
+Revision A (September 2022)
+• Initial release of this document
+
+
+=== PDF PAGE 4 ===
+MCP251863
+DS80000984B-page 4
+ 2022-2025 Microchip Technology Inc. and its subsidiaries
+NOTES:
+
+
+=== PDF PAGE 5 ===
+ 2022-2025 Microchip Technology Inc. and its subsidiaries
+DS80000984B-page 5
+Microchip Information
+Trademarks
+The “Microchip” name and logo, the “M” logo, and other names, logos, and brands are registered and 
+unregistered trademarks of Microchip Technology Incorporated or its affiliates and/or subsidiaries in the 
+United States and/or other countries (“Microchip Trademarks”). Information regarding Microchip 
+Trademarks can be found at https://www.microchip.com/en-us/about/legalinformation/microchip-
+trademarks.
+ISBN: 979-8-3371-0519-2
+Legal Notice
+This publication and the information herein may be used only with Microchip products, including to design, 
+test, and integrate Microchip products with your application. Use of this information in any other manner 
+violates these terms. Information regarding device applications is provided only for your convenience and 
+may be superseded by updates. It is your responsibility to ensure that your application meets with your 
+specifications. Contact your local Microchip sales office for additional support or, obtain additional support 
+at www.microchip.com/en-us/support/design-help/client-support-services.
+THIS INFORMATION IS PROVIDED BY MICROCHIP "AS IS". MICROCHIP MAKES NO 
+REPRESENTATIONS OR WARRANTIES OF ANY KIND WHETHER EXPRESS OR IMPLIED, WRITTEN 
+OR ORAL, STATUTORY OR OTHERWISE, RELATED TO THE INFORMATION INCLUDING BUT NOT 
+LIMITED TO ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND 
+FITNESS FOR A PARTICULAR PURPOSE, OR WARRANTIES RELATED TO ITS CONDITION, 
+QUALITY, OR PERFORMANCE.
+IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL, 
+OR CONSEQUENTIAL LOSS, DAMAGE, COST, OR EXPENSE OF ANY KIND WHATSOEVER 
+RELATED TO THE INFORMATION OR ITS USE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS 
+BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE FULLEST 
+EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAY 
+RELATED TO THE INFORMATION OR ITS USE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY, 
+THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THE INFORMATION.
+Use of Microchip devices in life support and/or safety applications is entirely at the buyer's risk, and the 
+buyer agrees to defend, indemnify and hold harmless Microchip from any and all damages, claims, suits, 
+or expenses resulting from such use. No licenses are conveyed, implicitly or otherwise, under any 
+Microchip intellectual property rights unless otherwise stated.
+Microchip Devices Code Protection Feature
+Note the following details of the code protection feature on Microchip products:
+• Microchip products meet the specifications contained in their particular Microchip Data Sheet.
+• Microchip believes that its family of products is secure when used in the intended manner, within 
+operating specifications, and under normal conditions.
+• Microchip values and aggressively protects its intellectual property rights. Attempts to breach the code 
+protection features of Microchip product is strictly prohibited and may violate the Digital Millennium 
+Copyright Act.
+• Neither Microchip nor any other semiconductor manufacturer can guarantee the security of its code. 
+Code protection does not mean that we are guaranteeing the product is “unbreakable”. Code 
+protection is constantly evolving. Microchip is committed to continuously improving the code protection 
+features of our products.

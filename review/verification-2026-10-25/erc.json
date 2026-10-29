@@ -1,0 +1,458 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-25T19:46:05",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.7",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/7022f12a-c2a8-43e6-a21f-f3e927ed060d",
+            "violations": [
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB18 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": -21.59,
+                                "y": 250.19
+                            },
+                            "uuid": "23586510-5ef0-4443-a756-f495929c1758"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB3 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": -20.32,
+                                "y": -49.53
+                            },
+                            "uuid": "da9f5010-c56a-42f1-b69d-5336cfb61f11"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB19 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": -6.35,
+                                "y": 227.33
+                            },
+                            "uuid": "78445929-4cd1-4f65-87da-e31cb28f3ba9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB2 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": -5.08,
+                                "y": -72.39
+                            },
+                            "uuid": "68e83d62-d1bc-4f0d-aa84-6839dd1c64b5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB20 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": -1.27,
+                                "y": 245.11
+                            },
+                            "uuid": "ed00ab20-908d-47b2-8c74-66e20662044c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB1 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 0.0,
+                                "y": -54.61
+                            },
+                            "uuid": "687f007b-bad0-4666-8dc1-03db54877cb6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB21 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 91.44,
+                                "y": 247.65
+                            },
+                            "uuid": "1e4df2a1-b019-4a38-bd07-f4677ad52466"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB8 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 92.71,
+                                "y": -52.07
+                            },
+                            "uuid": "e59e7733-c8e8-407e-a484-8b8dc4b4fe02"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB22 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 106.68,
+                                "y": 224.79
+                            },
+                            "uuid": "ca9122ba-f629-4f1c-8c1c-902eeb0f2433"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB9 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 107.95,
+                                "y": -74.93
+                            },
+                            "uuid": "3fc781b8-f6e1-493c-b9e9-ba0f2a9da04c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB23 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 111.76,
+                                "y": 242.57
+                            },
+                            "uuid": "f70b010b-26fa-4537-9359-1307f74e34ed"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB10 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 113.03,
+                                "y": -57.15
+                            },
+                            "uuid": "a4a6e996-4ac3-47f8-8862-f61d04d9bda8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB7 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 135.89,
+                                "y": 158.75
+                            },
+                            "uuid": "01dec742-a274-492e-90cd-0c61554a2c81"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB17 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 187.96,
+                                "y": 90.17
+                            },
+                            "uuid": "46e6fcd5-adc4-4af0-80a2-aba08012ca52"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB24 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 201.93,
+                                "y": 251.46
+                            },
+                            "uuid": "f8139cb9-bc80-48ae-a930-6dd8ef140327"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB11 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 203.2,
+                                "y": -48.26
+                            },
+                            "uuid": "614693ed-ee36-46e5-aa08-9614ac0e48a3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB25 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 217.17,
+                                "y": 228.6
+                            },
+                            "uuid": "edc0e9d9-fb14-4a24-8a59-ed10523a1731"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB12 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 218.44,
+                                "y": -71.12
+                            },
+                            "uuid": "c2a4ef9f-194f-4a3d-bfa4-7af9895b7dd2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB26 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 222.25,
+                                "y": 246.38
+                            },
+                            "uuid": "e095c672-5cef-4e52-92a0-94f30eae439d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB13 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 223.52,
+                                "y": -53.34
+                            },
+                            "uuid": "3c713962-0992-44a9-8317-19350a152fa3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB5 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 251.46,
+                                "y": 90.17
+                            },
+                            "uuid": "2319b4e7-e453-46cd-adbd-e4076652234f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB6 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 251.46,
+                                "y": 134.62
+                            },
+                            "uuid": "201b2e30-e4a6-4e15-b97e-f9fd967dc7da"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB27 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 303.53,
+                                "y": 254.0
+                            },
+                            "uuid": "48591252-7395-4092-896c-14300a330b35"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB14 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 304.8,
+                                "y": -45.72
+                            },
+                            "uuid": "ae6a7458-d385-4e84-ba63-935a7b59f384"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB28 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 318.77,
+                                "y": 231.14
+                            },
+                            "uuid": "c0690e73-c48f-4dbd-b7ed-2b0a8d706e84"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB15 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 320.04,
+                                "y": -68.58
+                            },
+                            "uuid": "ad4d2c6b-5878-4e59-8877-a5c695cc1e1a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB29 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 323.85,
+                                "y": 248.92
+                            },
+                            "uuid": "11d2b5ef-befa-486a-9c5f-169bd2f28494"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Symbol 'CC0603KRX7R9BB104' doesn't match copy in library 'BreakoutBoard'",
+                    "items": [
+                        {
+                            "description": "Symbol CC0603KRX7R9BB16 [CC0603KRX7R9BB104]",
+                            "pos": {
+                                "x": 325.12,
+                                "y": -50.8
+                            },
+                            "uuid": "119f09a2-c501-4640-9e33-c1a657b65fd7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                }
+            ]
+        }
+    ],
+    "source": "breakout.kicad_sch"
+}

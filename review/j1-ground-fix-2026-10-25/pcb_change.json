@@ -1,0 +1,34 @@
+{
+  "added_ground_pins": [
+    6,
+    9,
+    14,
+    20,
+    25,
+    30,
+    34
+  ],
+  "before_nets": {
+    "6": "unconnected-(J1-Pin_6-Pad6)",
+    "9": "unconnected-(J1-Pin_9-Pad9)",
+    "14": "unconnected-(J1-Pin_14-Pad14)",
+    "20": "unconnected-(J1-Pin_20-Pad20)",
+    "25": "unconnected-(J1-Pin_25-Pad25)",
+    "30": "unconnected-(J1-Pin_30-Pad30)",
+    "34": "unconnected-(J1-Pin_34-Pad34)"
+  },
+  "after_nets": {
+    "6": "GND",
+    "9": "GND",
+    "14": "GND",
+    "20": "GND",
+    "25": "GND",
+    "30": "GND",
+    "34": "GND"
+  },
+  "existing_ground_pin": 39,
+  "footprints": 141,
+  "track_and_via_count": 1712,
+  "before_sha256": "dc8c25e40236c56d6152cb0a81461df066c329f8193ceeb43edfeaea04ddfb14",
+  "after_sha256": "980dd1b76e40bde728940acfa8f8f4b815da1cf09b03aeacba339bc890bde7c2"
+}

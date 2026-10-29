@@ -1,0 +1,439 @@
+{
+  "net_partition_unchanged": true,
+  "physical_schematic_components": 141,
+  "purchased_packages": 120,
+  "purchased_mpn_types": 21,
+  "all_eight_channel_checks_pass": true,
+  "bank_truth_table_rows": 16,
+  "irq_truth_table_rows": 256,
+  "power_ground_and_input_protection_checks_pass": true,
+  "termination_references": [
+    "R10",
+    "R13",
+    "R16",
+    "R23",
+    "R26",
+    "R29",
+    "R32",
+    "R6"
+  ],
+  "erc_violations": 0,
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity_issues": 0,
+  "project_rules_and_exclusions_unchanged": true,
+  "mpn_references": {
+    "CC0603KRX7R9BB104": [
+      "C1",
+      "C21",
+      "C22",
+      "C23",
+      "C24",
+      "C25",
+      "C26",
+      "C27",
+      "C28",
+      "C29",
+      "C30",
+      "C31",
+      "C32",
+      "C33",
+      "C34",
+      "C35",
+      "C36",
+      "C37",
+      "C38",
+      "C39",
+      "C40",
+      "C41",
+      "C42",
+      "C43",
+      "C44",
+      "C45",
+      "C46",
+      "C47"
+    ],
+    "CL10C270JB8NNNC": [
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "C10",
+      "C11",
+      "C12",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C17"
+    ],
+    "CGA3E1X7R1E105K080AC": [
+      "C18",
+      "C19"
+    ],
+    "CL21B106KOQNNNE": [
+      "C20"
+    ],
+    "BZT52C6V8-13-F": [
+      "D2"
+    ],
+    "0466001.NR": [
+      "F1"
+    ],
+    "M20-7832046": [
+      "J1"
+    ],
+    "B3B-XH-A": [
+      "J4",
+      "J5",
+      "J7",
+      "J8",
+      "J9",
+      "J10",
+      "J11",
+      "J12"
+    ],
+    "B2B-XH-A": [
+      "J6"
+    ],
+    "AO3401A": [
+      "Q1"
+    ],
+    "RC0603FR-0733RL": [
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R9",
+      "R12",
+      "R15",
+      "R18",
+      "R19",
+      "R20",
+      "R21",
+      "R22",
+      "R25",
+      "R28",
+      "R31"
+    ],
+    "RC1206FR-07120RL": [
+      "R6",
+      "R10",
+      "R13",
+      "R16",
+      "R23",
+      "R26",
+      "R29",
+      "R32"
+    ],
+    "RC0603FR-0710KL": [
+      "R7",
+      "R8",
+      "R11",
+      "R14",
+      "R17",
+      "R24",
+      "R27",
+      "R30",
+      "R38"
+    ],
+    "RC0603FR-07100KL": [
+      "R34",
+      "R35",
+      "R36",
+      "R37"
+    ],
+    "M20-9990246": [
+      "TP13",
+      "TP14"
+    ],
+    "74LVC32APW,118": [
+      "U1",
+      "U5"
+    ],
+    "74LVC04AT14-13": [
+      "U2"
+    ],
+    "TLV75533PDBVR": [
+      "U3"
+    ],
+    "74AHC30PW,118": [
+      "U4"
+    ],
+    "MCP251863T-E/SS": [
+      "U9",
+      "U10",
+      "U11",
+      "U12",
+      "U13",
+      "U14",
+      "U15",
+      "U16"
+    ],
+    "ABM8G-40.000MHZ-18-D2Y-T": [
+      "Y1",
+      "Y2",
+      "Y3",
+      "Y4",
+      "Y5",
+      "Y6",
+      "Y7",
+      "Y8"
+    ]
+  },
+  "channel_checks": [
+    {
+      "channel": 1,
+      "reference": "U9",
+      "expected_spi": 0,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI0_SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R2",
+          "SPI0_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN1_CS",
+      "INT_pin19": "CAN1_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 2,
+      "reference": "U10",
+      "expected_spi": 0,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI0_SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R9",
+          "SPI0_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN2_CS",
+      "INT_pin19": "CAN2_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 3,
+      "reference": "U11",
+      "expected_spi": 0,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI0_SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R12",
+          "SPI0_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN3_CS",
+      "INT_pin19": "CAN3_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 4,
+      "reference": "U12",
+      "expected_spi": 0,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI0_SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R15",
+          "SPI0_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN4_CS",
+      "INT_pin19": "CAN4_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 5,
+      "reference": "U13",
+      "expected_spi": 1,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI1_SCK",
+      "SDI_pin10": "SPI1_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R22",
+          "SPI1_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN5_CS",
+      "INT_pin19": "CAN5_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 6,
+      "reference": "U14",
+      "expected_spi": 1,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI1_SCK",
+      "SDI_pin10": "SPI1_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R25",
+          "SPI1_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN6_CS",
+      "INT_pin19": "CAN6_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 7,
+      "reference": "U15",
+      "expected_spi": 1,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI1_SCK",
+      "SDI_pin10": "SPI1_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R28",
+          "SPI1_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN7_CS",
+      "INT_pin19": "CAN7_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 8,
+      "reference": "U16",
+      "expected_spi": 1,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI1_SCK",
+      "SDI_pin10": "SPI1_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R31",
+          "SPI1_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN8_CS",
+      "INT_pin19": "CAN8_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    }
+  ]
+}

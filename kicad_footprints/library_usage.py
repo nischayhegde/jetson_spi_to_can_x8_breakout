@@ -39,22 +39,36 @@ def property_value(block, name):
 
 def placed_symbols():
     rows = []
-    for path in sorted(PROJECT.rglob('*.kicad_sch')):
-        for block in children(path.read_text(encoding='utf-8')):
+    pending = [PROJECT / 'breakout.kicad_sch']
+    visited = set()
+    while pending:
+        path = pending.pop().resolve()
+        if path in visited:
+            continue
+        visited.add(path)
+        blocks = list(children(path.read_text(encoding='utf-8')))
+        for block in blocks:
+            if re.match(r'^\(sheet\s', block):
+                sheet_file = property_value(block, 'Sheetfile')
+                if sheet_file:
+                    pending.append(path.parent / sheet_file)
+        for block in blocks:
             match = re.search(r'^\(symbol\s+\(lib_id "([^"]+)"', block)
             if not match:
                 continue
             rows.append(dict(schematic=str(path.relative_to(ROOT.parent)),
                              lib_id=match[1], reference=property_value(block, 'Reference'),
                              value=property_value(block, 'Value'),
-                             footprint=property_value(block, 'Footprint')))
+                             footprint=property_value(block, 'Footprint'),
+                             mpn=property_value(block, 'MPN'),
+                             manufacturer=property_value(block, 'Manufacturer')))
     if not rows:
         raise ValueError('No placed schematic symbols found; refusing to infer an empty library')
     return rows
 
 
-# Generic C/R symbols have no footprint assigned yet. Retain their selected
-# packages rather than mistakenly treating them as unused library assets.
+# Compatibility mappings for earlier generic symbols. Current placements carry
+# explicit MPN and Manufacturer fields shared with the PCB and purchasing list.
 GENERIC_PARTS = {
     ('Device:C', '27p'): 'CL10C270JB8NNNC',
     ('Device:C', '1u'): 'CGA3E1X7R1E105K080AC',
@@ -69,9 +83,13 @@ GENERIC_PARTS = {
 def active_selection(catalog_names):
     references = defaultdict(set)
     reasons = defaultdict(set)
+    footprints = defaultdict(set)
+    manufacturers = defaultdict(set)
     for row in placed_symbols():
         lib_id = row['lib_id']
-        name = lib_id.split(':', 1)[1] if lib_id.startswith('BreakoutBoard:') else None
+        name = row['mpn'].replace('MCP251863T-E/SS','MCP251863T-E_SS') if row['mpn'] else None
+        if name is None and lib_id.startswith('BreakoutBoard:'):
+            name = lib_id.split(':', 1)[1]
         reason = 'placed BreakoutBoard symbol'
         if name is None:
             name = GENERIC_PARTS.get((lib_id, row['value'].strip()))
@@ -83,12 +101,10 @@ def active_selection(catalog_names):
                 raise ValueError('Placed component missing from source catalog: ' + name)
             references[name].add(row['reference'])
             reasons[name].add(reason)
-
-    # User explicitly requested a 1 A series fuse. It is missing from the saved
-    # schematic, so preserve the selected part for the reported correction.
-    if '0466001.NR' not in references:
-        references['0466001.NR'] = set()
-        reasons['0466001.NR'].add('retained for requested 1 A input fuse; absent from schematic')
-    return {name: dict(references=sorted(refs), quantity=len(refs) or 1,
+            footprints[name].add(row['footprint'])
+            if row['manufacturer']:manufacturers[name].add(row['manufacturer'])
+    return {name: dict(references=sorted(refs), quantity=len(refs),
+                       footprints=sorted(footprints[name]),
+                       manufacturer='; '.join(sorted(manufacturers[name])),
                        reason='; '.join(sorted(reasons[name])))
             for name, refs in references.items()}

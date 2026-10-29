@@ -1,0 +1,871 @@
+{
+  "retrieved_date": "2026-10-29",
+  "currency": "USD",
+  "stock_basis": "Distributor web listing snapshots retrieved on the stated date; pages may be cached. Verify stock, selected cut-tape packaging, and final checkout prices.",
+  "parts": [
+    {
+      "mpn": "MCP251863T-E/SS",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Microchip-Technology/MCP251863T-E-SS?qs=doiCPypUmgEjABEwFke1cA%3D%3D",
+        "stock": 6897,
+        "price_breaks": [
+          [
+            1,
+            2.3
+          ]
+        ],
+        "sku": "579-MCP251863T-E/SS",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/microchip-technology/MCP251863T-E-SS/15985723",
+        "stock": 1218,
+        "price_breaks": [
+          [
+            1,
+            2.3
+          ],
+          [
+            25,
+            1.92
+          ]
+        ],
+        "sku": "150-MCP251863T-E/SSCT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/ABRACON/ABM8G-40.000MHZ-18-D2Y-T?qs=3LVMET7lfiO1sAQRIVmcWA%3D%3D",
+        "stock": 1362,
+        "price_breaks": [
+          [
+            1,
+            0.62
+          ],
+          [
+            10,
+            0.54
+          ]
+        ],
+        "sku": "815-ABM8G-40-18D2Y",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/abracon-llc/ABM8G-40-000MHZ-18-D2Y-T/2218027",
+        "stock": 389,
+        "price_breaks": [
+          [
+            1,
+            0.62
+          ],
+          [
+            10,
+            0.54
+          ]
+        ],
+        "sku": "535-10281-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "TLV75533PDBVR",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Texas-Instruments/TLV75533PDBVR?qs=55YtniHzbhAKEwqeO2xJXQ%3D%3D",
+        "stock": 49482,
+        "price_breaks": [
+          [
+            1,
+            0.44
+          ],
+          [
+            10,
+            0.304
+          ]
+        ],
+        "sku": "595-TLV75533PDBVR",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/texas-instruments/TLV75533PDBVR/9356541",
+        "stock": 82294,
+        "price_breaks": [
+          [
+            1,
+            0.45
+          ],
+          [
+            10,
+            0.311
+          ]
+        ],
+        "sku": "296-50411-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "CL10C270JB8NNNC",
+      "mouser": {
+        "url": "https://www.mouser.it/ProductDetail/Samsung-Electro-Mechanics/CL10C270JB8NNNC?qs=349EhDEZ59qQ7Bw6gEHQYQ%3D%3D",
+        "stock": null,
+        "price_breaks": [],
+        "sku": "",
+        "notes": "Exact listing found; stock and USD price not verified. Buy the specified Samsung part from DigiKey.",
+        "status": "Not verified"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL10C270JB8NNNC/3889172",
+        "stock": 1471,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.028
+          ],
+          [
+            50,
+            0.0186
+          ]
+        ],
+        "sku": "1276-1086-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "CC0603KRX7R9BB104",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/YAGEO/CC0603KRX7R9BB104?qs=vTakOoo5QyLvVCYM2ge8LQ%3D%3D",
+        "stock": 47009219,
+        "price_breaks": [
+          [
+            1,
+            0.18
+          ],
+          [
+            10,
+            0.073
+          ],
+          [
+            100,
+            0.042
+          ]
+        ],
+        "sku": "603-CC603KRX7R9BB104",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+        "stock": 62814,
+        "price_breaks": [
+          [
+            1,
+            0.14
+          ],
+          [
+            10,
+            0.08
+          ],
+          [
+            50,
+            0.0554
+          ]
+        ],
+        "sku": "311-1344-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "CGA3E1X7R1E105K080AC",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/TDK/CGA3E1X7R1E105K080AC?qs=NRhsANhppD9VxGl2AsmRpw%3D%3D",
+        "stock": 1426652,
+        "price_breaks": [
+          [
+            1,
+            0.17
+          ],
+          [
+            10,
+            0.095
+          ],
+          [
+            50,
+            0.067
+          ]
+        ],
+        "sku": "810-CGA3E1X7R1E105K",
+        "notes": "Stock and USD pricing from Mouser US category listing.",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/tdk/CGA3E1X7R1E105K080AC/2672949",
+        "stock": 1368662,
+        "price_breaks": [
+          [
+            1,
+            0.17
+          ],
+          [
+            10,
+            0.095
+          ],
+          [
+            50,
+            0.0668
+          ]
+        ],
+        "sku": "445-6931-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "CL21B106KOQNNNE",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Samsung-Electro-Mechanics/CL21B106KOQNNNE?qs=349EhDEZ59r8qgLddyW2Yw%3D%3D",
+        "stock": null,
+        "price_breaks": [
+          [
+            1,
+            0.3
+          ],
+          [
+            10,
+            0.175
+          ]
+        ],
+        "sku": "187-CL21B106KOQNNNE",
+        "notes": "Exact E suffix. USD price from Mouser Israel; current stock not verified. Do not replace with the G suffix automatically.",
+        "status": "Not verified"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/samsung-electro-mechanics/CL21B106KOQNNNE/3888530",
+        "stock": 187206,
+        "price_breaks": [
+          [
+            1,
+            0.27
+          ],
+          [
+            10,
+            0.156
+          ],
+          [
+            50,
+            0.1126
+          ]
+        ],
+        "sku": "1276-2872-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "RC1206FR-07120RL",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/YAGEO/RC1206FR-07120RL?qs=sGAEpiMZZMvdGkrng054t8AJgcdMkx7xHngnO2SPVlk%3D",
+        "stock": 120281,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.025
+          ],
+          [
+            100,
+            0.017
+          ]
+        ],
+        "sku": "603-RC1206FR-07120RL",
+        "notes": "US stock and pricing from exact MPN row in Mouser category results.",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/yageo/RC1206FR-07120RL/728523",
+        "stock": 131576,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.047
+          ],
+          [
+            25,
+            0.036
+          ]
+        ],
+        "sku": "311-120FRCT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "RC0603FR-07120RL",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/YAGEO/RC0603FR-07120RL?qs=uM1JSSdPjOCKJQFXEGGb5w%3D%3D",
+        "stock": 301387,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.014
+          ],
+          [
+            100,
+            0.008
+          ]
+        ],
+        "sku": "603-RC0603FR-07120RL",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-07120RL/726920",
+        "stock": 478225,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.025
+          ],
+          [
+            25,
+            0.0188
+          ]
+        ],
+        "sku": "311-120HRCT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "RC0603FR-0710KL",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/603-RC0603FR-0710KL",
+        "stock": 2782034,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.014
+          ],
+          [
+            100,
+            0.008
+          ]
+        ],
+        "sku": "603-RC0603FR-0710KL",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0710KL/726880",
+        "stock": 2396093,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.025
+          ],
+          [
+            25,
+            0.0188
+          ]
+        ],
+        "sku": "311-10.0KHRCT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "RC0603FR-07100KL",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/YAGEO/RC0603FR-07100KL?qs=e1ok2LiJcmaihem8Va5%2Fsw%3D%3D",
+        "stock": 4585377,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.014
+          ],
+          [
+            100,
+            0.008
+          ]
+        ],
+        "sku": "603-RC0603FR-07100KL",
+        "notes": "US stock and pricing from exact MPN row in Mouser category results.",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-07100KL/726889",
+        "stock": 2081432,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.025
+          ],
+          [
+            25,
+            0.0188
+          ]
+        ],
+        "sku": "311-100KHRCT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "RC0603FR-0733RL",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/YAGEO/RC0603FR-0733RL?qs=diQw95jMAeMotgif2GSHTQ%3D%3D",
+        "stock": 595649,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.014
+          ],
+          [
+            100,
+            0.008
+          ]
+        ],
+        "sku": "603-RC0603FR-0733RL",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0733RL/730105",
+        "stock": 1088640,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.025
+          ],
+          [
+            25,
+            0.0188
+          ]
+        ],
+        "sku": "13-RC0603FR-0733RLCT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "B3B-XH-A",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/JST-Commercial/B3B-XH-ALFSN?qs=cdbOS8ANM9BVkoboCCIEMQ%3D%3D",
+        "stock": null,
+        "price_breaks": [
+          [
+            1,
+            0.13
+          ],
+          [
+            10,
+            0.11
+          ]
+        ],
+        "sku": "306-B3BXHALFSNP",
+        "notes": "Listing uses B3B-XH-A(LF)(SN). Stock not verified. No black, reverse, or press-fit variants selected.",
+        "status": "Not verified"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+        "stock": 120351,
+        "price_breaks": [
+          [
+            1,
+            0.13
+          ],
+          [
+            10,
+            0.11
+          ]
+        ],
+        "sku": "455-2248-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "B2B-XH-A",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/JST-Commercial/B2B-XH-ALFSN?qs=cdbOS8ANM9DdcSn9qRmfCw%3D%3D",
+        "stock": 560,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.087
+          ]
+        ],
+        "sku": "306-B2BXHALFSNP",
+        "notes": "Listing uses B2B-XH-A(LF)(SN). Stock evidence from Mouser South Africa. No A-M/press-fit variant selected.",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-XH-A/1651045",
+        "stock": 320857,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.087
+          ]
+        ],
+        "sku": "455-B2B-XH-A-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "M20-7832046",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Harwin/M20-7832046?qs=93uzuGORGqcTOAy6u%252BlWXQ%3D%3D",
+        "stock": 1973,
+        "price_breaks": [
+          [
+            1,
+            4.13
+          ],
+          [
+            11,
+            3.45
+          ]
+        ],
+        "sku": "855-M20-7832046",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/harwin-inc/M20-7832046/3728114",
+        "stock": 4597,
+        "price_breaks": [
+          [
+            1,
+            4.34
+          ],
+          [
+            11,
+            3.66273
+          ]
+        ],
+        "sku": "",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "0466001.NR",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Littelfuse/0466001.NR?qs=ar9f0rk5DXDy6tpNfF8WnQ%3D%3D",
+        "stock": 45577,
+        "price_breaks": [
+          [
+            1,
+            0.78
+          ],
+          [
+            5,
+            0.682
+          ],
+          [
+            10,
+            0.66
+          ]
+        ],
+        "sku": "",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/littelfuse-inc/0466001-NR/521337",
+        "stock": 36548,
+        "price_breaks": [
+          [
+            1,
+            1.25
+          ],
+          [
+            5,
+            1.032
+          ],
+          [
+            10,
+            0.952
+          ]
+        ],
+        "sku": "F1456CT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "AO3401A",
+      "mouser": {
+        "url": "https://www.mouser.com/c/?q=AO3401A",
+        "stock": null,
+        "price_breaks": [],
+        "sku": "",
+        "notes": "Search link only: no exact AOS AO3401A Mouser product listing verified. No MOSFET substitution selected.",
+        "status": "Not verified"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/alpha-omega-semiconductor-inc/AO3401A/1855943",
+        "stock": 443245,
+        "price_breaks": [
+          [
+            1,
+            0.52
+          ],
+          [
+            10,
+            0.322
+          ]
+        ],
+        "sku": "785-1001-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "BZT52C6V8-13-F",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Diodes-Incorporated/BZT52C6V8-13-F?qs=VJbqQHImxExiLN1mVoOupA%3D%3D",
+        "stock": 9830,
+        "price_breaks": [
+          [
+            1,
+            0.21
+          ],
+          [
+            10,
+            0.126
+          ]
+        ],
+        "sku": "",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/BZT52C6V8-13-F/4570599",
+        "stock": 6702,
+        "price_breaks": [
+          [
+            1,
+            0.22
+          ],
+          [
+            10,
+            0.135
+          ]
+        ],
+        "sku": "31-BZT52C6V8-13-FCT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "74AHC30PW,118",
+      "mouser": {
+        "url": "https://www.mouser.com/ProductDetail/Nexperia/74AHC30PW118?qs=P62ublwmbi%252B963Q4ACANGA%3D%3D",
+        "stock": 3795,
+        "price_breaks": [
+          [
+            1,
+            0.39
+          ],
+          [
+            10,
+            0.271
+          ]
+        ],
+        "sku": "771-74AHC30PW-T",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/nexperia-usa-inc/74AHC30PW-118/3724158",
+        "stock": 6890,
+        "price_breaks": [
+          [
+            1,
+            0.39
+          ],
+          [
+            10,
+            0.271
+          ]
+        ],
+        "sku": "1727-7291-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "74LVC32APW,118",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Nexperia/74LVC32APW118?qs=me8TqzrmIYUPFZGtjJtRrA%3D%3D",
+        "stock": 3867,
+        "price_breaks": [
+          [
+            1,
+            0.25
+          ],
+          [
+            10,
+            0.171
+          ]
+        ],
+        "sku": "771-74LVC32APW-T",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/nexperia-usa-inc/74LVC32APW-118/946666",
+        "stock": 6192,
+        "price_breaks": [
+          [
+            1,
+            0.25
+          ],
+          [
+            10,
+            0.171
+          ]
+        ],
+        "sku": "1727-3081-1-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "74LVC04AT14-13",
+      "mouser": {
+        "url": "https://www.mouser.com/ProductDetail/Diodes-Incorporated/74LVC04AT14-13?qs=ZtY9WdtwX56ItyAjeD24GQ%3D%3D",
+        "stock": 2760,
+        "price_breaks": [
+          [
+            1,
+            0.28
+          ],
+          [
+            10,
+            0.189
+          ]
+        ],
+        "sku": "",
+        "notes": "",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/74LVC04AT14-13/10452774",
+        "stock": 4004,
+        "price_breaks": [
+          [
+            1,
+            0.32
+          ],
+          [
+            10,
+            0.217
+          ]
+        ],
+        "sku": "31-74LVC04AT14-13CT-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    },
+    {
+      "mpn": "M20-9990246",
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Harwin/M20-9990246?qs=Jph8NoUxIfWjw4WmyRvzag%3D%3D",
+        "stock": 98136,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.08
+          ]
+        ],
+        "sku": "855-M20-9990246",
+        "notes": "Stock from Mouser Israel exact listing; USD unit price from US listing.",
+        "status": "In stock"
+      },
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/harwin-inc/M20-9990246/3728226",
+        "stock": 179951,
+        "price_breaks": [
+          [
+            1,
+            0.1
+          ],
+          [
+            10,
+            0.08
+          ]
+        ],
+        "sku": "952-2262-ND",
+        "notes": "",
+        "status": "In stock"
+      }
+    }
+  ]
+}

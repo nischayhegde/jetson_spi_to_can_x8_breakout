@@ -1,0 +1,637 @@
+{
+  "input_sha256": {
+    "breakout\\breakout.kicad_sch": "ef185397759b690fbab8afd64d6c93fda8616984e1ce9a3a143a1e98d3175f34",
+    "breakout\\breakout.kicad_pcb": "dc8c25e40236c56d6152cb0a81461df066c329f8193ceeb43edfeaea04ddfb14",
+    "breakout\\breakout.kicad_pro": "3de665ecd030f3fef767137f3c30ef88aa469ce72e953415b2305817138462b3"
+  },
+  "component_count": 141,
+  "all_channel_checks_pass": true,
+  "channel_checks": [
+    {
+      "channel": 1,
+      "reference": "U9",
+      "expected_spi": 0,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI0_SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R2",
+          "SPI0_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN1_CS",
+      "INT_pin19": "CAN1_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 2,
+      "reference": "U10",
+      "expected_spi": 0,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI0_SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R9",
+          "SPI0_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN2_CS",
+      "INT_pin19": "CAN2_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 3,
+      "reference": "U11",
+      "expected_spi": 0,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI0_SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R12",
+          "SPI0_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN3_CS",
+      "INT_pin19": "CAN3_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 4,
+      "reference": "U12",
+      "expected_spi": 0,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI0_SCK",
+      "SDI_pin10": "SPI0_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R15",
+          "SPI0_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN4_CS",
+      "INT_pin19": "CAN4_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 5,
+      "reference": "U13",
+      "expected_spi": 1,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI1_SCK",
+      "SDI_pin10": "SPI1_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R22",
+          "SPI1_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN5_CS",
+      "INT_pin19": "CAN5_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 6,
+      "reference": "U14",
+      "expected_spi": 1,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI1_SCK",
+      "SDI_pin10": "SPI1_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R25",
+          "SPI1_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN6_CS",
+      "INT_pin19": "CAN6_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 7,
+      "reference": "U15",
+      "expected_spi": 1,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI1_SCK",
+      "SDI_pin10": "SPI1_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R28",
+          "SPI1_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN7_CS",
+      "INT_pin19": "CAN7_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    },
+    {
+      "channel": 8,
+      "reference": "U16",
+      "expected_spi": 1,
+      "VCC_pin25": "VCC",
+      "VDD_pin14": "VDD_VIO",
+      "VIO_pin1": "VDD_VIO",
+      "SCK_pin9": "SPI1_SCK",
+      "SDI_pin10": "SPI1_MOSI",
+      "SDO_via_resistor": [
+        [
+          "R31",
+          "SPI1_MISO"
+        ]
+      ],
+      "CS_pin13": "CAN8_CS",
+      "INT_pin19": "CAN8_INT",
+      "checks": {
+        "power": true,
+        "spi": true,
+        "chip_select": true,
+        "interrupt": true,
+        "internal_can_links": true,
+        "grounds_and_standby": true,
+        "crystal": true,
+        "crystal_capacitors": true,
+        "local_bypass": true,
+        "can_connector": true,
+        "termination": true
+      }
+    }
+  ],
+  "gate_power": {
+    "U1": "VDD_VIO",
+    "U2": "VDD_VIO",
+    "U4": "VDD_VIO",
+    "U5": "VDD_VIO"
+  },
+  "gate_bypass_correct": true,
+  "fuses": {
+    "F1": {
+      "value": "0466001.NR",
+      "nets": [
+        "Net-(J6-Pin_2)",
+        "Net-(Q1-D)"
+      ]
+    }
+  },
+  "header_ground_pins": [
+    39
+  ],
+  "header_pins": {
+    "1": "unconnected-(J1-Pin_1-Pad1)",
+    "2": "unconnected-(J1-Pin_2-Pad2)",
+    "3": "unconnected-(J1-Pin_3-Pad3)",
+    "4": "unconnected-(J1-Pin_4-Pad4)",
+    "5": "unconnected-(J1-Pin_5-Pad5)",
+    "6": "unconnected-(J1-Pin_6-Pad6)",
+    "7": "unconnected-(J1-Pin_7-Pad7)",
+    "8": "unconnected-(J1-Pin_8-Pad8)",
+    "9": "unconnected-(J1-Pin_9-Pad9)",
+    "10": "unconnected-(J1-Pin_10-Pad10)",
+    "11": "unconnected-(J1-Pin_11-Pad11)",
+    "12": "unconnected-(J1-Pin_12-Pad12)",
+    "13": "Net-(J1-Pin_13)",
+    "14": "unconnected-(J1-Pin_14-Pad14)",
+    "15": "unconnected-(J1-Pin_15-Pad15)",
+    "16": "Net-(J1-Pin_16)",
+    "17": "unconnected-(J1-Pin_17-Pad17)",
+    "18": "Net-(J1-Pin_18)",
+    "19": "Net-(J1-Pin_19)",
+    "20": "unconnected-(J1-Pin_20-Pad20)",
+    "21": "SPI0_MISO",
+    "22": "SPI1_MISO",
+    "23": "Net-(J1-Pin_23)",
+    "24": "Net-(J1-Pin_24)",
+    "25": "unconnected-(J1-Pin_25-Pad25)",
+    "26": "Net-(J1-Pin_26)",
+    "27": "unconnected-(J1-Pin_27-Pad27)",
+    "28": "unconnected-(J1-Pin_28-Pad28)",
+    "29": "GPIO_1",
+    "30": "unconnected-(J1-Pin_30-Pad30)",
+    "31": "GPIO_11",
+    "32": "GPIO_7",
+    "33": "unconnected-(J1-Pin_33-Pad33)",
+    "34": "unconnected-(J1-Pin_34-Pad34)",
+    "35": "unconnected-(J1-Pin_35-Pad35)",
+    "36": "unconnected-(J1-Pin_36-Pad36)",
+    "37": "Net-(J1-Pin_37)",
+    "38": "unconnected-(J1-Pin_38-Pad38)",
+    "39": "GND",
+    "40": "unconnected-(J1-Pin_40-Pad40)"
+  },
+  "missing_footprints": [],
+  "bank_truth_table": [
+    {
+      "spi": 0,
+      "bank": 0,
+      "native_cs0": 0,
+      "native_cs1": 0,
+      "forbidden_both_active": true,
+      "levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 0,
+        "CAN3_CS": 0,
+        "CAN4_CS": 1
+      },
+      "selected": [
+        "CAN2_CS",
+        "CAN3_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 0,
+      "native_cs0": 0,
+      "native_cs1": 1,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 0,
+        "CAN3_CS": 1,
+        "CAN4_CS": 1
+      },
+      "selected": [
+        "CAN2_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 0,
+      "native_cs0": 1,
+      "native_cs1": 0,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 1,
+        "CAN3_CS": 0,
+        "CAN4_CS": 1
+      },
+      "selected": [
+        "CAN3_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 0,
+      "native_cs0": 1,
+      "native_cs1": 1,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 1
+      },
+      "selected": []
+    },
+    {
+      "spi": 0,
+      "bank": 1,
+      "native_cs0": 0,
+      "native_cs1": 0,
+      "forbidden_both_active": true,
+      "levels": {
+        "CAN1_CS": 0,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 0
+      },
+      "selected": [
+        "CAN1_CS",
+        "CAN4_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 1,
+      "native_cs0": 0,
+      "native_cs1": 1,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN1_CS": 0,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 1
+      },
+      "selected": [
+        "CAN1_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 1,
+      "native_cs0": 1,
+      "native_cs1": 0,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 0
+      },
+      "selected": [
+        "CAN4_CS"
+      ]
+    },
+    {
+      "spi": 0,
+      "bank": 1,
+      "native_cs0": 1,
+      "native_cs1": 1,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN1_CS": 1,
+        "CAN2_CS": 1,
+        "CAN3_CS": 1,
+        "CAN4_CS": 1
+      },
+      "selected": []
+    },
+    {
+      "spi": 1,
+      "bank": 0,
+      "native_cs0": 0,
+      "native_cs1": 0,
+      "forbidden_both_active": true,
+      "levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 0,
+        "CAN7_CS": 0,
+        "CAN8_CS": 1
+      },
+      "selected": [
+        "CAN6_CS",
+        "CAN7_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 0,
+      "native_cs0": 0,
+      "native_cs1": 1,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 0,
+        "CAN7_CS": 1,
+        "CAN8_CS": 1
+      },
+      "selected": [
+        "CAN6_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 0,
+      "native_cs0": 1,
+      "native_cs1": 0,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 1,
+        "CAN7_CS": 0,
+        "CAN8_CS": 1
+      },
+      "selected": [
+        "CAN7_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 0,
+      "native_cs0": 1,
+      "native_cs1": 1,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 1
+      },
+      "selected": []
+    },
+    {
+      "spi": 1,
+      "bank": 1,
+      "native_cs0": 0,
+      "native_cs1": 0,
+      "forbidden_both_active": true,
+      "levels": {
+        "CAN5_CS": 0,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 0
+      },
+      "selected": [
+        "CAN5_CS",
+        "CAN8_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 1,
+      "native_cs0": 0,
+      "native_cs1": 1,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN5_CS": 0,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 1
+      },
+      "selected": [
+        "CAN5_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 1,
+      "native_cs0": 1,
+      "native_cs1": 0,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 0
+      },
+      "selected": [
+        "CAN8_CS"
+      ]
+    },
+    {
+      "spi": 1,
+      "bank": 1,
+      "native_cs0": 1,
+      "native_cs1": 1,
+      "forbidden_both_active": false,
+      "levels": {
+        "CAN5_CS": 1,
+        "CAN6_CS": 1,
+        "CAN7_CS": 1,
+        "CAN8_CS": 1
+      },
+      "selected": []
+    }
+  ],
+  "bank_idle_deselects_all": true,
+  "bank_single_select": true,
+  "shared_irq_active_low": true,
+  "erc": {
+    "counts": {
+      "warning": 28
+    },
+    "types": {
+      "lib_symbol_mismatch": 28
+    }
+  },
+  "drc": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "protection_nets": {
+    "J6": {
+      "1": "GND",
+      "2": "Net-(J6-Pin_2)"
+    },
+    "F1": {
+      "1": "Net-(Q1-D)",
+      "2": "Net-(J6-Pin_2)"
+    },
+    "Q1": {
+      "1": "Net-(D2-A)",
+      "2": "VCC",
+      "3": "Net-(Q1-D)"
+    },
+    "D2": {
+      "1": "VCC",
+      "2": "Net-(D2-A)"
+    },
+    "R38": {
+      "1": "Net-(D2-A)",
+      "2": "GND"
+    },
+    "C18": {
+      "1": "GND",
+      "2": "VCC"
+    },
+    "C19": {
+      "1": "GND",
+      "2": "VDD_VIO"
+    },
+    "C20": {
+      "1": "VCC",
+      "2": "GND"
+    },
+    "U3": {
+      "1": "VCC",
+      "2": "GND",
+      "3": "VCC",
+      "4": "unconnected-(U3-NC-Pad4)",
+      "5": "VDD_VIO"
+    }
+  },
+  "bank_input_passives": {
+    "GPIO_7": [],
+    "GPIO_11": []
+  }
+}

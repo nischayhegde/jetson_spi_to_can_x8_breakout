@@ -1,0 +1,101 @@
+Schematic, PCB and purchasing standardization - 2026-10-29
+
+Implemented
+-----------
+All eight CAN terminations (R6/R10/R13/R16/R23/R26/R29/R32) use the same
+YAGEO RC1206FR-07120RL: 120 ohm, 1%, 0.25 W, 1206/3216 metric. R26 was
+the sole 0603 outlier. Its center and B.Cu side are preserved; it is rotated
+180 degrees and its two local CAN routes to J10 have been redrawn for the
+larger pads. Eight original short segments became four local segments.
+All other preexisting tracks/vias and component pad geometries are unchanged.
+
+J1 now identifies the Harwin M20-7832046 female socket in the symbol library,
+schematic, PCB and purchasing records. The previously named male M20-9982046
+did not match the existing female footprint. The physical footprint and
+pin-to-net assignments are unchanged. TP13/TP14 consistently identify the
+M20-9990246 two-pin male headers matching their existing footprints.
+
+The 28 bypass capacitors have conventional references C1 and C21-C47,
+displayed value 100n, and separate CC0603KRX7R9BB104 MPN fields. Existing
+C2-C20 references are retained. Cached/library capacitor metadata now agree,
+eliminating all 28 prior ERC warnings without changing electrical pin types.
+schematic-change.json records the complete reference rename map.
+
+All 120 purchased physical packages have explicit matching MPN/Manufacturer
+fields in the schematic and PCB, including each unit of multi-unit symbols.
+The active library inventory is 21 MPN types and follows only the actual root
+schematic and its referenced sheets, avoiding history/backup duplicates.
+The library, manifest, component lists and order lists use the same identities.
+
+The oversized schematic content previously extended outside its A4 page,
+including negative coordinates. The sheet is now A1 with a single grid-aligned
+translation of existing placed objects. No circuit geometry was rearranged.
+PCB 3D models now use available project-relative STEP paths. The female
+socket and two-pin header models are included locally. STEP models remain
+nominal package models, not certified manufacturer mechanical drawings.
+
+Preserved mechanics and circuit
+-------------------------------
+Board outline stays 81 x 80 mm with the four locked 3.2 mm M3 NPTH mounting
+holes and hardware keepouts from the preceding mounting-hole change.
+All 145 footprint centers and sides are unchanged. Only R26 changes package
+and rotation. All 141 physical schematic components remain; the additional
+four board-only footprints are mounting holes. No components were added to
+or removed from the electrical circuit, and no resistor/capacitor values,
+logic functions, power nets or connector pin assignments changed.
+
+Validation on the final saved files, KiCad 10.0.7
+-----------------------------------------------
+PASS ERC: 0 errors and 0 warnings under the configured checks.
+PASS PCB DRC: 0 violations, 0 unconnected items, 0 schematic parity issues.
+PASS exact before/after net partition equivalence after reference renames.
+PASS all eight CAN-channel power/ground/SPI/CS/IRQ/crystal/termination checks.
+PASS all 16 bank/native-CS combinations and all 256 interrupt combinations.
+PASS input fuse/MOSFET/Zener/LDO connectivity and all eight J1 ground pins.
+PASS 145 component centers/sides and all non-R26 pads retained.
+PASS all non-local tracks/vias, board outline and mounting-hole rules retained.
+PASS active symbol pin numbers match assigned footprint pads, key electrical
+     pin identities, local STEP availability and asset SHA-256 inventory.
+PASS project file hash unchanged: no rule/exclusion settings were relaxed.
+
+There are no item-level ERC or DRC exclusions. Existing ignored categories
+remain unchanged: ERC single-global-label, four-way-junction, simulation-model
+and footprint-filter checks; DRC missing courtyard, via centering, tuning
+geometry, footprint filters and footprint/pad type checks. The preexisting
+minimum silk clearance is zero. Fabricator-specific silk/mask requirements
+and high-speed timing/impedance constraints are not certified by clean DRC.
+
+Machine-readable evidence: electrical-validation.json, geometry-validation.json,
+erc-after.json, drc-after.json and ../orderlist-2026-10-29/validation.json.
+The before/ directory and before-sha256.json preserve the starting inputs.
+
+Purchasing
+----------
+One PCB: 21 purchase lines, 120 fitted packages. The dated DigiKey observations
+give 129 pieces ordered, including nine discounted spare resistors, for a
+$37.36 parts subtotal before shipping/tax/tariffs. All DigiKey observations
+show sufficient quantity for those orders. The quotes were retrieved on
+2026-10-29; pages may be cached and no stock is reserved.
+
+The workbook contains 42 native supplier hyperlinks and no formula errors.
+All quantities, reference sets, footprints, MPNs and CAD hashes reconcile.
+Mouser AO3401A remains explicitly search-only because an exact listing was
+not verified. The exact regional 27 pF listing lacks verified USD price/stock;
+C20 and the white B3B-XH-A also lack verified Mouser stock. The in-stock
+DigiKey selections use the specified MPNs. No substitute MOSFET was chosen.
+
+Electrical qualification still required
+--------------------------------------
+These changes preserve the original circuit function and pass static checks.
+They do not resolve the system-level qualifications in
+../verification-2026-10-25/verification_report.txt. In particular:
+  - Jetson translator/MCP SPI receive timing has no demonstrated margin at
+    16-17 MHz; operating rate and sampling/load margins require validation.
+  - Independently powered host/board inputs need a defined power sequence or
+    suitable protection; ERC cannot prove unpowered-input safety.
+  - Bank-input startup bias, preferred VDD bypass returns, crystal startup,
+    LDO/fuse thermal/load margin and harness/termination/EMC behavior retain
+    their earlier review qualifications. There is no galvanic isolation.
+The earlier missing-fuse/footprint documentation, J1 ground-pin finding and
+capacitor cache warnings are resolved in the saved current revision.
+Zero ERC/DRC findings are not unconditional manufacturing or system sign-off.

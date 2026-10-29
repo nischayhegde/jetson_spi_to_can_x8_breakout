@@ -1,0 +1,969 @@
+
+=== PDF PAGE 1 ===
+ 
+BZT52C2V0 - BZT52C39
+ 
+ 
+ SURFACE MOUNT ZENER DIODE 
+ 
+Features 
+• 
+Planar Die Construction 
+• 
+500mW Power Dissipation on Ceramic PCB 
+• 
+General Purpose, Medium Current 
+• 
+Ideally Suited for Automated Assembly Processes 
+• 
+Lead, Halogen and Antimony Free, RoHS Compliant 
+"Green" Device (Notes 2 and 3) 
+• 
+Qualified to AEC-Q101 Standards for High Reliability 
+ 
+ 
+Mechanical Data 
+• 
+Case: SOD-123 
+• 
+Case Material: Molded Plastic.  UL Flammability Classification 
+Rating 94V-0 
+• 
+Moisture Sensitivity: Level 1 per J-STD-020D 
+• 
+Terminals: Solderable per MIL-STD-202, Method 208 
+• 
+Lead Free Plating (Matte Tin Finish annealed over Alloy 42 
+leadframe)   
+• 
+Polarity: Cathode Band 
+• 
+Marking Information: See Page 3 
+• 
+Ordering Information: See Page 3 
+• 
+Weight: 0.010 grams (approximate) 
+ 
+ 
+ 
+ 
+ 
+ 
+Top View
+ 
+ 
+Maximum Ratings  @TA = 25°C unless otherwise specified 
+ 
+Single phase, half wave, 60Hz, resistive or inductive load. 
+For capacitance load, derate current by 20%. 
+Characteristic 
+Symbol 
+Value 
+Unit 
+Forward Voltage 
+@ IF = 10mA 
+VF 
+0.9 
+V 
+ 
+Thermal Characteristics    
+Characteristic 
+Symbol 
+Value 
+Unit 
+Power Dissipation (Note 1) 
+PD 
+500 
+mW 
+Thermal Resistance, Junction to Ambient Air (Note 1) 
+RθJA 
+250 
+°C/W 
+Operating and Storage Temperature Range 
+TJ, TSTG 
+-65 to +150 
+°C 
+Notes: 
+1.  Device mounted on ceramic PCB; 7.6mm x 9.4mm x 0.87mm with pad areas 25mm2. 
+2.  No purposefully added lead. Halogen and Antimony Free. 
+3.  Product manufactured with Data Code V9 (week 33, 2008) and newer are built with Green Molding Compound. Product manufactured prior to Date  
+ 
+     Code V9 are built with Non-Green Molding Compound and may contain Halogens or Sb2O3 Fire Retardants. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BZT52C2V0 - BZT52C39 
+Document number: DS18004 Rev. 32 - 2 
+1 of 4 
+www.diodes.com  
+June 2008
+© Diodes Incorporated 
+ 
+Please click here to visit our online spice models database.
+
+
+=== PDF PAGE 2 ===
+ 
+ 
+BZT52C2V0 - BZT52C39
+ 
+ 
+Electrical Characteristics  @TA = 25°C unless otherwise specified 
+Zener Voltage Range  
+(Note 5) 
+Maximum Zener  
+Impedance (Note 4) 
+Maximum 
+Reverse 
+Current 
+(Note 5) 
+BZT52C2V0 - BZT52C39 
+Document number: DS18004 Rev. 32 - 2 
+2 of 4 
+www.diodes.com  
+June 2008
+© Diodes Incorporated 
+ 
+VZ @ IZT 
+IZT 
+ZZT @ IZT 
+ZZK @ IZK 
+IZK 
+IR 
+@ VR 
+Typical 
+Temperature
+Coefficient 
+@ IZTC 
+mV/°C 
+Test 
+Current 
+IZTC 
+Type 
+Number 
+(Note 4) 
+Marking 
+Codes 
+Nom 
+(V) 
+Min (V) Max (V)
+mA 
+Ω 
+mA 
+uA 
+V 
+Min 
+Max 
+mA 
+BZT52C2V0 
+WY 
+2.0 
+1.91 
+2.09 
+5 
+100 
+600 
+1.0 
+150 
+1.0 
+-3.5 
+0 
+5 
+BZT52C2V4 
+WX 
+2.4 
+2.2 
+2.6 
+5 
+100 
+600 
+1.0 
+50 
+1.0 
+-3.5 
+0 
+5 
+BZT52C2V7 
+W1 
+2.7 
+2.5 
+2.9 
+5 
+100 
+600 
+1.0 
+20 
+1.0 
+-3.5 
+0 
+5 
+BZT52C3V0 
+W2 
+3.0 
+2.8 
+3.2 
+5 
+95 
+600 
+1.0 
+10 
+1.0 
+-3.5 
+0 
+5 
+BZT52C3V3 
+W3 
+3.3 
+3.1 
+3.5 
+5 
+95 
+600 
+1.0 
+5.0 
+1.0 
+-3.5 
+0 
+5 
+BZT52C3V6 
+W4 
+3.6 
+3.4 
+3.8 
+5 
+90 
+600 
+1.0 
+5.0 
+1.0 
+-3.5 
+0 
+5 
+BZT52C3V9 
+W5 
+3.9 
+3.7 
+4.1 
+5 
+90 
+600 
+1.0 
+3.0 
+1.0 
+-3.5 
+0 
+5 
+BZT52C4V3 
+W6, UB 
+4.3 
+4.0 
+4.6 
+5 
+90 
+600 
+1.0 
+3.0 
+1.0 
+-3.5 
+0 
+5 
+BZT52C4V7 
+W7 
+4.7 
+4.4 
+5.0 
+5 
+80 
+500 
+1.0 
+3.0 
+2.0 
+-3.5 
+0.2 
+5 
+BZT52C5V1 
+W8 
+5.1 
+4.8 
+5.4 
+5 
+60 
+480 
+1.0 
+2.0 
+2.0 
+-2.7 
+1.2 
+5 
+BZT52C5V6 
+W9 
+5.6 
+5.2 
+6.0 
+5 
+40 
+400 
+1.0 
+1.0 
+2.0 
+-2 
+2.5 
+5 
+BZT52C6V2 
+WA 
+6.2 
+5.8 
+6.6 
+5 
+10 
+150 
+1.0 
+3.0 
+4.0 
+0.4 
+3.7 
+5 
+BZT52C6V8 
+WB 
+6.8 
+6.4 
+7.2 
+5 
+15 
+80 
+1.0 
+2.0 
+4.0 
+1.2 
+4.5 
+5 
+BZT52C7V5 
+WC 
+7.5 
+7.0 
+7.9 
+5 
+15 
+80 
+1.0 
+1.0 
+5.0 
+2.5 
+5.3 
+5 
+BZT52C8V2 
+WD 
+8.2 
+7.7 
+8.7 
+5 
+15 
+80 
+1.0 
+0.7 
+5.0 
+3.2 
+6.2 
+5 
+BZT52C9V1 
+WE 
+9.1 
+8.5 
+9.6 
+5 
+15 
+100 
+1.0 
+0.5 
+6.0 
+3.8 
+7.0 
+5 
+BZT52C10 
+WF 
+10 
+9.4 
+10.6 
+5 
+20 
+150 
+1.0 
+0.2 
+7.0 
+4.5 
+8.0 
+5 
+BZT52C11 
+WG 
+11 
+10.4 
+11.6 
+5 
+20 
+150 
+1.0 
+0.1 
+8.0 
+5.4 
+9.0 
+5 
+BZT52C12 
+WH 
+12 
+11.4 
+12.7 
+5 
+25 
+150 
+1.0 
+0.1 
+8.0 
+6.0 
+10.0 
+5 
+BZT52C13 
+WI 
+13 
+12.4 
+14.1 
+5 
+30 
+170 
+1.0 
+0.1 
+8.0 
+7.0 
+11.0 
+5 
+BZT52C15 
+WJ 
+15 
+13.8 
+15.6 
+5 
+30 
+200 
+1.0 
+0.1 
+10.5 
+9.2 
+13.0 
+5 
+BZT52C16 
+WK 
+16 
+15.3 
+17.1 
+5 
+40 
+200 
+1.0 
+0.1 
+11.2 
+10.4 
+14.0 
+5 
+BZT52C18 
+WL 
+18 
+16.8 
+19.1 
+5 
+45 
+225 
+1.0 
+0.1 
+12.6 
+12.4 
+16.0 
+5 
+BZT52C20 
+WM 
+20 
+18.8 
+21.2 
+5 
+55 
+225 
+1.0 
+0.1 
+14.0 
+14.4 
+18.0 
+5 
+BZT52C22 
+WN 
+22 
+20.8 
+23.3 
+5 
+55 
+250 
+1.0 
+0.1 
+15.4 
+16.4 
+20.0 
+5 
+BZT52C24 
+WO 
+24 
+22.8 
+25.6 
+5 
+70 
+250 
+1.0 
+0.1 
+16.8 
+18.4 
+22.0 
+5 
+BZT52C27 
+WP 
+27 
+25.1 
+28.9 
+2 
+80 
+300 
+0.5 
+0.1 
+18.9 
+21.4 
+25.3 
+2 
+BZT52C30 
+WQ 
+30 
+28.0 
+32.0 
+2 
+80 
+300 
+0.5 
+0.1 
+21.0 
+24.4 
+29.4 
+2 
+BZT52C33 
+WR 
+33 
+31.0 
+35.0 
+2 
+80 
+325 
+0.5 
+0.1 
+23.1 
+27.4 
+33.4 
+2 
+BZT52C36 
+WS 
+36 
+34.0 
+38.0 
+2 
+90 
+350 
+0.5 
+0.1 
+25.2 
+30.4 
+37.4 
+2 
+BZT52C39 
+WT 
+39 
+37.0 
+41.0 
+2 
+130 
+350 
+0.5 
+0.1 
+27.3 
+33.4 
+41.2 
+2 
+Notes: 
+4.  f = 1kHz. 
+5.  Short duration pulse test used to minimize self-heating effect.  
+ 
+ 
+ 
+0
+10
+20
+30
+40
+50
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+1
+I , ZENE
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+25
+0
+50
+75
+100
+125
+150
+P , POWER DISSIPATION (W)
+D
+T , AMBIENT TEMPERATURE ( C)
+Fig. 1  Power Derating Curve
+A
+°
+0.6
+Note 1
+ 
+0
+R CURRENT (mA)
+Z
+V , ZENER VOLTAGE (V)
+Fig. 2  Typical Zener Breakdown Characteristics
+Z
+ 
+ 
+ 
+ 
+
+
+=== PDF PAGE 3 ===
+ 
+ 
+BZT52C2V0 - BZT52C39
+ 
+ 
+0
+2
+4
+6
+8
+10
+10
+0
+20
+30
+40
+50
+60
+70
+80
+90
+100
+I , ZENER CURRENT (mA)
+Z
+V , ZENER VOLTAGE (V)
+Fig. 4  Typical Zener Breakdown Characteristics
+Z
+ 
+0
+10
+20
+30
+0
+I , ZENER CURRENT (mA)
+Z
+V , ZENER VOLTAGE (V)
+Fig. 3  Typical Zener Breakdown Characteristics
+Z
+10
+20
+30
+40
+T = 25°C
+J
+Test Current I
+5mA
+Z
+Test Current I
+2mA
+Z
+C10
+C12
+C18
+C22
+C27
+C33
+C36
+C15
+ 
+C , TOTAL CAPACITANCE (pF)
+T
+10
+100
+1,000
+10
+100
+1
+V , NOMINAL ZENER VOLTAGE (V)
+Fig. 5  Typical Total Capacitance vs. Nominal Zener Voltage
+Z
+T = 25 °C
+f = 1MHz
+J 
+V = 1V
+R
+V = 2V
+R
+V = 1V
+R
+V = 2V
+R
+ 
+ 
+ 
+Ordering Information  (Note 6) 
+BZT52C2V0 - BZT52C39 
+Document number: DS18004 Rev. 32 - 2 
+3 of 4 
+www.diodes.com  
+June 2008
+© Diodes Incorporated 
+ 
+Part Number 
+Case 
+Packaging 
+(Type Number)-7-F (Note 7) 
+SOD-123 
+3000/Tape & Reel 
+(Type Number)-13-F (Note 8) 
+SOD-123 
+10,000/Tape & Reel 
+Notes: 
+6.  For packaging details, go to our website at http://www.diodes.com/datasheets/ap02007.pdf. 
+7.  Add “-7-F” to the appropriate type number in Electrical Characteristics Table, example: 6.2V Zener = BZT52C6V2-7-F. 
+8.  Add “-13-F” to the appropriate type number in Electrical Characteristics Table, example: 20V Zener = BZT52C20-13-F. 
+ 
+Marking Information 
+xx = Product Type Marking Code 
+(See Electrical Characteristics Table) 
+YM = Date Code Marking 
+Y = Year (ex: N = 2002) 
+M = Month (ex: 9 = September) 
+ 
+ 
+xx
+YM
+ 
+ 
+ 
+Date Code Key 
+Year 
+1998 
+1999 
+2000 
+2001 
+2002 
+2003 
+2004 
+2005 
+2006 
+2007 
+2008 
+2009 
+2010 
+2011 
+2012 
+Code 
+J 
+K 
+L 
+M 
+N 
+P 
+R 
+S 
+T 
+U 
+V 
+W 
+X 
+Y 
+Z 
+ 
+Month 
+Jan 
+Feb 
+Mar 
+Apr 
+May 
+Jun 
+Jul 
+Aug 
+Sep 
+Oct 
+Nov 
+Dec 
+Code 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+O 
+N 
+D 
+
+
+=== PDF PAGE 4 ===
+ 
+ 
+BZT52C2V0 - BZT52C39
+ 
+ 
+Package Outline Dimensions 
+ 
+BZT52C2V0 - BZT52C39 
+Document number: DS18004 Rev. 32 - 2 
+4 of 4 
+www.diodes.com  
+June 2008
+© Diodes Incorporated 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Suggested Pad Layout 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+IMPORTANT NOTICE 
+Diodes Incorporated and its subsidiaries reserve the right to make modifications, enhancements, improvements, corrections or other changes 
+without further notice to any product herein. Diodes Incorporated does not assume any liability arising out of the application or use of any product 
+described herein; neither does it convey any license under its patent rights, nor the rights of others. The user of products in such applications shall 
+assume all risks of such use and will agree to hold Diodes Incorporated and all the companies whose products are represented on our website, 
+harmless against all damages. 
+LIFE SUPPORT 
+Diodes Incorporated products are not authorized for use as critical components in life support devices or systems without the expressed written 
+approval of the President of Diodes Incorporated. 
+K
+L
+M
+C
+H
+B
+A
+SOD-123 
+Dim 
+Min 
+Max 
+A 
+0.55 Typ 
+B 
+1.40 
+1.70 
+C 
+3.55 
+3.85 
+H 
+2.55 
+2.85 
+J 
+0.00 
+0.10 
+K 
+1.00 
+1.35 
+L 
+0.25 
+0.40 
+M 
+0.10 
+0.15 
+α 
+0 
+8° 
+All Dimensions in mm 
+Z
+X
+C
+G
+Y
+Dimensions
+Value (in mm) 
+Z 
+4.9 
+G 
+2.5 
+X 
+0.7 
+Y 
+1.2 
+C 
+3.7 

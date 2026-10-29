@@ -11,17 +11,18 @@ PASS RC0603FR-07100KL: symbol pins match pads ['1', '2']; STEP exists and has IS
 PASS RC0603FR-0733RL: symbol pins match pads ['1', '2']; STEP exists and has ISO-10303 header/trailer
 PASS B3B-XH-A: symbol pins match pads ['1', '2', '3']; STEP exists and has ISO-10303 header/trailer
 PASS B2B-XH-A: symbol pins match pads ['1', '2']; STEP exists and has ISO-10303 header/trailer
-PASS M20-9982046: symbol pins match pads ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '4', '40', '5', '6', '7', '8', '9']; STEP exists and has ISO-10303 header/trailer
+PASS M20-7832046: symbol pins match pads ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '2', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '4', '40', '5', '6', '7', '8', '9']; STEP exists and has ISO-10303 header/trailer
 PASS 0466001.NR: symbol pins match pads ['1', '2']; STEP exists and has ISO-10303 header/trailer
 PASS AO3401A: symbol pins match pads ['1', '2', '3']; STEP exists and has ISO-10303 header/trailer
 PASS BZT52C6V8-13-F: symbol pins match pads ['1', '2']; STEP exists and has ISO-10303 header/trailer
 PASS 74AHC30PW,118: symbol pins match pads ['1', '10', '11', '12', '13', '14', '2', '3', '4', '5', '6', '7', '8', '9']; STEP exists and has ISO-10303 header/trailer
 PASS 74LVC32APW,118: symbol pins match pads ['1', '10', '11', '12', '13', '14', '2', '3', '4', '5', '6', '7', '8', '9']; STEP exists and has ISO-10303 header/trailer
 PASS 74LVC04AT14-13: symbol pins match pads ['1', '10', '11', '12', '13', '14', '2', '3', '4', '5', '6', '7', '8', '9']; STEP exists and has ISO-10303 header/trailer
+PASS M20-9990246: symbol pins match pads ['1', '2']; STEP exists and has ISO-10303 header/trailer
 PASS manufacturer MCP251863 pin directions: TXD23 input; RXD28 output
 PASS manufacturer AO3401A pin identities: {'1': 'G', '2': 'S', '3': 'D'}
 PASS manufacturer BZT52C6V8-13-F pin identities: {'1': 'K', '2': 'A'}
 PASS standard C/R reference prefixes on passive aliases
 PASS SHA-256 inventory
-KiCad footprint reader: 9.0.0-rc3
+KiCad footprint reader: 10.0.7
 These checks validate file loading and pin-number coverage, not electrical correctness or manufacturer mechanical tolerances.

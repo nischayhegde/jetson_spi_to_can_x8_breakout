@@ -1,0 +1,67 @@
+[
+  {
+    "file": "MCP251863_RevB.pdf",
+    "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-External-CAN-FD-Controller-with-Integrated-Transceiver-DS20006624.pdf",
+    "sha256": "a5fe2b243469f8426ec129a85b97e610a287cdc803b02657683adc7e602711e8"
+  },
+  {
+    "file": "MCP251863_ErrataB.pdf",
+    "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/Errata/MCP251863-Silicon-Errata-and-Data-Sheet-Clarification-DS80000984.pdf",
+    "sha256": "c9e89296420d26ab6a8e3cb4052f0b1472591fae091df06c834d0a6680179503"
+  },
+  {
+    "file": "Jetson_carrier_v1_3.pdf",
+    "url": "https://developer.nvidia.com/downloads/assets/embedded/secure/jetson/orin_nano/docs/jetson_orin_nano_devkit_carrier_board_specification_sp.pdf",
+    "sha256": "4a0f7ba948bce4881e176f0f8636ef3dbd40e3df9dd33134e6a7433359d18c02"
+  },
+  {
+    "file": "TXB0108.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/txb0108.pdf",
+    "sha256": "8f8720b78129d8b4f2ba45ec53cfa16cb511185019ae24eb25253422cf650556"
+  },
+  {
+    "file": "74LVC32A_Rev11.pdf",
+    "url": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "74AHC30_Rev8.pdf",
+    "url": "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT30.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "mcp251xfd-core.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-core.c",
+    "sha256": "ebb111d6d551fab950e51b28ab501ef28aa39be0f6f27d4596fd4a9356a84aeb"
+  },
+  {
+    "file": "mcp251xfd-rx.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-rx.c",
+    "sha256": "77e26ecf18988824cc61eecae1e5847fef463c4cacbc9514c696ab23c9010c9c"
+  },
+  {
+    "file": "mcp251xfd-tx.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-tx.c",
+    "sha256": "e614befa6621f3f03077f60c342ef243596875ade46ddded4c5ee0887ac60cf2"
+  },
+  {
+    "file": "mcp251xfd-regmap.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/drivers/net/can/spi/mcp251xfd/mcp251xfd-regmap.c",
+    "sha256": "fa7019906eae493712acdc96823a031abb068022ab3aae45f71418cda66a48b1"
+  },
+  {
+    "file": "spi-mux.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/drivers/spi/spi-mux.c",
+    "sha256": "f2ff0f3346dc0497f041d7bc427867cf5d628fdd011b33ac094b66bfec1ba46d"
+  },
+  {
+    "file": "spi-tegra114.c",
+    "url": "https://raw.githubusercontent.com/torvalds/linux/master/drivers/spi/spi-tegra114.c",
+    "sha256": "c9cdb35ff8dec4deb8c560e242ee8254fb8c802daaf4edb3defcadda469f8562"
+  },
+  {
+    "file": "RobStride04_Manual.pdf",
+    "url": "https://www.robstride.com/assets/product_manual_robStride04-37549d59.pdf",
+    "sha256": "37549d590746fdc46ee5faaff1d7b69f0a53be15322ff4caf3bd3f53dae3b53c"
+  }
+]

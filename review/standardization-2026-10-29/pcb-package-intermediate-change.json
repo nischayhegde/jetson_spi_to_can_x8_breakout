@@ -1,0 +1,39 @@
+{
+  "r26": {
+    "1": {
+      "before_mm": [
+        86.425,
+        118.7
+      ],
+      "after_mm": [
+        85.7875,
+        118.7
+      ],
+      "net": "Net-(J10-Pin_1)"
+    },
+    "2": {
+      "before_mm": [
+        88.075,
+        118.7
+      ],
+      "after_mm": [
+        88.7125,
+        118.7
+      ],
+      "net": "Net-(J10-Pin_2)"
+    }
+  },
+  "r26_added_track_uuids": [
+    "1bfda882-0000-4a4a-ae20-b981c99904d2",
+    "e5f16799-8f5f-4c05-8311-0b4f23f2502a"
+  ],
+  "r26_footprint": "BreakoutBoard:R_1206_3216Metric",
+  "renamed_capacitors": 28,
+  "footprints": 145,
+  "board_size_mm": [
+    81,
+    80
+  ],
+  "metadata_packages": 120,
+  "stage": "intermediate_package_swap_before_local_reroute"
+}

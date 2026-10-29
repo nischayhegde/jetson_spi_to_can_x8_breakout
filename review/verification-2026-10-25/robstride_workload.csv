@@ -1,0 +1,10 @@
+motors_on_one_CAN_bus,command_and_feedback_rate_each_hz,frames_per_second,CAN_utilization_before_stuffing,CAN_utilization_max_stuff_bound
+2,250,1000,0.131,0.16
+2,500,2000,0.262,0.32
+2,1000,4000,0.524,0.64
+3,250,1500,0.1965,0.24
+3,500,3000,0.393,0.48
+3,1000,6000,0.786,0.96
+4,250,2000,0.262,0.32
+4,500,4000,0.524,0.64
+4,1000,8000,1.048,1.28

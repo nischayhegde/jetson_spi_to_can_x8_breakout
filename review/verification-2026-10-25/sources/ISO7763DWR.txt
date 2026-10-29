@@ -1,0 +1,5062 @@
+
+=== PDF PAGE 1 ===
+ISO776x High-speed, robust EMC, reinforced six-channel digital isolators
+1 Features
+•
+100 Mbps data rate
+•
+Robust isolation barrier:
+–
+>30-Year projected lifetime
+–
+Up to 5000 VRMS isolation rating
+–
+Up to 12.8 kV surge capability
+–
+±100 kV/μs Typical CMTI
+•
+Wide supply range: 2.25 V to 5.5 V
+•
+2.25-V to 5.5-V Level translation
+•
+Default output high (ISO776x) and low (ISO776xF) 
+Options
+•
+Wide temperature range: –55°C to +125°C
+•
+Low power consumption, typical 1.4 mA per 
+channel at 1 Mbps
+•
+Low propagation delay: 11 ns typical at 5 V
+•
+Robust Electromagnetic Compatibility (EMC):
+–
+System-level ESD, EFT, and surge immunity
+–
+±8 kV IEC 61000-4-2 Contact discharge 
+protection across isolation barrier
+–
+Low emissions
+•
+Wide-SOIC (DW-16) and SSOP (DBQ-16) 
+package options
+•
+Automotive version available: ISO776x-Q1
+•
+Safety-related certifications:
+–
+Reinforced insulation per DIN EN IEC 60747-17 
+(VDE 0884-17)
+–
+UL 1577 component recognition program
+–
+CSA Certification per IEC 62368-1 and IEC 
+60601-1
+–
+CQC Certification per GB4943.1
+–
+TUV Certification according to EN 62368-1 and 
+EN 61010-1
+2 Applications
+•
+Industrial automation
+•
+Motor control
+•
+Power supplies
+•
+Solar inverters
+•
+Medical equipment
+3 Description
+The ISO776x devices are high-performance, six-
+channel 
+digital 
+isolators 
+with 
+5000-VRMS 
+(DW 
+package) and 3000-VRMS (DBQ package) isolation 
+ratings per UL 1577. This family of devices is also 
+certified according to VDE, CSA, TUV and CQC.
+The ISO776x family of devices provides high-
+electromagnetic immunity and low emissions at 
+low-power consumption, while isolating CMOS or 
+LVCMOS digital I/Os. Each isolation channel has 
+a logic-input and logic-output buffer separated by 
+a double capacitive silicon dioxide (SiO2) insulation 
+barrier. The ISO776x family of devices is available 
+in all possible pin configurations such that all six 
+channels are in the same direction, or one, two, 
+or three channels are in reverse direction while the 
+remaining channels are in forward direction. If the 
+input power or signal is lost, the default output is high 
+for devices without suffix F and low for devices with 
+suffix F. See the Device Functional Modes section for 
+further details.
+Used in conjunction with isolated power supplies, 
+this family of devices helps prevent noise currents 
+on data buses, such as RS-485, RS-232, and 
+CAN , or other circuits from entering the local 
+ground and interfering with or damaging sensitive 
+circuitry. Through innovative chip design and layout 
+techniques, electromagnetic compatibility of the 
+ISO776x family of devices has been significantly 
+enhanced to ease system-level ESD, EFT, surge, and 
+emissions compliance. The ISO776x family of devices 
+is available in 16-pin SOIC and SSOP packages.
+Device Information
+PART NUMBER
+PACKAGE
+BODY SIZE (NOM)
+ISO7760
+ISO7761
+ISO7762
+ISO7763
+SOIC (16)
+10.30 mm × 7.50 mm
+SSOP (16)
+4.90 mm × 3.90 mm
+OUTx
+GNDO
+GNDI
+VCCO
+VCCI
+Series Isolation 
+Capacitors
+Copyright © 2016, Texas Instruments Incorporated
+INx
+VCCI=Input VCC, VCCO=Output VCC
+GNDI=Input ground, GNDO=Output ground
+Simplified Schematic
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+
+=== PDF PAGE 2 ===
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Pin Configuration and Functions...................................3
+5 Specifications.................................................................. 6
+5.1 Absolute Maximum Ratings........................................ 6
+5.2 ESD Ratings............................................................... 6
+5.3 Recommended Operating Conditions.........................7
+5.4 Thermal Information....................................................8
+5.5 Power Ratings.............................................................8
+5.6 Insulation Specifications............................................. 9
+5.7 Safety-Related Certifications.....................................11
+5.8 Safety Limiting Values...............................................11
+5.9 Electrical Characteristics—5-V Supply..................... 13
+5.10 Supply Current Characteristics—5-V Supply..........13
+5.11 Electrical Characteristics—3.3-V Supply.................15
+5.12 Supply Current Characteristics—3.3-V Supply.......15
+5.13 Electrical Characteristics—2.5-V Supply ............... 17
+5.14 Supply Current Characteristics—2.5-V Supply.......17
+5.15 Switching Characteristics—5-V Supply...................19
+5.16 Switching Characteristics—3.3-V Supply................20
+5.17 Switching Characteristics—2.5-V Supply................21
+5.18 Insulation Characteristics Curves........................... 22
+5.19 Typical Characteristics............................................23
+6 Parameter Measurement Information..........................26
+7 Detailed Description......................................................27
+7.1 Overview...................................................................27
+7.2 Functional Block Diagram.........................................27
+7.3 Feature Description...................................................28
+7.4 Device Functional Modes..........................................29
+8 Application and Implementation..................................30
+8.1 Application Information............................................. 30
+8.2 Typical Application.................................................... 30
+9 Power Supply Recommendations................................34
+10 Layout...........................................................................35
+10.1 Layout Guidelines................................................... 35
+10.2 Layout Example...................................................... 35
+11 Device and Documentation Support..........................36
+11.1 Documentation Support.......................................... 36
+11.2 Receiving Notification of Documentation Updates..36
+11.3 Community Resources............................................36
+11.4 Trademarks............................................................. 36
+12 Revision History.......................................................... 36
+13 Mechanical, Packaging, and Orderable 
+Information.................................................................... 37
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+2
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 3 ===
+4 Pin Configuration and Functions
+ISOLATION
+GND1
+GND2
+9
+8
+INF
+OUTF
+10
+7
+INE
+OUTE
+11
+6
+IND
+OUTD
+12
+5
+INC
+OUTC
+13
+4
+INB
+OUTB
+14
+3
+INA
+OUTA
+15
+2
+VCC1
+VCC2
+16
+1
+Figure 4-1. ISO7760 DW and DBQ Packages 16-Pin SOIC and SSOP Top View 
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+3
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 4 ===
+ISOLATION
+GND1
+GND2
+9
+8
+OUTF
+INF
+10
+7
+INE
+OUTE
+11
+6
+IND
+OUTD
+12
+5
+INC
+OUTC
+13
+4
+INB
+OUTB
+14
+3
+INA
+OUTA
+15
+2
+VCC1
+VCC2
+16
+1
+Figure 4-2. ISO7761 DW and DBQ Packages 16-Pin SOIC and SSOP Top View 
+ISOLATION
+GND1
+GND2
+9
+8
+OUTF
+INF
+10
+7
+OUTE
+INE
+11
+6
+IND
+OUTD
+12
+5
+INC
+OUTC
+13
+4
+INB
+OUTB
+14
+3
+INA
+OUTA
+15
+2
+VCC1
+VCC2
+16
+1
+Figure 4-3. ISO7762 DW and DBQ Packages 16-Pin SOIC and SSOP Top View 
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+4
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 5 ===
+ISOLATION
+GND1
+GND2
+9
+8
+OUTF
+INF
+10
+7
+OUTE
+INE
+11
+6
+OUTD
+IND
+12
+5
+INC
+OUTC
+13
+4
+INB
+OUTB
+14
+3
+INA
+OUTA
+15
+2
+VCC1
+VCC2
+16
+1
+Figure 4-4. ISO7763 DW and DBQ Packages 16-Pin SOIC and SSOP Top View 
+Table 4-1. Pin Functions
+PIN
+I/O
+DESCRIPTION
+NAME
+NO.
+ISO7760
+ISO7761
+ISO7762
+ISO7763
+GND1
+8
+8
+8
+8
+—
+Ground connection for VCC1
+GND2
+9
+9
+9
+9
+—
+Ground connection for VCC2
+INA
+2
+2
+2
+2
+I
+Input, channel A
+INB
+3
+3
+3
+3
+I
+Input, channel B
+INC
+4
+4
+4
+4
+I
+Input, channel C
+IND
+5
+5
+5
+12
+I
+Input, channel D
+INE
+6
+6
+11
+11
+I
+Input, channel E
+INF
+7
+10
+10
+10
+I
+Input, channel F
+OUTA
+15
+15
+15
+15
+O
+Output, channel A
+OUTB
+14
+14
+14
+14
+O
+Output, channel B
+OUTC
+13
+13
+13
+13
+O
+Output, channel C
+OUTD
+12
+12
+12
+5
+O
+Output, channel D
+OUTE
+11
+11
+6
+6
+O
+Output, channel E
+OUTF
+10
+7
+7
+7
+O
+Output, channel F
+VCC1
+1
+1
+1
+1
+—
+Power supply, side 1
+VCC2
+16
+16
+16
+16
+—
+Power supply, side 2
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+5
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 6 ===
+5 Specifications
+5.1 Absolute Maximum Ratings
+See(1)
+MIN
+MAX
+UNIT
+VCC1, VCC2
+Supply voltage (2)
+-0.5
+6
+V
+V
+Voltage at INx, OUTx
+-0.5
+VCCX + 0.5 (3)
+V
+Io
+Output current
+-15
+15
+mA
+TJ
+Junction temperature
+150
+°C
+Tstg
+Storage temperature
+-65
+150
+°C
+(1)
+Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress 
+ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under 
+Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device 
+reliability.
+(2)
+All voltage values except differential I/O bus voltages are with respect to the local ground terminal (GND1 or GND2) and are peak 
+voltage values
+(3)
+Maximum voltage must not exceed 6 V.
+5.2 ESD Ratings
+(1) (2)
+VALUE
+UNIT
+V(ESD)
+Electrostatic discharge
+Human body model (HBM),per ANSI/
+ESDA/JEDEC JS-001, all pins (1)
+±6000
+V
+Charged device model (CDM),per JEDEC 
+specification JESD22-C101, all pins(2)
+±1500
+Contact discharge per IEC 61000-4-2; 
+Isolation barrier withstand test(3) (4)
+±8000
+V
+(1)
+JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2)
+JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+(3)
+IEC ESD strike is applied across the barrier with all pins on each side tied together creating a two-terminal device.
+(4)
+Testing is carried out in air or oil to determine the intrinsic contact discharge capability of the device.
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+6
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 7 ===
+5.3 Recommended Operating Conditions
+MIN
+NOM
+MAX
+UNIT
+VCC1, VCC2
+Supply Voltage
+2.25
+5.5
+V
+Vcc (UVLO+)
+UVLO threshold when supply voltage is rising
+2
+2.25
+V
+Vcc (UVLO-)
+UVLO threshold when supply voltage is falling
+1.7
+1.8
+V
+VHYS (UVLO)
+Supply voltage UVLO hysteresis
+100
+200
+mV
+IOH
+High level output current
+VCCO (1)  = 5 V
+-4
+mA
+VCCO = 3.3 V
+-2
+VCCO = 2.5 V
+-1
+IOL
+Low level output current
+VCCO = 5 V
+4
+mA
+VCCO = 3.3 V
+2
+VCCO = 2.5 V
+1
+VIH
+High level Input voltage
+0.7 x VCCI  (1)
+VCCI
+V
+VIL
+Low level Input voltage
+0
+0.3 x VCCI
+V
+DR(2)
+Data Rate
+0
+100
+Mbps
+TA
+Ambient temperature
+-55
+25
+125
+°C
+(1)
+VCCI = Input-side VCC; VCCO = Output-side VCC
+(2)
+100 Mbps is the maximum specified data rate, although higher data rates are possible.
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+7
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 8 ===
+5.4 Thermal Information
+THERMAL METRIC (1)
+ISO776x
+UNIT
+DW (SOIC)
+DBQ (SSOP)
+16 PINS
+16 PINS
+RθJA
+Junction-to-ambient thermal resistance
+60.3
+86.5
+°C/W
+RθJC(top)
+Junction-to-case (top) thermal resistance
+24.0
+26.9
+°C/W
+RθJB
+Junction-to-board thermal resistance
+29.3
+36.6
+°C/W
+ψJT
+Junction-to-top characterization parameter
+3.3
+1.7
+°C/W
+ψJB
+Junction-to-board characterization parameter
+28.7
+36.1
+°C/W
+RθJC(bot)
+Junction-to-case (bottom) thermal resistance
+n/a
+n/a
+°C/W
+(1)
+For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+report.
+5.5 Power Ratings
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+ISO7760
+PD
+Maximum power dissipation (both sides)
+VCC1 = VCC2 = 5.5 V, TJ = 150°C, CL = 
+15 pF, Input a 50-MHz 50% duty cycle 
+square wave
+314
+mW
+PD1
+Maximum power dissipation (side-1)
+55
+mW
+PD2
+Maximum power dissipation (side-2)
+259
+mW
+ISO7761
+PD
+Maximum power dissipation (both sides)
+VCC1 = VCC2 = 5.5 V, TJ = 150°C, CL = 
+15 pF, Input a 50-MHz 50% duty cycle 
+square wave
+314
+mW
+PD1
+Maximum power dissipation (side-1)
+88
+mW
+PD2
+Maximum power dissipation (side-2)
+226
+mW
+ISO7762
+PD
+Maximum power dissipation (both sides)
+VCC1 = VCC2 = 5.5 V, TJ = 150°C, CL = 
+15 pF, Input a 50-MHz 50% duty cycle 
+square wave
+314
+mW
+PD1
+Maximum power dissipation (side-1)
+122
+mW
+PD2
+Maximum power dissipation (side-2)
+192
+mW
+ISO7763
+PD
+Maximum power dissipation (both sides)
+VCC1 = VCC2 = 5.5 V, TJ = 150°C, CL = 
+15 pF, Input a 50-MHz 50% duty cycle 
+square wave
+ 314
+mW
+PD1
+Maximum power dissipation (side-1)
+157
+mW
+PD2
+Maximum power dissipation (side-2)
+157
+mW
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+8
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 9 ===
+5.6 Insulation Specifications
+PARAMETER
+TEST CONDITIONS
+VALUE
+UNIT
+DW-16
+DBQ-16
+CLR
+External clearance(1)
+Shortest terminal-to-terminal distance through air
+>8
+>3.7
+mm
+CPG
+External creepage(1)
+Shortest terminal-to-terminal distance across the package 
+surface
+>8
+>3.7
+mm
+DTI
+Distance through the insulation
+Minimum internal gap (internal clearance)
+>17
+>17
+μm
+CTI
+Comparative tracking index
+DIN EN 60112 (VDE 0303-11); IEC 60112; UL 746A
+>600
+>600
+V
+Material group
+According to IEC 60664-1
+I
+I
+Overvoltage category per IEC 60664-1
+Rated mains voltage ≤ 150 VRMS
+I-IV
+I-IV
+Rated mains voltage ≤ 300 VRMS    
+I-IV
+I-III
+Rated mains voltage ≤ 600 VRMS
+I-IV
+n/a
+Rated mains voltage ≤ 1000 VRMS
+I-III
+n/a
+DIN EN IEC 60747-17 (VDE 0884-17)(2)
+VIORM
+Maximum repetitive peak isolation 
+voltage
+AC voltage (bipolar)
+2121
+566
+VPK
+VIOWM
+Maximum working isolation voltage 
+AC voltage; Time dependent dielectric breakdown (TDDB) 
+test; See Figure 8-7
+1500
+400
+VRMS
+DC voltage
+2121
+566
+VDC
+VIOTM
+Maximum transient isolation voltage 
+VTEST = VIOTM,
+t = 60 s (qualification);
+VTEST = 1.2 x VIOTM,
+t= 1 s (100% production)
+ISO7760
+8000
+4242
+VPK
+ISO7761, 
+ISO7762, 
+ISO7763
+7071
+VIMP
+Maximum impulse voltage(3)
+Tested in air, 1.2/50-μs waveform per IEC 62368-1
+8000
+4000
+VPK
+VIOSM
+Maximum surge isolation voltage(4)
+VIOSM ≥ 1.3 x VIMP; Tested in oil (qualification test),
+1.2/50-μs waveform per IEC 62368-1
+12800
+10000
+VPK
+qpd
+Apparent charge(5)
+Method a, After Input-output safety test subgroup 2/3,
+Vini = VIOTM, tini = 60 s;
+Vpd(m) = 1.2 x VIORM, tm = 10 s
+≤5
+≤5
+pC
+Method a, After environmental tests subgroup 1,
+Vini = VIOTM, tini = 60 s;
+Vpd(m) = 1.6 x VIORM, tm = 10 s
+≤5
+≤5
+Method b: At routine test (100% production) and 
+preconditioning (type test);
+Vini = 1.2 x VIOTM, tini = 1 s;
+Vpd(m) = 1.875 x VIORM, tm = 1 s (method b1) or 
+Vpd(m) = Vini, tm = tini (method b2)
+≤5
+≤5
+CIO
+Barrier capacitance, input to output(6)
+VIO = 0.4 x sin (2πft), f = 1 MHz
+~1.1
+~0.9
+pF
+RIO
+Isolation resistance(6)
+VIO = 500 V, TA = 25°C
+>1012
+>1012
+Ω
+VIO = 500 V, 100°C ≤ TA ≤ 125°C
+>1011
+>1011
+VIO = 500 V, TS = 150°C
+>109
+>109
+Pollution degree
+2
+2
+Climatic category
+55/125/
+21
+55/125/
+21
+UL 1577
+VISO
+Maximum withstanding isolation voltage
+VTEST = VISO , t = 60 s (qualification),
+VTEST = 1.2 x VISO , t = 1 s (100% production)
+5000
+3000
+VRMS
+(1)
+Creepage and clearance requirements should be applied according to the specific equipment isolation standards of an application. 
+Care should be taken to maintain the creepage and clearance distance of a board design to ensure that the mounting pads of 
+the isolator on the printed-circuit board do not reduce this distance. Creepage and clearance on a printed-circuit board become 
+equal in certain cases. Techniques such as inserting grooves and/or ribs on a printed-circuit board are used to help increase these 
+specifications.
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+9
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 10 ===
+(2)
+This coupler is suitable for safe electrical insulation only within the safety ratings. Compliance with the safety ratings shall be ensured 
+by means of suitable protective circuits.
+(3)
+Testing is carried out in air to determine the surge immunity of the package
+(4)
+Testing is carried out in oil to determine the intrinsic surge immunity of the isolation barrier.
+(5)
+Apparent charge is electrical discharge caused by a partial discharge (pd).
+(6)
+All pins on each side of the barrier tied together creating a two-terminal device.
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+10
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 11 ===
+5.7 Safety-Related Certifications
+VDE
+CSA
+UL
+CQC
+TUV
+Certified according to
+DIN EN IEC 60747-17 
+(VDE 0884-17)
+Certified according to IEC 
+62368-1 and IEC 60601-1
+Recognized under 
+UL 1577 Component 
+Recognition Program
+Certified according to GB
+4943.1
+Certified according to
+EN 61010-1 and EN 
+62368-1
+Reinforced Insulation;
+Maximum transient
+isolation voltage, 8000
+VPK (ISO7760 in DW-
+16), 7071 VPK
+(ISO7761, ISO7762,
+ISO7763 in DW-16)
+and 4242 VPK (DBQ-
+16);
+Maximum repetitive
+peak isolation voltage,
+2121 VPK (DW-16) and
+566 VPK (DBQ-16);
+Maximum surge
+isolation voltage, 12800
+VPK (DW-16) and 10000
+VPK (DBQ-16)
+Reinforced insulation per
+CSA 62368-1 and IEC 
+62368-1 800 VRMS 
+(DW-16) and 370
+VRMS (DBQ-16) maximum
+working voltage (pollution
+degree 2, material group 
+I);
+DW-16: 2 MOPP (Means 
+of
+Patient Protection) per 
+CSA 60601-1 and IEC 
+60601-1, 250 VRMS 
+maximum
+working voltage
+DW-16: Single protection,
+5000 VRMS ;
+DBQ-16: Single protection,
+3000 VRMS
+DW-16: Reinforced
+Insulation, Altitude ≤ 5000
+m, Tropical Climate, 700
+VRMS maximum working
+voltage;
+DBQ-16: Basic Insulation,
+Altitude ≤ 5000 m, Tropical
+Climate, 400 VRMS
+maximum working voltage
+5000 VRMS Reinforced
+insulation per EN 
+61010-1 up to
+working voltage of 600
+VRMS (DW-16) and 300
+VRMS (DBQ-16)
+5000 VRMS Reinforced
+insulation per EN 
+62368-1 up to
+working voltage of 600
+VRMS (DW-16) and 370
+VRMS (DBQ-16)
+Certificate number:
+40040142
+Master contract number:
+220991
+File number: E181974
+Certificate numbers:
+CQC15001121716 (DW)
+CQC18001199097 (DBQ)
+Client ID number: 77311
+5.8 Safety Limiting Values
+Safety limiting(1) intends to minimize potential damage to the isolation barrier upon failure of input or output circuitry.
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+DW-16 PACKAGE
+IS
+Safety input, output, or supply current (1)
+RθJA = 60.3°C/W, VI = 5.5 V, TJ = 150°C, 
+TA = 25°C, see Figure 5-1
+377
+mA
+RθJA = 60.3°C/W, VI = 3.6 V, TJ = 150°C, 
+TA = 25°C, see Figure 5-1
+576
+RθJA = 60.3°C/W, VI = 2.75 V, TJ = 150°C, 
+TA = 25°C, see Figure 5-1
+754
+PS
+Safety input, output, or total power (1)
+RθJA = 60.3°C/W, TJ = 150°C, TA = 25°C, 
+see Figure 5-3
+2073
+mW
+TS
+Maximum safety temperature (1)
+150
+°C
+DBQ-16 PACKAGE 
+IS
+Safety input, output, or supply current (1)
+RθJA = 86.5°C/W, VI = 5.5 V, TJ = 150°C, 
+TA = 25°C, see Figure 5-2
+263
+mA
+RθJA = 86.5°C/W, VI = 3.6 V, TJ = 150°C, 
+TA = 25°C,  see Figure 5-2
+401
+RθJA = 86.5°C/W, VI = 2.75 V, TJ = 150°C, 
+TA = 25°C, see Figure 5-2
+525
+PS
+Safety input, output, or total power (1)
+RθJA = 86.5°C/W, TJ = 150°C, TA = 25°C, 
+see Figure 5-4
+1445
+mW
+TS
+Maximum safety temperature (1)
+150
+°C
+(1)
+The maximum safety temperature, TS, has the same value as the maximum junction temperature, TJ, specified for the device. The 
+IS and PS parameters represent the safety current and safety power respectively. The maximum limits of IS and PS should not be 
+exceeded. These limits vary with the ambient temperature, TA. 
+The junction-to-air thermal resistance, RθJA, in the table is that of a device installed on a high-K test board for leaded surface-mount 
+packages. Use these equations to calculate the value for each parameter:
+TJ = TA + RθJA × P, where P is the power dissipated in the device.
+TJ(max) = TS = TA + RθJA × PS, where TJ(max) is the maximum allowed junction temperature.
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+11
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 12 ===
+PS = IS × VI, where VI is the maximum input voltage.
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+12
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 13 ===
+5.9 Electrical Characteristics—5-V Supply
+VCC1 = VCC2 = 5 V ± 10% (over recommended operating conditions unless otherwise noted)
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+VOH
+High-level output voltage
+IOH = -4 mA; See Figure 6-1
+VCCO (1) - 0.4
+4.8
+V
+VOL
+Low-level output voltage
+IOL = 4 mA; See Figure 6-1
+0.2
+0.4
+V
+VIT+(IN)
+Rising input switching threshold
+0.6 x VCCI
+0.7 x VCCI
+V
+VIT-(IN)
+Falling input switching threshold
+0.3 x VCCI
+0.4 x VCCI
+V
+VI(HYS)
+Input threshold voltage hysteresis
+0.1 x VCCI
+0.2 x VCCI
+V
+IIH
+High-level input current
+VIH = VCCI (1) at INx
+10
+µA
+IIL
+Low-level input current
+VIL = 0 V at INx
+-10
+µA
+CMTI
+Common mode transient immunity
+VI = VCCI or 0 V, VCM = 1200 V; 
+See Figure 6-3
+85
+100
+kV/μs
+CI
+Input Capacitance (2)
+VI = VCC/ 2 + 0.4 × sin(2πft), f = 
+1 MHz, VCC = 5 V 
+2
+pF
+(1)
+VCCI = Input-side VCC; VCCO = Output-side VCC
+(2)
+Measured from input pin to same side ground.
+5.10 Supply Current Characteristics—5-V Supply
+VCC1 = VCC2 = 5 V ±10% (over recommended operating conditions unless otherwise noted).
+PARAMETER
+TEST CONDITIONS
+SUPPLY 
+CURRENT
+MIN
+TYP
+MAX
+UNIT
+ISO7760
+Supply current - DC signal
+VI = VCC1 (ISO7760);
+VI = 0 V (ISO7760 with F suffix)
+ICC1
+1.6
+2.9
+mA
+ICC2
+3
+5.3
+VI = 0 V (ISO7760);
+VI = VCC1 (ISO7760 with F suffix)
+ICC1
+8
+11.3
+ICC2
+3.3
+5.7
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+5
+6.5
+ICC2
+3.5
+5.9
+10 Mbps
+ICC1
+5.2
+6.7
+ICC2
+6.4
+9.7
+100 Mbps
+ICC1
+7
+9.2
+ICC2
+35
+47
+ISO7761
+Supply current - DC signal
+VI = VCCI (1)(ISO7761);
+VI = 0 V (ISO7761 with F suffix)
+ICC1
+1.9
+3.5
+mA
+ICC2
+2.9
+5.4
+VI = 0 V (ISO7761);
+VI = VCCI (ISO7761 with F suffix)
+ICC1
+7.3
+10.6
+ICC2
+4.2
+6.9
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+4.7
+6.6
+ICC2
+3.8
+6.5
+10 Mbps
+ICC1
+5.3
+8
+ICC2
+6.3
+9.6
+100 Mbps
+ 
+ICC1
+11.5
+15.6
+ICC2
+30.5
+40.3
+ISO7762
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+13
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 14 ===
+VCC1 = VCC2 = 5 V ±10% (over recommended operating conditions unless otherwise noted).
+PARAMETER
+TEST CONDITIONS
+SUPPLY 
+CURRENT
+MIN
+TYP
+MAX
+UNIT
+Supply current - DC signal
+VI = VCCI (ISO7762);
+VI = 0 V (ISO7762 with F suffix)
+ICC1
+2.1
+4.1
+mA
+ICC2
+2.6
+4.9
+VI = 0 V (ISO7762);
+VI = VCCI (ISO7762 with F suffix)
+ICC1
+6.5
+9.3
+ICC2
+5
+7.6
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+4.5
+6.7
+ICC2
+4
+6.5
+10 Mbps
+ICC1
+5.6
+8
+ICC2
+6
+8.9
+100 Mbps
+ 
+ICC1
+16.5
+21.3
+ICC2
+25.7
+34
+ISO7763
+Supply current - DC signal
+VI = VCCI (ISO7763);
+VI = 0 V (ISO7763 with F suffix)
+ICC1, ICC2
+2.4
+4.7
+mA
+VI = 0 V (ISO7763);
+VI = VCCI (ISO7763 with F suffix)
+ICC1, ICC2
+5.7
+8.6
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1, ICC2
+4.2
+6.8
+10 Mbps
+ICC1, ICC2
+5.8
+8.7
+100 Mbps
+ICC1, ICC2
+21
+28.4
+(1)
+VCCI = Input-side VCC
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+14
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 15 ===
+5.11 Electrical Characteristics—3.3-V Supply
+VCC1 = VCC2 = 3.3 V ±10% (over recommended operating conditions unless otherwise noted).
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+VOH
+High-level output voltage
+IOH = -2mA ; See Figure 6-1
+VCCO (1) - 0.3
+3.2
+V
+VOL
+Low-level output voltage
+IOL = 2mA ; See Figure 6-1
+0.1
+0.3
+V
+VIT+(IN)
+Rising input switching threshold
+0.6 x VCCI
+0.7 x VCCI (1)
+V
+VIT-(IN)
+Falling input switching threshold
+0.3 x VCCI
+0.4 x VCCI
+V
+VI(HYS)
+Input threshold voltage 
+hysteresis
+0.1 x VCCI
+0.2 x VCCI
+V
+IIH
+High-level input current
+VIH = VCCI (1) at INx
+10
+µA
+IIL
+Low-level input current
+VIL = 0 V at INx
+-10
+µA
+CMTI
+Common mode transient 
+immunity
+VI = VCC or 0 V, VCM = 1200 
+V; See Figure 6-3
+85
+100
+kV/us
+(1)
+VCCI = Input-side VCC; VCCO = Output-side VCC
+5.12 Supply Current Characteristics—3.3-V Supply
+VCC1 = VCC2 = 3.3 V ±10% (over recommended operating conditions unless otherwise noted).
+PARAMETER
+TEST CONDITIONS
+SUPPLY 
+CURRENT
+MIN
+TYP
+MAX
+UNIT
+ISO7760
+Supply current - DC signal
+VI = VCC1 (ISO7760);
+VI = 0 V (ISO7760 with F suffix)
+ICC1
+1.6
+2.9
+mA
+ICC2
+3
+5.3
+VI = 0 V (ISO7760);
+VI = VCC1 (ISO7760 with F suffix)
+ICC1
+8
+11.4
+ICC2
+3.3
+5.7
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+4.9
+6.4
+ICC2
+3.4
+5.7
+10 Mbps
+ICC1
+5
+6.6
+ICC2
+5.5
+8.5
+100 Mbps
+ 
+ICC1
+6.3
+8.1
+ICC2
+26
+35
+ISO7761
+Supply current - DC signal
+VI = VCCI (1)(ISO7761);
+VI = 0 V (ISO7761 with F suffix)
+ICC1
+1.8
+3.5
+mA
+ICC2
+2.9
+5.3
+VI = 0 V (ISO7761);
+VI = VCCI (ISO7761 with F suffix)
+ICC1
+7.2
+10.3
+ICC2
+4.2
+6.9
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+4.6
+6.5
+ICC2
+3.7
+6.3
+10 Mbps
+ICC1
+5.1
+7.5
+ICC2
+5.5
+8.6
+100 Mbps
+ 
+ICC1
+9.4
+12.7
+ICC2
+22.8
+30.5
+ISO7762
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+15
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 16 ===
+VCC1 = VCC2 = 3.3 V ±10% (over recommended operating conditions unless otherwise noted).
+PARAMETER
+TEST CONDITIONS
+SUPPLY 
+CURRENT
+MIN
+TYP
+MAX
+UNIT
+Supply current - DC signal
+VI = VCCI (ISO7762);
+VI = 0 V (ISO7762 with F suffix)
+ICC1
+2.1
+4
+mA
+ICC2
+2.5
+4.8
+VI = 0 V (ISO7762);
+VI = VCCI (ISO7762 with F suffix)
+ICC1
+6.5
+9.4
+ICC2
+5
+7.5
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+4.4
+6.6
+ICC2
+3.9
+6.3
+10 Mbps
+ICC1
+5.2
+7.5
+ICC2
+5.4
+8.1
+100 Mbps
+ 
+ICC1
+12.9
+16.9
+ICC2
+19.5
+26
+ISO7763
+Supply current - DC signal
+VI = VCCI (ISO7763);
+VI = 0 V (ISO7763 with F suffix)
+ICC1, ICC2
+2.4
+4.6
+mA
+VI = 0 V (ISO7763);
+VI = VCCI (ISO7763 with F suffix)
+ICC1, ICC2
+5.7
+8.4
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1, ICC2
+4.2
+6.6
+10 Mbps
+ICC1, ICC2
+5.2
+8.1
+100 Mbps
+ICC1, ICC2
+16
+21.9
+(1)
+VCCI = Input-side VCC
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+16
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 17 ===
+5.13 Electrical Characteristics—2.5-V Supply 
+VCC1 = VCC2 = 2.5 V ±10% (over recommended operating conditions unless otherwise noted).
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+VOH
+High-level output voltage
+IOH = -1mA ; See Figure 6-1
+VCCO (1) - 0.2
+2.45
+V
+VOL
+Low-level output voltage
+IOL = 1mA ; See Figure 6-1
+0.05
+0.2
+V
+VIT+(IN)
+Rising input switching threshold
+0.6 x VCCI
+0.7 x VCCI (1)
+V
+VIT-(IN)
+Falling input switching threshold
+0.3 x VCCI
+0.4 x VCCI
+V
+VI(HYS)
+Input threshold voltage 
+hysteresis
+0.1 x VCCI
+0.2 x VCCI
+V
+IIH
+High-level input current
+VIH = VCCI (1) at INx
+10
+µA
+IIL
+Low-level input current
+VIL = 0 V at INx
+-10
+µA
+CMTI
+Common mode transient 
+immunity
+VI = VCC or 0 V, VCM = 1200 
+V; See Figure 6-3
+85
+100
+kV/us
+(1)
+VCCI = Input-side VCC; VCCO = Output-side VCC
+5.14 Supply Current Characteristics—2.5-V Supply
+VCC1 = VCC2 = 2.5 V ±10% (over recommended operating conditions unless otherwise noted).
+PARAMETER
+TEST CONDITIONS
+SUPPLY 
+CURRENT
+MIN
+TYP
+MAX
+UNIT
+ISO7760
+Supply current - DC signal
+VI = VCC1 (ISO7760);
+VI = 0 V (ISO7760 with F suffix)
+ICC1
+1.6
+2.9
+mA
+ICC2
+3
+5.2
+VI = 0 V (ISO7760);
+VI = VCC1 (ISO7760 with F suffix)
+ICC1
+8
+11.6
+ICC2
+3.3
+5.7
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+4.9
+6.4
+ICC2
+3.4
+5.7
+10 Mbps
+ICC1
+5
+6.5
+ICC2
+4.9
+7.7
+100 Mbps
+ 
+ICC1
+6
+7.7
+ICC2
+20.3
+27.9
+ISO7761
+Supply current - DC signal
+VI = VCCI (1) (ISO7761);
+VI = 0 V (ISO7761 with F suffix)
+ICC1
+1.8
+3.4
+mA
+ICC2
+2.9
+5.3
+VI = 0 V (ISO7761);
+VI = VCCI (ISO7761 with F suffix)
+ICC1
+7.2
+10.3
+ICC2
+4.2
+6.8
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+4.6
+6.5
+ICC2
+3.7
+6.3
+10 Mbps
+ICC1
+4.9
+7.2
+ICC2
+5
+7.9
+100 Mbps
+ 
+ICC1
+8.3
+11.2
+ICC2
+18.1
+24.6
+ISO7762
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+17
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 18 ===
+VCC1 = VCC2 = 2.5 V ±10% (over recommended operating conditions unless otherwise noted).
+PARAMETER
+TEST CONDITIONS
+SUPPLY 
+CURRENT
+MIN
+TYP
+MAX
+UNIT
+Supply current - DC signal
+VI = VCCI (ISO7762);
+VI = 0 V (ISO7762 with F suffix)
+ICC1
+2.1
+4
+mA
+ICC2
+2.6
+4.8
+VI = 0 V (ISO7762);
+VI = VCCI (ISO7762 with F suffix)
+ICC1
+6.5
+9.6
+ICC2
+4.9
+7.4
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1
+4.4
+6.5
+ICC2
+3.9
+6.3
+10 Mbps
+ICC1
+5
+7.2
+ICC2
+5
+7.6
+100 Mbps
+ 
+ICC1
+10.9
+14.4
+ICC2
+15.6
+21.3
+ISO7763
+Supply current - DC signal
+VI = VCCI (ISO7763);
+VI = 0 V (ISO7763 with F suffix)
+ICC1, ICC2
+2.3
+4.6
+mA
+VI = 0 V (ISO7763);
+VI = VCCI (ISO7763 with F suffix)
+ICC1, ICC2
+5.7
+8.4
+Supply current - AC signal
+All channels switching with square 
+wave clock input; CL = 15 pF
+1 Mbps
+ICC1, ICC2
+4.1
+6.6
+10 Mbps
+ICC1, ICC2
+4.9
+7.6
+100 Mbps
+ICC1, ICC2
+13
+18.1
+(1)
+VCCI = Input-side VCC
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+18
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 19 ===
+5.15 Switching Characteristics—5-V Supply
+VCC1 = VCC2 = 5 V ±10% (over recommended operating conditions unless otherwise noted)
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+ISO776x
+tPLH, tPHL
+Propagation delay time
+See Figure 6-1
+6
+11
+17
+ns
+PWD
+Pulse width distortion(1) |tPHL – tPLH|
+0.4
+5.9
+ns
+tsk(o)
+Channel-to-channel output skew time(2)
+Same-direction channels
+4
+ns
+tsk(pp)
+Part-to-part skew time(3)
+4.5
+ns
+tr
+Output signal rise time
+See Figure 6-1
+1.1
+3.9
+ns
+tf
+Output signal fall time
+1.4
+3.9
+ns
+tDO
+Default output delay time from input power loss
+Measured from the time VCC goes 
+below 1.7V. See Figure 6-2
+0.2
+0.3
+μs
+tie
+Time interval error
+216 – 1 PRBS data at 100 Mbps
+1.3
+ns
+(1)
+Also known as pulse skew.
+(2)
+tsk(o) is the skew between outputs of a single device with all driving inputs connected together and the outputs switching in the same 
+direction while driving identical loads.
+(3)
+tsk(pp) is the magnitude of the difference in propagation delay times between any terminals of different devices switching in the same 
+direction while operating at identical supply voltages, temperature, input signals and loads.
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+19
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 20 ===
+5.16 Switching Characteristics—3.3-V Supply
+VCC1 = VCC2 = 3.3 V ±10% (over recommended operating conditions unless otherwise noted)
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+ISO776x
+tPLH, tPHL
+Propagation delay time
+See Figure 6-1
+6
+12
+18.5
+ns
+PWD
+Pulse width distortion(1) |tPHL – tPLH|
+0.5
+5.9
+ns
+tsk(o)
+Channel-to-channel output skew time(2)
+Same-direction channels
+4.4
+ns
+tsk(pp)
+Part-to-part skew time(3)
+5
+ns
+tr
+Output signal rise time
+See Figure 6-1
+1
+3
+ns
+tf
+Output signal fall time
+1
+3
+ns
+tDO
+Default output delay time from input power loss
+Measured from the time VCC goes 
+below 1.7V. See Figure 6-2
+0.2
+0.3
+μs
+tie
+Time interval error
+216 – 1 PRBS data at 100 Mbps
+1.3
+ns
+(1)
+Also known as pulse skew.
+(2)
+tsk(o) is the skew between outputs of a single device with all driving inputs connected together and the outputs switching in the same 
+direction while driving identical loads.
+(3)
+tsk(pp) is the magnitude of the difference in propagation delay times between any terminals of different devices switching in the same 
+direction while operating at identical supply voltages, temperature, input signals and loads.
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+20
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 21 ===
+5.17 Switching Characteristics—2.5-V Supply
+VCC1 = VCC2 = 2.5 V ±10% (over recommended operating conditions unless otherwise noted)
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+ISO776x
+tPLH, tPHL
+Propagation delay time
+See Figure 6-1
+7.5
+13
+21
+ns
+PWD
+Pulse width distortion(1) |tPHL – tPLH|
+0.6
+5.9
+ns
+tsk(o)
+Channel-to-channel output skew time(2)
+Same-direction channels
+4.4
+ns
+tsk(pp)
+Part-to-part skew time(3)
+5.3
+ns
+tr
+Output signal rise time
+See Figure 6-1
+1
+3.5
+ns
+tf
+Output signal fall time
+1
+3.5
+ns
+tDO
+Default output delay time from input power loss
+Measured from the time VCC goes 
+below 1.7V. See Figure 6-2
+0.1
+0.3
+μs
+tie
+Time interval error
+216 – 1 PRBS data at 100 Mbps
+1.3
+ns
+(1)
+Also known as pulse skew.
+(2)
+tsk(o) is the skew between outputs of a single device with all driving inputs connected together and the outputs switching in the same 
+direction while driving identical loads.
+(3)
+tsk(pp) is the magnitude of the difference in propagation delay times between any terminals of different devices switching in the same 
+direction while operating at identical supply voltages, temperature, input signals and loads.
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+21
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 22 ===
+5.18 Insulation Characteristics Curves
+Ambient Temperature (qC)
+Safety Liming Current (mA)
+0
+50
+100
+150
+200
+0
+100
+200
+300
+400
+500
+600
+700
+800
+D008
+VCC1 = VCC2 = 2.75 V
+VCC1 = VCC2 = 3.6 V
+VCC1 = VCC2 = 5.5 V
+Figure 5-1. Thermal Derating Curve for Limiting 
+Current per VDE for DW-16 Package
+Ambient Temperature (qC)
+Safety Liming Current (mA)
+0
+50
+100
+150
+200
+0
+100
+200
+300
+400
+500
+600
+D009
+VCC1 = VCC2 = 2.75 V
+VCC1 = VCC2 = 3.6 V
+VCC1 = VCC2 = 5.5 V
+Figure 5-2. Thermal Derating Curve for Limiting 
+Current per VDE for DBQ-16 Package
+Ambient Temperature (qC)
+Safety Limiting Power (mW)
+0
+50
+100
+150
+200
+0
+500
+1000
+1500
+2000
+2500
+D010
+Figure 5-3. Thermal Derating Curve for Limiting 
+Power per VDE for DW-16 Package
+Ambient Temperature (qC)
+Safety Limiting Power (mW)
+0
+50
+100
+150
+200
+0
+200
+400
+600
+800
+1000
+1200
+1400
+1600
+D011
+Figure 5-4. Thermal Derating Curve for Limiting 
+Power per VDE for DBQ-16 Package
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+22
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 23 ===
+5.19 Typical Characteristics
+Data rate (Mbps)
+Supply Current (mA)
+0
+25
+50
+75
+100
+0
+4
+8
+12
+16
+20
+24
+28
+32
+36
+40
+44
+ICC1 at 2.5 V
+ICC1 at 3.3 V
+ICC1 at 5 V
+ICC2 at 2.5 V
+ICC2 at 3.3 V
+ICC2 at 5 V
+TA = 25°C
+CL = 15 pF
+Figure 5-5. ISO7760 Supply Current vs Data Rate 
+(With 15-pF Load)
+Data rate (Mbps)
+Supply Current (mA)
+0
+25
+50
+75
+100
+0
+2
+4
+6
+8
+10
+12
+14
+16
+ICC1 at 2.5 V
+ICC1 at 3.3 V
+ICC1 at 5 V
+ICC2 at 2.5 V
+ICC2 at 3.3 V
+ICC2 at 5 V
+TA = 25°C
+CL = No Load
+Figure 5-6. ISO7760 Supply Current vs Data Rate 
+(With No Load)
+Data rate (Mbps)
+Supply Current (mA)
+0
+25
+50
+75
+100
+0
+4
+8
+12
+16
+20
+24
+28
+32
+36
+ICC1 at 2.5 V
+ICC1 at 3.3 V
+ICC1 at 5 V
+ICC2 at 2.5 V
+ICC2 at 3.3 V
+ICC2 at 5 V
+TA = 25°C
+CL = 15 pF
+Figure 5-7. ISO7761 Supply Current vs Data Rate 
+(With 15-pF Load)
+Data rate (Mbps)
+Supply Current (mA)
+0
+25
+50
+75
+100
+0
+2
+4
+6
+8
+10
+12
+14
+16
+ICC1 at 2.5 V
+ICC1 at 3.3 V
+ICC1 at 5 V
+ICC2 at 2.5 V
+ICC2 at 3.3 V
+ICC2 at 5 V
+TA = 25°C
+CL = No Load
+Figure 5-8. ISO7761 Supply Current vs Data Rate 
+(With No Load)
+Data rate (Mbps)
+Supply Current (mA)
+0
+25
+50
+75
+100
+0
+4
+8
+12
+16
+20
+24
+28
+32
+ICC1 at 2.5 V
+ICC1 at 3.3 V
+ICC1 at 5 V
+ICC2 at 2.5 V
+ICC2 at 3.3 V
+ICC2 at 5 V
+TA = 25°C
+CL = 15 pF
+Figure 5-9. ISO7762 Supply Current vs Data Rate 
+(With 15-pF Load)
+Data rate (Mbps)
+Supply Current (mA)
+0
+25
+50
+75
+100
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+ICC1 at 2.5 V
+ICC1 at 3.3 V
+ICC1 at 5 V
+ICC2 at 2.5 V
+ICC2 at 3.3 V
+ICC2 at 5 V
+TA = 25°C
+CL = No Load
+Figure 5-10. ISO7762 Supply Current vs Data Rate 
+(With No Load)
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+23
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 24 ===
+Data rate (Mbps)
+Supply Current (mA)
+0
+25
+50
+75
+100
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+24
+ICC1 at 2.5 V
+ICC1 at 3.3 V
+ICC1 at 5 V
+ICC2 at 2.5 V
+ICC2 at 3.3 V
+ICC2 at 5 V
+TA = 25°C
+CL = 15 pF
+Figure 5-11. ISO7763 Supply Current vs Data Rate 
+(With 15-pF Load)
+Data rate (Mbps)
+Supply Current (mA)
+0
+25
+50
+75
+100
+0
+2
+4
+6
+8
+10
+12
+ICC1 at 2.5 V
+ICC1 at 3.3 V
+ICC1 at 5 V
+ICC2 at 2.5 V
+ICC2 at 3.3 V
+ICC2 at 5 V
+TA = 25°C
+CL = No Load
+Figure 5-12. ISO7763 Supply Current vs Data Rate 
+(With No Load)
+High-Level Output Current (mA)
+High-Level Output Voltage (V)
+-15
+-10
+-5
+0
+0
+1
+2
+3
+4
+5
+6
+VCC at 2.5V
+VCC at 3.3V
+VCC at 5V
+TA = 25°C
+Figure 5-13. High-Level Output Voltage vs High-
+Level Output Current
+Low-Level Output Current (mA)
+Low-Level Output Voltage (V)
+0
+5
+10
+15
+0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+1
+VCC at 2.5V
+VCC at 3.3V
+VCC at 5V
+TA = 25°C
+Figure 5-14. Low-Level Output Voltage vs Low-
+Level Output Current
+Free-Air Temperature (C)
+Power-Supply UVLO Threshold (V)
+-55
+-15
+25
+65
+105
+125
+1.7
+1.75
+1.8
+1.85
+1.9
+1.95
+2
+2.05
+2.1
+2.15
+2.2
+2.25
+VCC1 Falling
+VCC1 Rising
+VCC2 Falling
+VCC2 Rising
+Figure 5-15. Power Supply Undervoltage Threshold 
+vs Free-Air Temperature
+Free Air Temperature (C)
+Propagation Delay Time (ns)
+-55
+-15
+25
+65
+105
+125
+9
+10
+11
+12
+13
+14
+15
+16
+TPHL at 2.5 V
+TPHL at 3.3 V
+TPHL at 5 V
+TPLH at 2.5 V
+TPLH at 3.3 V
+TPLH at 5 V
+Figure 5-16. Propagation Delay Time vs Free-Air 
+Temperature
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+24
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 25 ===
+Data Rate (Mbps)
+Peak-to-Peak Output Jitter (ps)
+0
+25
+50
+75
+100
+600
+800
+1000
+1200
+1400
+1600
+D007
+Rising Edge Jitter at 2.5 V
+Falling Edge Jitter at 2.5 V
+Rising Edge Jitter at 3.3 V
+Falling Edge Jitter at 3.3 V
+Rising Edge Jitter at 5 V
+Falling Edge Jitter at 5 V
+TA = 25°C
+Figure 5-17. Peak-to-Peak Output Jitter vs Data Rate
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+25
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 26 ===
+6 Parameter Measurement Information
+IN
+OUT
+CL
+See Note B
+VO
+VI
+VOL
+VOH
+VCCI
+0 V
+tr
+Isolation Barrier
+50 
+Input 
+Generator 
+(See Note A)
+VI
+VO
+tf
+tPLH
+tPHL
+50%
+50%
+50%
+50%
+90%
+10%
+Copyright © 2016, Texas Instruments Incorporated
+A.
+The input pulse is supplied by a generator having the following characteristics: PRR ≤ 50 kHz, 50% duty cycle, tr ≤ 3 ns, tf ≤ 3 ns, ZO = 
+50 Ω. At the input, a 50-Ω resistor is required to terminate Input Generator signal. It is not needed in actual application.
+B.
+CL = 15 pF and includes instrumentation and fixture capacitance within ±20%.
+Figure 6-1. Switching Characteristics Test Circuit and Voltage Waveforms
+VI
+VCC
+IN
+OUT
+VO
+CL
+See Note A
+IN = 0 V (Devices without suffix F)
+IN = VCC (Devices with suffix F)
+VO
+VI
+VOL
+VOH
+VCC
+0 V
+1.7 V
+50%
+tDO
+default high
+default low
+Isolation Barrier
+See Note B
+A.
+CL = 15 pF and includes instrumentation and fixture capacitance within ±20%.
+B.
+Power-supply ramp rate = 10 mV/ns
+Figure 6-2. Default Output Delay Time Test Circuit and Voltage Waveforms
+IN
+OUT
+Isolation Barrier
+VCCO
+CL
+See Note A
+S1
+GNDO
+GNDI
++
+±
+VCM
++
+±
+VOH or VOL
+C = 0.1 µF ±1%
+C = 0.1 µF ±1%
+VCCI
+Pass-fail criteria: 
+The output must 
+remain stable.
+A.
+CL = 15 pF and includes instrumentation and fixture capacitance within ±20%.
+Figure 6-3. Common-Mode Transient Immunity Test Circuit
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+26
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 27 ===
+7 Detailed Description
+7.1 Overview
+The ISO776x family of devices uses an ON-OFF keying (OOK) modulation scheme to transmit the digital 
+data across a silicon-dioxide based isolation barrier. The transmitter sends a high-frequency carrier across the 
+barrier to represent one digital state and sends no signal to represent the other digital state. The receiver 
+demodulates the signal after advanced signal conditioning and produces the output through a buffer stage. The 
+ISO776x family of devices also incorporates advanced circuit techniques to maximize the CMTI performance 
+and minimize the radiated emissions because of the high-frequency carrier and IO buffer switching. The 
+conceptual block diagram of a digital capacitive isolator, Figure 7-1, shows a functional block diagram of a 
+typical channel. Figure 7-2 shows a conceptual detail of how the ON-OFF keying scheme works.
+7.2 Functional Block Diagram
+TX IN
+Oscillator
+OOK 
+Modulation
+Transmitter
+Emissions 
+Reduction 
+Techniques
+TX Signal 
+Conditioning
+Envelope 
+Detection
+RX Signal 
+Conditioning
+Receiver
+RX OUT
+SiO2 based 
+Capacitive 
+Isolation 
+Barrier
+Copyright © 2016, Texas Instruments Incorporated
+Figure 7-1. Conceptual Block Diagram of a Digital Capacitive Isolator
+TX IN
+RX OUT
+Carrier signal through 
+isolation barrier
+Figure 7-2. ON-OFF Keying (OOK) Based Modulation Scheme
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+27
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 28 ===
+7.3 Feature Description
+Table 7-1 lists the device features.
+Table 7-1. Device Features
+PART NUMBER
+CHANNEL DIRECTION
+MAXIMUM DATA 
+RATE
+DEFAULT 
+OUTPUT
+PACKAGE
+RATED ISOLATION(1)
+ISO7760
+6 Forward,
+0 Reverse
+100 Mbps
+High
+DW-16
+5000 VRMS / 8000 VPK
+DBQ-16
+3000 VRMS / 4242 VPK
+ISO7760 with F suffix
+6 Forward,
+0 Reverse
+100 Mbps
+Low
+DW-16
+5000 VRMS / 8000 VPK
+DBQ-16
+3000 VRMS / 4242 VPK
+ISO7761
+5 Forward,
+1 Reverse
+100 Mbps
+High
+DW-16
+5000 VRMS / 7071 VPK
+DBQ-16
+3000 VRMS / 4242 VPK
+ISO7761 with F suffix
+5 Forward,
+1 Reverse
+100 Mbps
+Low
+DW-16
+5000 VRMS / 7071 VPK
+DBQ-16
+3000 VRMS / 4242 VPK
+ISO7762
+4 Forward,
+2 Reverse
+100 Mbps
+High
+DW-16
+5000 VRMS / 7071 VPK
+DBQ-16
+3000 VRMS / 4242 VPK
+ISO7762 with F suffix
+4 Forward,
+2 Reverse
+100 Mbps
+Low
+DW-16
+5000 VRMS / 7071 VPK
+DBQ-16
+3000 VRMS / 4242 VPK
+ISO7763
+3 Forward,
+3 Reverse
+100 Mbps
+High
+DW-16
+5000 VRMS / 7071 VPK
+DBQ-16
+3000 VRMS / 4242 VPK
+ISO7763 with F suffix
+3 Forward,
+3 Reverse
+100 Mbps
+Low
+DW-16
+5000 VRMS / 7071 VPK
+DBQ-16
+3000 VRMS / 4242 VPK
+(1)
+See Section 5.7 for detailed isolation ratings.
+7.3.1 Electromagnetic Compatibility (EMC) Considerations
+Many applications in harsh industrial environment are sensitive to disturbances such as electrostatic discharge 
+(ESD), electrical fast transient (EFT), surge and electromagnetic emissions. These electromagnetic disturbances 
+are regulated by international standards such as IEC 61000-4-x and CISPR 22. Although system-level 
+performance and reliability depends, to a large extent, on the application board design and layout, the ISO776x 
+family of devices incorporates many chip-level design improvements for overall system robustness. Some of 
+these improvements include:
+•
+Robust ESD protection for input and output signal pins and inter-chip bond pads.
+•
+Low-resistance connectivity of ESD cells to supply and ground pins.
+•
+Enhanced performance of high voltage isolation capacitor for better tolerance of ESD, EFT and surge events.
+•
+Bigger on-chip decoupling capacitors to bypass undesirable high energy signals through a low impedance 
+path.
+•
+PMOS and NMOS devices isolated from each other by using guard rings to avoid triggering of parasitic 
+SCRs.
+•
+Reduced common mode currents across the isolation barrier by ensuring purely differential internal operation.
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+28
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 29 ===
+7.4 Device Functional Modes
+Table 7-2 lists the functional modes for the ISO776x.
+Table 7-2. Function Table
+VCCI
+VCCO
+INPUT
+(INx)(2)
+OUTPUT
+(OUTx)
+COMMENTS
+PU
+PU
+H
+H
+Normal Operation:
+A channel output assumes the logic state of the input.
+L
+L
+Open
+Default
+Default mode: When INx is open, the corresponding channel output goes to 
+its default logic state. Default is High for ISO776x and Low for ISO776x with F 
+suffix.
+PD
+PU
+X
+Default
+Default mode: When VCCI is unpowered, a channel output assumes the logic 
+state based on the selected default option. Default is High for ISO776x and 
+Low for ISO776x with F suffix.
+When VCCI transitions from unpowered to powered-up, a channel output 
+assumes the logic state of its input.
+When VCCI transitions from powered-up to unpowered, channel output 
+assumes the selected default state.
+X
+PD
+X
+Undetermined
+When VCCO is unpowered, a channel output is undetermined (1).
+When VCCO transitions from unpowered to powered-up, a channel output 
+assumes the logic state of the input
+(1)
+The outputs are in undetermined state when 1.7 V < VCCI, VCCO < 2.25 V.
+(2)
+A strongly driven input signal can weakly power the floating VCC via an internal protection diode and cause undetermined output.
+7.4.1 Device I/O Schematics
+Output
+985 
+1.5 M
+INx
+VCCI
+VCCI
+VCCI
+Input (Devices without F suffix)
+985 
+1.5 M
+INx
+VCCI
+VCCI
+VCCI
+VCCI
+Input (Devices with F suffix)
+VCCO
+~20 
+OUTx
+Copyright © 2016, Texas Instruments Incorporated
+Figure 7-3. Device I/O Schematics
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+29
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 30 ===
+8 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, and 
+TI does not warrant its accuracy or completeness. TI’s customers are responsible for determining 
+suitability of components for their purposes. Customers should validate and test their design 
+implementation to confirm system functionality.
+8.1 Application Information
+The ISO776x family of devices is a high-performance, six-channel digital isolators. The ISO776x family of 
+devices uses single-ended CMOS-logic switching technology. The voltage range is from 2.25 V to 5.5 V for both 
+supplies, VCC1 and VCC2. When designing with digital isolators, keep in mind that because of the single-ended 
+design structure, digital isolators do not conform to any specific interface standard and are only intended for 
+isolating single-ended CMOS or TTL digital signal lines. The isolator is typically placed between the data 
+controller (that is, μC or UART), and a data converter or a line transceiver, regardless of the interface type or 
+standard.
+8.2 Typical Application
+Figure 8-1 shows the isolated serial-peripheral interface (SPI) and controller-area network (CAN) interface 
+implementation.
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+30
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 31 ===
+0.1 F
+VS
+10 F
+MBR0520L
+MBR0520L
+1:1.33
+10 F
+3
+1
+D2
+SN6501
+D1
+5
+2
+GND
+GND
+4
+3.3 V
+IN
+EN
+GND
+OUT
+1
+5
+2
+3
+TPS76333
+10 F
+ISO 3.3V
+VCC
+RS
+GND
+Vref
+CANH
+CANL
+7
+6
+R
+D
+0.1 F
+SN65HVD231
+ISO Barrier
+4.7 nF / 
+2 kV
+SM712
+10  (optional)
+10  (optional)
+Vcc
+0.1 F
+25
+26
+1
+3
+4
+2
+8
+5
+TMS320F28035PAG
+CANRXA
+6, 28
+29, 57
+VSS
+VDDIO
+CANTXA
+VIN
+GND
+VOUT
+2
+6
+4
+REF5025
+1 µF
+22 µF
+36
++VBD
+AGND
+CH0
+1, 22
+CS
+34
+32
+33
+SCLK
+SDI
+28
+SDO
+ADS7953
+CH15
+11
+BDGND
+27
+5
++VA
+4
+REFP
+7
+MXO
+8
+AINP
+REFM
+30
+16 Analog
+Inputs
+0.1 µF
+CAN Bus
+VCC1
+VCC2
+GND1
+GND2
+INA
+IND
+OUTE
+INB
+OUTA
+OUTB
+OUTD
+INC
+OUTF
+ISO7762
+OUTC
+INE
+INF
+SPISOMIA
+SPISIMOA
+SPICLKA
+SPISTEA
+44
+0.1 F
+0.1 F
+34
+36
+33
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+31
+Multiple pins and discrete components omitted for clarity purpose.
+Figure 8-1. Isolated SPI and CAN Interface
+8.2.1 Design Requirements
+For this design example, use the parameters listed in Table 8-1.
+Table 8-1. Design Parameters
+PARAMETER
+VALUE
+Supply voltage, VCC1 and VCC2
+2.25 to 5.5 V
+Decoupling capacitor between VCC1 and GND1
+0.1 µF
+Decoupling capacitor from VCC2 and GND2
+0.1 µF
+8.2.2 Detailed Design Procedure
+Unlike optocouplers, which require external components to improve performance, provide bias, or limit current, 
+the ISO776x family of devices only requires two external bypass capacitors to operate.
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+31
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 32 ===
+1
+2
+3
+4
+5
+6
+7
+8
+16
+15
+14
+13
+12
+11
+10
+9
+INC
+INF
+OUTC
+OUTF
+GND1
+0.1 µF
+GND2
+INB
+OUTB
+INA
+OUTA
+INE
+OUTE
+IND
+OUTD
+VCC1
+0.1 µF
+VCC2
+Figure 8-2. Typical ISO7761 Circuit Hook-up
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+32
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 33 ===
+8.2.3 Application Curves
+The typical eye diagram of the ISO776x family of devices indicates low jitter and a wide open eye at the 
+maximum data rate of 100 Mbps.
+Figure 8-3. Eye Diagram at 100 Mbps PRBS 216 – 1 
+Data, 5 V and 25°C
+Figure 8-4. Eye Diagram at 100 Mbps PRBS 216 – 1 
+Data, 3.3 V and 25°C
+Figure 8-5. Eye Diagram at 100 Mbps PRBS 216 – 1 Data, 2.5 V and 25°C
+8.2.3.1 Insulation Lifetime
+Insulation lifetime projection data is collected by using industry-standard Time Dependent Dielectric Breakdown 
+(TDDB) test method. In this test, all pins on each side of the barrier are tied together creating a two-terminal 
+device and high voltage applied between the two sides; See Figure 8-6for TDDB test setup. The insulation 
+breakdown data is collected at various high voltages switching at 60 Hz over temperature. For reinforced 
+insulation, VDE standard requires the use of TDDB projection line with failure rate of less than 1 part per million 
+(ppm). Even though the expected minimum insulation lifetime is 20 years at the specified working isolation 
+voltage, VDE reinforced certification requires additional safety margin of 20% for working voltage and 50% for 
+lifetime which translates into minimum required insulation lifetime of 30 years at a working voltage that's 20% 
+higher than the specified value.
+Figure 8-7 shows the intrinsic capability of the isolation barrier to withstand high voltage stress over its lifetime. 
+Based on the TDDB data, the intrinsic capability of the insulation is 1500 VRMS with a lifetime of 36 years. Other 
+factors, such as package size, pollution degree, material group, etc. can further limit the working voltage of the 
+component. The working voltage of DW-16 package is specified upto 1500 VRMS and DBQ-16 package up to 
+400 VRMS. At the lower working voltages, the corresponding insulation lifetime is much longer than 36 years.
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+33
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 34 ===
+DUT
+Vcc 2
+Vcc 1
+GND 1
+GND 2
+A
+Oven at 150 °C
+Time Counter
+> 1 mA
+VS
+Figure 8-6. Test Setup for Insulation Lifetime Measurement
+1.E+01
+1.E+02
+1.E+03
+1.E+04
+1.E+05
+1.E+06
+1.E+07
+1.E+08
+1.E+09
+1.E+10
+1.E+11
+1.E+12
+200
+1200
+2200
+3200
+4200
+5200
+6200
+50 %
+Time to Fail (sec)
+Applied Voltage (VRMS)
+54 Yrs
+36 Yrs
+Operating Zone
+VDE Safety 
+Margin Zone
+TDDB Line (<1 ppm Fail Rate)
+20%
+Working Isolation Volatage = 1500 VRMS
+up to 150°C
+Protected Insulation Lifetime = 36 Years
+Applied Voltage Frequency = 60 Hz
+Figure 8-7. Insulation Lifetime Projection Data
+9 Power Supply Recommendations
+To help ensure reliable operation at data rates and supply voltages, a 0.1-μF bypass capacitor is recommended 
+at input and output supply pins (VCC1 and VCC2). The capacitors should be placed as close to the supply pins 
+as possible. If only a single primary-side power supply is available in an application, isolated power can be 
+generated for the secondary-side with the help of a transformer driver such as Texas Instruments' SN6501 or 
+SN6505. For such applications, detailed power supply design and transformer selection recommendations are 
+available in the SN6501 Transformer Driver for Isolated Power Supplies data sheet or the SN6505 Low-Noise 
+1-A Transformer Drivers for Isolated Power Supplies data sheet.
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+34
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 35 ===
+10 Layout
+10.1 Layout Guidelines
+A minimum of four layers is required to accomplish a low EMI PCB design (see Figure 10-1). Layer stacking 
+should be in the following order (top-to-bottom): high-speed signal layer, ground plane, power plane and low-
+frequency signal layer.
+•
+Routing the high-speed traces on the top layer avoids the use of vias (and the introduction of their 
+inductances) and allows for clean interconnects between the isolator and the transmitter and receiver circuits 
+of the data link.
+•
+Placing a solid ground plane next to the high-speed signal layer establishes controlled impedance for 
+transmission line interconnects and provides an excellent low-inductance path for the return current flow.
+•
+Placing the power plane next to the ground plane creates additional high-frequency bypass capacitance of 
+approximately 100 pF/inch2.
+•
+Routing the slower speed control signals on the bottom layer allows for greater flexibility as these signal links 
+usually have margin to tolerate discontinuities such as vias.
+If an additional supply voltage plane or signal layer is needed, add a second power or ground plane system 
+to the stack to keep it symmetrical. This makes the stack mechanically stable and prevents it from warping. 
+Also the power and ground plane of each power system can be placed closer together, thus increasing the 
+high-frequency bypass capacitance significantly.
+For detailed layout recommendations, see the Digital Isolator Design Guide application report.
+10.1.1 PCB Material
+For digital circuit boards operating at less than 150 Mbps, (or rise and fall times greater than 1 ns), and trace 
+lengths of up to 10 inches, use standard FR-4 UL94V-0 printed circuit board. This PCB is preferred over cheaper 
+alternatives because of lower dielectric losses at high frequencies, less moisture absorption, greater strength 
+and stiffness, and the self-extinguishing flammability-characteristics.
+10.2 Layout Example
+10 mils
+10 mils
+40 mils
+FR-4
+0r ~ 4.5
+Keep this 
+space free 
+from planes,
+traces, pads, 
+and vias
+Ground plane
+Power plane
+Low-speed traces
+High-speed traces
+Figure 10-1. Layout Example Schematic
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+35
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 36 ===
+11 Device and Documentation Support
+11.1 Documentation Support
+11.1.1 Related Documentation
+For related documentation see the following:
+•
+Texas Instruments, Digital Isolator Design Guide application report
+•
+Texas Instruments, How to use isolation to improve ESD, EFT and Surge immunity in industrial systems 
+application report
+•
+Texas Instruments, Isolation Glossary
+•
+Texas Instruments, TMS320F2803xPiccolo™ Microcontrollers data sheet
+•
+Texas Instruments, ADS79xx 12/10/8-Bit, 1 MSPS, 16/12/8/4-Channel, Single-Ended, MicroPower, Serial 
+Interface ADCs data sheet
+•
+Texas Instruments, REF50xx Low-Noise, Very Low Drift, Precision Voltage Reference data sheet
+•
+Texas Instruments, SN6501 Transformer Driver for Isolated Power Supplies data sheet
+•
+Texas Instruments, SN65HVD23x 3.3-V CAN Bus Transceivers data sheet
+•
+Texas Instruments, TPS76333 Low-Power 150-mA Low-Dropout Linear Regulators data sheet
+11.2 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. In the upper 
+right corner, click on Alert me to register and receive a weekly digest of any product information that has 
+changed. For change details, review the revision history included in any revised document.
+11.3 Community Resources
+11.4 Trademarks
+Piccolo™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+12 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision G (June 2023) to Revision H (January 2024)
+Page
+•
+Updated numbering format for tables, figures and cross-references throughout document.............................. 1
+•
+Updated Thermal Characteristics, Safety Limiting Values, and Thermal Derating Curves to provide more 
+accurate system-level thermal calculations........................................................................................................6
+•
+Updated electrical and switching characteristics to match device performance.................................................6
+Changes from Revision F (November 2022) to Revision G (June 2023)
+Page
+•
+Changed standard name From: "DIN V VDE V 0884-11:2017-01" To: "DIN EN IEC 60747-17 (VDE 0884-17)" 
+throughout the document....................................................................................................................................1
+•
+Removed references to standard IEC/EN/CSA 60950-1 throughout the document...........................................1
+•
+Removed standard revision and year references from all standard names throughout the document.............. 1
+•
+Added Maximum impulse voltage (VIMP) per DIN EN IEC 60747-17 (VDE 0884-17) ....................................... 9
+•
+Changed test conditions and values of Maximum surge isolation voltage (VIOSM) specification per DIN EN IEC 
+60747-17 (VDE 0884-17) .................................................................................................................................. 9
+•
+Clarified method b test conditions of Apparent charge (qPD) .............................................................................9
+•
+Changed maximum working voltage value From: 250 VRMS To: 400 VRMS for DBQ-16 devices per GB 
+4943.1...............................................................................................................................................................11
+•
+Changed working voltage lifetime margin from: 87.5% to: 50%, minimum required insulation lifetime from: 
+37.5 years to: 30 years and insulation lifetime per TDDB from: 135 years to: 169 years per DIN EN IEC 
+60747-17 (VDE 0884-17)................................................................................................................................. 33
+•
+Changed Figure 8-7 per DIN EN IEC 60747-17 (VDE 0884-17)......................................................................33
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+www.ti.com
+36
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 37 ===
+Changes from Revision E (February 2019) to Revision F (November 2022)
+Page
+•
+Updated the numbering format for tables, figures, and cross-references throughout the document................. 1
+Changes from Revision D (November 2018) to Revision E (February 2019)
+Page
+•
+Changed CPG parameter description from "External clearance" to "External creepage".................................. 9
+Changes from Revision C (January 2018) to Revision D (November 2018)
+Page
+•
+Made editorial and cosmetic changes throughout the document....................................................................... 1
+•
+Changed From: "Isolation Barrier Life: >40 Years" To:">100-Year Projected Lifetime" in Section 1 ................. 1
+•
+Added "Up to 5000 VRMS Isolation Rating" in Section 1 ....................................................................................1
+•
+Added "Up to 12.8 kV Surge Capability" in Section 1 ....................................................................................... 1
+•
+Added "±8 kV IEC 61000-4-2 Contact Discharge Protection across Isolation Barrier" in Section 1 ..................1
+•
+Added "Automotive Version Available: ISO776x-Q1" in Section 1 .................................................................... 1
+•
+Deleted "Certification Planned" statement throughout the document ................................................................1
+•
+Updated Section 2 list.........................................................................................................................................1
+•
+Changed Figure 3-1 to show series isolation capacitors....................................................................................1
+•
+Added table note to Data rate specification........................................................................................................7
+•
+Changed VIORM value for DW-16 package from "1414 VPK" to "2121 VPK ........................................................9
+•
+Changed VIOWM values for DW-16 package from "1000 VRMS" and "1414 VDC" to "1500 VRMS" and "2121 
+VDC".................................................................................................................................................................... 9
+•
+Updated certification information...................................................................................................................... 11
+•
+Changed From: "Table 2" To: "Safety Related Certifications" in Table 7-1 table note...................................... 28
+•
+Changed Figure 7-3 .........................................................................................................................................29
+•
+Added Section 8.2.3.1 sub-section under Section 8.2.3 section...................................................................... 33
+Changes from Revision B (November 2017) to Revision C (January 2018)
+Page
+•
+Changed the CIO value for the DBQ package from 1.1 to 0.9 pF.......................................................................9
+Changes from Revision A (August 2017) to Revision B (November 2017)
+Page
+•
+Changed the CSA certification wording in the Features and Safety-Related Certifications table...................... 1
+•
+Changed the isolation voltage for the DBQ-16 package from 2500 to 3000 VRMS ............................................1
+•
+Added the maximum transient isolation voltage for the DW-16 package of the ISO7761, ISO7762, and 
+ISO7763 devices and changed the maximum value for the DBQ-16 package from 3600 to 4242 for all 
+devices................................................................................................................................................................9
+•
+Changed table note and table condition of safety limiting values.....................................................................11
+•
+Added the supply current vs data rate graphs for the ISO7761, ISO7762, and ISO7763 in the Typical 
+Characteristics section......................................................................................................................................23
+Changes from Revision * (August 2017) to Revision A (August 2017)
+Page
+•
+Deleted EN from the Common-Mode Transient Immunity Test Circuit figure...................................................26
+•
+Changed the VCC1 and VCC2 signals in the Typical ISO7761 Circuit Hook-up figure....................................... 31
+13 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+www.ti.com
+ISO7760, ISO7761, ISO7762, ISO7763
+SLLSER1H – AUGUST 2017 – REVISED JANUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+37
+Product Folder Links: ISO7760 ISO7761 ISO7762 ISO7763
+
+
+=== PDF PAGE 38 ===
+PACKAGE OPTION ADDENDUM
+www.ti.com
+7-Feb-2026
+PACKAGING INFORMATION
+Orderable part number
+Status
+(1)
+Material type
+(2)
+Package | Pins
+Package qty | Carrier
+RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C)
+Part marking
+(6)
+ISO7760DBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7760
+ISO7760DBQR.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7760
+ISO7760DWR
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7760
+ISO7760DWR.A
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7760
+ISO7760FDBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7760F
+ISO7760FDBQR.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7760F
+ISO7760FDWR
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7760F
+ISO7760FDWR.A
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7760F
+ISO7761DBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7761
+ISO7761DBQR.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7761
+ISO7761DWR
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7761
+ISO7761DWR.A
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7761
+ISO7761FDBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7761F
+ISO7761FDBQR.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7761F
+ISO7761FDWR
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7761F
+ISO7761FDWR.A
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7761F
+ISO7761FSDBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+SN
+Level-2-260C-1 YEAR
+-55 to 125
+7761FS
+ISO7762DBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7762
+ISO7762DBQR.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7762
+ISO7762DBQRG4
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7762
+ISO7762DBQRG4.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7762
+ISO7762DWR
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7762
+ISO7762DWR.A
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7762
+ISO7762FDBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7762F
+ISO7762FDBQR.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7762F
+ISO7762FDBQRG4
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7762F
+ISO7762FDBQRG4.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7762F
+ISO7762FDWR
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7762F
+ISO7762FDWR.A
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7762F
+Addendum-Page 1
+
+
+=== PDF PAGE 39 ===
+PACKAGE OPTION ADDENDUM
+www.ti.com
+7-Feb-2026
+Orderable part number
+Status
+(1)
+Material type
+(2)
+Package | Pins
+Package qty | Carrier
+RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C)
+Part marking
+(6)
+ISO7762FSDBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+SN
+Level-2-260C-1 YEAR
+-55 to 125
+7762FS
+ISO7763DBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7763
+ISO7763DBQR.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7763
+ISO7763DWR
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7763
+ISO7763DWR.A
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7763
+ISO7763FDBQR
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7763F
+ISO7763FDBQR.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7763F
+ISO7763FDBQRG4
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7763F
+ISO7763FDBQRG4.A
+Active
+Production
+SSOP (DBQ) | 16
+2500 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+7763F
+ISO7763FDWR
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7763F
+ISO7763FDWR.A
+Active
+Production
+SOIC (DW) | 16
+2000 | LARGE T&R
+Yes
+NIPDAU
+Level-2-260C-1 YEAR
+-55 to 125
+ISO7763F
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+Addendum-Page 2
+
+
+=== PDF PAGE 40 ===
+PACKAGE OPTION ADDENDUM
+www.ti.com
+7-Feb-2026
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+ OTHER QUALIFIED VERSIONS OF ISO7760, ISO7761, ISO7762, ISO7763 :
+• Automotive : ISO7760-Q1, ISO7761-Q1, ISO7762-Q1, ISO7763-Q1
+ NOTE: Qualified Version Definitions:
+• Automotive - Q100 devices qualified for high-reliability automotive applications targeting zero defects
+Addendum-Page 3
+
+
+=== PDF PAGE 41 ===
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+13-Aug-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0
+B0
+K0
+W
+Dimension designed to accommodate the component length
+Dimension designed to accommodate the component thickness
+Overall width of the carrier tape
+Pitch between successive cavity centers
+Dimension designed to accommodate the component width
+TAPE DIMENSIONS
+K0
+ P1
+B0 W
+A0
+Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket Quadrants
+Sprocket Holes
+Q1
+Q1
+Q2
+Q2
+Q3
+Q3
+Q4
+Q4
+User Direction of Feed
+P1
+Reel
+Diameter
+ 
+*All dimensions are nominal
+Device
+Package
+Type
+Package
+Drawing
+Pins
+SPQ
+Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+ISO7760DBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7760DWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7760DWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7760FDBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7760FDWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7760FDWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7761DBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7761DWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7761DWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7761FDBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7761FDWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7761FDWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7761FSDBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7762DBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7762DBQRG4
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7762DWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+Pack Materials-Page 1
+
+
+=== PDF PAGE 42 ===
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+13-Aug-2026
+Device
+Package
+Type
+Package
+Drawing
+Pins
+SPQ
+Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+ISO7762DWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7762FDBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7762FDBQRG4
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7762FDWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7762FDWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7762FSDBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7763DBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7763DWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7763DWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7763FDBQR
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7763FDBQRG4
+SSOP
+DBQ
+16
+2500
+330.0
+12.4
+6.4
+5.2
+2.1
+8.0
+12.0
+Q1
+ISO7763FDWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+ISO7763FDWR
+SOIC
+DW
+16
+2000
+330.0
+16.4
+10.75
+10.7
+2.7
+12.0
+16.0
+Q1
+Pack Materials-Page 2
+
+
+=== PDF PAGE 43 ===
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+13-Aug-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W
+L
+H
+ 
+*All dimensions are nominal
+Device
+Package Type
+Package Drawing
+Pins
+SPQ
+Length (mm)
+Width (mm)
+Height (mm)
+ISO7760DBQR
+SSOP
+DBQ
+16
+2500
+353.0
+353.0
+32.0
+ISO7760DWR
+SOIC
+DW
+16
+2000
+353.0
+353.0
+32.0
+ISO7760DWR
+SOIC
+DW
+16
+2000
+356.0
+356.0
+36.0
+ISO7760FDBQR
+SSOP
+DBQ
+16
+2500
+353.0
+353.0
+32.0
+ISO7760FDWR
+SOIC
+DW
+16
+2000
+356.0
+356.0
+36.0
+ISO7760FDWR
+SOIC
+DW
+16
+2000
+353.0
+353.0
+32.0
+ISO7761DBQR
+SSOP
+DBQ
+16
+2500
+353.0
+353.0
+32.0
+ISO7761DWR
+SOIC
+DW
+16
+2000
+356.0
+356.0
+36.0
+ISO7761DWR
+SOIC
+DW
+16
+2000
+353.0
+353.0
+32.0
+ISO7761FDBQR
+SSOP
+DBQ
+16
+2500
+353.0
+353.0
+32.0
+ISO7761FDWR
+SOIC
+DW
+16
+2000
+356.0
+356.0
+36.0
+ISO7761FDWR
+SOIC
+DW
+16
+2000
+353.0
+353.0
+32.0
+ISO7761FSDBQR
+SSOP
+DBQ
+16
+2500
+350.0
+350.0
+43.0
+ISO7762DBQR
+SSOP
+DBQ
+16
+2500
+353.0
+353.0
+32.0
+ISO7762DBQRG4
+SSOP
+DBQ
+16
+2500
+350.0
+350.0
+43.0
+ISO7762DWR
+SOIC
+DW
+16
+2000
+353.0
+353.0
+32.0
+ISO7762DWR
+SOIC
+DW
+16
+2000
+356.0
+356.0
+36.0
+ISO7762FDBQR
+SSOP
+DBQ
+16
+2500
+353.0
+353.0
+32.0
+Pack Materials-Page 3
+
+
+=== PDF PAGE 44 ===
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+13-Aug-2026
+Device
+Package Type
+Package Drawing
+Pins
+SPQ
+Length (mm)
+Width (mm)
+Height (mm)
+ISO7762FDBQRG4
+SSOP
+DBQ
+16
+2500
+350.0
+350.0
+43.0
+ISO7762FDWR
+SOIC
+DW
+16
+2000
+353.0
+353.0
+32.0
+ISO7762FDWR
+SOIC
+DW
+16
+2000
+356.0
+356.0
+36.0
+ISO7762FSDBQR
+SSOP
+DBQ
+16
+2500
+350.0
+350.0
+43.0
+ISO7763DBQR
+SSOP
+DBQ
+16
+2500
+353.0
+353.0
+32.0
+ISO7763DWR
+SOIC
+DW
+16
+2000
+356.0
+356.0
+36.0
+ISO7763DWR
+SOIC
+DW
+16
+2000
+353.0
+353.0
+32.0
+ISO7763FDBQR
+SSOP
+DBQ
+16
+2500
+353.0
+353.0
+32.0
+ISO7763FDBQRG4
+SSOP
+DBQ
+16
+2500
+350.0
+350.0
+43.0
+ISO7763FDWR
+SOIC
+DW
+16
+2000
+353.0
+353.0
+32.0
+ISO7763FDWR
+SOIC
+DW
+16
+2000
+356.0
+356.0
+36.0
+Pack Materials-Page 4
+
+
+=== PDF PAGE 45 ===
+www.ti.com
+GENERIC PACKAGE VIEW
+This image is a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+SOIC - 2.65 mm max height
+DW 16
+SMALL OUTLINE INTEGRATED CIRCUIT
+7.5 x 10.3, 1.27 mm pitch
+4224780/A
+
+
+=== PDF PAGE 46 ===
+www.ti.com
+PACKAGE OUTLINE
+C
+ TYP
+10.63
+9.97
+2.65 MAX
+14X 1.27
+16X 0.51
+0.31
+2X
+8.89
+ TYP
+0.33
+0.10
+0 - 8
+0.3
+0.1
+(1.4)
+0.25
+GAGE PLANE
+1.27
+0.40
+A
+NOTE 3
+10.5
+10.1
+B
+NOTE 4
+7.6
+7.4
+4221009/B   07/2016
+SOIC - 2.65 mm max height
+DW0016B
+SOIC
+NOTES: 
+ 
+1. All linear dimensions are in millimeters. Dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed 0.15 mm, per side. 
+4. This dimension does not include interlead flash. Interlead flash shall not exceed 0.25 mm, per side.
+5. Reference JEDEC registration MS-013.
+ 
+1
+16
+0.25
+C A
+B
+9
+8
+PIN 1 ID
+AREA
+SEATING PLANE
+0.1 C
+ SEE DETAIL A
+DETAIL A
+TYPICAL
+SCALE  1.500
+
+
+=== PDF PAGE 47 ===
+www.ti.com
+EXAMPLE BOARD LAYOUT
+(9.75)
+R0.05 TYP
+0.07 MAX
+ALL AROUND
+0.07 MIN
+ALL AROUND
+ 
+(9.3)
+14X (1.27)
+R0.05 TYP
+16X (1.65)
+16X (0.6)
+14X (1.27)
+16X (2)
+16X (0.6)
+4221009/B   07/2016
+SOIC - 2.65 mm max height
+DW0016B
+SOIC
+SYMM
+SYMM
+SEE
+DETAILS
+1
+8
+9
+16
+SYMM
+HV / ISOLATION OPTION
+8.1 mm CLEARANCE/CREEPAGE
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+METAL
+SOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+OPENING
+SOLDER MASK
+METAL
+SOLDER MASK
+DEFINED
+LAND PATTERN EXAMPLE
+SCALE:4X
+SYMM
+1
+8
+9
+16
+IPC-7351 NOMINAL
+7.3 mm CLEARANCE/CREEPAGE
+SEE
+DETAILS
+
+
+=== PDF PAGE 48 ===
+www.ti.com
+EXAMPLE STENCIL DESIGN
+R0.05 TYP
+R0.05 TYP
+16X (1.65)
+16X (0.6)
+14X (1.27)
+(9.75)
+16X (2)
+16X (0.6)
+14X (1.27)
+(9.3)
+4221009/B   07/2016
+SOIC - 2.65 mm max height
+DW0016B
+SOIC
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SYMM
+SYMM
+1
+8
+9
+16
+HV / ISOLATION OPTION
+8.1 mm CLEARANCE/CREEPAGE
+SOLDER PASTE EXAMPLE
+BASED ON 0.125 mm THICK STENCIL
+SCALE:4X
+SYMM
+SYMM
+1
+8
+9
+16
+IPC-7351 NOMINAL
+7.3 mm CLEARANCE/CREEPAGE
+
+
+=== PDF PAGE 49 ===
+www.ti.com
+PACKAGE OUTLINE
+C
+ TYP
+-.244
+.228
+-6.19
+5.80
+[
+]
+.069 MAX
+[1.75]     
+14X .0250
+[0.635]
+16X 
+-.012
+.008
+-0.30
+0.21
+[
+]
+2X
+.175
+[4.45]
+ TYP
+-.010
+.005
+-0.25
+0.13
+[
+]
+0 - 8
+-.010
+.004
+-0.25
+0.11
+[
+]
+(.041 )
+[1.04]
+.010
+[0.25]
+GAGE PLANE
+-.035
+.016
+-0.88
+0.41
+[
+]
+A
+NOTE 3
+-.197
+.189
+-5.00
+4.81
+[
+]
+B
+NOTE 4
+-.157
+.150
+-3.98
+3.81
+[
+]
+SSOP - 1.75 mm max height
+DBQ0016A
+SHRINK SMALL-OUTLINE PACKAGE
+4214846/A   03/2014
+NOTES: 
+ 
+1. Linear dimensions are in inches [millimeters]. Dimensions in parenthesis are for reference only. Controlling dimensions are in inches.
+    Dimensioning and tolerancing per ASME Y14.5M. 
+2. This drawing is subject to change without notice. 
+3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+    exceed .006 inch, per side. 
+4. This dimension does not include interlead flash.
+5. Reference JEDEC registration MO-137, variation AB.
+ 
+1
+16
+.007 [0.17]
+C A
+B
+9
+8
+PIN 1 ID AREA
+SEATING PLANE
+.004 [0.1] C
+ SEE DETAIL A
+DETAIL A
+TYPICAL
+SCALE  2.800
+
+
+=== PDF PAGE 50 ===
+www.ti.com
+EXAMPLE BOARD LAYOUT
+.002 MAX
+[0.05]
+ALL AROUND
+.002 MIN
+[0.05]
+ALL AROUND
+ 
+(.213)
+[5.4]
+14X (.0250 )
+[0.635]
+16X (.063)
+[1.6]
+16X (.016 )
+[0.41]
+SSOP - 1.75 mm max height
+DBQ0016A
+SHRINK SMALL-OUTLINE PACKAGE
+4214846/A   03/2014
+NOTES: (continued)
+ 
+6. Publication IPC-7351 may have alternate designs. 
+7. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+ 
+METAL
+SOLDER MASK
+OPENING
+NON SOLDER MASK
+DEFINED
+SOLDER MASK DETAILS
+OPENING
+SOLDER MASK
+METAL
+SOLDER MASK
+DEFINED
+LAND PATTERN EXAMPLE
+SCALE:8X
+SYMM
+1
+8
+9
+16
+SEE
+DETAILS
+
+
+=== PDF PAGE 51 ===
+www.ti.com
+EXAMPLE STENCIL DESIGN
+16X (.063)
+[1.6]
+16X (.016 )
+[0.41]
+14X (.0250 )
+[0.635]
+(.213)
+[5.4]
+SSOP - 1.75 mm max height
+DBQ0016A
+SHRINK SMALL-OUTLINE PACKAGE
+4214846/A   03/2014
+NOTES: (continued)
+ 
+8. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations.   
+9. Board assembly site may have different recommendations for stencil design.
+ 
+SOLDER PASTE EXAMPLE
+BASED ON .005 INCH [0.127 MM] THICK STENCIL
+SCALE:8X
+SYMM
+SYMM
+1
+8
+9
+16
+
+
+=== PDF PAGE 52 ===
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

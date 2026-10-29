@@ -1,0 +1,524 @@
+{
+  "reference_renames": {
+    "CC0603KRX7R9BB1": "C1",
+    "CC0603KRX7R9BB2": "C21",
+    "CC0603KRX7R9BB3": "C22",
+    "CC0603KRX7R9BB5": "C23",
+    "CC0603KRX7R9BB6": "C24",
+    "CC0603KRX7R9BB7": "C25",
+    "CC0603KRX7R9BB8": "C26",
+    "CC0603KRX7R9BB9": "C27",
+    "CC0603KRX7R9BB10": "C28",
+    "CC0603KRX7R9BB11": "C29",
+    "CC0603KRX7R9BB12": "C30",
+    "CC0603KRX7R9BB13": "C31",
+    "CC0603KRX7R9BB14": "C32",
+    "CC0603KRX7R9BB15": "C33",
+    "CC0603KRX7R9BB16": "C34",
+    "CC0603KRX7R9BB17": "C35",
+    "CC0603KRX7R9BB18": "C36",
+    "CC0603KRX7R9BB19": "C37",
+    "CC0603KRX7R9BB20": "C38",
+    "CC0603KRX7R9BB21": "C39",
+    "CC0603KRX7R9BB22": "C40",
+    "CC0603KRX7R9BB23": "C41",
+    "CC0603KRX7R9BB24": "C42",
+    "CC0603KRX7R9BB25": "C43",
+    "CC0603KRX7R9BB26": "C44",
+    "CC0603KRX7R9BB27": "C45",
+    "CC0603KRX7R9BB28": "C46",
+    "CC0603KRX7R9BB29": "C47"
+  },
+  "purchased_metadata": {
+    "U9": {
+      "mpn": "MCP251863T-E/SS",
+      "manufacturer": "Microchip"
+    },
+    "U10": {
+      "mpn": "MCP251863T-E/SS",
+      "manufacturer": "Microchip"
+    },
+    "U11": {
+      "mpn": "MCP251863T-E/SS",
+      "manufacturer": "Microchip"
+    },
+    "U12": {
+      "mpn": "MCP251863T-E/SS",
+      "manufacturer": "Microchip"
+    },
+    "U13": {
+      "mpn": "MCP251863T-E/SS",
+      "manufacturer": "Microchip"
+    },
+    "U14": {
+      "mpn": "MCP251863T-E/SS",
+      "manufacturer": "Microchip"
+    },
+    "U15": {
+      "mpn": "MCP251863T-E/SS",
+      "manufacturer": "Microchip"
+    },
+    "U16": {
+      "mpn": "MCP251863T-E/SS",
+      "manufacturer": "Microchip"
+    },
+    "Y1": {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "manufacturer": "Abracon"
+    },
+    "Y2": {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "manufacturer": "Abracon"
+    },
+    "Y3": {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "manufacturer": "Abracon"
+    },
+    "Y4": {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "manufacturer": "Abracon"
+    },
+    "Y5": {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "manufacturer": "Abracon"
+    },
+    "Y6": {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "manufacturer": "Abracon"
+    },
+    "Y7": {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "manufacturer": "Abracon"
+    },
+    "Y8": {
+      "mpn": "ABM8G-40.000MHZ-18-D2Y-T",
+      "manufacturer": "Abracon"
+    },
+    "U3": {
+      "mpn": "TLV75533PDBVR",
+      "manufacturer": "Texas Instruments"
+    },
+    "C2": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C3": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C4": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C5": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C6": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C7": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C8": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C9": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C10": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C11": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C12": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C13": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C14": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C15": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C16": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C17": {
+      "mpn": "CL10C270JB8NNNC",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "C1": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C21": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C22": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C23": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C24": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C25": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C26": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C27": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C28": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C29": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C30": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C31": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C32": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C33": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C34": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C35": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C36": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C37": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C38": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C39": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C40": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C41": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C42": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C43": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C44": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C45": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C46": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C47": {
+      "mpn": "CC0603KRX7R9BB104",
+      "manufacturer": "YAGEO"
+    },
+    "C18": {
+      "mpn": "CGA3E1X7R1E105K080AC",
+      "manufacturer": "TDK"
+    },
+    "C19": {
+      "mpn": "CGA3E1X7R1E105K080AC",
+      "manufacturer": "TDK"
+    },
+    "C20": {
+      "mpn": "CL21B106KOQNNNE",
+      "manufacturer": "Samsung Electro-Mechanics"
+    },
+    "R6": {
+      "mpn": "RC1206FR-07120RL",
+      "manufacturer": "YAGEO"
+    },
+    "R10": {
+      "mpn": "RC1206FR-07120RL",
+      "manufacturer": "YAGEO"
+    },
+    "R13": {
+      "mpn": "RC1206FR-07120RL",
+      "manufacturer": "YAGEO"
+    },
+    "R16": {
+      "mpn": "RC1206FR-07120RL",
+      "manufacturer": "YAGEO"
+    },
+    "R23": {
+      "mpn": "RC1206FR-07120RL",
+      "manufacturer": "YAGEO"
+    },
+    "R29": {
+      "mpn": "RC1206FR-07120RL",
+      "manufacturer": "YAGEO"
+    },
+    "R32": {
+      "mpn": "RC1206FR-07120RL",
+      "manufacturer": "YAGEO"
+    },
+    "R26": {
+      "mpn": "RC1206FR-07120RL",
+      "manufacturer": "YAGEO"
+    },
+    "R7": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R8": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R11": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R14": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R17": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R24": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R27": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R30": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R38": {
+      "mpn": "RC0603FR-0710KL",
+      "manufacturer": "YAGEO"
+    },
+    "R34": {
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "YAGEO"
+    },
+    "R35": {
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "YAGEO"
+    },
+    "R36": {
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "YAGEO"
+    },
+    "R37": {
+      "mpn": "RC0603FR-07100KL",
+      "manufacturer": "YAGEO"
+    },
+    "R1": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R2": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R3": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R4": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R5": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R9": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R12": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R15": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R18": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R19": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R20": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R21": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R22": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R25": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R28": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "R31": {
+      "mpn": "RC0603FR-0733RL",
+      "manufacturer": "YAGEO"
+    },
+    "J4": {
+      "mpn": "B3B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J5": {
+      "mpn": "B3B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J7": {
+      "mpn": "B3B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J8": {
+      "mpn": "B3B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J9": {
+      "mpn": "B3B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J10": {
+      "mpn": "B3B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J11": {
+      "mpn": "B3B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J12": {
+      "mpn": "B3B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J6": {
+      "mpn": "B2B-XH-A",
+      "manufacturer": "JST"
+    },
+    "J1": {
+      "mpn": "M20-7832046",
+      "manufacturer": "Harwin"
+    },
+    "F1": {
+      "mpn": "0466001.NR",
+      "manufacturer": "Littelfuse"
+    },
+    "Q1": {
+      "mpn": "AO3401A",
+      "manufacturer": "Alpha & Omega Semiconductor"
+    },
+    "D2": {
+      "mpn": "BZT52C6V8-13-F",
+      "manufacturer": "Diodes Incorporated"
+    },
+    "U4": {
+      "mpn": "74AHC30PW,118",
+      "manufacturer": "Nexperia"
+    },
+    "U1": {
+      "mpn": "74LVC32APW,118",
+      "manufacturer": "Nexperia"
+    },
+    "U5": {
+      "mpn": "74LVC32APW,118",
+      "manufacturer": "Nexperia"
+    },
+    "U2": {
+      "mpn": "74LVC04AT14-13",
+      "manufacturer": "Diodes Incorporated"
+    },
+    "TP13": {
+      "mpn": "M20-9990246",
+      "manufacturer": "Harwin"
+    },
+    "TP14": {
+      "mpn": "M20-9990246",
+      "manufacturer": "Harwin"
+    }
+  },
+  "termination_mpn": "RC1206FR-07120RL",
+  "termination_footprint": "BreakoutBoard:R_1206_3216Metric",
+  "j1_mpn": "M20-7832046",
+  "test_header_mpn": "M20-9990246",
+  "schematic_translation_mm": [
+    90.17,
+    104.14
+  ],
+  "paper": "A1",
+  "symbol_pin_definitions_unchanged": true
+}

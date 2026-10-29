@@ -1,0 +1,750 @@
+
+=== PDF PAGE 1 ===
+  
+October 2016 
+DocID5512 Rev 4 
+1/12 
+This is information on a product in full production. 
+www.st.com 
+ 
+STPS20L15 
+ 
+Low drop OR-ing power Schottky diode
+Datasheet - production data
+ 
+ 
+Features 
+ 
+Very low forward voltage drop for less power 
+dissipation and reduced heatsink size 
+ 
+Reverse voltage suited to OR-ing of 3 V, 5 V 
+and 12 V rails 
+ 
+Avalanche capability specified 
+ 
+ECOPACK®2 compliant component for 
+D²PAK on demand 
+Description 
+Packaged in TO-220AC or D²PAK, this device is 
+especially intended for use as an OR-ing diode in 
+fault tolerant power supply equipments. 
+Table 1: Device summary 
+Symbol 
+Value 
+IF(AV) 
+20 A 
+VRRM 
+15 V 
+VF  (typ.) 
+0.28 V 
+Tj (max.) 
+125 °C 
+ 
+K
+K
+A
+K
+K
+NC
+NC
+A
+A
+TO-220AC
+D²PAK
+A
+K
+
+
+=== PDF PAGE 2 ===
+Characteristics 
+STPS20L15 
+ 
+2/12 
+DocID5512 Rev 4 
+ 
+ 
+1 
+Characteristics 
+Table 2: Absolute ratings (limiting values at 25 °C, unless otherwise specified) 
+Symbol 
+Parameter 
+Value 
+Unit 
+VRRM 
+Repetitive peak reverse voltage 
+15 
+V 
+IF(RMS) 
+Forward rms current 
+30 
+A 
+IF(AV) 
+Average forward current 
+TC = 115 °C, DC 
+20 
+A 
+IFSM 
+Surge non repetitive forward current 
+tp = 10 ms sinusoidal 
+310 
+A 
+PARM 
+Repetitive peak avalanche power 
+tp = 10 µs, Tj = 125 °C 
+970 
+W 
+Tstg 
+Storage temperature range 
+-65 to +150 
+°C 
+Tj 
+Maximum operating junction temperature (1) 
+125 
+ 
+Notes: 
+(1)(dPtot/dTj) < (1/Rth(j-a)) condition to avoid thermal runaway for a diode on its own heatsink. 
+ 
+Table 3: Thermal parameters 
+Symbol 
+Parameter 
+Max. value 
+Unit 
+Rth(j-c) 
+Junction to case 
+1.6 
+°C/W 
+ 
+Table 4: Static electrical characteristics 
+Symbol 
+Parameter 
+Test conditions 
+Min. 
+Typ. 
+Max. 
+Unit 
+IR(1) 
+Reverse leakage current 
+Tj = 25 °C 
+VR = 15 V 
+- 
+6 
+mA 
+Tj = 100 °C 
+- 
+200 
+500 
+VF(1) 
+Forward voltage drop 
+Tj = 25 °C 
+IF = 19 A 
+- 
+0.41 
+V 
+IF = 40 A 
+- 
+0.52 
+Tj = 125 °C 
+IF = 19 A 
+- 
+0.28 
+0.33 
+IF = 40 A 
+0.42 
+0.50 
+ 
+Notes: 
+(1)Pulse test: tp = 380 µs, δ < 2% 
+ 
+To evaluate the maximum conduction losses, use the following equation: 
+P = 0.18 x IF(AV) + 8.10-3 x IF2(RMS) 
+ 
+ 
+
+
+=== PDF PAGE 3 ===
+STPS20L15 
+Characteristics 
+ 
+ 
+DocID5512 Rev 4 
+3/12 
+ 
+1.1 
+Characteristics (curves) 
+Figure 1: Average forward power dissipation 
+versus average forward current 
+ 
+Figure 2: Average forward current versus ambient 
+temperature (δ = 1) 
+ 
+ 
+Figure 3: Normalized avalanche power derating 
+versus pulse duration (Tj = 125 °C) 
+ 
+Figure 4: Relative variation of thermal impedance 
+junction to case versus pulse duration 
+ 
+ 
+Figure 5: Reverse leakage current versus reverse 
+voltage applied (typical values) 
+ 
+Figure 6: Junction capacitance versus reverse 
+voltage applied (typical values) 
+ 
+ 
+0
+1
+2
+3
+4
+5
+6
+7
+8
+= 1
+= 0.5
+= 0.2
+= 0.1
+= 0.05
+T
+= tp/T
+tp
+δ
+δ
+δ
+δ
+δ
+δ
+PF(AV)(W)
+IF(AV)(A)
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+22
+T
+= tp/T
+tp
+IF(AV)(A)
+δ
+Tamb(°C)
+Rth(j-a) = Rth(j-c)
+Rth(j-a) = 15 °C/W
+Rth(j-a) = 35 °C/W
+0
+25
+50
+75
+100
+125
+P
+(tp)
+P
+(10 µs)
+ARM
+ARM
+0.001
+0.01
+0.1
+1
+1
+10
+100
+1000
+t (µs)
+p
+1. 0E -4
+1. 0E -3
+1. 0E -2
+1. 0E -1
+1. 0E +0
+0. 0
+0. 2
+0. 4
+0. 6
+0. 8
+1. 0
+T
+= tp/T
+tp
+Zth(j-c)/Rth(j-c)
+δ
+δ = 0.1
+δ = 0.5
+δ = 0.2
+Single pulse
+tp(s)
+1E -1
+1E +0
+1E +1
+1E +2
+5E +2
+IR(mA)
+0
+2
+4
+6
+8
+10
+12
+14
+16
+VR(V)
+Tj = 100 °C
+Tj = 25 °C
+0. 1
+1. 0
+5. 0
+C(nF)
+VR(V)
+1
+2
+5
+10
+20
+F = 1 MHz
+Tj = 25 °C
+
+
+=== PDF PAGE 4 ===
+Characteristics 
+STPS20L15 
+ 
+4/12 
+DocID5512 Rev 4 
+ 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+0
+5
+10
+15
+20
+25
+30
+35
+40
+SCu(cm²)
+Rth(j-a)(°C/W)
+Epoxy printed board FR4, eCU= 35 µm
+Figure 7: Forward voltage drop versus forward 
+current (typical values) 
+ 
+Figure 8: Forward voltage drop versus forward 
+current (maximum values) 
+ 
+ 
+Figure 9: Thermal resistance junction to ambient versus copper surface under tab for D²PAK 
+ 
+ 
+1
+10
+100
+200 IF(A)
+VF (V)
+Tj = 100 °C
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+
+
+=== PDF PAGE 5 ===
+STPS20L15 
+Package information 
+ 
+ 
+DocID5512 Rev 4 
+5/12 
+ 
+2 
+Package information 
+In order to meet environmental requirements, ST offers these devices in different grades of 
+ECOPACK® packages, depending on their level of environmental compliance. ECOPACK® 
+specifications, grade definitions and product status are available at: www.st.com. 
+ECOPACK® is an ST trademark.  
+ 
+Cooling method: by conduction (C) 
+ 
+Epoxy meets UL 94,V0 
+ 
+Recommended torque value: 0.55 N·m (for TO-220AC) 
+ 
+Maximum torque value: 0.7 N·m (for TO-220AC) 
+
+
+=== PDF PAGE 6 ===
+Package information 
+STPS20L15 
+ 
+6/12 
+DocID5512 Rev 4 
+ 
+ 
+2.1 
+D²PAK package information 
+Figure 10: D²PAK package outline 
+ 
+ 
+ 
+This package drawing may slightly differ from the physical package. However, all 
+the specified dimensions are guaranteed. 
+ 
+
+
+=== PDF PAGE 7 ===
+STPS20L15 
+Package information 
+ 
+ 
+DocID5512 Rev 4 
+7/12 
+ 
+Table 5: D²PAK package mechanical data 
+Ref. 
+Dimensions 
+Millimeters 
+Inches 
+Min. 
+Max. 
+Min. 
+Max. 
+A 
+4.36 
+4.60 
+0.172 
+0.181 
+A1 
+0.00 
+0.25 
+0.000 
+0.010 
+b 
+0.70 
+0.93 
+0.028 
+0.037 
+b2 
+1.14 
+1.70 
+0.045 
+0.067 
+c 
+0.38 
+0.69 
+0.015 
+0.027 
+c2 
+1.19 
+1.36 
+0.047 
+0.053 
+D 
+8.60 
+9.35 
+0.339 
+0.368 
+D1 
+6.90 
+8.00 
+0.272 
+0.311 
+D2 
+1.10 
+1.50 
+0.043 
+0.060 
+E 
+10.00 
+10.55 
+0.394 
+0.415 
+E1 
+8.10 
+8.90 
+0.319 
+0.346 
+E2 
+6.85 
+7.25 
+0.266 
+0.282 
+e 
+2.54 typ. 
+0.100 
+e1 
+4.88 
+5.28 
+0.190 
+0.205 
+H 
+15.00 
+15.85 
+0.591 
+0.624 
+J1 
+2.49 
+2.90 
+0.097 
+0.112 
+L 
+1.90 
+2.79 
+0.075 
+0.110 
+L1 
+1.27 
+1.65 
+0.049 
+0.065 
+L2 
+1.30 
+1.78 
+0.050 
+0.070 
+R 
+0.4 typ. 
+0.015 
+V2 
+0° 
+8° 
+0° 
+8° 
+ 
+
+
+=== PDF PAGE 8 ===
+Package information 
+STPS20L15 
+ 
+8/12 
+DocID5512 Rev 4 
+ 
+ 
+Figure 11: D²PAK recommended footprint (dimensions in mm) 
+ 
+
+
+=== PDF PAGE 9 ===
+STPS20L15 
+Package information 
+ 
+ 
+DocID5512 Rev 4 
+9/12 
+ 
+2.2 
+TO-220AC package information 
+Figure 12: TO-220AC package outline 
+ 
+ 
+ 
+
+
+=== PDF PAGE 10 ===
+Package information 
+STPS20L15 
+ 
+10/12 
+DocID5512 Rev 4 
+ 
+ 
+Table 6: TO-220AC package mechanical data 
+Ref. 
+Dimensions 
+Millimeters 
+Inches 
+Min. 
+Max. 
+Min. 
+Max. 
+A 
+4.40 
+4.60 
+0.173 
+0.181 
+C 
+1.23 
+1.32 
+0.048 
+0.051 
+D 
+2.40 
+2.72 
+0.094 
+0.107 
+E 
+0.49 
+0.70 
+0.019 
+0.027 
+F 
+0.61 
+0.88 
+0.024 
+0.034 
+F1 
+1.14 
+1.70 
+0.044 
+0.066 
+G 
+4.95 
+5.15 
+0.194 
+0.202 
+H2 
+10.00 
+10.40 
+0.393 
+0.409 
+L2 
+16.40 typ. 
+0.645 typ. 
+L4 
+13.00 
+14.00 
+0.511 
+0.551 
+L5 
+2.65 
+2.95 
+0.104 
+0.116 
+L6 
+15.25 
+15.75 
+0.600 
+0.620 
+L7 
+6.20 
+6.60 
+0.244 
+0.259 
+L9 
+3.50 
+3.93 
+0.137 
+0.154 
+M 
+2.6 typ. 
+0.102 typ. 
+Diam 
+3.75 
+3.85 
+0.147 
+0.151 
+ 
+
+
+=== PDF PAGE 11 ===
+STPS20L15 
+Ordering information 
+ 
+ 
+DocID5512 Rev 4 
+11/12 
+ 
+3 
+Ordering information 
+Table 7: Ordering information 
+Order code 
+Marking 
+Package 
+Weight 
+Base qty. 
+Delivery mode 
+STPS20L15D 
+STPS20L15D 
+TO-220AC 
+1.86 g 
+50 
+Tube 
+STPS20L15G-TR 
+STPS20L15G 
+D²PAK 
+1.38 g 
+1000 
+Tape and reel 
+ 
+4 
+Revision history 
+Table 8: Document revision history 
+Date 
+Revision 
+Changes 
+24-Jul-2012 
+3 
+13-Oct-2016 
+4 
+Updated cover page, Section 3.1: "Characteristics 
+(curves)", Section 3: "Characteristics", Section 4.2: "D²PAK 
+package information" and Table 7: "Ordering information". 
+ 
+ 
+
+
+=== PDF PAGE 12 ===
+ 
+STPS20L15 
+ 
+12/12 
+DocID5512 Rev 4 
+ 
+ 
+ 
+IMPORTANT NOTICE – PLEASE READ CAREFULLY 
+ 
+STMicroelectronics NV and its subsidiaries (“ST”) reserve the right to make changes, corrections, enhancements, modifications, and 
+improvements to ST products and/or to this document at any time without notice. Purchasers should obtain the latest relevant information on ST 
+products before placing orders. ST products are sold pursuant to ST’s terms and conditions of sale in place at the time of order 
+acknowledgement.  
+ 
+Purchasers are solely responsible for the choice, selection, and use of ST products and ST assumes no liability for application assistance or the 
+design of Purchasers’ products. 
+ 
+No license, express or implied, to any intellectual property right is granted by ST herein. 
+ 
+Resale of ST products with provisions different from the information set forth herein shall void any warranty granted by ST for such product. 
+ 
+ST and the ST logo are trademarks of ST. All other product or service names are the property of their respective owners. 
+ 
+Information in this document supersedes and replaces information previously supplied in any prior versions of this document. 
+ 
+© 2016 STMicroelectronics – All rights reserved 
+ 
+ 

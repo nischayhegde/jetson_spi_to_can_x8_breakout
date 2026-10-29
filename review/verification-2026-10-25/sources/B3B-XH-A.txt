@@ -1,0 +1,1181 @@
+
+=== PDF PAGE 1 ===
+- 1 -
+1
+Highly reliable, versatile 2.5 mm pitch wire-to-
+board connector with an assembled board 
+height of 9.8 mm for low profile applications.
+■Specifications
+• Current rating: 3 A　AC/DC（AWG #22）
+・Voltage rating: 250 V　AC/DC
+・Temperature range: -25℃ to +85℃
+ 
+  
+ 
+ 
+ 
+  (including temperature rise in 
+                               applying electrical current)
+・Contact resistance: 
+                 Initial value/ 10 mΩ max.
+ 
+        After environmental tests/ 20 mΩ max.
+・Insulation resistance: 1,000 MΩ min. 
+・Withstanding voltage: 
+      There shall be no breakdown or flashover while
+      applying 1,000 VAC for one minute.
+・Applicable wire range: 
+                 Conductor size/ AWG #30 to AWG #22
+ 
+          Insulation O.D./ φ 0.9 mm to φ 1.9 mm
+・Applicable PC board thickness: 1.6 mm 
+* Please refer to the "Handling Precautions for Terminals
+   and Connectors" on our website (listed in the “Technical
+   Documents” column on the Product Information page)
+   before use.
+* RoHS2 compliance
+* Dimensional unit: mm
+* Contact JST for details.
+■Standards
+For information on overseas standard registrations, 
+please refer to the "List of Registered Overseas 
+Standards" on our website (listed in the “Technical 
+Documents” column on the Product Information page).
+* Specifications registered to overseas standards may 
+   differ from the general specifications listed above.
+XH CONNECTOR
+2.5 mm pitch/Wire-to-Board connectors/Crimp style and Mating style
+・Original double-leaf contact design
+・Box-shaped shrouded header
+・Header is also available with boss
+・The 4 pin version conforms to JEMA's 
+   Home Automation (HA terminal) standards.
+
+
+=== PDF PAGE 2 ===
+- 2 -
+±0.05
+4.35
+φ0.9
+＋0.1
+　0
+φ1.7
+＋0.1
+　0
+Boss
+(7)
+(9.8)
+5.75
+2.5 ±0.05
+＋0.2
+　0
+2 ±0.05
+±0.05
+1.6±0.05
+2 circuits: φ1
+3 circuits or more: φ0.9
+＋0.1
+　0
+φ1.1
+Boss
+No. 1 circuit
+5.75
+(7)
+(9.8)
+2.5 ±0.05
+±0.05
+φ1
+φ0.9
+PA 66（Glass-ﬁlled）type: 
+ Radial tape type: 
+(Lock side)
+＋0.1
+　0
+No. 1
+circuit
+(7)
+(9.8)
+5.75
+Note 3）
+2.5 ±0.05
+No. 1
+circuit
+φ0.9
+＋0.1
+　0
+5.75
+(7)
+(9.8)
+(Lock side)
+5.75
+(7)
+(9.8)
+2.5 ±0.05
+No. 1
+circuit
+φ0.9
+＋0.1
+　0
+注3)
+(Lock side)
+2.5 ±0.05
+φ0.9
+＋0.1
+　0
+No. 1 circuit
+(6.1)
+4.5
+7
+(14.3)
+(C)
+Side edge of 
+header on PCB
+Note:  1. The PC board layout figure shown is viewed from the connector mounting surface.
+         2. Tolerance for the PCB hole pitch shall be ± 0.05 and shall not accumulate.
+         3. Dimension C: See “Header/ Side entry type” section on page 4.
+         4. Hole dimensions differ depending on the type of PCB and PCB drilling method. 
+            When using PCB made of hard material composed of fiberglass cloth, please consider a larger hole diameter.
+　　     The above dimensions are reference values. Please contact JST for details.
+ Top entry type
+ Side entry type
+< 2 circuits or more>
+<Single circuit>
+　PC board layout and Assembly layout
+XH CONNECTOR
+ Top entry type
+　PC board layout and Assembly layout/ PA 66（Glass-filled）
+  type, Radial tape type
+<2 circuits>
+<3 to 8 circuits>
+<9 circuits or more>
+Note:  1. The PC board layout figure shown is viewed from the connector mounting surface.
+         2. Tolerance for the PCB hole pitch shall be ± 0.05 and shall not accumulate.
+         3. Radial tape style packaging conforms to PCB hole diameter specifications on the automatic insertion machine.
+         4. Hole dimensions differ depending on the type of PCB and PCB drilling method. 
+            When using PCB made of hard material composed of fiberglass cloth with glass-filled PA 66, 
+            please consider a larger hole diameter.
+　　     The above dimensions are reference values. Please contact JST for details.
+
+
+=== PDF PAGE 3 ===
+- 3 -
+XH CONNECTOR
+1.6
+5.6
+2.35
+1.9
+Material and Surface ﬁnish, etc.
+Model No.
+Applicable wire range
+Q'ty/
+reel
+Conductor size
+AWG (mm2)
+Insulation O.D.
+（mm）
+Phosphor bronze, tin-plated
+SXH-001T-P0.6N
+SXH-002T-P0.6
+SXH-001T-P0.6
+#26 to #22 (0.13 to 0.33)
+#30 to #26 (0.05 to 0.13)
+#28 to #22 (0.08 to 0.33)
+1.3 to 1.9
+0.9 to 1.3
+0.9 to 1.9
+5,000
+8,000
+Shape
+A
+B
+Note:  1. Contact JST for gold-plated products.
+         2. Contact JST also if you require shielded wires, thin wires or 
+            other special wires.
+         3. SXH-001T-P0.6N is low-insertion force type contact, for easier
+            insertion/withdrawal, which would be less resistant to 
+            the vibration.
+2
+6.1
+2.4
+1.95
+ Shape A
+ Shape B
+Contact
+Crimping machine
+Crimp applicator with dies
+Applicator
+SXH-001T-P0.6N
+SXH-002T-P0.6
+SXH-001T-P0.6
+AP-K2N
+MKS-L
+APLMK SXH001-06N
+APLMK SXH002-06
+APLMK SXH001-06
+　Contact
+Crimping machine
+Note: Contact JST for fully automatic crimping applicator.
+(0.2)
+3.9
+11
+6.5
+1.8
+2.3
+2.5±0.05
+1.3
+Side edge of 
+header on PCB
+7
+（3）
+（12.8）
+（6）
+No. 1 circuit
+ Side entry type
+Note:  1. The PC board layout figure shown is viewed from the connector mounting surface.
+         2. Tolerance for the PCB pattern pitch shall be ± 0.05 and shall not accumulate.
+         3. The above dimensions are reference values. Please contact JST for details.
+　PC board layout and Assembly layout/ SMT type
+
+
+=== PDF PAGE 4 ===
+- 4 -
+XH CONNECTOR
+B
+5.7
+0.25
+7.5
+Note:  1. XHP-2(10.0)-U means the 2-circuits housing with 10.0 mm pitch, 
+            and 3-circuits of 5-circuits are filled with the resin.  
+         2. XHP-6(5.0)-U means the 6-circuits housing with 5.0 mm pitch 
+            and each even number circuit is filled with the resin.  
+        3. For flame retardant grade of resin material used, please refer to
+            the "List of Registered Overseas Standards" on our website
+            (listed in the “Technical Documents” column on the Product
+            Information page).
+No. of
+circuits
+Model No.
+Dimensions (mm)
+Q'ty/bag
+A
+B
+Material and Surface ﬁnish, etc.
+PA 6, natural (white)
+ 1
+  2
+Note 1）2
+  3
+  4
+  5
+  6
+Note 2）6
+  7
+  8
+  9
+10
+11
+12
+13
+14
+15
+16
+20
+XHP-1
+XHP-2
+XHP-2(10.0)-U
+XHP-3
+XHP-4
+XHP-5
+XHP-6
+XHP-6(5.0)-U
+XHP-7
+XHP-8
+XHP-9
+XHP-10
+XHP-11
+XHP-12
+XHP-13
+XHP-14
+XHP-15
+XHP-16
+XHP-20
+-
+  2.5
+10.0
+  5.0
+  7.5
+10.0
+12.5
+25.0
+15.0
+17.5
+20.0
+22.5
+25.0
+27.5
+30.0
+32.5
+35.0
+37.5
+47.5
+4.8
+7.3
+14.8
+9.8
+12.3
+14.8
+17.3
+29.8
+19.8
+22.3
+24.8
+27.3
+29.8
+32.3
+34.8
+37.3
+39.8
+42.3
+52.3
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+1,000
+500
+A
+B
+5.7
+No. 1
+circuit
+0.25
+7.5
+A
+B
+5.7
+0.25
+7.5
+No. 1
+circuit
+ Plugged up hole
+ <2 circuits, 10 mm pitch>
+ <Single circuit>
+ <2 to 16, 20 circuits>
+　Housing
+<6 circuits, 5 mm pitch>
+2.5
+A
+B
+5.7
+0.25
+7.5
+No. 1
+circuit
+
+
+=== PDF PAGE 5 ===
+- 5 -
+A
+B
+5.75
+(3.4)
+7
+2
+(2.35)
+φ1
+1.6
+No. 1 circuit
+□0.64
+B
+(3.4)
+7
+(2.35)
+4.35
+5.75
+1.5
+□0.64
+(3.4)
+7
+2.5
+φ1
+2
+5.75
+1.6
+No. 1 circuit
+A
+B
+□0.64
+5.75
+(2.35)
+(2.35)
+ Top entry type
+ Top entry type, plugged up hole
+  <2 circuits, 10 mm pitch>
+<Single circuit>
+<2 circuits>
+<2 circuits>
+<3 circuits or more>
+<3 circuits or more>
+Note:  1. This product displays （LF）
+（SN） on a label.
+         2. B2(10.0)B-XH-A-U means the 2-circuits housing with 10.0 mm
+            pitch, and 3-circuits of 5-circuits are filled with the resin.  
+         3. For flame retardant grade of resin material used, please refer to
+            the "List of Registered Overseas Standards" on our website
+            (listed in the “Technical Documents” column on the Product
+            Information page).
+Note:  1. This product displays （LF）
+（SN） on a label.
+         2. For flame retardant grade of resin material used, please refer to
+            the "List of Registered Overseas Standards" on our website
+            (listed in the “Technical Documents” column on the Product
+            Information page).
+(3.4)
+7
+5.75
+A
+B
+□0.64
+No. 1 circuit
+(2.35)
+No. 1 circuit
+A
+B
+□0.64
+4.5
+7
+(6.1)
+(3.4)
+C: 9.2/7.6
+No. 1 circuit
+2.5
+A
+B
+□0.64
+4.5
+7
+(6.1)
+(3.4)
+C: 9.2/7.6
+ Side entry type
+XH CONNECTOR
+　Header
+No. of
+circuits
+Model No.
+Dimensions (mm)
+A
+B
+Without
+boss
+Without boss
+With boss
+With
+boss
+Q'ty/box
+1
+2
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+20
+   -
+B2B-XH-A
+B2 (10.0)B-XH-A-U Note2）
+B3B-XH-A
+B4B-XH-A
+B5B-XH-A
+B6B-XH-A
+B7B-XH-A
+B8B-XH-A
+B9B-XH-A
+B10B-XH-A
+B11B-XH-A
+B12B-XH-A
+B13B-XH-A
+B14B-XH-A
+B15B-XH-A
+B16B-XH-A
+B20B-XH-A
+B1B-XH-AM
+B2B-XH-AM
+    -
+B3B-XH-AM
+B4B-XH-AM
+B5B-XH-AM
+B6B-XH-AM
+B7B-XH-AM
+B8B-XH-AM
+B9B-XH-AM
+B10B-XH-AM
+    -
+B12B-XH-AM
+    -
+    -
+    -
+    -
+    -
+-
+  2.5
+10.0
+  5.0
+  7.5
+10.0
+12.5
+15.0
+17.5
+20.0
+22.5
+25.0
+27.5
+30.0
+32.5
+35.0
+37.5
+47.5
+4.9
+7.4
+14.9
+9.9
+12.4
+14.9
+17.4
+19.9
+22.4
+24.9
+27.4
+29.9
+32.4
+34.9
+37.4
+39.9
+42.4
+52.4
+-
+1,000
+1,000
+1,000
+   500
+   500
+   500
+   500
+   250
+   250
+   250
+   250
+   250
+   250
+   250
+   250
+   200
+   100
+1,000
+1,000
+-
+1,000
+   500
+   500
+   500
+   500
+   250
+   250
+   250
+-
+   250
+-
+-
+-
+-
+-
+Material and Surface ﬁnish, etc.
+Post: Brass, copper-undercoated, tin-plated
+Wafer: PA 66, natural (white)
+No. of
+circuits
+Model No.
+Dimensions (mm)
+A
+B
+C: 9.2 (mm)
+C: 7.6 (mm)
+Q'ty/box
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+S2B-XH-A
+S3B-XH-A
+S4B-XH-A
+S5B-XH-A
+S6B-XH-A
+S7B-XH-A
+S8B-XH-A
+S9B-XH-A
+S10B-XH-A
+S11B-XH-A
+S12B-XH-A
+S13B-XH-A
+S14B-XH-A
+S15B-XH-A
+S16B-XH-A
+S2B-XH-A-1
+S3B-XH-A-1
+S4B-XH-A-1
+S5B-XH-A-1
+S6B-XH-A-1
+S7B-XH-A-1
+S8B-XH-A-1
+S9B-XH-A-1
+S10B-XH-A-1
+S11B-XH-A-1
+S12B-XH-A-1
+S13B-XH-A-1
+S14B-XH-A-1
+S15B-XH-A-1
+   -
+2.5
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+20.0
+22.5
+25.0
+27.5
+30.0
+32.5
+35.0
+37.5
+7.4
+9.9
+12.4
+14.9
+17.4
+19.9
+22.4
+24.9
+27.4
+29.9
+32.4
+34.9
+37.4
+39.9
+42.4
+1,000
+1,000
+500
+ 500
+500
+250
+250
+ 250
+250
+250
+200
+200
+200
+100
+100
+Material and Surface ﬁnish, etc.
+Post: Brass, copper-undercoated, tin-plated
+Wafer: PA 66, natural (white)
+Top entry type
+Side entry type
+
+
+=== PDF PAGE 6 ===
+- 6 -
+XH CONNECTOR
+7
+(3)
+No. 1
+circuit
+□0.64
+2.5
+A
+B
+5.5
+6
+No. of
+circuits
+Model No.
+Dimensions (mm)
+A
+B
+Q'ty/reel
+Material and Surface ﬁnish, etc.
+5.0
+7.5
+12.5
+S3B-XH-SM4-TB
+S4B-XH-SM4-TB
+S6B-XH-SM4-TB
+12.5
+15.0
+20.0
+800
+800
+800
+3 
+4 
+6 
+Post: Copper alloy, copper-undercoated, tin-plated
+Wafer: Modiﬁed PA 6T, natural (ivory)
+Solder tab: Brass, copper-undercoated, tin-plated
+Note:  1. This product displays （LF）
+（SN） on a label.
+         2. This product is supplied on embossed tape and reel packaging.
+         3. For flame retardant grade of resin material used, please refer to
+            the "List of Registered Overseas Standards" on our website
+            (listed in the “Technical Documents” column on the Product
+            Information page).
+　Header/ SMT type
+ Top entry type
+No. of
+circuits
+Model No.
+Dimensions (mm)
+Q'ty/box
+A
+B
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+B2B-XH-2
+B3B-XH-2
+B4B-XH-2
+B5B-XH-2
+B6B-XH-2
+B7B-XH-2
+B8B-XH-2
+B9B-XH-2
+B10B-XH-2
+B11B-XH-2
+B12B-XH-2
+B13B-XH-2
+B14B-XH-2
+B15B-XH-2
+2.5
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+20.0
+22.5
+25.0
+27.5
+30.0
+32.5
+35.0
+7.4
+9.9
+12.4
+14.9
+17.4
+19.9
+22.4
+24.9
+27.4
+29.9
+32.4
+34.9
+37.4
+39.9
+1,000
+1,000
+500
+500
+500
+500
+250
+250
+250
+250
+250
+250
+250
+250
+Material and Surface ﬁnish, etc.
+Post: Brass, copper-undercoated, tin-plated 
+Wafer: PA 66 (Glass-ﬁlled), natural (ivory)
+<2 circuits>
+<3 to 8 circuits>
+<9 circuits or more>
+A
+B
+5.75
+(3.4)
+7
+6.75
+□0.64
+(2.35)
+No. 1
+circuit
+2.5
+5.75
+6.75
+(3.4)
+7
+No. 1
+circuit
+A
+B
+□0.64
+(2.35)
+2.5
+5.75
+(3.4)
+7
+No. 1
+circuit
+A
+B
+□0.64
+(2.35)
+Note:  1. This product displays （LF）
+（SN） on a label.
+         2. For flame retardant grade of resin material used, please refer to
+            the "List of Registered Overseas Standards" on our website
+            (listed in the “Technical Documents” column on the Product
+            Information page).
+　Header/ PA 66 (Glass-filled) type
+
+
+=== PDF PAGE 7 ===
+- 7 -
+XH CONNECTOR
+2.5
+7.4
+2.45
+7
+6.75
+(φ0.7)
+□0.64
+2.5
+B
+A
+2.45
+7
+2.8
+□0.64
+6.75
+(φ0.7)
+□0.64
+2.5
+B
+A
+2.45
+7
+2.8
+□0.64
+6.75
+(φ0.7)
+□0.64
+ PA 66 type
+ <3, 4 circuits>
+ PA 66 (Glass-filled) type
+ <2 circuits>
+<3 to 8 circuits>
+No. of
+circuits
+Model No.
+Dimensions (mm)
+A
+B
+PA 66 type
+PA 66 (Glass-ﬁlled) type
+2
+3
+4
+5
+6
+7
+8
+-
+B3B-XH-TV4
+B4B-XH-TV4
+-
+-
+-
+-
+B2B-XH-2-TV4
+B3B-XH-2-TV4
+B4B-XH-2-TV4
+B5B-XH-2-TV4
+B6B-XH-2-TV4
+B7B-XH-2-TV4
+B8B-XH-2-TV4
+-
+5.0
+7.5
+10.0
+12.5
+15.0
+17.5
+-
+9.9
+12.4
+14.9
+17.4
+19.9
+22.4
+Material and Surface ﬁnish, etc.
+Post: Brass, copper-undercoated, tin-plated
+Wafer: PA 66 type/ PA 66, natural (white)
+          PA 66 (Glass-ﬁlled) type/ PA 66 (Glass-ﬁlled), natural (ivory)
+Q'ty/box
+1,000
+1,000
+500
+500
+500
+500
+500
+Note:  1. This product displays （LF）
+（SN） on a label.
+         2. For flame retardant grade of resin material used, please refer to the "List of Registered 
+            Overseas Standards" on our website (listed in the “Technical Documents” column on 
+            the Product Information page).
+　Header/ Radial tape type
+
+
+=== PDF PAGE 8 ===
+12.7
+20
+9
+6
+18
+φ4
+6.75
+2 circuits: 5.1
+3 to 8 circuits: 3.85
+2 circuits: 2.5
+3 to 8 circuits: 5
+2, 3 circuits: 12.7
+4 to 8 circuits: 25.4
+Note: Conforms to IEC 60286-2 (JIC C 0806-2) "Tape packaging of
+         components with unidirectional leads on continuous tapes".
+　Packaging specifications
+　Taping specifications
+- 8 -
+XH CONNECTOR
+ Housing
+ Contact
+　Model number allocation
+Supply form: Strip form
+Series name
+Applicable wire range: 
+　  Normal type  
+　  　  002…AWG #30 to AWG #26
+　  　  001…AWG #28 to AWG #22
+　  Low insertion force type  
+　  　  001…AWG #26 to AWG #22
+Surface ﬁnish: Tin-plated
+Material: Phosphor bronze
+Applicable post size
+Type: No indication…Normal type, N…Low insertion force type
+XH
+S
+- 001 T
+P
+-
+0.6
+Series name
+Type: Plug
+No. of circuits
+Color: No indication…Natural (White), BK…Black, R…Red, 
+         E…Blue, Y…Yellow, L…Lemon yellow, M…Green, 
+         N…Brown, FY…Fluorescent yellow
+XH P
+5
+-
+-
+TERMINALS & CONNECTORS
+R
+D
+Ｈ
+W
+Leader tape
+Tail tape
+Flat pack (zigzag folded)
+24 index holes per fold (304.8 mm)
+316(W)×45(D)×330(H) mm
+1,000 pcs./box
+   500 pcs./box
+19.05 mm
+2, 3 circuits
+4 to 8 circuits
+Packaging style
+Distance between folds
+Box size
+Distance between the end of the tape and 
+the ﬁrst connector’s center line (either end)
+Quantity 
+per package
+Distance between the end of the tape and 
+the first connector's center line (either end)
+Note: Products of different packaging specifications are also available.  
+ Contact JST for details.
+
+
+=== PDF PAGE 9 ===
+- 9 -
+XH CONNECTOR
+　Model number allocation
+ Header/ Radial tape type 
+ Header/ SMT type 
+Header type: Side entry type
+No. of circuits
+Assembly product
+Series name
+Termination style: SMT
+Product version number
+Color: No indication…Natural (Ivory), M…Green
+Packaging style: Embossed taping
+B
+-
+-
+3
+XH
+4
+SM
+TB
+S
+-
+-
+Header type: Top entry type
+No. of circuits
+Assembly product
+Series name
+Housing material: No indication…PA 66
+　　　　　　　　2…PA 66 (Glass-ﬁlled)
+Packaging style: Radial tape
+Radial tape lead style: Partially rounded rectangular leads
+Color: PA 66 type
+　　　   No indication…Natural (White), BK…Black, 
+　　　   R…Red, E…Blue, Y…Yellow, M…Green
+　　   PA 66 (Glass-ﬁlled) type
+　　　   No indication…Natural (Ivory), C…Black,   
+　　　   R…Red, E…Blue, Y…Yellow, M…Green
+　　
+B
+-
+-
+3
+XH
+V4
+2
+B
+-
+T
+-
+ Header/ Plugged up hole
+ Header/ PA 66 (Glass-filled) type
+ Housing/ Plugged up hole
+ Header
+Series name
+Type: Plug
+No. of circuits 
+Pitch
+Sub model number
+P
+XH
+- 2 (10.0)- U
+Header type: B…Top entry type
+　　　　　    S…Side entry type
+No. of circuits
+Assembly product
+Series name
+Clinched (Kinked)/ Not clinched: Clinched
+Presence of boss: No indication…Without boss
+                          M…With boss
+Color: No indication……Natural (White), BK…Black, R…Red,
+　　　E…Blue, Y…Yellow, L…Lemon yellow, M…Green, 
+         N…Brown, FY…Fluorescent yellow, D…Orange
+B 5 B
+A
+XH
+-
+-
+-
+Header type: Top entry type
+No. of circuits
+Pitch
+Assembly product
+Series name
+Clinched (Kinked)/ Not clinched: Clinched
+Sub model number
+Color: No indication…Natural (White), R…Red, E…Blue
+B 2
+-
+(10.0) B
+XH
+U
+A
+-
+-
+-
+Header type: Top entry type
+No. of circuits
+Assembly product
+Series name
+Housing material: PA 66 (Glass-ﬁlled)
+Color: No indication…Natural (Ivory), C…Black, R…Red, 
+         E…Blue, Y…Yellow, M…Green
+B 5 B
+2
+XH
+-
+-
+-

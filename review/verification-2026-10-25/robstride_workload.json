@@ -1,0 +1,87 @@
+{
+  "user_inputs": {
+    "Jetson_to_board_cable_length_cm": 5,
+    "nodes": "Mostly RobStride motors and IMUs",
+    "motor_update_rate_hz": null,
+    "motor_models_and_protocol_mode": null,
+    "IMU_models_and_frame_schedule": null
+  },
+  "scenario_assumptions": "RobStride private protocol, Classical CAN 29-bit ID DLC8; one command and one response per update; IMU traffic excluded",
+  "rows": [
+    {
+      "motors_on_one_CAN_bus": 2,
+      "command_and_feedback_rate_each_hz": 250,
+      "frames_per_second": 1000,
+      "CAN_utilization_before_stuffing": 0.131,
+      "CAN_utilization_max_stuff_bound": 0.16
+    },
+    {
+      "motors_on_one_CAN_bus": 2,
+      "command_and_feedback_rate_each_hz": 500,
+      "frames_per_second": 2000,
+      "CAN_utilization_before_stuffing": 0.262,
+      "CAN_utilization_max_stuff_bound": 0.32
+    },
+    {
+      "motors_on_one_CAN_bus": 2,
+      "command_and_feedback_rate_each_hz": 1000,
+      "frames_per_second": 4000,
+      "CAN_utilization_before_stuffing": 0.524,
+      "CAN_utilization_max_stuff_bound": 0.64
+    },
+    {
+      "motors_on_one_CAN_bus": 3,
+      "command_and_feedback_rate_each_hz": 250,
+      "frames_per_second": 1500,
+      "CAN_utilization_before_stuffing": 0.1965,
+      "CAN_utilization_max_stuff_bound": 0.24
+    },
+    {
+      "motors_on_one_CAN_bus": 3,
+      "command_and_feedback_rate_each_hz": 500,
+      "frames_per_second": 3000,
+      "CAN_utilization_before_stuffing": 0.393,
+      "CAN_utilization_max_stuff_bound": 0.48
+    },
+    {
+      "motors_on_one_CAN_bus": 3,
+      "command_and_feedback_rate_each_hz": 1000,
+      "frames_per_second": 6000,
+      "CAN_utilization_before_stuffing": 0.786,
+      "CAN_utilization_max_stuff_bound": 0.96
+    },
+    {
+      "motors_on_one_CAN_bus": 4,
+      "command_and_feedback_rate_each_hz": 250,
+      "frames_per_second": 2000,
+      "CAN_utilization_before_stuffing": 0.262,
+      "CAN_utilization_max_stuff_bound": 0.32
+    },
+    {
+      "motors_on_one_CAN_bus": 4,
+      "command_and_feedback_rate_each_hz": 500,
+      "frames_per_second": 4000,
+      "CAN_utilization_before_stuffing": 0.524,
+      "CAN_utilization_max_stuff_bound": 0.64
+    },
+    {
+      "motors_on_one_CAN_bus": 4,
+      "command_and_feedback_rate_each_hz": 1000,
+      "frames_per_second": 8000,
+      "CAN_utilization_before_stuffing": 1.048,
+      "CAN_utilization_max_stuff_bound": 1.28
+    }
+  ],
+  "example_IMU_budget": {
+    "CAN_frames_per_second": 1000,
+    "assumed_extended_DLC8": true,
+    "CAN_utilization_before_stuffing": 0.131,
+    "CAN_utilization_max_stuff_bound": 0.16
+  },
+  "cable_delay_estimate": {
+    "assumed_propagation_m_per_s": 200000000,
+    "one_way_ns": 0.25,
+    "SCK_out_MISO_return_ns": 0.5,
+    "comment": "Illustrative flight time only; actual cable impedance/capacitance/return path remain unmeasured"
+  }
+}

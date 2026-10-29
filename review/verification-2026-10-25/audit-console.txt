@@ -1,0 +1,292 @@
+{
+  "input_sha256": {
+    "breakout\\breakout.kicad_sch": "ef185397759b690fbab8afd64d6c93fda8616984e1ce9a3a143a1e98d3175f34",
+    "breakout\\breakout.kicad_pcb": "dc8c25e40236c56d6152cb0a81461df066c329f8193ceeb43edfeaea04ddfb14",
+    "breakout\\breakout.kicad_pro": "3de665ecd030f3fef767137f3c30ef88aa469ce72e953415b2305817138462b3"
+  },
+  "component_count": 141,
+  "all_channel_checks_pass": true,
+  "gate_power": {
+    "U1": "VDD_VIO",
+    "U2": "VDD_VIO",
+    "U4": "VDD_VIO",
+    "U5": "VDD_VIO"
+  },
+  "gate_bypass_correct": true,
+  "fuses": {
+    "F1": {
+      "value": "0466001.NR",
+      "nets": [
+        "Net-(J6-Pin_2)",
+        "Net-(Q1-D)"
+      ]
+    }
+  },
+  "header_ground_pins": [
+    39
+  ],
+  "missing_footprints": [],
+  "bank_idle_deselects_all": true,
+  "bank_single_select": true,
+  "shared_irq_active_low": true,
+  "erc": {
+    "counts": {
+      "warning": 28
+    },
+    "types": {
+      "lib_symbol_mismatch": 28
+    }
+  },
+  "drc": {
+    "violations": 0,
+    "unconnected_items": 0,
+    "schematic_parity": 0
+  },
+  "bank_input_passives": {
+    "GPIO_7": [],
+    "GPIO_11": []
+  }
+}
+Protection: {'J6': {'1': 'GND', '2': 'Net-(J6-Pin_2)'}, 'F1': {'1': 'Net-(Q1-D)', '2': 'Net-(J6-Pin_2)'}, 'Q1': {'1': 'Net-(D2-A)', '2': 'VCC', '3': 'Net-(Q1-D)'}, 'D2': {'1': 'VCC', '2': 'Net-(D2-A)'}, 'R38': {'1': 'Net-(D2-A)', '2': 'GND'}, 'C18': {'1': 'GND', '2': 'VCC'}, 'C19': {'1': 'GND', '2': 'VDD_VIO'}, 'C20': {'1': 'VCC', '2': 'GND'}, 'U3': {'1': 'VCC', '2': 'GND', '3': 'VCC', '4': 'unconnected-(U3-NC-Pad4)', '5': 'VDD_VIO'}}
+Selected bandwidth rows: [
+  {
+    "extended": false,
+    "dlc": 0,
+    "can_bits_min_including_intermission": 47,
+    "frame_rate_upper_bound_per_channel": 21276.59574468085,
+    "model": "RX_CRC_amortized_status",
+    "spi_bytes_per_frame": 23,
+    "required_spi_mbit_per_bus": 15.659574468085104,
+    "utilization_10MHz": 1.5659574468085105,
+    "utilization_16MHz": 0.978723404255319,
+    "utilization_17MHz": 0.9211514392991238,
+    "gap_budget_us_per_frame_at_16MHz": 0.25,
+    "total_eight_channel_frame_rate": 170212.7659574468,
+    "max_stuff_bits_bound": 8
+  },
+  {
+    "extended": false,
+    "dlc": 0,
+    "can_bits_min_including_intermission": 47,
+    "frame_rate_upper_bound_per_channel": 21276.59574468085,
+    "model": "RX_CRC_two_status_reads_per_frame",
+    "spi_bytes_per_frame": 41,
+    "required_spi_mbit_per_bus": 27.914893617021274,
+    "utilization_10MHz": 2.7914893617021272,
+    "utilization_16MHz": 1.7446808510638296,
+    "utilization_17MHz": 1.6420525657071336,
+    "gap_budget_us_per_frame_at_16MHz": -8.75,
+    "total_eight_channel_frame_rate": 170212.7659574468,
+    "max_stuff_bits_bound": 8
+  },
+  {
+    "extended": false,
+    "dlc": 0,
+    "can_bits_min_including_intermission": 47,
+    "frame_rate_upper_bound_per_channel": 21276.59574468085,
+    "model": "TX_CRC_and_timestamped_TEF_amortized_status",
+    "spi_bytes_per_frame": 42,
+    "required_spi_mbit_per_bus": 28.595744680851062,
+    "utilization_10MHz": 2.859574468085106,
+    "utilization_16MHz": 1.7872340425531914,
+    "utilization_17MHz": 1.6821026282853566,
+    "gap_budget_us_per_frame_at_16MHz": -9.25,
+    "total_eight_channel_frame_rate": 170212.7659574468,
+    "max_stuff_bits_bound": 8
+  },
+  {
+    "extended": false,
+    "dlc": 0,
+    "can_bits_min_including_intermission": 47,
+    "frame_rate_upper_bound_per_channel": 21276.59574468085,
+    "model": "TX_CRC_and_TEF_two_status_reads_per_frame",
+    "spi_bytes_per_frame": 60,
+    "required_spi_mbit_per_bus": 40.85106382978723,
+    "utilization_10MHz": 4.085106382978723,
+    "utilization_16MHz": 2.553191489361702,
+    "utilization_17MHz": 2.4030037546933665,
+    "gap_budget_us_per_frame_at_16MHz": -18.25,
+    "total_eight_channel_frame_rate": 170212.7659574468,
+    "max_stuff_bits_bound": 8
+  },
+  {
+    "extended": false,
+    "dlc": 8,
+    "can_bits_min_including_intermission": 111,
+    "frame_rate_upper_bound_per_channel": 9009.009009009009,
+    "model": "RX_CRC_amortized_status",
+    "spi_bytes_per_frame": 31,
+    "required_spi_mbit_per_bus": 8.936936936936938,
+    "utilization_10MHz": 0.8936936936936938,
+    "utilization_16MHz": 0.5585585585585586,
+    "utilization_17MHz": 0.5257021727609963,
+    "gap_budget_us_per_frame_at_16MHz": 12.25,
+    "total_eight_channel_frame_rate": 72072.07207207207,
+    "max_stuff_bits_bound": 24
+  },
+  {
+    "extended": false,
+    "dlc": 8,
+    "can_bits_min_including_intermission": 111,
+    "frame_rate_upper_bound_per_channel": 9009.009009009009,
+    "model": "RX_CRC_two_status_reads_per_frame",
+    "spi_bytes_per_frame": 49,
+    "required_spi_mbit_per_bus": 14.126126126126126,
+    "utilization_10MHz": 1.4126126126126126,
+    "utilization_16MHz": 0.8828828828828829,
+    "utilization_17MHz": 0.830948595654478,
+    "gap_budget_us_per_frame_at_16MHz": 3.25,
+    "total_eight_channel_frame_rate": 72072.07207207207,
+    "max_stuff_bits_bound": 24
+  },
+  {
+    "extended": false,
+    "dlc": 8,
+    "can_bits_min_including_intermission": 111,
+    "frame_rate_upper_bound_per_channel": 9009.009009009009,
+    "model": "TX_CRC_and_timestamped_TEF_amortized_status",
+    "spi_bytes_per_frame": 50,
+    "required_spi_mbit_per_bus": 14.414414414414413,
+    "utilization_10MHz": 1.4414414414414414,
+    "utilization_16MHz": 0.9009009009009008,
+    "utilization_17MHz": 0.8479067302596713,
+    "gap_budget_us_per_frame_at_16MHz": 2.75,
+    "total_eight_channel_frame_rate": 72072.07207207207,
+    "max_stuff_bits_bound": 24
+  },
+  {
+    "extended": false,
+    "dlc": 8,
+    "can_bits_min_including_intermission": 111,
+    "frame_rate_upper_bound_per_channel": 9009.009009009009,
+    "model": "TX_CRC_and_TEF_two_status_reads_per_frame",
+    "spi_bytes_per_frame": 68,
+    "required_spi_mbit_per_bus": 19.603603603603602,
+    "utilization_10MHz": 1.96036036036036,
+    "utilization_16MHz": 1.2252252252252251,
+    "utilization_17MHz": 1.153153153153153,
+    "gap_budget_us_per_frame_at_16MHz": -6.25,
+    "total_eight_channel_frame_rate": 72072.07207207207,
+    "max_stuff_bits_bound": 24
+  },
+  {
+    "extended": true,
+    "dlc": 0,
+    "can_bits_min_including_intermission": 67,
+    "frame_rate_upper_bound_per_channel": 14925.373134328358,
+    "model": "RX_CRC_amortized_status",
+    "spi_bytes_per_frame": 23,
+    "required_spi_mbit_per_bus": 10.985074626865671,
+    "utilization_10MHz": 1.0985074626865672,
+    "utilization_16MHz": 0.6865671641791045,
+    "utilization_17MHz": 0.646180860403863,
+    "gap_budget_us_per_frame_at_16MHz": 5.25,
+    "total_eight_channel_frame_rate": 119402.98507462686,
+    "max_stuff_bits_bound": 13
+  },
+  {
+    "extended": true,
+    "dlc": 0,
+    "can_bits_min_including_intermission": 67,
+    "frame_rate_upper_bound_per_channel": 14925.373134328358,
+    "model": "RX_CRC_two_status_reads_per_frame",
+    "spi_bytes_per_frame": 41,
+    "required_spi_mbit_per_bus": 19.582089552238806,
+    "utilization_10MHz": 1.9582089552238806,
+    "utilization_16MHz": 1.2238805970149254,
+    "utilization_17MHz": 1.1518876207199298,
+    "gap_budget_us_per_frame_at_16MHz": -3.75,
+    "total_eight_channel_frame_rate": 119402.98507462686,
+    "max_stuff_bits_bound": 13
+  },
+  {
+    "extended": true,
+    "dlc": 0,
+    "can_bits_min_including_intermission": 67,
+    "frame_rate_upper_bound_per_channel": 14925.373134328358,
+    "model": "TX_CRC_and_timestamped_TEF_amortized_status",
+    "spi_bytes_per_frame": 42,
+    "required_spi_mbit_per_bus": 20.05970149253731,
+    "utilization_10MHz": 2.005970149253731,
+    "utilization_16MHz": 1.253731343283582,
+    "utilization_17MHz": 1.179982440737489,
+    "gap_budget_us_per_frame_at_16MHz": -4.25,
+    "total_eight_channel_frame_rate": 119402.98507462686,
+    "max_stuff_bits_bound": 13
+  },
+  {
+    "extended": true,
+    "dlc": 0,
+    "can_bits_min_including_intermission": 67,
+    "frame_rate_upper_bound_per_channel": 14925.373134328358,
+    "model": "TX_CRC_and_TEF_two_status_reads_per_frame",
+    "spi_bytes_per_frame": 60,
+    "required_spi_mbit_per_bus": 28.65671641791045,
+    "utilization_10MHz": 2.865671641791045,
+    "utilization_16MHz": 1.791044776119403,
+    "utilization_17MHz": 1.6856892010535558,
+    "gap_budget_us_per_frame_at_16MHz": -13.25,
+    "total_eight_channel_frame_rate": 119402.98507462686,
+    "max_stuff_bits_bound": 13
+  },
+  {
+    "extended": true,
+    "dlc": 8,
+    "can_bits_min_including_intermission": 131,
+    "frame_rate_upper_bound_per_channel": 7633.587786259542,
+    "model": "RX_CRC_amortized_status",
+    "spi_bytes_per_frame": 31,
+    "required_spi_mbit_per_bus": 7.572519083969466,
+    "utilization_10MHz": 0.7572519083969466,
+    "utilization_16MHz": 0.4732824427480916,
+    "utilization_17MHz": 0.44544229905702737,
+    "gap_budget_us_per_frame_at_16MHz": 17.25,
+    "total_eight_channel_frame_rate": 61068.70229007633,
+    "max_stuff_bits_bound": 29
+  },
+  {
+    "extended": true,
+    "dlc": 8,
+    "can_bits_min_including_intermission": 131,
+    "frame_rate_upper_bound_per_channel": 7633.587786259542,
+    "model": "RX_CRC_two_status_reads_per_frame",
+    "spi_bytes_per_frame": 49,
+    "required_spi_mbit_per_bus": 11.969465648854962,
+    "utilization_10MHz": 1.1969465648854962,
+    "utilization_16MHz": 0.7480916030534351,
+    "utilization_17MHz": 0.7040862146385272,
+    "gap_budget_us_per_frame_at_16MHz": 8.25,
+    "total_eight_channel_frame_rate": 61068.70229007633,
+    "max_stuff_bits_bound": 29
+  },
+  {
+    "extended": true,
+    "dlc": 8,
+    "can_bits_min_including_intermission": 131,
+    "frame_rate_upper_bound_per_channel": 7633.587786259542,
+    "model": "TX_CRC_and_timestamped_TEF_amortized_status",
+    "spi_bytes_per_frame": 50,
+    "required_spi_mbit_per_bus": 12.213740458015266,
+    "utilization_10MHz": 1.2213740458015268,
+    "utilization_16MHz": 0.7633587786259541,
+    "utilization_17MHz": 0.7184553210597215,
+    "gap_budget_us_per_frame_at_16MHz": 7.75,
+    "total_eight_channel_frame_rate": 61068.70229007633,
+    "max_stuff_bits_bound": 29
+  },
+  {
+    "extended": true,
+    "dlc": 8,
+    "can_bits_min_including_intermission": 131,
+    "frame_rate_upper_bound_per_channel": 7633.587786259542,
+    "model": "TX_CRC_and_TEF_two_status_reads_per_frame",
+    "spi_bytes_per_frame": 68,
+    "required_spi_mbit_per_bus": 16.610687022900763,
+    "utilization_10MHz": 1.6610687022900763,
+    "utilization_16MHz": 1.0381679389312977,
+    "utilization_17MHz": 0.9770992366412213,
+    "gap_budget_us_per_frame_at_16MHz": -1.25,
+    "total_eight_channel_frame_rate": 61068.70229007633,
+    "max_stuff_bits_bound": 29
+  }
+]

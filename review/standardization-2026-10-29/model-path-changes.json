@@ -1,0 +1,97 @@
+[
+  {
+    "reference": "C16",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C15",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C3",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C17",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C8",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C4",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "TP14",
+    "before": "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/PinHeader_1x02_P2.54mm_Vertical.step"
+  },
+  {
+    "reference": "C9",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C6",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C5",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C14",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C12",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "TP13",
+    "before": "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x02_P2.54mm_Vertical.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/PinHeader_1x02_P2.54mm_Vertical.step"
+  },
+  {
+    "reference": "C10",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C7",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C11",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C2",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "C13",
+    "before": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/C_0603_1608Metric.step"
+  },
+  {
+    "reference": "J1",
+    "before": "${KICAD10_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x20_P2.54mm_Vertical.step",
+    "after": "${KIPRJMOD}/../kicad_footprints/3dmodels/PinSocket_2x20_P2.54mm_Vertical.step"
+  }
+]

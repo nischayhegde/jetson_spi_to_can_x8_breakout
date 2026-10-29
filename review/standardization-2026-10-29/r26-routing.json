@@ -1,0 +1,33 @@
+{
+  "orientation_degrees": 180,
+  "removed_local_track_uuids": [
+    "412d1974-b515-4f71-b46f-caff304a933c",
+    "442713db-d1a4-45bb-8c1e-354984081aa1",
+    "727bb74d-2d49-47d2-9842-9ffc8ebda0ce",
+    "7f0d64d9-1bf9-45e9-89eb-bbf420c99517",
+    "e5f16799-8f5f-4c05-8311-0b4f23f2502a",
+    "e6f59844-6d78-4c37-8a7a-568a53d797da",
+    "ffdd0e1a-04d7-4758-80dc-24047d1dec82",
+    "1bfda882-0000-4a4a-ae20-b981c99904d2",
+    "811f749b-a359-4a6a-ac90-fca40313478d",
+    "ce8bcbc1-3282-412d-be87-a60587fe7181"
+  ],
+  "added_local_track_uuids": [
+    "2109c317-e3a3-44c2-b05c-cb7627b9610d",
+    "38e96117-6da6-42c5-b24f-c8dd068ac89e",
+    "6d7905af-2152-4f70-8016-72a38daaa173",
+    "c6cb667c-efe0-4e2a-b3f8-9c7b78cec57d"
+  ],
+  "pad_positions_mm": {
+    "1": [
+      88.7125,
+      118.7
+    ],
+    "2": [
+      85.7875,
+      118.7
+    ]
+  },
+  "all_new_tracks_on": "B.Cu",
+  "new_track_width_mm": 0.25
+}

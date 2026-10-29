@@ -1,0 +1,14 @@
+{
+  "breakout/breakout.kicad_sch": "4769f26b4108f747cac426cf33e145d907afa9cb1eb3496f62f7ed67e8b19e03",
+  "breakout/breakout.kicad_pcb": "8daad598d0ae59ef91b5f50e902295045b92a65a8ee4d703976a4738cda0cdb6",
+  "breakout/breakout.kicad_pro": "3de665ecd030f3fef767137f3c30ef88aa469ce72e953415b2305817138462b3",
+  "kicad_footprints/BreakoutBoard.kicad_sym": "3c2bd05dcd7580549bff97e636826ab73f8457c8d220fe653e0eb1b6cad01b9b",
+  "kicad_footprints/parts.json": "5f46525b2085a73d7ddd7052147a11f379c996e180865be2d5416163669e73a9",
+  "kicad_footprints/asset_manifest.csv": "1358f986272ca8bc5e15b47196e5c8014bd1fb7e585fa72b3e2283a1b2304779",
+  "kicad_footprints/sha256.json": "b465a850854779b19815b0444e900d5afa4c5d9d9ac45adbdb91272a09b8c81f",
+  "componentlist.csv": "bc469f87b4156eb64d0d65085b719734f68532c676f452457897d5740c0015a1",
+  "componentlist.md.txt": "072aad53cb2362ae92dea5f0f7f413525e226938e302f9d593b8f659b24cbcad",
+  "orderlist.csv": "c1b0799087dfc03cc77c284929d4bc54b9a24f56770a8114924dc40e68c73c10",
+  "orderlist.md.txt": "9690447952d13814864c335457550ad4da97c0b8e81dce57437d70e1c9b64f53",
+  "orderlist.xlsx": "d52d37c2650ff0632f8dead3c728cfa64766b4aefe09330fb07ca971013e691c"
+}

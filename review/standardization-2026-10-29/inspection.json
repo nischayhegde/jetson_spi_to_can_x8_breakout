@@ -1,0 +1,2854 @@
+{
+  "physical_refs": 141,
+  "placed_units": 156,
+  "library_property_differences": {
+    "BreakoutBoard:CC0603KRX7R9BB104": {
+      "ki_fp_filters": [
+        "CC0603KRX7R9BB104_*",
+        "C_*"
+      ],
+      "Reference": [
+        "CC0603KRX7R9BB104",
+        "C"
+      ]
+    }
+  },
+  "termination_footprints": {
+    "R6": "BreakoutBoard:R_1206_3216Metric",
+    "R10": "BreakoutBoard:R_1206_3216Metric",
+    "R13": "BreakoutBoard:R_1206_3216Metric",
+    "R16": "BreakoutBoard:R_1206_3216Metric",
+    "R23": "BreakoutBoard:R_1206_3216Metric",
+    "R26": "BreakoutBoard:R_0603_1608Metric",
+    "R29": "BreakoutBoard:R_1206_3216Metric",
+    "R32": "BreakoutBoard:R_1206_3216Metric"
+  },
+  "j1": [
+    {
+      "lib_id": "BreakoutBoard:M20-9982046",
+      "unit": 1,
+      "properties": {
+        "Reference": "J1",
+        "Value": "M20-9982046",
+        "Footprint": "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical",
+        "Datasheet": "https://www.digikey.com/en/products/detail/harwin-inc/M20-9982046/3921209",
+        "Description": "2x20 2.54 mm host harness header"
+      },
+      "at": [
+        60.96,
+        99.06,
+        0
+      ]
+    }
+  ],
+  "nonstandard_refs": [
+    "CC0603KRX7R9BB7",
+    "CC0603KRX7R9BB16",
+    "CC0603KRX7R9BB29",
+    "CC0603KRX7R9BB21",
+    "CC0603KRX7R9BB6",
+    "CC0603KRX7R9BB5",
+    "CC0603KRX7R9BB18",
+    "CC0603KRX7R9BB13",
+    "CC0603KRX7R9BB9",
+    "CC0603KRX7R9BB17",
+    "CC0603KRX7R9BB27",
+    "CC0603KRX7R9BB11",
+    "CC0603KRX7R9BB1",
+    "CC0603KRX7R9BB2",
+    "CC0603KRX7R9BB19",
+    "CC0603KRX7R9BB10",
+    "CC0603KRX7R9BB15",
+    "CC0603KRX7R9BB14",
+    "CC0603KRX7R9BB28",
+    "CC0603KRX7R9BB12",
+    "CC0603KRX7R9BB22",
+    "CC0603KRX7R9BB3",
+    "CC0603KRX7R9BB26",
+    "CC0603KRX7R9BB8",
+    "CC0603KRX7R9BB20",
+    "CC0603KRX7R9BB25",
+    "CC0603KRX7R9BB23",
+    "CC0603KRX7R9BB24"
+  ],
+  "references": {
+    "TP11": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP11",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          41.91,
+          90
+        ]
+      }
+    ],
+    "J12": [
+      {
+        "lib_id": "BreakoutBoard:B3B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J12",
+          "Value": "B3B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+          "Description": "3-pin 2.50 mm CAN connector"
+        },
+        "at": [
+          346.71,
+          262.89,
+          0
+        ]
+      }
+    ],
+    "U5": [
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 2,
+        "properties": {
+          "Reference": "U5",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          190.5,
+          44.45,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 1,
+        "properties": {
+          "Reference": "U5",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          190.5,
+          29.21,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 4,
+        "properties": {
+          "Reference": "U5",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          190.5,
+          74.93,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 5,
+        "properties": {
+          "Reference": "U5",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          172.72,
+          102.87,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 3,
+        "properties": {
+          "Reference": "U5",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          190.5,
+          59.69,
+          0
+        ]
+      }
+    ],
+    "R29": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R29",
+          "Value": "120",
+          "Footprint": "BreakoutBoard:R_1206_3216Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          233.68,
+          257.81,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB7": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB7",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          135.89,
+          158.75,
+          90
+        ]
+      }
+    ],
+    "R19": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R19",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          115.57,
+          90.17,
+          270
+        ]
+      }
+    ],
+    "TP15": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP15",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          151.13,
+          90
+        ]
+      }
+    ],
+    "C11": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C11",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          -33.02,
+          295.91,
+          0
+        ]
+      }
+    ],
+    "C17": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C17",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          292.1,
+          299.72,
+          0
+        ]
+      }
+    ],
+    "U2": [
+      {
+        "lib_id": "BreakoutBoard:74LVC04AT14-13",
+        "unit": 1,
+        "properties": {
+          "Reference": "U2",
+          "Value": "74LVC04AT14-13",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://www.diodes.com/assets/Datasheets/74LVC04A.pdf",
+          "Description": "Hex inverter, 3.3 V host-side CS bank logic"
+        },
+        "at": [
+          232.41,
+          24.13,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC04AT14-13",
+        "unit": 3,
+        "properties": {
+          "Reference": "U2",
+          "Value": "74LVC04AT14-13",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://www.diodes.com/assets/Datasheets/74LVC04A.pdf",
+          "Description": "Hex inverter, 3.3 V host-side CS bank logic"
+        },
+        "at": [
+          170.18,
+          26.67,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC04AT14-13",
+        "unit": 2,
+        "properties": {
+          "Reference": "U2",
+          "Value": "74LVC04AT14-13",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://www.diodes.com/assets/Datasheets/74LVC04A.pdf",
+          "Description": "Hex inverter, 3.3 V host-side CS bank logic"
+        },
+        "at": [
+          232.41,
+          76.2,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC04AT14-13",
+        "unit": 4,
+        "properties": {
+          "Reference": "U2",
+          "Value": "74LVC04AT14-13",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://www.diodes.com/assets/Datasheets/74LVC04A.pdf",
+          "Description": "Hex inverter, 3.3 V host-side CS bank logic"
+        },
+        "at": [
+          170.18,
+          77.47,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC04AT14-13",
+        "unit": 6,
+        "properties": {
+          "Reference": "U2",
+          "Value": "74LVC04AT14-13",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://www.diodes.com/assets/Datasheets/74LVC04A.pdf",
+          "Description": "Hex inverter, 3.3 V host-side CS bank logic"
+        },
+        "at": [
+          148.59,
+          137.16,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC04AT14-13",
+        "unit": 7,
+        "properties": {
+          "Reference": "U2",
+          "Value": "74LVC04AT14-13",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://www.diodes.com/assets/Datasheets/74LVC04A.pdf",
+          "Description": "Hex inverter, 3.3 V host-side CS bank logic"
+        },
+        "at": [
+          237.49,
+          119.38,
+          270
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC04AT14-13",
+        "unit": 5,
+        "properties": {
+          "Reference": "U2",
+          "Value": "74LVC04AT14-13",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://www.diodes.com/assets/Datasheets/74LVC04A.pdf",
+          "Description": "Hex inverter, 3.3 V host-side CS bank logic"
+        },
+        "at": [
+          204.47,
+          120.65,
+          0
+        ]
+      }
+    ],
+    "Y5": [
+      {
+        "lib_id": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+        "unit": 1,
+        "properties": {
+          "Reference": "Y5",
+          "Value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "Footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "Datasheet": "https://abracon.com/Resonators/abm8g.pdf",
+          "Description": "40 MHz passive crystal, CL=18 pF"
+        },
+        "at": [
+          -34.29,
+          288.29,
+          90
+        ]
+      }
+    ],
+    "R5": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R5",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          106.68,
+          97.79,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB16": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB16",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          325.12,
+          -50.8,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB29": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB29",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          323.85,
+          248.92,
+          270
+        ]
+      }
+    ],
+    "Y3": [
+      {
+        "lib_id": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+        "unit": 1,
+        "properties": {
+          "Reference": "Y3",
+          "Value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "Footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "Datasheet": "https://abracon.com/Resonators/abm8g.pdf",
+          "Description": "40 MHz passive crystal, CL=18 pF"
+        },
+        "at": [
+          190.5,
+          -10.16,
+          90
+        ]
+      }
+    ],
+    "Y1": [
+      {
+        "lib_id": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+        "unit": 1,
+        "properties": {
+          "Reference": "Y1",
+          "Value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "Footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "Datasheet": "https://abracon.com/Resonators/abm8g.pdf",
+          "Description": "40 MHz passive crystal, CL=18 pF"
+        },
+        "at": [
+          -33.02,
+          -11.43,
+          90
+        ]
+      }
+    ],
+    "C14": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C14",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          190.5,
+          281.94,
+          0
+        ]
+      }
+    ],
+    "R26": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R26",
+          "Value": "120",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          123.19,
+          254,
+          0
+        ]
+      }
+    ],
+    "C13": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C13",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          80.01,
+          293.37,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB21": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB21",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          91.44,
+          247.65,
+          270
+        ]
+      }
+    ],
+    "U15": [
+      {
+        "lib_id": "BreakoutBoard:MCP251863T-E_SS",
+        "unit": 1,
+        "properties": {
+          "Reference": "U15",
+          "Value": "MCP251863T-E/SS",
+          "Footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf",
+          "Description": "Integrated SPI CAN FD controller/transceiver"
+        },
+        "at": [
+          215.9,
+          273.05,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB6": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB6",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          251.46,
+          134.62,
+          0
+        ]
+      }
+    ],
+    "R4": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R4",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          88.9,
+          106.68,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB5": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB5",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          251.46,
+          90.17,
+          180
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB18": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB18",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          -21.59,
+          250.19,
+          270
+        ]
+      }
+    ],
+    "U1": [
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 2,
+        "properties": {
+          "Reference": "U1",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          251.46,
+          41.91,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 1,
+        "properties": {
+          "Reference": "U1",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          251.46,
+          26.67,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 5,
+        "properties": {
+          "Reference": "U1",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          237.49,
+          102.87,
+          270
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 4,
+        "properties": {
+          "Reference": "U1",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          251.46,
+          73.66,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74LVC32APW,118",
+        "unit": 3,
+        "properties": {
+          "Reference": "U1",
+          "Value": "74LVC32APW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74LVC32A.pdf",
+          "Description": "Quad 2-input OR, 3.3 V host-side logic provision"
+        },
+        "at": [
+          251.46,
+          58.42,
+          0
+        ]
+      }
+    ],
+    "R24": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R24",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          57.15,
+          264.16,
+          90
+        ]
+      }
+    ],
+    "R20": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R20",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          81.28,
+          81.28,
+          270
+        ]
+      }
+    ],
+    "C4": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C4",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          81.28,
+          -21.59,
+          0
+        ]
+      }
+    ],
+    "TP1": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP1",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          179.07,
+          90
+        ]
+      }
+    ],
+    "TP14": [
+      {
+        "lib_id": "Connector:TestPoint_2Pole",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP14",
+          "Value": "TestPoint_2Pole",
+          "Footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "Datasheet": "",
+          "Description": "2-polar test point"
+        },
+        "at": [
+          345.44,
+          173.99,
+          90
+        ]
+      }
+    ],
+    "TP18": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP18",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          97.79,
+          90
+        ]
+      }
+    ],
+    "R38": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R38",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          43.18,
+          44.45,
+          0
+        ]
+      }
+    ],
+    "R7": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R7",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          -54.61,
+          -33.02,
+          90
+        ]
+      }
+    ],
+    "R13": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R13",
+          "Value": "120",
+          "Footprint": "BreakoutBoard:R_1206_3216Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          234.95,
+          -41.91,
+          0
+        ]
+      }
+    ],
+    "Y2": [
+      {
+        "lib_id": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+        "unit": 1,
+        "properties": {
+          "Reference": "Y2",
+          "Value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "Footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "Datasheet": "https://abracon.com/Resonators/abm8g.pdf",
+          "Description": "40 MHz passive crystal, CL=18 pF"
+        },
+        "at": [
+          80.01,
+          -13.97,
+          90
+        ]
+      }
+    ],
+    "J4": [
+      {
+        "lib_id": "BreakoutBoard:B3B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J4",
+          "Value": "B3B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+          "Description": "3-pin 2.50 mm CAN connector"
+        },
+        "at": [
+          22.86,
+          -40.64,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB13": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB13",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          223.52,
+          -53.34,
+          270
+        ]
+      }
+    ],
+    "C8": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C8",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          293.37,
+          -15.24,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB9": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB9",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          107.95,
+          -74.93,
+          270
+        ]
+      }
+    ],
+    "TP6": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP6",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          110.49,
+          90
+        ]
+      }
+    ],
+    "U10": [
+      {
+        "lib_id": "BreakoutBoard:MCP251863T-E_SS",
+        "unit": 1,
+        "properties": {
+          "Reference": "U10",
+          "Value": "MCP251863T-E/SS",
+          "Footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf",
+          "Description": "Integrated SPI CAN FD controller/transceiver"
+        },
+        "at": [
+          106.68,
+          -30.48,
+          0
+        ]
+      }
+    ],
+    "C3": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C3",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          -31.75,
+          -3.81,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB17": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB17",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          187.96,
+          90.17,
+          90
+        ]
+      }
+    ],
+    "C6": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C6",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          191.77,
+          -17.78,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB27": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB27",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          303.53,
+          254,
+          270
+        ]
+      }
+    ],
+    "C18": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C18",
+          "Value": "1u",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          96.52,
+          34.29,
+          0
+        ]
+      }
+    ],
+    "J9": [
+      {
+        "lib_id": "BreakoutBoard:B3B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J9",
+          "Value": "B3B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+          "Description": "3-pin 2.50 mm CAN connector"
+        },
+        "at": [
+          21.59,
+          259.08,
+          0
+        ]
+      }
+    ],
+    "R35": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R35",
+          "Value": "100k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          100.33,
+          88.9,
+          180
+        ]
+      }
+    ],
+    "J5": [
+      {
+        "lib_id": "BreakoutBoard:B3B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J5",
+          "Value": "B3B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+          "Description": "3-pin 2.50 mm CAN connector"
+        },
+        "at": [
+          135.89,
+          -43.18,
+          0
+        ]
+      }
+    ],
+    "C9": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C9",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          293.37,
+          0,
+          0
+        ]
+      }
+    ],
+    "C2": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C2",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          -31.75,
+          -19.05,
+          0
+        ]
+      }
+    ],
+    "R28": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R28",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          184.15,
+          252.73,
+          90
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB11": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB11",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          203.2,
+          -48.26,
+          270
+        ]
+      }
+    ],
+    "U9": [
+      {
+        "lib_id": "BreakoutBoard:MCP251863T-E_SS",
+        "unit": 1,
+        "properties": {
+          "Reference": "U9",
+          "Value": "MCP251863T-E/SS",
+          "Footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf",
+          "Description": "Integrated SPI CAN FD controller/transceiver"
+        },
+        "at": [
+          -6.35,
+          -27.94,
+          0
+        ]
+      }
+    ],
+    "J11": [
+      {
+        "lib_id": "BreakoutBoard:B3B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J11",
+          "Value": "B3B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+          "Description": "3-pin 2.50 mm CAN connector"
+        },
+        "at": [
+          245.11,
+          260.35,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB1": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB1",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          0,
+          -54.61,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB2": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB2",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          -5.08,
+          -72.39,
+          270
+        ]
+      }
+    ],
+    "C16": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C16",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          292.1,
+          284.48,
+          0
+        ]
+      }
+    ],
+    "TP16": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP16",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          123.19,
+          90
+        ]
+      }
+    ],
+    "C15": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C15",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          190.5,
+          297.18,
+          0
+        ]
+      }
+    ],
+    "R31": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R31",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          285.75,
+          255.27,
+          90
+        ]
+      }
+    ],
+    "U4": [
+      {
+        "lib_id": "BreakoutBoard:74AHC30PW,118",
+        "unit": 1,
+        "properties": {
+          "Reference": "U4",
+          "Value": "74AHC30PW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT30.pdf",
+          "Description": "8-input NAND plus spare NOT implements shared-IRQ AND"
+        },
+        "at": [
+          133.35,
+          137.16,
+          0
+        ]
+      },
+      {
+        "lib_id": "BreakoutBoard:74AHC30PW,118",
+        "unit": 2,
+        "properties": {
+          "Reference": "U4",
+          "Value": "74AHC30PW,118",
+          "Footprint": "BreakoutBoard:TSSOP-14_4.4x5mm_P0.65mm",
+          "Datasheet": "https://assets.nexperia.com/documents/data-sheet/74AHC_AHCT30.pdf",
+          "Description": "8-input NAND plus spare NOT implements shared-IRQ AND"
+        },
+        "at": [
+          120.65,
+          171.45,
+          0
+        ]
+      }
+    ],
+    "TP19": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP19",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          83.82,
+          90
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB19": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB19",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          -6.35,
+          227.33,
+          270
+        ]
+      }
+    ],
+    "R1": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R1",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          46.99,
+          97.79,
+          270
+        ]
+      }
+    ],
+    "J10": [
+      {
+        "lib_id": "BreakoutBoard:B3B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J10",
+          "Value": "B3B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+          "Description": "3-pin 2.50 mm CAN connector"
+        },
+        "at": [
+          134.62,
+          256.54,
+          0
+        ]
+      }
+    ],
+    "R36": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R36",
+          "Value": "100k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          74.93,
+          71.12,
+          180
+        ]
+      }
+    ],
+    "TP3": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP3",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          151.13,
+          90
+        ]
+      }
+    ],
+    "R17": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R17",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          -55.88,
+          266.7,
+          90
+        ]
+      }
+    ],
+    "TP12": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP12",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          29.21,
+          90
+        ]
+      }
+    ],
+    "TP9": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP9",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          69.85,
+          90
+        ]
+      }
+    ],
+    "TP7": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP7",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          97.79,
+          90
+        ]
+      }
+    ],
+    "C20": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C20",
+          "Value": "10u",
+          "Footprint": "BreakoutBoard:C_0805_2012Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          77.47,
+          33.02,
+          0
+        ]
+      }
+    ],
+    "Y8": [
+      {
+        "lib_id": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+        "unit": 1,
+        "properties": {
+          "Reference": "Y8",
+          "Value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "Footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "Datasheet": "https://abracon.com/Resonators/abm8g.pdf",
+          "Description": "40 MHz passive crystal, CL=18 pF"
+        },
+        "at": [
+          290.83,
+          292.1,
+          90
+        ]
+      }
+    ],
+    "U16": [
+      {
+        "lib_id": "BreakoutBoard:MCP251863T-E_SS",
+        "unit": 1,
+        "properties": {
+          "Reference": "U16",
+          "Value": "MCP251863T-E/SS",
+          "Footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf",
+          "Description": "Integrated SPI CAN FD controller/transceiver"
+        },
+        "at": [
+          317.5,
+          275.59,
+          0
+        ]
+      }
+    ],
+    "TP5": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP5",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          123.19,
+          90
+        ]
+      }
+    ],
+    "U12": [
+      {
+        "lib_id": "BreakoutBoard:MCP251863T-E_SS",
+        "unit": 1,
+        "properties": {
+          "Reference": "U12",
+          "Value": "MCP251863T-E/SS",
+          "Footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf",
+          "Description": "Integrated SPI CAN FD controller/transceiver"
+        },
+        "at": [
+          318.77,
+          -24.13,
+          0
+        ]
+      }
+    ],
+    "J1": [
+      {
+        "lib_id": "BreakoutBoard:M20-9982046",
+        "unit": 1,
+        "properties": {
+          "Reference": "J1",
+          "Value": "M20-9982046",
+          "Footprint": "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/harwin-inc/M20-9982046/3921209",
+          "Description": "2x20 2.54 mm host harness header"
+        },
+        "at": [
+          60.96,
+          99.06,
+          0
+        ]
+      }
+    ],
+    "R23": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R23",
+          "Value": "120",
+          "Footprint": "BreakoutBoard:R_1206_3216Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          10.16,
+          256.54,
+          0
+        ]
+      }
+    ],
+    "R37": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R37",
+          "Value": "100k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          80.01,
+          96.52,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB10": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB10",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          113.03,
+          -57.15,
+          270
+        ]
+      }
+    ],
+    "Y6": [
+      {
+        "lib_id": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+        "unit": 1,
+        "properties": {
+          "Reference": "Y6",
+          "Value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "Footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "Datasheet": "https://abracon.com/Resonators/abm8g.pdf",
+          "Description": "40 MHz passive crystal, CL=18 pF"
+        },
+        "at": [
+          78.74,
+          285.75,
+          90
+        ]
+      }
+    ],
+    "TP10": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP10",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          55.88,
+          90
+        ]
+      }
+    ],
+    "R14": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R14",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          270.51,
+          -29.21,
+          90
+        ]
+      }
+    ],
+    "TP17": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP17",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          110.49,
+          90
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB15": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB15",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          320.04,
+          -68.58,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB14": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB14",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          304.8,
+          -45.72,
+          270
+        ]
+      }
+    ],
+    "R27": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R27",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          167.64,
+          267.97,
+          90
+        ]
+      }
+    ],
+    "TP2": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP2",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          165.1,
+          90
+        ]
+      }
+    ],
+    "Y4": [
+      {
+        "lib_id": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+        "unit": 1,
+        "properties": {
+          "Reference": "Y4",
+          "Value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "Footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "Datasheet": "https://abracon.com/Resonators/abm8g.pdf",
+          "Description": "40 MHz passive crystal, CL=18 pF"
+        },
+        "at": [
+          292.1,
+          -7.62,
+          90
+        ]
+      }
+    ],
+    "TP21": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP21",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          55.88,
+          90
+        ]
+      }
+    ],
+    "R34": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R34",
+          "Value": "100k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          82.55,
+          114.3,
+          180
+        ]
+      }
+    ],
+    "R3": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R3",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          40.64,
+          105.41,
+          270
+        ]
+      }
+    ],
+    "TP4": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP4",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          137.16,
+          90
+        ]
+      }
+    ],
+    "U14": [
+      {
+        "lib_id": "BreakoutBoard:MCP251863T-E_SS",
+        "unit": 1,
+        "properties": {
+          "Reference": "U14",
+          "Value": "MCP251863T-E/SS",
+          "Footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf",
+          "Description": "Integrated SPI CAN FD controller/transceiver"
+        },
+        "at": [
+          105.41,
+          269.24,
+          0
+        ]
+      }
+    ],
+    "J6": [
+      {
+        "lib_id": "BreakoutBoard:B2B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J6",
+          "Value": "B2B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-XH-A/1651045",
+          "Description": "2-pin 2.50 mm 5 V input connector"
+        },
+        "at": [
+          19.05,
+          31.75,
+          180
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB28": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB28",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          318.77,
+          231.14,
+          270
+        ]
+      }
+    ],
+    "R15": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R15",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          287.02,
+          -44.45,
+          90
+        ]
+      }
+    ],
+    "R9": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R9",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          74.93,
+          -50.8,
+          90
+        ]
+      }
+    ],
+    "J8": [
+      {
+        "lib_id": "BreakoutBoard:B3B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J8",
+          "Value": "B3B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+          "Description": "3-pin 2.50 mm CAN connector"
+        },
+        "at": [
+          347.98,
+          -36.83,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB12": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB12",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          218.44,
+          -71.12,
+          270
+        ]
+      }
+    ],
+    "R16": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R16",
+          "Value": "120",
+          "Footprint": "BreakoutBoard:R_1206_3216Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          336.55,
+          -39.37,
+          0
+        ]
+      }
+    ],
+    "TP20": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP20",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          69.85,
+          90
+        ]
+      }
+    ],
+    "R18": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R18",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          49.53,
+          121.92,
+          90
+        ]
+      }
+    ],
+    "F1": [
+      {
+        "lib_id": "BreakoutBoard:0466001.NR",
+        "unit": 1,
+        "properties": {
+          "Reference": "F1",
+          "Value": "0466001.NR",
+          "Footprint": "BreakoutBoard:Fuse_1206_3216Metric",
+          "Datasheet": "https://www.littelfuse.com/assetdocs/fuse-466-datasheet?assetguid=dbe9bcd7-6072-4adf-bf5b-d33e52a6b90f",
+          "Description": "1 A 63 V fast-acting series input fuse, 1206; V1 load qualification required"
+        },
+        "at": [
+          30.48,
+          29.21,
+          270
+        ]
+      }
+    ],
+    "C7": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C7",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          191.77,
+          -2.54,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB22": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB22",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          106.68,
+          224.79,
+          270
+        ]
+      }
+    ],
+    "R25": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R25",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          73.66,
+          248.92,
+          90
+        ]
+      }
+    ],
+    "R30": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R30",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          269.24,
+          270.51,
+          90
+        ]
+      }
+    ],
+    "R10": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R10",
+          "Value": "120",
+          "Footprint": "BreakoutBoard:R_1206_3216Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          124.46,
+          -45.72,
+          0
+        ]
+      }
+    ],
+    "R21": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R21",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          52.07,
+          91.44,
+          270
+        ]
+      }
+    ],
+    "U13": [
+      {
+        "lib_id": "BreakoutBoard:MCP251863T-E_SS",
+        "unit": 1,
+        "properties": {
+          "Reference": "U13",
+          "Value": "MCP251863T-E/SS",
+          "Footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf",
+          "Description": "Integrated SPI CAN FD controller/transceiver"
+        },
+        "at": [
+          -7.62,
+          271.78,
+          0
+        ]
+      }
+    ],
+    "R2": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R2",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          -38.1,
+          -48.26,
+          90
+        ]
+      }
+    ],
+    "C10": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C10",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          -33.02,
+          280.67,
+          0
+        ]
+      }
+    ],
+    "Q1": [
+      {
+        "lib_id": "BreakoutBoard:AO3401A",
+        "unit": 1,
+        "properties": {
+          "Reference": "Q1",
+          "Value": "AO3401A",
+          "Footprint": "BreakoutBoard:SOT-23",
+          "Datasheet": "https://www.aosmd.com/sites/default/files/res/datasheets/AO3401A.pdf",
+          "Description": "P-channel -30 V MOSFET for 5 V high-side reverse-hookup protection"
+        },
+        "at": [
+          43.18,
+          31.75,
+          90
+        ]
+      }
+    ],
+    "TP8": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP8",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          312.42,
+          83.82,
+          90
+        ]
+      }
+    ],
+    "Y7": [
+      {
+        "lib_id": "BreakoutBoard:ABM8G-40.000MHZ-18-D2Y-T",
+        "unit": 1,
+        "properties": {
+          "Reference": "Y7",
+          "Value": "ABM8G-40.000MHZ-18-D2Y-T",
+          "Footprint": "BreakoutBoard:Crystal_SMD_Abracon_ABM8G-4Pin_3.2x2.5mm",
+          "Datasheet": "https://abracon.com/Resonators/abm8g.pdf",
+          "Description": "40 MHz passive crystal, CL=18 pF"
+        },
+        "at": [
+          189.23,
+          289.56,
+          90
+        ]
+      }
+    ],
+    "C19": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C19",
+          "Value": "1u",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          120.65,
+          36.83,
+          0
+        ]
+      }
+    ],
+    "TP22": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP22",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          41.91,
+          90
+        ]
+      }
+    ],
+    "TP13": [
+      {
+        "lib_id": "Connector:TestPoint_2Pole",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP13",
+          "Value": "TestPoint_2Pole",
+          "Footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+          "Datasheet": "",
+          "Description": "2-polar test point"
+        },
+        "at": [
+          336.55,
+          173.99,
+          90
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB3": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB3",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          -20.32,
+          -49.53,
+          270
+        ]
+      }
+    ],
+    "R6": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R6",
+          "Value": "120",
+          "Footprint": "BreakoutBoard:R_1206_3216Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          11.43,
+          -43.18,
+          0
+        ]
+      }
+    ],
+    "R32": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R32",
+          "Value": "120",
+          "Footprint": "BreakoutBoard:R_1206_3216Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          335.28,
+          260.35,
+          0
+        ]
+      }
+    ],
+    "C5": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C5",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          81.28,
+          -6.35,
+          0
+        ]
+      }
+    ],
+    "U3": [
+      {
+        "lib_id": "BreakoutBoard:TLV75533PDBVR",
+        "unit": 1,
+        "properties": {
+          "Reference": "U3",
+          "Value": "TLV75533PDBVR",
+          "Footprint": "BreakoutBoard:SOT-23-5",
+          "Datasheet": "https://www.ti.com/lit/ds/symlink/tlv755p.pdf",
+          "Description": "Host-side 3.3 V LDO"
+        },
+        "at": [
+          111.76,
+          48.26,
+          0
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB26": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB26",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          222.25,
+          246.38,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB8": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB8",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          92.71,
+          -52.07,
+          270
+        ]
+      }
+    ],
+    "C12": [
+      {
+        "lib_id": "Device:C",
+        "unit": 1,
+        "properties": {
+          "Reference": "C12",
+          "Value": "27p",
+          "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Unpolarized capacitor"
+        },
+        "at": [
+          80.01,
+          278.13,
+          0
+        ]
+      }
+    ],
+    "TP23": [
+      {
+        "lib_id": "Connector:TestPoint",
+        "unit": 1,
+        "properties": {
+          "Reference": "TP23",
+          "Value": "TestPoint",
+          "Footprint": "TestPoint:TestPoint_Pad_D1.5mm",
+          "Datasheet": "",
+          "Description": "test point"
+        },
+        "at": [
+          339.09,
+          29.21,
+          90
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB20": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB20",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          -1.27,
+          245.11,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB25": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB25",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          217.17,
+          228.6,
+          270
+        ]
+      }
+    ],
+    "R12": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R12",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          185.42,
+          -46.99,
+          90
+        ]
+      }
+    ],
+    "R11": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R11",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          168.91,
+          -31.75,
+          90
+        ]
+      }
+    ],
+    "J7": [
+      {
+        "lib_id": "BreakoutBoard:B3B-XH-A",
+        "unit": 1,
+        "properties": {
+          "Reference": "J7",
+          "Value": "B3B-XH-A",
+          "Footprint": "BreakoutBoard:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical",
+          "Datasheet": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B3B-XH-A/1651046",
+          "Description": "3-pin 2.50 mm CAN connector"
+        },
+        "at": [
+          246.38,
+          -39.37,
+          0
+        ]
+      }
+    ],
+    "D2": [
+      {
+        "lib_id": "BreakoutBoard:BZT52C6V8-13-F",
+        "unit": 1,
+        "properties": {
+          "Reference": "D2",
+          "Value": "BZT52C6V8-13-F",
+          "Footprint": "BreakoutBoard:D_SOD-123",
+          "Datasheet": "https://www.diodes.com/assets/Datasheets/ds18004.pdf",
+          "Description": "6.8 V gate-source Zener clamp, SOD123; not a supply-rail clamp"
+        },
+        "at": [
+          52.07,
+          35.56,
+          270
+        ]
+      }
+    ],
+    "R22": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R22",
+          "Value": "33",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          -39.37,
+          251.46,
+          90
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB23": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB23",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          111.76,
+          242.57,
+          270
+        ]
+      }
+    ],
+    "CC0603KRX7R9BB24": [
+      {
+        "lib_id": "BreakoutBoard:CC0603KRX7R9BB104",
+        "unit": 1,
+        "properties": {
+          "Reference": "CC0603KRX7R9BB24",
+          "Value": "CC0603KRX7R9BB104",
+          "Footprint": "BreakoutBoard:C_0603_1608Metric",
+          "Datasheet": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB104/2103082",
+          "Description": "100 nF 50 V X7R bypass capacitor"
+        },
+        "at": [
+          201.93,
+          251.46,
+          270
+        ]
+      }
+    ],
+    "U11": [
+      {
+        "lib_id": "BreakoutBoard:MCP251863T-E_SS",
+        "unit": 1,
+        "properties": {
+          "Reference": "U11",
+          "Value": "MCP251863T-E/SS",
+          "Footprint": "BreakoutBoard:SSOP-28_5.3x10.2mm_P0.65mm",
+          "Datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP251863-Data-Sheet-DS20006624A.pdf",
+          "Description": "Integrated SPI CAN FD controller/transceiver"
+        },
+        "at": [
+          217.17,
+          -26.67,
+          0
+        ]
+      }
+    ],
+    "R8": [
+      {
+        "lib_id": "Device:R",
+        "unit": 1,
+        "properties": {
+          "Reference": "R8",
+          "Value": "10k",
+          "Footprint": "BreakoutBoard:R_0603_1608Metric",
+          "Datasheet": "",
+          "Description": "Resistor"
+        },
+        "at": [
+          58.42,
+          -35.56,
+          90
+        ]
+      }
+    ]
+  }
+}
