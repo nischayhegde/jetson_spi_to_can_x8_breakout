@@ -1,0 +1,31 @@
+{
+  "purchase_lines": 21,
+  "fitted_packages": 120,
+  "order_quantity": 144,
+  "spares": 24,
+  "digikey_subtotal_usd": 49.78,
+  "all_digikey_snapshot_stock_sufficient": true,
+  "native_excel_hyperlinks": 42,
+  "formula_error_cells": 0,
+  "frozen_panes": {
+    "xSplit": "1",
+    "ySplit": "6",
+    "topLeftCell": "B7",
+    "activePane": "bottomRight",
+    "state": "frozen"
+  },
+  "all_purchased_refs_and_footprints_match_cad": true,
+  "approved_purchasing_substitutions": 1,
+  "cad_files_unchanged_during_list_generation": true,
+  "bulk_add_lines": 21,
+  "spares_percent_overall": 20,
+  "j1_metadata_consistent_in_schematic_pcb_and_bom": true,
+  "sha256": {
+    "componentlist.csv": "3a9edfc4638b5839892886da3c40340ef6d0b7e9efca2b69a25ba7db7726ef55",
+    "componentlist.md.txt": "6145b75e21692f3b522aa38163027529d77312bf8814c6e230e22f9261d60a39",
+    "orderlist.csv": "0587478712ee5d8c8a8a8aa2b49c2a9cd4cbd44f437388a2489a0a6a4a1a58c6",
+    "orderlist.md.txt": "5b433af36c3c4328032b56a84ea4b14f6a41fc1933c207e1e373f235c567c0ef",
+    "orderlist.xlsx": "ee5595cc89c2912d2e92918c49395300b55fdfb7bdf1a248aa264c757c618e28",
+    "bulk_order_digikey.txt": "81b6bc56de979b75407e7c2f8ae13c9dc80bf0b3a1c012eac909aa55c1db6866"
+  }
+}

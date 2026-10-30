@@ -1,0 +1,13 @@
+{
+  "cad_and_fabrication_zip_unchanged": true,
+  "all_original_fitted_counts_references_and_footprints_preserved": true,
+  "unrelated_part_selections_unchanged": true,
+  "workbook_before_matched_generated_reference": true,
+  "spare_pieces": 24,
+  "bulk_total_pieces": 144,
+  "approved_replacement": "AC0603FR-0710KL",
+  "digikey_cut_tape_sku": "311-10KLDCT-ND",
+  "checked_date": "2026-10-30",
+  "digikey_observed_stock": 971121,
+  "digikey_price_at_ten_usd": 0.03
+}

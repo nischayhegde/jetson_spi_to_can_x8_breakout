@@ -10,6 +10,9 @@ OUT = Path(__file__).resolve().parent
 ROOT = OUT.parents[1]
 inventory = json.loads((OUT/'inventory.json').read_text())
 quotes = json.loads((OUT/'supplier_quotes.json').read_text())
+config_path=ROOT/'purchasing_config.json'
+config=json.loads(config_path.read_text()) if config_path.exists() else {}
+substitutions=config.get('substitutions',{})
 for relative,digest in inventory['sha256'].items():
     assert hashlib.sha256((ROOT/relative).read_bytes()).hexdigest()==digest
 for name in ('componentlist.csv','componentlist.md.txt'):
@@ -32,6 +35,7 @@ for quote in quotes['parts']:
     if mpn not in actual:
         continue
     item=actual[mpn]
+    cad_mpn=mpn
     prior=old.get(mpn,{})
     notes=[]
     if mpn=='M20-7832046':
@@ -58,45 +62,53 @@ for quote in quotes['parts']:
             notes.append('28 x 100 nF bypass capacitors: C1 and C21-C47. MPN retained in hidden fields.')
         if mpn=='AO3401A':
             notes.append('Keep Alpha & Omega AO3401A. No alternate MOSFET selected.')
+    substitute=substitutions.get(cad_mpn)
+    if substitute:
+        assert item['footprints']==[substitute['footprint']]
+        assert set(item['references'])==set(substitute['references'])
+        mpn=substitute['mpn']
+        maker=substitute['manufacturer']
+        spec=substitute['specifications']
+        quote=substitute
+        notes.append('CAD MPN: '+cad_mpn+'. '+substitute['reason'])
     required=item['quantity']
     dk=quote['digikey']
     assert dk['stock']>=required
-    candidates=[]
-    for quantity in {required}|{q for q,price in dk['price_breaks'] if required<=q<=max(25,required)}:
-        price=Decimal(str(max((x for x in dk['price_breaks'] if x[0]<=quantity),key=lambda x:x[0])[1]))
-        candidates.append((price*quantity,quantity,price))
-    cost,order,price=min(candidates)
-    if order>required:
-        notes.append(f'Order {order} instead of {required}: the quantity discount lowers the line total.')
+    order=config['order_quantities_by_fitted_count'][str(required)]
+    assert order>required
+    price=Decimal(str(max((x for x in dk['price_breaks'] if x[0]<=order),key=lambda x:x[0])[1]))
+    cost=price*order
+    notes.append(f'{required} fitted; {order-required} spare(s).')
     mouser=quote['mouser']
     mp=max((x for x in mouser['price_breaks'] if x[0]<=order),key=lambda x:x[0])[1] if mouser['price_breaks'] else None
     # Supplier stock, price and provenance are independent facts.
     source_notes=' '.join(x for x in (mouser['notes'],dk['notes']) if x)
-    rows.append(dict(mpn=mpn,manufacturer=maker,function=function,specifications=spec,
+    rows.append(dict(mpn=mpn,cad_mpn=cad_mpn,manufacturer=maker,function=function,specifications=spec,
         quantity=required,order_quantity=order,spares=order-required,
         schematic_quantity=required,board_quantity=required,
         placed_references=';'.join(item['references']),design_value=';'.join(item['design_values']),
-        footprint=';'.join(item['footprints']),status='PLACED',
+        footprint=';'.join(item['footprints']),status='APPROVED SUBSTITUTE' if substitute else 'PLACED',
         supplier_url=dk['url'],observed_stock=dk['stock'],unit_usd=float(price),
         line_usd=float(cost.quantize(Decimal('.01'),rounding=ROUND_HALF_UP)),
-        checked_date=quotes['retrieved_date'],
+        checked_date=quote.get('checked_date',quotes['retrieved_date']),
         digikey_url=dk['url'],digikey_stock=dk['stock'],digikey_status=dk['status'],
         digikey_sku=dk['sku'],digikey_unit_usd=float(price),
         mouser_url=mouser['url'],mouser_stock=mouser['stock'],mouser_status=mouser['status'],
         mouser_unit_usd=mp,mouser_line_usd=round(mp*order+1e-8,2) if mp is not None else None,
         mouser_evidence_url=evidence_urls.get(mpn,mouser['url']),
         sourcing_note=source_notes,notes=' '.join(notes),
-        datasheet=prior.get('datasheet',''),symbol=prior.get('symbol',''),
+        datasheet=substitute['datasheet_url'] if substitute else prior.get('datasheet',''),symbol=prior.get('symbol',''),
         unit_price_basis='DigiKey price break at order_quantity; cut tape or bulk/tube, no reeling fee'))
 
 assert sum(r['quantity'] for r in rows)==120
-assert sum(r['order_quantity'] for r in rows)==129
-assert {r['mpn'] for r in rows}==set(actual)
-summary=dict(date=quotes['retrieved_date'],currency='USD',boards=1,purchase_lines=len(rows),
-    fitted_packages=120,order_quantity=129,spares=9,
+assert sum(r['order_quantity'] for r in rows)==144
+assert {r['cad_mpn'] for r in rows}==set(actual)
+summary=dict(date=config['updated_date'],quote_start_date=quotes['retrieved_date'],currency='USD',boards=1,purchase_lines=len(rows),
+    fitted_packages=120,order_quantity=144,spares=24,
     digikey_subtotal_usd=float(sum(Decimal(str(r['line_usd'])) for r in rows)),
     stock_basis=quotes['stock_basis'],cad_sha256=inventory['sha256'],
-    cad_files_changed=True,rows=rows,pcb_features=inventory['bare_test_pads'],
+    cad_files_changed=False,purchasing_config_sha256=hashlib.sha256(config_path.read_bytes()).hexdigest(),
+    substitutions=substitutions,rows=rows,pcb_features=inventory['bare_test_pads'],
     mounting_holes=inventory['board_only_mounting_holes'])
 (OUT/'order_data.json').write_text(json.dumps(summary,indent=2)+'\n')
-print(json.dumps({k:v for k,v in summary.items() if k not in ('rows','pcb_features','cad_sha256')},indent=2))
+print(json.dumps({k:v for k,v in summary.items() if k not in ('rows','pcb_features','cad_sha256','substitutions')},indent=2))

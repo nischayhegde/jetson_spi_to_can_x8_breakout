@@ -1,0 +1,23 @@
+{
+  "cad_and_fabrication_zip_unchanged": true,
+  "all_original_fitted_counts_references_and_footprints_preserved": true,
+  "unrelated_parts_unchanged": true,
+  "bulk_only_change": [
+    "5, 311-100KHRCT-ND",
+    "5, 541-100KHCT-ND"
+  ],
+  "purchased_mpn": "CRCW0603100KFKEA",
+  "designators": [
+    "R34",
+    "R35",
+    "R36",
+    "R37"
+  ],
+  "order_quantity": 5,
+  "spare_quantity": 1,
+  "digikey_observed_stock": 3055789,
+  "digikey_price_each_usd": 0.1,
+  "digikey_line_usd": 0.5,
+  "datasheet": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+  "checked_date": "2026-10-30"
+}

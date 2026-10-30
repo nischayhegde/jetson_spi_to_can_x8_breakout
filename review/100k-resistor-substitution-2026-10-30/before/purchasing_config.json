@@ -1,0 +1,33 @@
+{
+  "updated_date": "2026-10-30",
+  "reserve_policy": "One PCB, 120 fitted parts plus 24 spares (20% overall), with at least one spare of every part type. Quantities preserve the approved bulk-add string.",
+  "order_quantities_by_fitted_count": {"1": 2, "2": 3, "4": 5, "8": 9, "9": 10, "16": 18, "28": 30},
+  "substitutions": {
+    "RC0603FR-0710KL": {
+      "mpn": "AC0603FR-0710KL",
+      "manufacturer": "YAGEO",
+      "specifications": "10 kohm, +/-1%, 0.1 W, 0603 (1608 metric), +/-100 ppm/C, AEC-Q200",
+      "footprint": "BreakoutBoard:R_0603_1608Metric",
+      "references": ["R7", "R8", "R11", "R14", "R17", "R24", "R27", "R30", "R38"],
+      "datasheet_url": "https://yageogroup.com/content/datasheet/asset/file/PYU-AC_51_ROHS_L",
+      "checked_date": "2026-10-30",
+      "reason": "Original RC0603FR-0710KL is out of stock at DigiKey. AC0603FR-0710KL matches its resistance, tolerance, power, TCR and 1.60 x 0.80 x 0.45 mm nominal body. Purchase this compatible substitute for the existing 0603 footprint; no CAD or Gerber changes.",
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/yageo/AC0603FR-0710KL/2828135",
+        "sku": "311-10KLDCT-ND",
+        "stock": 971121,
+        "status": "In stock",
+        "price_breaks": [[1, 0.11], [10, 0.03], [25, 0.022], [50, 0.0178], [100, 0.0144], [250, 0.01124], [500, 0.0094], [1000, 0.00798]],
+        "notes": "DigiKey US listing checked 2026-10-30; cut tape. Stock is a web listing observation, not reserved inventory."
+      },
+      "mouser": {
+        "url": "https://my.mouser.com/ProductDetail/YAGEO/AC0603FR-0710KL?qs=UoPT7wUmgYKz3zh0UDMA4Q%3D%3D",
+        "sku": "603-AC0603FR-0710KL",
+        "stock": null,
+        "status": "Not verified for US ordering",
+        "price_breaks": [],
+        "notes": "Exact Mouser regional listing. Current US stock and USD price are unverified; use the verified DigiKey listing for this order."
+      }
+    }
+  }
+}

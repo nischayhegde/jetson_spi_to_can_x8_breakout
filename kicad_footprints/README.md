@@ -32,6 +32,10 @@ Run `python -B kicad_footprints/write_component_list.py` from the repository roo
 
 Supplier data comes from the dated observations in `../review/orderlist-2026-10-29/supplier_quotes.json`. Regenerating the lists does **not** refresh stock or prices. All displayed stock and prices retain their observation date, and unverified Mouser entries remain labeled. Refresh supplier evidence deliberately before purchasing.
 
+`../purchasing_config.json` records the approved purchasing substitute and the spare quantities used by the bulk-add text. On 2026-10-30, AC0603FR-0710KL replaced the unavailable RC0603FR-0710KL in the purchase list, using the same 0603 package and electrical ratings. The CAD MPN remains the original design identity; the list's `cad_mpn` column preserves that mapping. The saved schematic, PCB and fabrication ZIP are unchanged. The order plan contains 144 pieces for 120 fitted components, including 24 spares (20% overall).
+
+The same purchasing configuration also substitutes Vishay CRCW0603100KFKEA for the backordered RC0603FR-07100KL at R34-R37. It is 100 kohm, 1%, 100 ppm/C, at least 0.1 W, and fits the existing 0603 footprint. Five are ordered for four fitted positions plus one spare; the DigiKey cut-tape SKU is 541-100KHCT-ND. This purchasing change does not alter the saved CAD or fabrication files.
+
 `library_usage.py` follows the root schematic and its referenced child sheets, avoiding backups and history files. `build_library.py` can rebuild the active MPN aliases from installed official KiCad assets; review the resulting changes before replacing project assets. `validate_library.py` runs with KiCad's bundled Python. Rebuilding library defaults does not update placed PCB footprints automatically.
 
 ## Verification limits and attribution

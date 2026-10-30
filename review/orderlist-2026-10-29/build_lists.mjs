@@ -38,23 +38,29 @@ async function csvFromArtifact(filename,headers,records){
   await fs.writeFile(path.join(root,filename),'\uFEFF'+actual.map(r=>r.map(csvCell).join(',')).join('\r\n')+'\r\n');
 }
 
-const componentHeaders=['mpn','manufacturer','quantity','schematic_quantity','board_quantity',
+const componentHeaders=['mpn','cad_mpn','manufacturer','quantity','schematic_quantity','board_quantity',
   'placed_references','design_value','footprint','function','specifications','status',
   'mouser_url','digikey_url','notes'];
 await csvFromArtifact('componentlist.csv',componentHeaders,rows);
-const orderHeaders=['mpn','manufacturer','quantity','order_quantity','spares','placed_references',
+const orderHeaders=['mpn','cad_mpn','manufacturer','quantity','order_quantity','spares','placed_references',
   'design_value','footprint','specifications','digikey_sku','digikey_stock','digikey_status',
   'digikey_unit_usd','line_usd','digikey_url','mouser_stock','mouser_status',
   'mouser_unit_usd','mouser_line_usd','mouser_url','mouser_evidence_url',
   'checked_date','unit_price_basis','notes','sourcing_note'];
 await csvFromArtifact('orderlist.csv',orderHeaders,rows);
+const bulk=rows.map(r=>`${r.order_quantity}, ${r.digikey_sku||r.mpn}`).join('\n')+'\n';
+await fs.writeFile(path.join(root,'bulk_order_digikey.txt'),bulk);
 
 const componentText=[
   '# SPI to eight-channel CAN PCB component list',
   '',
-  'Updated 2026-10-29 from the saved schematic and PCB. Quantities are for one board and count physical packages, including multi-unit logic ICs only once.',
+  `Updated ${data.date} from the saved schematic and PCB, with the approved purchasing substitutions below. Quantities are fitted packages for one board; multi-unit logic ICs count only once.`,
   '',
-  `**${data.purchase_lines} purchase lines, ${data.fitted_packages} fitted components.** The PCB also contains 21 bare test pads and four mounting holes. These features require no purchased component. Package identities, references and purchasing fields are synchronized across the schematic and PCB. Circuit connectivity is unchanged.`,
+  `**${data.purchase_lines} purchase lines, ${data.fitted_packages} fitted components.** The PCB also contains 21 bare test pads and four mounting holes, which need no purchased component. References, quantities and footprints come from the saved CAD. The CSV records both the part to purchase and the original CAD MPN.`,
+  '',
+  '**10 kohm replacement:** purchase **AC0603FR-0710KL** for R7/R8/R11/R14/R17/R24/R27/R30/R38. The original RC0603FR-0710KL is out of stock at DigiKey. The replacement is YAGEO, 10 kohm, 1%, 0.1 W, 0603, with the same nominal 1.60 x 0.80 x 0.45 mm body and 100 ppm/C TCR. It fits the existing footprint. The schematic, PCB and fabrication ZIP are unchanged. '+link('Manufacturer datasheet','https://yageogroup.com/content/datasheet/asset/file/PYU-AC_51_ROHS_L')+'.',
+  '',
+  '**100 kohm replacement:** purchase **CRCW0603100KFKEA** for R34-R37. The original RC0603FR-07100KL is on backorder at DigiKey. The Vishay part is 100 kohm, 1%, 100 ppm/C and 0603, with a 0.1 W standard rating (0.125 W extended). Its nominal 1.55 x 0.85 x 0.45 mm body fits the existing 0603 footprint. Order five: four fitted and one spare. '+link('Manufacturer datasheet','https://www.vishay.com/docs/20035/dcrcwe3.pdf')+'.',
   '',
   '**Standardized parts:** all eight 120-ohm CAN terminations use **RC1206FR-07120RL**, 1%, 0.25 W, 1206. J1 uses **M20-7832046** and the matching female socket footprint in the schematic, PCB and order list. '+link('YAGEO resistor specification','https://yageogroup.com/component-documentation/download/specsheet/RC1206FR-07120RL')+'; '+link('Harwin socket specification','https://www.harwin.com/products/M20-7832046')+'.',
   '',
@@ -74,20 +80,22 @@ await fs.writeFile(path.join(root,'componentlist.md.txt'),componentText);
 const orderText=[
   '# PCB parts order list',
   '',
-  `**One board: ${data.fitted_packages} fitted components, ${data.purchase_lines} purchase lines. Order ${data.order_quantity} pieces from DigiKey for a quoted parts subtotal of ${money(data.digikey_subtotal_usd)}.** The ${data.spares} extra resistors reduce the order cost at the published quantity breaks. Every DigiKey line below showed stock sufficient for its order quantity in the retrieved listing.`,
+  `**One board: ${data.fitted_packages} fitted components, ${data.purchase_lines} purchase lines. Order ${data.order_quantity} pieces from DigiKey for a quoted parts subtotal of ${money(data.digikey_subtotal_usd)}.** This includes ${data.spares} spares, 20% extra overall, with at least one spare of every part type. Quantities match the `+link('bulk-add text','bulk_order_digikey.txt')+'.',
   '',
-  'Supplier snapshots retrieved **2026-10-29**. Web pages may be cached, so these are listing snapshots rather than a live reserved cart. USD prices exclude shipping, tax, tariffs and assembly. Use cut tape for SMD parts and bulk/tube for connectors. Do not select paid reeling. Mouser unit and line prices use the same order quantity for comparison; unverified stock is not treated as available.',
+  '**The 10 kohm and 100 kohm replacements were checked on 2026-10-30; other stock and price observations retain their 2026-10-29 date and were not refreshed.** Each CSV row has its checked date. Web pages may be cached; inventory is not reserved. USD prices exclude shipping, tax, tariffs and assembly. Use cut tape for SMD parts and bulk/tube for connectors. Mouser prices use the same order quantities where available; unverified stock is not treated as available.',
   '',
   '| Manufacturer part | Needed | Order | DigiKey USD each | DigiKey USD line | DigiKey stock | DigiKey | Mouser USD each | Mouser stock | Mouser |',
   '|---|---:|---:|---:|---:|---:|---|---:|---:|---|',
   ...rows.map(r=>`| ${esc(r.mpn)} | ${r.quantity} | ${r.order_quantity} | ${unit(r.digikey_unit_usd)} | ${money(r.line_usd)} | ${count(r.digikey_stock)} | ${link('Listing',r.digikey_url)} | ${unit(r.mouser_unit_usd)} | ${count(r.mouser_stock)} | ${link(r.mpn==='AO3401A'?'Search only':'Listing',r.mouser_url)} |`),
   `| **Total** | **${data.fitted_packages}** | **${data.order_quantity}** | | **${money(data.digikey_subtotal_usd)}** | | | | | |`,
   '',
-  'Order ten RC1206FR-07120RL for eight fitted positions, ten RC0603FR-0710KL for nine fitted positions, and ten RC0603FR-07100KL for four fitted positions. All other order quantities equal the fitted quantity. No discretionary spare ICs or connectors are added.',
+  '**10 kohm purchase:** order ten AC0603FR-0710KL using DigiKey cut-tape SKU **311-10KLDCT-ND**: nine fitted and one spare, $0.03 each / $0.30 for the line. This replaces RC0603FR-0710KL / 311-10.0KHRCT-ND in the purchase cart.',
   '',
-  '**Footprint matching:** R6/R10/R13/R16/R23/R26/R29/R32 all use the same 1206 termination footprint and MPN. J1 consistently specifies the female M20-7832046 socket. TP13/TP14 specify M20-9990246 two-pin headers. MPN and Manufacturer fields in the schematic and PCB drive this list. The standardization changed R26\'s package and local bottom routing, corrected metadata and capacitor references, and retained every circuit connection.',
+  '**100 kohm purchase:** order five CRCW0603100KFKEA using DigiKey cut-tape SKU **541-100KHCT-ND**: four fitted and one spare, $0.10 each / $0.50 for the line. This replaces RC0603FR-07100KL / 311-100KHRCT-ND in the purchase cart.',
   '',
-  '**Mouser exceptions:** AO3401A has a clearly labeled search link because an exact Alpha & Omega product listing was not verified. The Samsung 27 pF capacitor has an exact regional listing, but its stock and USD price were not verified. C20 and the white three-pin JST connector also lack verified current Mouser stock. The DigiKey entries retain the standardized CAD\'s specified MPNs.',
+  '**Footprint matching:** all eight 120-ohm terminations remain RC1206FR-07120RL in 1206. J1 remains the female M20-7832046 socket; TP13/TP14 remain M20-9990246 two-pin headers. All purchased footprints and reference sets match CAD. Both approved resistor substitutions use the original 0603 footprints; the CSV cad_mpn column retains the original schematic identities. No schematic, PCB or Gerber change is required.',
+  '',
+  '**Mouser exceptions:** AO3401A is search-only. The 27 pF capacitor and replacement resistors have exact links but lack verified current US stock/USD prices. C20 and the white three-pin JST connector also lack verified current Mouser stock. Use the specified DigiKey parts for the bulk-add order.',
   '',
   '| Supplier observation | Source and detail |',
   '|---|---|',
@@ -107,7 +115,7 @@ const headers=['Manufacturer part','Needed','Order','DigiKey USD each','DigiKey 
   'References','Existing PCB footprint','Notes'];
 sheet.getRange('A2').values=[['PCB parts for one board']];
 sheet.getRange('A3').values=[[`${data.fitted_packages} fitted components. Order ${data.order_quantity} pieces across ${data.purchase_lines} purchase lines.`]];
-sheet.getRange('A4').values=[['2026-10-29 listing snapshots. USD excludes shipping, tax and tariffs. Standardized CAD; circuit connectivity unchanged.']];
+sheet.getRange('A4').values=[['Stock/prices: 2026-10-29; 10k/100k replacements checked 2026-10-30. USD excludes shipping, tax and tariffs.']];
 sheet.getRange('A6:O6').values=[headers];
 const shortRefs=r=>r.mpn==='CC0603KRX7R9BB104'?'C1, C21-C47':r.placed_references.replaceAll(';',', ');
 const body=rows.map(r=>[r.mpn,r.quantity,r.order_quantity,r.digikey_unit_usd,r.line_usd,r.digikey_stock,
@@ -124,8 +132,8 @@ sheet.getRange(`B${totalRow}:C${totalRow}`).formulas=[[`=SUM(B7:B${lastRow})`,`=
 sheet.getRange(`E${totalRow}`).formulas=[[`=SUM(E7:E${lastRow})`]];
 sheet.getRange(`G${totalRow}`).values=[['Mouser total']];
 sheet.getRange(`H${totalRow}`).values=[['Incomplete']];
-sheet.getRange(`A${totalRow+2}`).values=[['Extras: 2 x 1206 120-ohm, 1 x 10-kohm, 6 x 100-kohm resistors. Published quantity breaks lower the line totals.']];
-sheet.getRange(`A${totalRow+3}`).values=[['All eight terminations: RC1206FR-07120RL, 1206, 0.25 W. J1: M20-7832046 female socket. MPN fields match CAD.']];
+sheet.getRange(`A${totalRow+2}`).values=[['24 spare pieces: 20% extra overall, including at least one spare of every part type. Quantities match the bulk-add text.']];
+sheet.getRange(`A${totalRow+3}`).values=[['Replacements: 10k AC0603FR-0710KL; 100k CRCW0603100KFKEA. Both fit existing 0603 footprints. CAD and Gerbers unchanged.']];
 sheet.getRange(`A${endRow}`).values=[['Mouser AO3401A is search only. Unverified stock and missing USD prices are shown explicitly.']];
 sheet.getRange(`A2:O${endRow}`).format.font={name:'Arial',size:10,color:'#172B4D'};
 sheet.getRange('A2').format.font={name:'Arial',size:15,bold:true};
@@ -172,5 +180,5 @@ for(const [relative,expected] of Object.entries(data.cad_sha256)){
     throw new Error(`Unexpected CAD mutation: ${relative}`);
 }
 console.log(JSON.stringify({lines:rows.length,fitted:data.fitted_packages,ordered:data.order_quantity,subtotal:total,
-  outputs:['componentlist.md.txt','componentlist.csv','orderlist.md.txt','orderlist.csv','orderlist.xlsx'],
+  outputs:['componentlist.md.txt','componentlist.csv','orderlist.md.txt','orderlist.csv','orderlist.xlsx','bulk_order_digikey.txt'],
   cadUnchangedDuringListGeneration:true}));

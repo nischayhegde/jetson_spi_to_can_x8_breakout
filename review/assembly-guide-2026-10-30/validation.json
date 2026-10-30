@@ -1,0 +1,26 @@
+{
+  "pdf_pages": 6,
+  "fitted_parts_labeled": 120,
+  "front_fitted_parts": 91,
+  "back_fitted_parts": 29,
+  "current_purchase_mpns_present": 21,
+  "sources_and_gerber_zip_unchanged": true,
+  "all_part_references_in_pdf": true,
+  "back_map_mirrored_horizontally": true,
+  "j1_mounting_side": "back",
+  "image_sizes": {
+    "output/assembly/front-assembly-map.png": [
+      4961,
+      3508
+    ],
+    "output/assembly/back-assembly-map.png": [
+      4961,
+      3508
+    ]
+  },
+  "output_sha256": {
+    "output/pdf/pcb-assembly-guide.pdf": "85025300759bee11ef2104ee0ed8f6ee808cda99f535563d0496c96585db60ee",
+    "output/assembly/front-assembly-map.png": "43acfc71a9ccc190c8b75f20a5432252894ac0899458cd556fa95866154d0da0",
+    "output/assembly/back-assembly-map.png": "f58b0ef83703fc21aa7b033819f1560987d260a20ba6df691c1b1b3b724181ea"
+  }
+}

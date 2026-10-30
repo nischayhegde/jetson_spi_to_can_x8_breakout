@@ -1,0 +1,59 @@
+{
+  "updated_date": "2026-10-30",
+  "reserve_policy": "One PCB, 120 fitted parts plus 24 spares (20% overall), with at least one spare of every part type. Quantities preserve the approved bulk-add string.",
+  "order_quantities_by_fitted_count": {"1": 2, "2": 3, "4": 5, "8": 9, "9": 10, "16": 18, "28": 30},
+  "substitutions": {
+    "RC0603FR-0710KL": {
+      "mpn": "AC0603FR-0710KL",
+      "manufacturer": "YAGEO",
+      "specifications": "10 kohm, +/-1%, 0.1 W, 0603 (1608 metric), +/-100 ppm/C, AEC-Q200",
+      "footprint": "BreakoutBoard:R_0603_1608Metric",
+      "references": ["R7", "R8", "R11", "R14", "R17", "R24", "R27", "R30", "R38"],
+      "datasheet_url": "https://yageogroup.com/content/datasheet/asset/file/PYU-AC_51_ROHS_L",
+      "checked_date": "2026-10-30",
+      "reason": "Original RC0603FR-0710KL is out of stock at DigiKey. AC0603FR-0710KL matches its resistance, tolerance, power, TCR and 1.60 x 0.80 x 0.45 mm nominal body. Purchase this compatible substitute for the existing 0603 footprint; no CAD or Gerber changes.",
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/yageo/AC0603FR-0710KL/2828135",
+        "sku": "311-10KLDCT-ND",
+        "stock": 971121,
+        "status": "In stock",
+        "price_breaks": [[1, 0.11], [10, 0.03], [25, 0.022], [50, 0.0178], [100, 0.0144], [250, 0.01124], [500, 0.0094], [1000, 0.00798]],
+        "notes": "DigiKey US listing checked 2026-10-30; cut tape. Stock is a web listing observation, not reserved inventory."
+      },
+      "mouser": {
+        "url": "https://my.mouser.com/ProductDetail/YAGEO/AC0603FR-0710KL?qs=UoPT7wUmgYKz3zh0UDMA4Q%3D%3D",
+        "sku": "603-AC0603FR-0710KL",
+        "stock": null,
+        "status": "Not verified for US ordering",
+        "price_breaks": [],
+        "notes": "Exact Mouser regional listing. Current US stock and USD price are unverified; use the verified DigiKey listing for this order."
+      }
+    },
+    "RC0603FR-07100KL": {
+      "mpn": "CRCW0603100KFKEA",
+      "manufacturer": "Vishay Dale",
+      "specifications": "100 kohm, +/-1%, 0.1 W standard rating, 0603 (1608 metric), +/-100 ppm/C, AEC-Q200",
+      "footprint": "BreakoutBoard:R_0603_1608Metric",
+      "references": ["R34", "R35", "R36", "R37"],
+      "datasheet_url": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+      "checked_date": "2026-10-30",
+      "reason": "Original RC0603FR-07100KL is on backorder at DigiKey. CRCW0603100KFKEA matches 100 kohm, 1%, at least 0.1 W and 100 ppm/C. Its standard 0603 body (nominal 1.55 x 0.85 x 0.45 mm) fits the existing IPC-7351 nominal R_0603_1608Metric footprint. The manufacturer specifies 0.10 W standard / 0.125 W extended operation. No schematic, PCB or Gerber change is required.",
+      "digikey": {
+        "url": "https://www.digikey.com/en/products/detail/vishay-dale/CRCW0603100KFKEA/1174896",
+        "sku": "541-100KHCT-ND",
+        "stock": 3055789,
+        "status": "In stock",
+        "price_breaks": [[1, 0.10], [10, 0.032], [25, 0.024], [50, 0.0194], [100, 0.0159], [250, 0.01244], [500, 0.01048], [1000, 0.00895]],
+        "notes": "DigiKey US listing checked 2026-10-30; cut tape. Listed stock 3,055,789. Five cost $0.50 before tax/shipping. Inventory is not reserved."
+      },
+      "mouser": {
+        "url": "https://www.mouser.com/en/ProductDetail/Vishay/CRCW0603100KFKEA?qs=6dqgS%252BKntICWHMMdIzt5%2FQ%3D%3D",
+        "sku": "",
+        "stock": null,
+        "status": "Live US stock and pricing not verified",
+        "price_breaks": [],
+        "notes": "Exact Mouser US product listing found. The indexed page is cached and direct access was unavailable; live stock and USD pricing remain unverified. Use the checked DigiKey cut-tape listing for this order."
+      }
+    }
+  }
+}
