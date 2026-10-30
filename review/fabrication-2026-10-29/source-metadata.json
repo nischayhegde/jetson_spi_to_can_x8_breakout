@@ -1,0 +1,73 @@
+{
+  "source_sha256": {
+    "breakout\\breakout.kicad_pcb": "0ee3e9547fe445c02e4dff8bc78db90068801db0794fd329b4c71b3dae0fb11c",
+    "breakout\\breakout.kicad_sch": "e5fcc7f0b61d26664784e4e7607363ba22bacf82be935e080a10ebf20b39b456",
+    "breakout\\breakout.kicad_pro": "3de665ecd030f3fef767137f3c30ef88aa469ce72e953415b2305817138462b3"
+  },
+  "kicad_version": "10.0.7",
+  "board_size_mm": [
+    81.0,
+    80.0
+  ],
+  "board_thickness_mm": 1.6,
+  "copper_layers": 4,
+  "via_count": 207,
+  "footprints": 145,
+  "drill_counts": [
+    {
+      "plating": "NPTH",
+      "x_mm": 3.2,
+      "y_mm": 3.2,
+      "count": 4
+    },
+    {
+      "plating": "PTH",
+      "x_mm": 0.3,
+      "y_mm": 0.3,
+      "count": 207
+    },
+    {
+      "plating": "PTH",
+      "x_mm": 0.95,
+      "y_mm": 0.95,
+      "count": 24
+    },
+    {
+      "plating": "PTH",
+      "x_mm": 1.0,
+      "y_mm": 1.0,
+      "count": 46
+    }
+  ],
+  "mounting_holes": [
+    {
+      "reference": "H3",
+      "x_mm": 60.0,
+      "y_mm": 123.5,
+      "drill_mm": 3.2
+    },
+    {
+      "reference": "H2",
+      "x_mm": 133.0,
+      "y_mm": 51.5,
+      "drill_mm": 3.2
+    },
+    {
+      "reference": "H1",
+      "x_mm": 60.0,
+      "y_mm": 51.5,
+      "drill_mm": 3.2
+    },
+    {
+      "reference": "H4",
+      "x_mm": 133.0,
+      "y_mm": 123.5,
+      "drill_mm": 3.2
+    }
+  ],
+  "source_files_unchanged": true,
+  "outline_stroke_bounds_mm": [
+    81.05,
+    80.05
+  ]
+}

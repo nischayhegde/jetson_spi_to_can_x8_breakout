@@ -1,0 +1,22 @@
+{
+  "gerber_layers": 11,
+  "copper_layers": 4,
+  "outline_mm": [
+    81.0,
+    80.0
+  ],
+  "thickness_mm": 1.6,
+  "pth_holes": 277,
+  "npth_holes": 4,
+  "mounting_drill_mm": 3.2,
+  "all_drill_locations_match_source": true,
+  "matching_absolute_origins": true,
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity_issues": 0,
+  "source_files_unchanged": true,
+  "zip_files": 17,
+  "zip_crc_check": "PASS",
+  "archive": "C:\\humanoids\\jetson_spi_to_can_x8_breakout\\fabrication\\jetson_spi_to_can_x8_breakout-gerbers-drills-2026-10-29.zip",
+  "archive_sha256": "2dd1e632fee011c432302acb905656065f559431f1fc963dae7f40582e1f87b6"
+}
